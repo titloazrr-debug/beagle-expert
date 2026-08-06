@@ -4,13 +4,14 @@
 :root {
   /* Fonds doux beige */
   --background: #f7f1e8;
-  --foreground: #1a1410;
+  /* Texte quasi noir pour contraste max */
+  --foreground: #0a0806;
   --card: #fffcf7;
-  --card-foreground: #1a1410;
+  --card-foreground: #0a0806;
 
-  /* Secondaire : fond pastel mais texte bien sombre */
+  /* Texte secondaire très foncé (lisibilité max, plus de gris moyen) */
   --muted: #ebe0d0;
-  --muted-foreground: #3d3128;
+  --muted-foreground: #1a1410;
   --border: #d0bfa8;
   --input: #d0bfa8;
   --ring: #1f4a2c;
@@ -26,7 +27,7 @@
   --accent-soft: #b88952;
 
   --secondary: #e5d6c2;
-  --secondary-foreground: #1f1611;
+  --secondary-foreground: #0a0806;
   --destructive: #9b2c2c;
   --destructive-foreground: #ffffff;
   --success: #1f4a2c;
