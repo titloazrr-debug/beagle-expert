@@ -14,9 +14,11 @@ import { categoryLabels } from "@/data/categories";
 import { getQuizBySlug } from "@/data/quizzes";
 import { getProductsByIds } from "@/data/products";
 import { getComparisonsForFiche } from "@/lib/content/load-comparisons";
+import { getComparisonTablesForFiche } from "@/data/comparisons";
 import { AttentionBox } from "@/components/AttentionBox";
 import { ProductCard } from "@/components/ProductCard";
 import { ComparisonBlock } from "@/components/ComparisonBlock";
+import { ComparisonTable } from "@/components/ComparisonTable";
 import { FicheRelatedLinks } from "@/components/FicheRelatedLinks";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd } from "@/components/JsonLd";
@@ -67,6 +69,7 @@ export default async function FichePage({ params }: PageProps) {
   const showMedicalDisclaimer = isMedicalFicheCategory(fiche.category);
   const relatedProducts = getProductsByIds(fiche.relatedProductIds ?? []);
   const comparisons = getComparisonsForFiche(slug);
+  const comparisonTables = getComparisonTablesForFiche(slug);
   const relatedQuizzes = (fiche.relatedQuizSlugs ?? [])
     .map((s) => getQuizBySlug(s))
     .filter(Boolean);
@@ -351,7 +354,7 @@ export default async function FichePage({ params }: PageProps) {
               </section>
             )}
 
-            {comparisons.length > 0 && (
+            {(comparisons.length > 0 || comparisonTables.length > 0) && (
               <section
                 className="space-y-5"
                 aria-labelledby="comparisons-heading"
@@ -369,6 +372,9 @@ export default async function FichePage({ params }: PageProps) {
                   Lectures croisées neutres : forces, limites, et quand choisir
                   l’une ou l’autre option.
                 </p>
+                {comparisonTables.map((t) => (
+                  <ComparisonTable key={t.id} table={t} />
+                ))}
                 {comparisons.map((c) => (
                   <ComparisonBlock key={c.id} comparison={c} />
                 ))}

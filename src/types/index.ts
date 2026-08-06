@@ -130,6 +130,49 @@ export interface ProductComparison {
   disclaimer?: string;
 }
 
+/** ——— Tableau comparatif interactif (critères × produits) ——— */
+
+export interface ComparisonTableProduct {
+  id: string;
+  name: string;
+  emoji: string;
+  badge?: string;
+  /** Recommandation globale Beagle Expert */
+  recommended?: boolean;
+  affiliateUrl: string;
+  priceLabel: string;
+  /** Valeurs affichées par clé de critère */
+  criteria: Record<string, string | number | boolean>;
+}
+
+export interface ComparisonCriterionMeta {
+  key: string;
+  label: string;
+  /** Id produit gagnant pour ce critère (absent = égalité) */
+  winnerId?: string;
+  /** Détail optionnel (ligne extensible) */
+  detail?: string;
+}
+
+export interface ComparisonCategory {
+  id: string;
+  label: string;
+  criteria: ComparisonCriterionMeta[];
+}
+
+export interface ComparisonTableSpec {
+  id: string;
+  title: string;
+  emoji: string;
+  intro: string;
+  products: ComparisonTableProduct[];
+  categories: ComparisonCategory[];
+  verdict?: string;
+  disclaimer?: string;
+  /** Fiches où afficher ce tableau */
+  ficheSlugs: string[];
+}
+
 export interface QuizOption {
   id: string;
   label: string;
