@@ -50,17 +50,49 @@ export function Hero() {
       <div className="pointer-events-none absolute -right-16 bottom-0 size-80 rounded-full bg-accent/10 blur-3xl" />
 
       <div className="container-page relative py-8 sm:py-12 lg:py-14">
-        {/* Plein largeur, plus bas sur desktop pour laisser voir le texte sans scroll */}
+        {/*
+          Mobile : cover 4/3 (inchangé).
+          Desktop : même hauteur courte, visage entier (object-contain)
+          + fond flouté de la même photo (pas de bandes vides).
+        */}
         <div className="relative mb-5 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-soft)] sm:mb-6 sm:rounded-[1.75rem]">
-          <BeagleImage
-            asset={heroImage}
-            alt="Beagle regardant la caméra"
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1120px"
-            className="aspect-[4/3] max-h-[220px] w-full object-cover object-center sm:aspect-[21/9] sm:max-h-[240px] lg:max-h-[280px]"
-            width={heroImage.width}
-            height={heroImage.height}
-          />
+          {/* Mobile */}
+          <div className="sm:hidden">
+            <BeagleImage
+              asset={heroImage}
+              alt="Beagle regardant la caméra"
+              priority
+              sizes="100vw"
+              className="aspect-[4/3] max-h-[220px] w-full object-cover object-center"
+              width={heroImage.width}
+              height={heroImage.height}
+            />
+          </div>
+          {/* Desktop / tablette */}
+          <div className="relative hidden h-[240px] w-full sm:block lg:h-[270px]">
+            <BeagleImage
+              asset={heroImage}
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 1280px) 90vw, 1120px"
+              className="scale-125 object-cover object-center blur-2xl brightness-90"
+              wrapperClassName="absolute inset-0"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-black/5"
+              aria-hidden
+            />
+            <BeagleImage
+              asset={heroImage}
+              alt="Beagle regardant la caméra"
+              fill
+              priority
+              sizes="(max-width: 1280px) 90vw, 1120px"
+              className="object-contain object-center"
+              wrapperClassName="absolute inset-0"
+            />
+          </div>
         </div>
 
         {/* Badge fort contraste : fond clair, texte très sombre, extra gras */}
