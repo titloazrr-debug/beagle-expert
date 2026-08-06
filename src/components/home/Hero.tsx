@@ -50,27 +50,26 @@ export function Hero() {
       <div className="pointer-events-none absolute -right-16 bottom-0 size-80 rounded-full bg-accent/10 blur-3xl" />
 
       <div className="container-page relative py-8 sm:py-12 lg:py-14">
-        {/* Image seule — pas de texte superposé (évite la troncature) */}
-        <div className="relative mb-5 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-soft)] sm:mb-8 sm:rounded-[1.75rem]">
+        {/* object-contain = visage entier (pas seulement les yeux) ; fond beige si bandes */}
+        <div className="relative mb-5 flex items-center justify-center overflow-hidden rounded-2xl border border-border bg-[#ebe0d0] shadow-[var(--shadow-soft)] sm:mb-8 sm:rounded-[1.75rem]">
           <BeagleImage
             asset={heroImage}
             alt="Beagle regardant la caméra"
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1120px"
-            className="h-[min(38vw,160px)] w-full object-cover object-[center_30%] sm:h-[min(28vw,220px)] lg:h-[min(22vw,260px)]"
+            className="h-auto max-h-[260px] w-full object-contain object-center sm:max-h-[360px] lg:max-h-[420px]"
             width={heroImage.width}
             height={heroImage.height}
           />
-          <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"
-            aria-hidden
-          />
         </div>
 
-        {/* Titre + badge SOUS l’image = lettres toujours entières */}
-        <p className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-primary sm:text-xs">
-          <Sparkles className="size-3.5 shrink-0" aria-hidden />
-          <span className="truncate">
+        {/* Badge fort contraste : fond clair, texte très sombre, extra gras */}
+        <p className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-[11px] font-extrabold uppercase tracking-wide text-foreground shadow-sm sm:text-xs">
+          <Sparkles
+            className="size-3.5 shrink-0 text-accent"
+            aria-hidden
+          />
+          <span className="min-w-0 leading-snug">
             {tenant.name} · Guide interactif Beagle
           </span>
         </p>
