@@ -1,7 +1,6 @@
 import type { ProductComparison, ComparisonSide, Product } from "@/types";
 import { getProductById } from "@/data/products";
 import { Scale, Sparkles } from "lucide-react";
-import { ProductRating } from "@/components/ProductRating";
 import { cn } from "@/lib/utils";
 
 interface ComparisonBlockProps {
@@ -19,7 +18,6 @@ function SideCard({
   accent: "left" | "right";
 }) {
   const emoji = side.imageEmoji || product?.imageEmoji || "🛒";
-  const rating = product?.rating;
 
   return (
     <div
@@ -45,9 +43,6 @@ function SideCard({
             <p className="mt-0.5 text-sm font-medium text-accent">
               {side.tagline}
             </p>
-          )}
-          {rating !== undefined && (
-            <ProductRating rating={rating} className="mt-1.5" />
           )}
         </div>
       </div>

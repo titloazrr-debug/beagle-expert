@@ -66,6 +66,14 @@ export function Footer() {
           <ul className="mt-3 space-y-2">
             <li>
               <Link
+                href="/a-propos"
+                className="text-sm text-muted-foreground hover:text-primary"
+              >
+                À propos &amp; méthode
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/mentions-legales"
                 className="text-sm text-muted-foreground hover:text-primary"
               >

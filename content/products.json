@@ -21,7 +21,11 @@
       "ideal",
       "controle"
     ],
-    "categories": ["alimentation", "croquettes", "budget"],
+    "categories": [
+      "alimentation",
+      "croquettes",
+      "budget"
+    ],
     "advantages": [
       "Fort taux de protéines animales, adapté aux besoins d’un chien actif",
       "Formules chiot / adulte / light pour ajuster calories et stade de vie",
@@ -35,8 +39,7 @@
       "Comme toute croquette sèche, l’hydratation reste à surveiller",
       "La transition alimentaire doit rester progressive (7–10 jours)"
     ],
-    "bestFor": "Propriétaires qui veulent une croquette premium française, un contrôle calorique simple et un bon rapport qualité-prix pour un Beagle adulte ou en tendance surpoids.",
-    "rating": 4.5
+    "bestFor": "Propriétaires qui veulent une croquette premium française, un contrôle calorique simple et un bon rapport qualité-prix pour un Beagle adulte ou en tendance surpoids."
   },
   {
     "id": "tractive-gps",
@@ -58,7 +61,12 @@
       "pret",
       "vigilance"
     ],
-    "categories": ["equipement", "gps", "education", "budget"],
+    "categories": [
+      "equipement",
+      "gps",
+      "education",
+      "budget"
+    ],
     "advantages": [
       "Localisation quasi temps réel via l’app (réseau cellulaire)",
       "Clôtures virtuelles et alertes de sortie de zone",
@@ -72,8 +80,7 @@
       "Poids et volume sur le collier d’un petit Beagle à surveiller",
       "Ce n’est pas un substitut au rappel ni à une clôture physique"
     ],
-    "bestFor": "Beagles fugueurs, sorties campagne/forêt, jardins non 100 % sécurisés, ou rappel encore en construction.",
-    "rating": 4.6
+    "bestFor": "Beagles fugueurs, sorties campagne/forêt, jardins non 100 % sécurisés, ou rappel encore en construction."
   },
   {
     "id": "santevet",
@@ -93,7 +100,11 @@
       "pret",
       "vigilance"
     ],
-    "categories": ["sante", "budget", "assurance"],
+    "categories": [
+      "sante",
+      "budget",
+      "assurance"
+    ],
     "advantages": [
       "Aide à absorber otites, bilans et imprévus (coûts souvent sous-estimés)",
       "Formules modulables selon budget et niveau de couverture",
@@ -107,8 +118,7 @@
       "Il faut lire attentivement le tableau de garanties",
       "Pas un substitut aux gestes de prévention (hygiène oreilles, poids, etc.)"
     ],
-    "bestFor": "Foyers qui veulent lisser les frais véto d’un Beagle, surtout si le budget ne tolère pas une grosse facture d’un coup.",
-    "rating": 4.2
+    "bestFor": "Foyers qui veulent lisser les frais véto d’un Beagle, surtout si le budget ne tolère pas une grosse facture d’un coup."
   },
   {
     "id": "kong-classic",
@@ -130,7 +140,11 @@
       "education",
       "pret"
     ],
-    "categories": ["education", "jouets", "budget"],
+    "categories": [
+      "education",
+      "jouets",
+      "budget"
+    ],
     "advantages": [
       "Très résistant pour un Beagle motivé / mâchouilleur",
       "Farcissable : allonge le temps d’occupation et active le cerveau",
@@ -144,8 +158,7 @@
       "Surveillance recommandée au début (morceaux trop durs / usage abusif)",
       "Ne remplace pas la marche ni le travail de flair en extérieur"
     ],
-    "bestFor": "Beagles gourmands, absences régulières, besoin d’occupation solo et de canaliser la mastication destructive.",
-    "rating": 4.7
+    "bestFor": "Beagles gourmands, absences régulières, besoin d’occupation solo et de canaliser la mastication destructive."
   },
   {
     "id": "tapis-fouille",
@@ -167,7 +180,11 @@
       "education",
       "vigilance"
     ],
-    "categories": ["education", "jouets", "budget"],
+    "categories": [
+      "education",
+      "jouets",
+      "budget"
+    ],
     "advantages": [
       "Exploite le flair exceptionnel du Beagle (besoin naturel)",
       "Fatigue mentale rapide, souvent en 10–20 minutes",
@@ -181,8 +198,7 @@
       "Certains chiens arrachent le tissu s’ils sont très frustrés",
       "Moins adapté comme occupation longue en totale solitude"
     ],
-    "bestFor": "Beagles nerveux ou sous-stimulés mentalement, jours de pluie, travail du calme via le flair à la maison.",
-    "rating": 4.5
+    "bestFor": "Beagles nerveux ou sous-stimulés mentalement, jours de pluie, travail du calme via le flair à la maison."
   },
   {
     "id": "nettoyant-auriculaire",
@@ -194,8 +210,19 @@
     "affiliateUrl": "#",
     "imageEmoji": "👂",
     "badge": "Essentiel",
-    "tags": ["soin", "oreilles", "sante", "otite", "pret", "hygiene"],
-    "categories": ["soins", "sante", "budget"],
+    "tags": [
+      "soin",
+      "oreilles",
+      "sante",
+      "otite",
+      "pret",
+      "hygiene"
+    ],
+    "categories": [
+      "soins",
+      "sante",
+      "budget"
+    ],
     "advantages": [
       "Geste simple et peu coûteux face à un risque élevé d’otites",
       "Aide à limiter cérumen, odeurs et humidité résiduelle",
@@ -209,7 +236,6 @@
       "Il faut le bon produit (pas d’alcool / remèdes maison hasardeux)",
       "Sans séchage et contrôle régulier, l’effet préventif diminue"
     ],
-    "bestFor": "Tous les Beagles (oreilles tombantes), surtout en climat humide, après natation, ou dès les premiers signes de démangeaisons.",
-    "rating": 4.8
+    "bestFor": "Tous les Beagles (oreilles tombantes), surtout en climat humide, après natation, ou dès les premiers signes de démangeaisons."
   }
 ]

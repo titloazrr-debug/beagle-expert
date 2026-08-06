@@ -244,9 +244,6 @@ export default async function FichePage({ params }: PageProps) {
           {/* Contenu */}
           <div className="min-w-0 space-y-8" itemProp="articleBody">
             {fiche.sections.map((section, index) => {
-              const sectionProducts = getProductsByIds(
-                section.productIds ?? []
-              );
               return (
                 <section
                   key={section.id}
@@ -292,36 +289,13 @@ export default async function FichePage({ params }: PageProps) {
                     />
                   )}
 
-                  {sectionProducts.length > 0 && (
-                    <div className="mt-6">
-                      <h3 className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-accent">
+                  {/* Plus de grilles produits en milieu de fiche : une seule
+                      sélection en bas de page. Renvois quiz / tips en MDX. */}
+                  {section.ctaLines?.length ? (
+                    <div className="mt-6 rounded-2xl border border-primary/20 bg-primary/5 p-5">
+                      <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-primary">
                         <ShoppingBag className="size-3.5" aria-hidden />
-                        Recommandé pour cette section
-                      </h3>
-                      <AffiliateDisclaimer
-                        variant="box"
-                        className="mb-3"
-                        showLegalLink
-                      />
-                      <div className="grid gap-4 sm:grid-cols-2">
-                        {sectionProducts.map((p) => (
-                          <ProductCard
-                            key={p.id}
-                            product={p}
-                            reason={p.recommendation || p.shortDescription}
-                            compact
-                            showProsCons
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {!sectionProducts.length && section.ctaLines?.length ? (
-                    <div className="mt-6 rounded-2xl border border-accent/25 bg-gradient-to-br from-accent/5 to-card p-5">
-                      <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-accent">
-                        <ShoppingBag className="size-3.5" aria-hidden />
-                        Produits utiles
+                        Pour aller plus loin
                       </h3>
                       <ul className="mt-3 space-y-2.5">
                         {section.ctaLines.map((line) => (

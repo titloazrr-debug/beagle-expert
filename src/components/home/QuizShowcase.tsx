@@ -39,7 +39,7 @@ const HOME_COPY: Record<
   "alimentation-croquettes": {
     badge: "Nouveau · ~3 min",
     pitch:
-      "Âge, silhouette, activité et digestion : quel type de croquettes correspond le mieux à VOTRE Beagle ?",
+      "Âge, silhouette, activité et digestion : quel type de croquettes correspond le mieux à votre Beagle ?",
     cta: "Trouver son profil",
   },
   "risque-obesite": {

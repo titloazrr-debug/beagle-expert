@@ -3,7 +3,6 @@
 import type { Product } from "@/types";
 import { ExternalLink, UserCheck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { ProductRating } from "@/components/ProductRating";
 import { ProductProsCons } from "@/components/ProductProsCons";
 import { formatPrice, cn } from "@/lib/utils";
 
@@ -93,9 +92,6 @@ export function ProductCard({
               {product.name}
             </h3>
             <p className="mt-1 text-sm font-bold text-accent">{price}</p>
-            {product.rating !== undefined && (
-              <ProductRating rating={product.rating} className="mt-1.5" />
-            )}
           </div>
         </div>
 

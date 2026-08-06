@@ -1,15 +1,15 @@
 {
   "slug": "alimentation-croquettes",
-  "title": "Quelles croquettes adaptées à mon Beagle ?",
-  "subtitle": "Âge, silhouette, activité et digestion : un profil alimentaire en quelques minutes",
+  "title": "Quelles croquettes choisir pour mon Beagle ?",
+  "subtitle": "Âge, silhouette, activité et digestion : trouvez le type de croquettes adapté à votre Beagle",
   "emoji": "🥣",
   "description": "Un Beagle encore en croissance n’a pas les mêmes besoins qu’un adulte très actif, un chien stérilisé qui prend facilement du poids ou un senior. Ce quiz analyse son profil général pour vous indiquer le type de croquettes le plus cohérent avec sa situation.",
   "estimatedMinutes": 3,
   "mode": "profile",
   "ctaLabel": "Trouver son profil",
   "seo": {
-    "title": "Quelles croquettes pour mon Beagle ? Quiz | Beagle Expert",
-    "description": "Chiot, adulte, stérilisé, gourmand, sensible ou senior : répondez à 7 questions pour identifier le type de croquettes adapté au profil de votre Beagle."
+    "title": "Quelles croquettes choisir pour mon Beagle ? Quiz | Beagle Expert",
+    "description": "Chiot, adulte, stérilisé, gourmand, sensible ou senior : répondez à 7 questions pour identifier le type de croquettes adapté à votre Beagle."
   },
   "basedOn": [
     "content/raw/guide_alimentation_beagle.md",

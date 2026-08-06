@@ -13,6 +13,7 @@ const nav = [
   { href: "/#fiches", label: "Fiches" },
   { href: "/fiches", label: "Toutes les fiches" },
   { href: "/quizzes", label: "Tous les quiz" },
+  { href: "/a-propos", label: "À propos" },
 ];
 
 export function Header() {

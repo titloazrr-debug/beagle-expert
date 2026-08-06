@@ -17,15 +17,15 @@ const featuredQuizzes = [
   },
   {
     e: "🥣",
-    t: "Quelles croquettes adaptées à mon Beagle ?",
+    t: "Quelles croquettes choisir pour mon Beagle ?",
     d: "Âge, silhouette, activité et digestion",
     href: "/quiz/alimentation-croquettes",
     badge: "Nouveau",
   },
   {
     e: "🛡️",
-    t: "Quelle protection santé ?",
-    d: "Budget, âge et niveau de couverture",
+    t: "Quelle assurance santé ?",
+    d: "Priorités, budget et niveau de couverture",
     href: "/quiz/assurance-sante-beagle",
     badge: "Assurance",
   },
