@@ -3,7 +3,7 @@ import { Hero } from "@/components/home/Hero";
 import { QuizShowcase } from "@/components/home/QuizShowcase";
 import { FichesPreview } from "@/components/home/FichesPreview";
 import { Button } from "@/components/ui/button";
-import { Compass } from "lucide-react";
+import { Calculator, Compass, TrendingUp } from "lucide-react";
 import { fiches } from "@/data/fiches";
 import { quizzes } from "@/data/quizzes";
 import { getTenant } from "@/lib/tenant";
@@ -55,6 +55,38 @@ export default function HomePage() {
                   Faire le quiz « Suis-je prêt ? »
                 </Link>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Calculateur budget interactif */}
+      <section className="border-t border-border/60 bg-gradient-to-b from-background to-muted/30 py-16 sm:py-20">
+        <div className="container-page">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-3xl shadow-sm ring-1 ring-primary/20">
+              <Calculator className="size-7 text-primary" aria-hidden />
+            </span>
+            <h2 className="mt-4 font-[family-name:var(--font-display)] text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">
+              Combien coûte vraiment un {tenant.breed} ?
+            </h2>
+            <p className="measure-wide mx-auto mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Alimentation, assurance, GPS, soins vétérinaires… Notre
+              calculateur interactif vous donne une estimation personnalisée
+              en 30 secondes. Ajustez les paramètres et voyez le budget
+              évoluer en temps réel.
+            </p>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <Button asChild size="xl" className="min-h-14 gap-2 text-base shadow-lg sm:text-lg">
+                <Link href="/fiche/budget-equipement">
+                  <Calculator className="size-5" aria-hidden />
+                  Estimer mon budget
+                </Link>
+              </Button>
+              <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                <TrendingUp className="size-4 text-primary" aria-hidden />
+                Gratuit, sans inscription
+              </p>
             </div>
           </div>
         </div>
