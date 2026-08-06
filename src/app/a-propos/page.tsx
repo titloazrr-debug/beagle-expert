@@ -56,7 +56,14 @@ export default function AProposPage() {
                     quiz pratiques
                   </strong>{" "}
                   pour transformer ces points en actions concrètes au quotidien
-                  — avant une adoption, ou dès qu’une question se pose.
+                  — avant une adoption, ou dès qu&apos;une question se pose.
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  Nouveau sur le site ? Commencez par{" "}
+                  <Link href="/par-ou-commencer" className="font-semibold text-primary underline underline-offset-2 hover:no-underline">
+                    notre guide « Par où commencer ? »
+                  </Link>{" "}
+                  pour être redirigé vers le contenu adapté à votre situation.
                 </p>
               </div>
             </div>

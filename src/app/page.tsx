@@ -3,6 +3,7 @@ import { Hero } from "@/components/home/Hero";
 import { QuizShowcase } from "@/components/home/QuizShowcase";
 import { FichesPreview } from "@/components/home/FichesPreview";
 import { Button } from "@/components/ui/button";
+import { Compass } from "lucide-react";
 import { fiches } from "@/data/fiches";
 import { quizzes } from "@/data/quizzes";
 import { getTenant } from "@/lib/tenant";
@@ -15,6 +16,18 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+
+      <section className="border-b border-border/40 py-6">
+        <div className="container-page">
+          <Button asChild variant="outline" size="lg" className="w-full gap-2 border-primary/30 bg-primary/5 hover:bg-primary/10 sm:w-auto">
+            <Link href="/par-ou-commencer">
+              <Compass className="size-4" aria-hidden />
+              Par où commencer ? — un guide pour les nouveaux visiteurs
+            </Link>
+          </Button>
+        </div>
+      </section>
+
       <QuizShowcase quizzes={quizzes} />
       <FichesPreview fiches={fiches} />
 

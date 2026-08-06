@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const nav = [
+  { href: "/par-ou-commencer", label: "Par où commencer" },
   { href: "/#quiz", label: "Quiz" },
   { href: "/#fiches", label: "Fiches" },
   { href: "/fiches", label: "Toutes les fiches" },
