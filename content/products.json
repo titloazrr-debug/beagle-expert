@@ -1,0 +1,215 @@
+[
+  {
+    "id": "ultra-premium-direct",
+    "name": "Ultra Premium Direct",
+    "category": "croquettes",
+    "price": "environ 35–55€ / 12 kg",
+    "shortDescription": "Croquettes françaises, fort en protéines animales, formules adulte / chiot / light — excellent rapport qualité-prix pour Beagle gourmand.",
+    "recommendation": "Nous recommandons Ultra Premium Direct pour les Beagles. Ces croquettes françaises offrent un excellent rapport qualité-prix, avec une forte teneur en protéines animales et des formules adaptées (adulte, chiot, light). Idéal pour limiter le risque de surpoids, très fréquent chez cette race gourmande.",
+    "affiliateUrl": "#",
+    "imageEmoji": "🥣",
+    "badge": "Qualité-prix",
+    "tags": [
+      "croquettes",
+      "alimentation",
+      "ultra",
+      "light",
+      "surpoids",
+      "chiot",
+      "adulte",
+      "maintien",
+      "ideal",
+      "controle"
+    ],
+    "categories": ["alimentation", "croquettes", "budget"],
+    "advantages": [
+      "Fort taux de protéines animales, adapté aux besoins d’un chien actif",
+      "Formules chiot / adulte / light pour ajuster calories et stade de vie",
+      "Prix au kg souvent plus accessible que les grandes marques « race »",
+      "Vente directe : traçabilité et composition lisibles",
+      "Bon levier pour stabiliser le poids d’un Beagle gourmand"
+    ],
+    "disadvantages": [
+      "Pas de croquette « race Beagle » dédiée comme chez certains leaders",
+      "Moins de présence en animalerie : commande surtout en ligne",
+      "Comme toute croquette sèche, l’hydratation reste à surveiller",
+      "La transition alimentaire doit rester progressive (7–10 jours)"
+    ],
+    "bestFor": "Propriétaires qui veulent une croquette premium française, un contrôle calorique simple et un bon rapport qualité-prix pour un Beagle adulte ou en tendance surpoids.",
+    "rating": 4.5
+  },
+  {
+    "id": "tractive-gps",
+    "name": "Tractive GPS Tracker",
+    "category": "collier_gps",
+    "price": "environ 40–50€ + abo 5–10€/mois",
+    "shortDescription": "Suivi en temps réel, clôtures virtuelles et bonne autonomie — filet de sécurité pour Beagle fugueur.",
+    "recommendation": "Le Beagle étant un chien de chasse avec un fort instinct de fugue, un collier GPS est fortement recommandé. Tractive est actuellement l’une des meilleures solutions : suivi en temps réel, clôtures virtuelles et bonne autonomie. Particulièrement utile dès les premières sorties hors laisse.",
+    "affiliateUrl": "#",
+    "imageEmoji": "📡",
+    "badge": "Sécurité",
+    "tags": [
+      "gps",
+      "tractive",
+      "securite",
+      "fugueur",
+      "campagne",
+      "rappel",
+      "pret",
+      "vigilance"
+    ],
+    "categories": ["equipement", "gps", "education", "budget"],
+    "advantages": [
+      "Localisation quasi temps réel via l’app (réseau cellulaire)",
+      "Clôtures virtuelles et alertes de sortie de zone",
+      "Écosystème mature (app, historique, modes LIVE)",
+      "Autonomie correcte pour un usage quotidien",
+      "Très pertinent tant que le rappel hors laisse n’est pas fiable"
+    ],
+    "disadvantages": [
+      "Abonnement mensuel obligatoire pour le suivi",
+      "Dépendance au réseau mobile (zones blanches possibles en forêt profonde)",
+      "Poids et volume sur le collier d’un petit Beagle à surveiller",
+      "Ce n’est pas un substitut au rappel ni à une clôture physique"
+    ],
+    "bestFor": "Beagles fugueurs, sorties campagne/forêt, jardins non 100 % sécurisés, ou rappel encore en construction.",
+    "rating": 4.6
+  },
+  {
+    "id": "santevet",
+    "name": "SantéVet",
+    "category": "assurance",
+    "price": "environ 15–35€/mois",
+    "shortDescription": "Assurance santé chien pour anticiper otites, articulations, imprévus — frais véto mieux maîtrisés.",
+    "recommendation": "Le Beagle est prédisposé à certaines pathologies (otites, dysplasie, obésité, problèmes oculaires). Une assurance santé comme SantéVet permet de faire face sereinement aux frais vétérinaires, qui peuvent rapidement devenir élevés.",
+    "affiliateUrl": "#",
+    "imageEmoji": "🛡️",
+    "badge": "Prévention",
+    "tags": [
+      "assurance",
+      "sante",
+      "santevet",
+      "budget",
+      "pret",
+      "vigilance"
+    ],
+    "categories": ["sante", "budget", "assurance"],
+    "advantages": [
+      "Aide à absorber otites, bilans et imprévus (coûts souvent sous-estimés)",
+      "Formules modulables selon budget et niveau de couverture",
+      "Utile dès le jeune âge pour limiter les exclusions liées à l’âge",
+      "Complément rassurant pour une race prédisposée (oreilles, poids, articulations)",
+      "Lisse le budget santé sur l’année"
+    ],
+    "disadvantages": [
+      "Cotisation mensuelle + éventuelles franchises / plafonds",
+      "Délais de carence et exclusions (maladies préexistantes)",
+      "Il faut lire attentivement le tableau de garanties",
+      "Pas un substitut aux gestes de prévention (hygiène oreilles, poids, etc.)"
+    ],
+    "bestFor": "Foyers qui veulent lisser les frais véto d’un Beagle, surtout si le budget ne tolère pas une grosse facture d’un coup.",
+    "rating": 4.2
+  },
+  {
+    "id": "kong-classic",
+    "name": "Kong Classic",
+    "category": "jouet",
+    "price": "environ 10–15€",
+    "shortDescription": "Jouet farcissable ultra-résistant : occupation mentale et calme en absence.",
+    "recommendation": "Le Kong Classic est un excellent choix pour occuper un Beagle. Farcissable de friandises, il stimule mentalement le chien et aide à réduire l’anxiété de séparation, un point sensible chez cette race de meute.",
+    "affiliateUrl": "#",
+    "imageEmoji": "🔴",
+    "badge": "Indispensable",
+    "tags": [
+      "kong",
+      "jouet",
+      "occupation",
+      "solitude",
+      "destructeur",
+      "gourmand",
+      "education",
+      "pret"
+    ],
+    "categories": ["education", "jouets", "budget"],
+    "advantages": [
+      "Très résistant pour un Beagle motivé / mâchouilleur",
+      "Farcissable : allonge le temps d’occupation et active le cerveau",
+      "Utile pour les absences courtes et le calme en caisse/panier",
+      "Prix d’entrée accessible, durable si bien choisi (taille / modèle)",
+      "Compatible renforcement positif (récompense longue)"
+    ],
+    "disadvantages": [
+      "Les calories des garnitures comptent dans la ration du jour",
+      "Un Kong trop facile devient vite un « snack express »",
+      "Surveillance recommandée au début (morceaux trop durs / usage abusif)",
+      "Ne remplace pas la marche ni le travail de flair en extérieur"
+    ],
+    "bestFor": "Beagles gourmands, absences régulières, besoin d’occupation solo et de canaliser la mastication destructive.",
+    "rating": 4.7
+  },
+  {
+    "id": "tapis-fouille",
+    "name": "Tapis de fouille (Snuffle Mat)",
+    "category": "jouet",
+    "price": "environ 15–30€",
+    "shortDescription": "Active le flair exceptionnel du Beagle et le fatigue mentalement en douceur.",
+    "recommendation": "Le Beagle possède l’un des meilleurs odorats canins. Un tapis de fouille (snuffle mat) exploite parfaitement cet instinct et fatigue mentalement le chien, ce qui est très utile pour canaliser son énergie.",
+    "affiliateUrl": "#",
+    "imageEmoji": "🌿",
+    "badge": "Flair",
+    "tags": [
+      "fouille",
+      "flair",
+      "jouet",
+      "mental",
+      "occupation",
+      "aboiement",
+      "education",
+      "vigilance"
+    ],
+    "categories": ["education", "jouets", "budget"],
+    "advantages": [
+      "Exploite le flair exceptionnel du Beagle (besoin naturel)",
+      "Fatigue mentale rapide, souvent en 10–20 minutes",
+      "Peu d’effort physique pour le maître, fort impact bien-être",
+      "Idéal par mauvais temps ou en appartement",
+      "Peut remplacer une partie des croquettes du repas (enrichissement)"
+    ],
+    "disadvantages": [
+      "Moins « indestructible » qu’un Kong chez un gros mâcheur",
+      "À laver régulièrement (salive, croquettes, odeurs)",
+      "Certains chiens arrachent le tissu s’ils sont très frustrés",
+      "Moins adapté comme occupation longue en totale solitude"
+    ],
+    "bestFor": "Beagles nerveux ou sous-stimulés mentalement, jours de pluie, travail du calme via le flair à la maison.",
+    "rating": 4.5
+  },
+  {
+    "id": "nettoyant-auriculaire",
+    "name": "Nettoyant auriculaire",
+    "category": "soin",
+    "price": "environ 10–15€",
+    "shortDescription": "Soin de base pour oreilles tombantes : prévention simple des otites.",
+    "recommendation": "Les oreilles tombantes du Beagle favorisent les otites. Un nettoyage régulier avec un nettoyant auriculaire adapté est l’un des gestes de prévention les plus importants.",
+    "affiliateUrl": "#",
+    "imageEmoji": "👂",
+    "badge": "Essentiel",
+    "tags": ["soin", "oreilles", "sante", "otite", "pret", "hygiene"],
+    "categories": ["soins", "sante", "budget"],
+    "advantages": [
+      "Geste simple et peu coûteux face à un risque élevé d’otites",
+      "Aide à limiter cérumen, odeurs et humidité résiduelle",
+      "Utile après bains, baignades ou journées humides",
+      "Habitue le chien au contact des oreilles (examens plus faciles)",
+      "Produit de base à toujours avoir dans l’armoire à pharmacie canine"
+    ],
+    "disadvantages": [
+      "Ne traite pas une otite installée (avis véto indispensable)",
+      "Un usage trop agressif ou trop fréquent peut irriter",
+      "Il faut le bon produit (pas d’alcool / remèdes maison hasardeux)",
+      "Sans séchage et contrôle régulier, l’effet préventif diminue"
+    ],
+    "bestFor": "Tous les Beagles (oreilles tombantes), surtout en climat humide, après natation, ou dès les premiers signes de démangeaisons.",
+    "rating": 4.8
+  }
+]

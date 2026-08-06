@@ -1,26 +1,242 @@
 @import "tailwindcss";
 
+/* ——— Design system Beagle Expert (contraste & lisibilité renforcés) ——— */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Fonds doux beige */
+  --background: #f7f1e8;
+  --foreground: #1a1410;
+  --card: #fffcf7;
+  --card-foreground: #1a1410;
+
+  /* Secondaire : fond pastel mais texte bien sombre */
+  --muted: #ebe0d0;
+  --muted-foreground: #3d3128;
+  --border: #d0bfa8;
+  --input: #d0bfa8;
+  --ring: #1f4a2c;
+
+  /* Vert forêt plus dense pour contraste WCAG */
+  --primary: #1f4a2c;
+  --primary-foreground: #ffffff;
+  --primary-hover: #163822;
+
+  /* Brun Beagle plus soutenu */
+  --accent: #6b3f1a;
+  --accent-foreground: #fffdf8;
+  --accent-soft: #b88952;
+
+  --secondary: #e5d6c2;
+  --secondary-foreground: #1f1611;
+  --destructive: #9b2c2c;
+  --destructive-foreground: #ffffff;
+  --success: #1f4a2c;
+  --warning: #9a6412;
+  --warning-bg: #fde8b8;
+  --warning-fg: #3d2808;
+  --key-bg: #e6f0e8;
+  --key-border: #1f4a2c;
+  --key-fg: #122a1a;
+
+  --radius: 0.875rem;
+  --shadow-soft: 0 4px 24px -4px rgb(26 20 16 / 0.1);
+  --shadow-card: 0 2px 14px -2px rgb(26 20 16 / 0.08);
+
+  /* Typo confort lecture longue */
+  --text-body: 1.0625rem; /* 17px */
+  --text-body-lg: 1.125rem; /* 18px */
+  --leading-body: 1.75;
+  --leading-tight: 1.3;
+  --measure: 40rem; /* ~640px — largeur de lecture idéale */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-warning-bg: var(--warning-bg);
+  --color-warning-fg: var(--warning-fg);
+  --color-key-bg: var(--key-bg);
+  --color-key-border: var(--key-border);
+  --color-key-fg: var(--key-fg);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 10px);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    font-weight: 450;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Hiérarchie titres — foncés, lisibles */
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--foreground);
+    font-weight: 800;
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: clamp(1.875rem, 1.4rem + 1.5vw, 2.75rem);
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    font-size: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+  }
+
+  h3 {
+    font-size: clamp(1.125rem, 1.05rem + 0.35vw, 1.35rem);
+    font-weight: 700;
+  }
+
+  p {
+    line-height: var(--leading-body);
+  }
+
+  strong,
+  b {
+    font-weight: 700;
+    color: var(--foreground);
+  }
+
+  a {
+    color: var(--primary);
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 28%, transparent);
+    color: var(--foreground);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Largeur de lecture confortable pour longs textes */
+  .measure {
+    max-width: var(--measure);
+  }
+
+  .measure-wide {
+    max-width: 48rem;
+  }
+
+  .container-page {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-page {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .gradient-hero {
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 0%, rgb(31 74 44 / 0.1), transparent),
+      radial-gradient(ellipse 60% 50% at 90% 10%, rgb(107 63 26 / 0.08), transparent),
+      var(--background);
+  }
+
+  .card-hover {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+    border-color: color-mix(in oklab, var(--primary) 35%, var(--border));
+  }
+
+  /* Corps de texte “article” */
+  .prose-readable {
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    color: var(--foreground);
+  }
+
+  .prose-readable li {
+    color: var(--foreground);
+    line-height: var(--leading-body);
+  }
+}
+
+/* Progress bar shimmer */
+.progress-fill {
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    color-mix(in oklab, var(--primary) 70%, var(--accent-soft)),
+    var(--primary)
+  );
+  background-size: 200% 100%;
+  animation: progress-shine 2.5s linear infinite;
+}
+
+@keyframes progress-shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Focus visible accessibilité — plus visible */
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
 }

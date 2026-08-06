@@ -1,0 +1,309 @@
+{
+  "slug": "risque-obesite",
+  "title": "Mon Beagle est-il à risque de surpoids ?",
+  "subtitle": "Portions, activité, silhouette et outils adaptés.",
+  "emoji": "⚖️",
+  "description": "Gourmandise, portions et activité : 6 questions pour estimer le risque de surpoids et recevoir des recommandations issues des guides alimentation, santé et budget.",
+  "estimatedMinutes": 3,
+  "mode": "product-score",
+  "ctaLabel": "Voir mon bilan & mes conseils",
+  "seo": {
+    "title": "Quiz surpoids Beagle — risque d'obésité et croquettes",
+    "description": "Évaluez le risque de surpoids de votre Beagle et découvrez croquettes (Royal Canin, Hill's, Pro Plan) et outils d'occupation adaptés."
+  },
+  "basedOn": [
+    "content/raw/dossier_sante_beagle.md",
+    "content/raw/guide_alimentation_beagle.md",
+    "content/raw/guide_budget_beagle.md"
+  ],
+  "questions": [
+    {
+      "id": "cotes",
+      "question": "Quand vous passez les mains sur ses flancs…",
+      "helper": "Test des côtes : simple et utile à la maison.",
+      "options": [
+        {
+          "id": "c1",
+          "label": "Je sens facilement les côtes sous une fine couche",
+          "scores": {
+            "ideal": 3,
+            "maintien": 2
+          }
+        },
+        {
+          "id": "c2",
+          "label": "Il faut appuyer un peu pour les sentir",
+          "scores": {
+            "surpoids": 2,
+            "light": 2,
+            "royal": 2
+          }
+        },
+        {
+          "id": "c3",
+          "label": "Je ne sens presque pas les côtes",
+          "scores": {
+            "surpoids": 3,
+            "light": 3,
+            "royal": 3
+          }
+        },
+        {
+          "id": "c4",
+          "label": "Côtes très saillantes — autre sujet possible",
+          "scores": {
+            "maigre": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "endurance",
+      "question": "Lors des promenades, son endurance…",
+      "options": [
+        {
+          "id": "e1",
+          "label": "Bonne : rythme régulier, il en redemande",
+          "scores": {
+            "ideal": 2,
+            "maintien": 1
+          }
+        },
+        {
+          "id": "e2",
+          "label": "Il s'essouffle plus vite ou se fatigue tôt",
+          "scores": {
+            "surpoids": 3,
+            "light": 2,
+            "balle": 2
+          }
+        },
+        {
+          "id": "e3",
+          "label": "Variable selon les jours",
+          "scores": {
+            "surpoids": 1,
+            "controle": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "ration",
+      "question": "Comment gérez-vous la ration ?",
+      "options": [
+        {
+          "id": "r1",
+          "label": "Pesée précise + ajustement au corps du chien",
+          "scores": {
+            "ideal": 2,
+            "maintien": 1
+          }
+        },
+        {
+          "id": "r2",
+          "label": "Grosso modo au gobelet",
+          "scores": {
+            "surpoids": 1,
+            "controle": 2,
+            "royal": 1
+          }
+        },
+        {
+          "id": "r3",
+          "label": "Libre-service ou il obtient souvent un supplément",
+          "scores": {
+            "surpoids": 3,
+            "light": 3,
+            "royal": 2,
+            "balle": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "friandises",
+      "question": "Friandises, restes de table, quémandage ?",
+      "options": [
+        {
+          "id": "fr1",
+          "label": "Comptés dans la ration, quantités faibles",
+          "scores": {
+            "ideal": 1
+          }
+        },
+        {
+          "id": "fr2",
+          "label": "Plusieurs par jour, pas vraiment comptés",
+          "scores": {
+            "surpoids": 2,
+            "controle": 2,
+            "light": 1
+          }
+        },
+        {
+          "id": "fr3",
+          "label": "Le roi de la table — difficile de résister",
+          "scores": {
+            "surpoids": 3,
+            "light": 2,
+            "royal": 2,
+            "balle": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "activite",
+      "question": "Activité physique quotidienne ?",
+      "helper": "Plusieurs sources citent au moins ~1 h d'exercice par jour.",
+      "options": [
+        {
+          "id": "a1",
+          "label": "1 h ou plus (marches actives, jeux, flair)",
+          "scores": {
+            "ideal": 1,
+            "maintien": 1,
+            "hills": 1
+          }
+        },
+        {
+          "id": "a2",
+          "label": "20–40 min, plutôt tranquille",
+          "scores": {
+            "surpoids": 2,
+            "light": 2,
+            "balle": 2
+          }
+        },
+        {
+          "id": "a3",
+          "label": "Très sédentaire la plupart des jours",
+          "scores": {
+            "surpoids": 3,
+            "light": 3,
+            "royal": 2,
+            "balle": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "question": "Profil du chien",
+      "options": [
+        {
+          "id": "ag1",
+          "label": "Chiot / jeune en croissance (2–12 mois)",
+          "scores": {
+            "chiot": 3,
+            "proplan": 3
+          }
+        },
+        {
+          "id": "ag2",
+          "label": "Adulte (environ 1–7 ans)",
+          "scores": {
+            "royal": 2,
+            "hills": 2,
+            "adulte": 2
+          }
+        },
+        {
+          "id": "ag3",
+          "label": "Senior ou nettement moins actif qu'avant",
+          "scores": {
+            "surpoids": 2,
+            "light": 2,
+            "royal": 2,
+            "senior": 2
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "risque-eleve",
+      "title": "Risque de surpoids élevé — on reprend la main",
+      "description": "Plusieurs signaux (silhouette, ration, friandises ou sédentarité) pointent vers un excès de poids. Objectif : calories contrôlées, activité progressive et suivi vétérinaire.",
+      "tags": [
+        "surpoids",
+        "light",
+        "royal"
+      ],
+      "productIds": [
+        "ultra-premium-direct",
+        "kong-classic",
+        "tapis-fouille"
+      ],
+      "reasons": [
+        "Ultra Premium Direct : formules adaptées (dont light) pour limiter le surpoids",
+        "Kong farci avec une partie de la ration pour ralentir et occuper",
+        "Tapis de fouille : dépense mentale sans multiplier les calories « en plus »"
+      ]
+    },
+    {
+      "id": "vigilance",
+      "title": "Zone grise — vigilance utile",
+      "description": "Pas forcément d'obésité, mais le Beagle bascule vite. Ajustez portions, freinez les quémandages et visez une heure d'activité quand c'est possible.",
+      "tags": [
+        "controle",
+        "surpoids",
+        "light"
+      ],
+      "productIds": [
+        "ultra-premium-direct",
+        "tapis-fouille",
+        "kong-classic"
+      ],
+      "reasons": [
+        "Repasser sur une alimentation qualité-prix adaptée au Beagle gourmand",
+        "Occupation olfactive pour éviter le grignotage par ennui",
+        "Kong pour structurer les repas / récompenses"
+      ]
+    },
+    {
+      "id": "ideal",
+      "title": "Silhouette plutôt idéale — continuez ainsi",
+      "description": "Habitudes et condition semblent saines. Gardez la régularité, surtout si l'activité baisse ou après un changement de rythme de vie.",
+      "tags": [
+        "ideal",
+        "maintien"
+      ],
+      "productIds": [
+        "ultra-premium-direct",
+        "nettoyant-auriculaire"
+      ],
+      "reasons": [
+        "Gardez le cap avec des croquettes adaptées et des portions mesurées",
+        "Le nettoyant auriculaire reste un geste de prévention utile au quotidien"
+      ]
+    },
+    {
+      "id": "chiot",
+      "title": "Profil chiot — croissance avant « light »",
+      "description": "En croissance, priorisez une formule puppy adaptée plutôt qu'un régime adulte light. Éduquez déjà le quémandage : les habitudes se prennent tôt.",
+      "tags": [
+        "chiot",
+        "proplan"
+      ],
+      "productIds": [
+        "ultra-premium-direct",
+        "kong-classic",
+        "tapis-fouille"
+      ],
+      "reasons": [
+        "Ultra Premium Direct propose des formules chiot adaptées à la croissance",
+        "Kong et snuffle : de bonnes habitudes d'occupation dès le plus jeune âge"
+      ]
+    }
+  ],
+  "productIds": [
+    "ultra-premium-direct",
+    "kong-classic",
+    "tapis-fouille",
+    "nettoyant-auriculaire",
+    "santevet"
+  ]
+}

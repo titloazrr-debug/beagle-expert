@@ -1,0 +1,130 @@
+[
+  {
+    "id": "alim-upd-vs-royal-canin",
+    "title": "Ultra Premium Direct vs Royal Canin Beagle Adult",
+    "category": "alimentation",
+    "emoji": "🥣",
+    "intro": "Deux approches solides pour nourrir un Beagle : une croquette française polyvalente au bon prix, face à une formule « race » très ciblée embonpoint et digeste. Le meilleur choix dépend surtout du poids de votre chien et de votre budget annuel.",
+    "ficheSlugs": ["alimentation", "budget-equipement", "sante"],
+    "left": {
+      "productId": "ultra-premium-direct",
+      "name": "Ultra Premium Direct",
+      "tagline": "Premium direct, rapport qualité-prix",
+      "points": [
+        "Fort en protéines animales, formules adulte / light",
+        "Prix au kg souvent plus doux sur l’année",
+        "Flexible selon l’âge et l’activité",
+        "Idéal si vous ajustez déjà bien la ration"
+      ]
+    },
+    "right": {
+      "name": "Royal Canin Beagle Adult",
+      "tagline": "Formule race, focus embonpoint",
+      "imageEmoji": "🏅",
+      "points": [
+        "Kibble et formule pensés pour la morphologie Beagle",
+        "Souvent plébiscitée pour le contrôle du poids",
+        "Large disponibilité (animaleries, véto, e-commerce)",
+        "Prix généralement plus élevé au kilo"
+      ]
+    },
+    "verdict": "Choisissez Ultra Premium Direct si vous voulez un excellent équilibre composition / budget et une formule light en cas de tendance au gras. Orientez-vous vers une formule race type Royal Canin Beagle Adult si votre véto privilégie ce profil ou si votre Beagle a déjà un embonpoint installé et besoin d’un cadre très spécifique. Dans les deux cas : peser la ration, compter les friandises, et valider le poids de forme avec un professionnel.",
+    "disclaimer": "Comparaison informative, non exhaustive. Les besoins varient selon l’âge, l’activité et l’état de santé."
+  },
+  {
+    "id": "gps-tractive-vs-weenect",
+    "title": "Tractive vs Weenect",
+    "category": "gps",
+    "emoji": "📡",
+    "intro": "Pour un Beagle au flair « interrupteur d’écoute », le GPS est un filet de sécurité — pas une baguette magique. Tractive et Weenect sont les deux références grand public les plus comparées en France.",
+    "ficheSlugs": ["education-comportement", "budget-equipement"],
+    "left": {
+      "productId": "tractive-gps",
+      "name": "Tractive GPS",
+      "tagline": "Écosystème riche, suivi LIVE",
+      "points": [
+        "App mature, historique et modes LIVE",
+        "Clôtures virtuelles et alertes de zone",
+        "Large communauté / retours d’usage",
+        "Abonnement nécessaire pour le service"
+      ]
+    },
+    "right": {
+      "name": "Weenect",
+      "tagline": "Alternative francophone populaire",
+      "imageEmoji": "📍",
+      "points": [
+        "Positionnement fort sur le marché FR",
+        "Suivi GPS + options de rappel selon modèles",
+        "Abonnement également requis",
+        "Comparer autonomie, couverture et SAV au moment de l’achat"
+      ]
+    },
+    "verdict": "Tractive se distingue souvent par l’expérience app et les fonctions de zone ; Weenect reste une alternative sérieuse, surtout si une offre locale ou un modèle précis vous convient mieux. Comparez l’abonnement sur 12–24 mois, l’autonomie réelle et la couverture réseau dans vos zones de promenade. Aucun GPS ne remplace clôture, longe et travail de rappel.",
+    "disclaimer": "Offres et forfaits évoluent : vérifiez les conditions actuelles avant d’acheter."
+  },
+  {
+    "id": "jouets-kong-vs-snuffle",
+    "title": "Kong Classic vs Tapis de fouille",
+    "category": "jouets",
+    "emoji": "🧩",
+    "intro": "Occupation ≠ une seule boîte à outils. Kong et snuffle mat répondent à deux besoins différents du Beagle : mastication / résolution vs flair / fouille.",
+    "ficheSlugs": ["education-comportement", "alimentation", "budget-equipement", "histoire-standard"],
+    "left": {
+      "productId": "kong-classic",
+      "name": "Kong Classic",
+      "tagline": "Mastication + farce longue durée",
+      "points": [
+        "Très résistant, idéal mâchouilleur",
+        "Parfait pour absences courtes",
+        "Allonge le temps de « travail » alimentaire",
+        "Calories des garnitures à compter"
+      ]
+    },
+    "right": {
+      "productId": "tapis-fouille",
+      "name": "Tapis de fouille",
+      "tagline": "Flair et fatigue mentale douce",
+      "points": [
+        "Exploite l’odorat exceptionnel du Beagle",
+        "Fatigue mentale rapide, peu d’espace",
+        "Super par temps de pluie / en appart",
+        "Moins indestructible si le chien arrache"
+      ]
+    },
+    "verdict": "Ce n’est pas l’un ou l’autre : le duo est souvent le meilleur combo. Kong pour canaliser la mâchoire et les absences ; tapis de fouille pour le flair et le calme mental. Commencez par celui qui colle au problème du moment (destruction vs sous-stimulation / aboiements d’ennui).",
+    "disclaimer": "Supervisez les premières séances et adaptez la difficulté pour éviter frustration ou ingestion de tissu."
+  },
+  {
+    "id": "assurance-santevet-vs-epargne",
+    "title": "SantéVet vs épargne / sans assurance",
+    "category": "assurance",
+    "emoji": "🛡️",
+    "intro": "Assurer un Beagle n’est pas obligatoire, mais les otites, bilans et imprévus s’additionnent. Voici une lecture transparente entre couverture assurantielle et « auto-assurance » via une cagnotte.",
+    "ficheSlugs": ["sante", "soins-entretien", "budget-equipement"],
+    "left": {
+      "productId": "santevet",
+      "name": "SantéVet (assurance)",
+      "tagline": "Lisser les gros postes de dépenses",
+      "points": [
+        "Protège contre les pics de frais (chirurgie, bilans)",
+        "Utile sur une race exposée (oreilles, poids, articulations)",
+        "Cotisation mensuelle prévisible",
+        "Exclusions, franchises et plafonds à lire"
+      ]
+    },
+    "right": {
+      "name": "Épargne dédiée (sans contrat)",
+      "tagline": "Flexibilité totale, risque porté seul",
+      "imageEmoji": "💰",
+      "points": [
+        "Aucun questionnaire ni délai de carence",
+        "Vous gardez 100 % du choix des soins",
+        "Il faut discipliner l’épargne chaque mois",
+        "Une seule grosse facture peut vider la cagnotte"
+      ]
+    },
+    "verdict": "L’assurance a du sens si une facture de plusieurs centaines d’euros mettrait le budget en difficulté, ou si vous préférez la prévisibilité. L’épargne dédiée peut suffire si vous mettez de côté régulièrement un montant réaliste (et que vous acceptez le risque d’un gros imprévu). Beaucoup de foyers combinent : petite cagnotte + formule d’assurance raisonnable. Ce n’est jamais un substitut à la prévention (oreilles, poids, bilans).",
+    "disclaimer": "Les garanties d’assurance varient fortement. Lisez le contrat ; ce site ne fournit pas de conseil assurantiel personnalisé."
+  }
+]

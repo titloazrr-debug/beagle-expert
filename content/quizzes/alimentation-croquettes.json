@@ -1,0 +1,310 @@
+{
+  "slug": "alimentation-croquettes",
+  "title": "Quelles croquettes adaptées à mon Beagle ?",
+  "subtitle": "Âge, silhouette, activité et digestion : un profil alimentaire en quelques minutes",
+  "emoji": "🥣",
+  "description": "Un Beagle encore en croissance n’a pas les mêmes besoins qu’un adulte très actif, un chien stérilisé qui prend facilement du poids ou un senior. Ce quiz analyse son profil général pour vous indiquer le type de croquettes le plus cohérent avec sa situation.",
+  "estimatedMinutes": 3,
+  "mode": "profile",
+  "ctaLabel": "Trouver son profil",
+  "seo": {
+    "title": "Quelles croquettes pour mon Beagle ? Quiz | Beagle Expert",
+    "description": "Chiot, adulte, stérilisé, gourmand, sensible ou senior : répondez à 7 questions pour identifier le type de croquettes adapté au profil de votre Beagle."
+  },
+  "basedOn": [
+    "content/raw/guide_alimentation_beagle.md",
+    "content/raw/dossier_sante_beagle.md"
+  ],
+  "productIds": ["ultra-premium-direct"],
+  "questions": [
+    {
+      "id": "age",
+      "question": "Quel âge a votre Beagle ?",
+      "helper": "La croissance nécessite une recette spécifiquement formulée pour les chiots.",
+      "options": [
+        {
+          "id": "age-lt4m",
+          "label": "Moins de 4 mois",
+          "scores": { "puppy_young": 1 }
+        },
+        {
+          "id": "age-4-11m",
+          "label": "De 4 à 11 mois",
+          "scores": { "puppy": 1 }
+        },
+        {
+          "id": "age-1-6",
+          "label": "De 1 à 6 ans",
+          "scores": { "adult": 1 }
+        },
+        {
+          "id": "age-7-9",
+          "label": "De 7 à 9 ans",
+          "scores": { "senior": 1 }
+        },
+        {
+          "id": "age-10p",
+          "label": "10 ans ou plus",
+          "scores": { "senior_advanced": 1 }
+        }
+      ]
+    },
+    {
+      "id": "poids",
+      "question": "Combien pèse-t-il actuellement ?",
+      "helper": "Le poids seul ne permet pas de conclure à un surpoids ou à une maigreur. Il sert surtout à contextualiser le résultat et le calculateur de ration du fabricant.",
+      "options": [
+        {
+          "id": "p-lt8",
+          "label": "Moins de 8 kg",
+          "scores": { "weight_context": 1 }
+        },
+        {
+          "id": "p-8-12",
+          "label": "De 8 à moins de 12 kg",
+          "scores": { "weight_context": 1 }
+        },
+        {
+          "id": "p-12-16",
+          "label": "De 12 à moins de 16 kg",
+          "scores": { "weight_context": 1 }
+        },
+        {
+          "id": "p-16-20",
+          "label": "De 16 à moins de 20 kg",
+          "scores": { "weight_context": 1 }
+        },
+        {
+          "id": "p-20p",
+          "label": "20 kg ou davantage",
+          "scores": { "weight_context": 1 }
+        },
+        {
+          "id": "p-nsp",
+          "label": "Je ne connais pas son poids",
+          "scores": { "weight_context": 1 }
+        }
+      ]
+    },
+    {
+      "id": "silhouette",
+      "question": "Quelle description correspond le mieux à sa silhouette ?",
+      "helper": "Les côtes se sentent sous une fine couche de graisse et la taille reste visible vue du dessus : c’est souvent un bon repère d’équilibre.",
+      "options": [
+        {
+          "id": "sil-lean",
+          "label": "Ses côtes sont très visibles et il paraît maigre",
+          "scores": { "lean": 1 }
+        },
+        {
+          "id": "sil-ok",
+          "label": "Ses côtes se sentent facilement et sa taille reste visible",
+          "scores": { "balanced": 1 }
+        },
+        {
+          "id": "sil-round",
+          "label": "Sa taille est moins marquée et il s’arrondit facilement",
+          "scores": { "weight_control": 2 }
+        },
+        {
+          "id": "sil-hard",
+          "label": "Ses côtes sont difficiles à sentir",
+          "scores": { "weight_control": 4 }
+        },
+        {
+          "id": "sil-nsp",
+          "label": "Je ne sais pas l’évaluer",
+          "scores": { "unknown_sil": 1 }
+        }
+      ]
+    },
+    {
+      "id": "sterilisation",
+      "question": "Votre Beagle est-il stérilisé ?",
+      "helper": "La stérilisation seule ne conduit pas automatiquement à une recette light.",
+      "options": [
+        {
+          "id": "ster-yes",
+          "label": "Oui",
+          "scores": { "sterilized": 1 }
+        },
+        {
+          "id": "ster-no",
+          "label": "Non",
+          "scores": {}
+        },
+        {
+          "id": "ster-soon",
+          "label": "La stérilisation est prévue prochainement",
+          "scores": { "sterilized_soon": 1 }
+        },
+        {
+          "id": "ster-nsp",
+          "label": "Je ne sais pas",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "activite",
+      "question": "Quel est son niveau d’activité habituel ?",
+      "options": [
+        {
+          "id": "act-low",
+          "label": "Faible : sorties courtes et beaucoup de repos",
+          "scores": { "low_activity": 1, "weight_control": 1 }
+        },
+        {
+          "id": "act-normal",
+          "label": "Modéré : promenades quotidiennes classiques",
+          "scores": { "normal_activity": 1 }
+        },
+        {
+          "id": "act-high",
+          "label": "Élevé : longues sorties, pistage, randonnée ou activité régulière",
+          "scores": { "high_activity": 1 }
+        },
+        {
+          "id": "act-var",
+          "label": "Très variable selon les semaines",
+          "scores": { "variable_activity": 1 }
+        }
+      ]
+    },
+    {
+      "id": "appetit_digestion",
+      "question": "Comment se passent son appétit et sa digestion ?",
+      "helper": "Choisissez la situation la plus proche du quotidien de votre Beagle.",
+      "options": [
+        {
+          "id": "ad-normal",
+          "label": "Normal, il mange bien et digère bien",
+          "scores": { "appetite_normal": 1 }
+        },
+        {
+          "id": "ad-greedy",
+          "label": "Il réclame / mange vite, mais digestion correcte",
+          "scores": { "weight_control": 1, "appetite_claims": 1 }
+        },
+        {
+          "id": "ad-fragile",
+          "label": "Digestion parfois fragile (selles molles, gaz)",
+          "scores": { "digestion_sensitive": 2 }
+        },
+        {
+          "id": "ad-sensitive",
+          "label": "Digestion régulièrement sensible ou démangeaisons cutanées suspectées",
+          "scores": { "digestion_sensitive": 4, "skin_caution": 1 }
+        }
+      ]
+    },
+    {
+      "id": "sante",
+      "question": "L’une de ces situations concerne-t-elle votre Beagle ?",
+      "helper": "Un simple problème de peau sans diagnostic n’est pas automatiquement une allergie alimentaire.",
+      "options": [
+        {
+          "id": "health-none",
+          "label": "Aucun problème particulier",
+          "scores": {}
+        },
+        {
+          "id": "health-itch",
+          "label": "Démangeaisons, otites ou peau sensible (sans diagnostic)",
+          "scores": { "skin_caution": 1 }
+        },
+        {
+          "id": "health-medical",
+          "label": "Maladie sous suivi vétérinaire (rénale, hépatique, cardiaque, pancréatique, diabète, allergie alimentaire diagnostiquée)",
+          "scores": { "medical_review": 10 }
+        },
+        {
+          "id": "health-nsp",
+          "label": "Je ne sais pas",
+          "scores": {}
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "medical_review",
+      "title": "Avis vétérinaire recommandé",
+      "description": "Vous avez indiqué une pathologie suivie par un vétérinaire. Dans ce cas, l’alimentation fait partie du traitement. Ne changez rien sans l’accord de votre vétérinaire — il peut recommander une alimentation thérapeutique spécifique.",
+      "tags": ["medical_review"],
+      "productIds": [],
+      "reasons": [
+        "Un changement d’alimentation peut interagir avec un traitement en cours",
+        "Votre vétérinaire est le mieux placé pour adapter la ration à la pathologie"
+      ]
+    },
+    {
+      "id": "puppy_sensitive",
+      "title": "Chiot Beagle à digestion sensible",
+      "description": "Votre chiot a un système digestif délicat. Une formule sans céréales ou à base de riz peut mieux convenir. Transition alimentaire sur 7 à 10 jours.",
+      "tags": ["puppy", "digestion_sensitive"],
+      "productIds": ["ultra-premium-direct"],
+      "reasons": [
+        "Ultra Premium Direct propose des recettes sans céréales adaptées aux sensibilités digestives, même pour les jeunes chiens",
+        "Une transition progressive (7-10 jours) est essentielle pour ne pas aggraver les fragilités",
+        "Si les symptômes persistent malgré le changement, consultez votre vétérinaire"
+      ]
+    },
+    {
+      "id": "puppy_standard",
+      "title": "Chiot Beagle en croissance",
+      "description": "Votre Beagle a besoin d’une recette riche en protéines et nutriments adaptés à sa croissance, avec des portions fractionnées (3 repas/jour jusqu’à 6 mois, puis 2).",
+      "tags": ["puppy"],
+      "productIds": ["ultra-premium-direct"],
+      "reasons": [
+        "Ultra Premium Direct propose une formule chiot adaptée aux races moyennes, avec un bon rapport protéines/calcium pour une croissance régulière",
+        "Fractionnez la ration en 3 repas jusqu’à 6 mois pour éviter les gloutonneries et favoriser la digestion"
+      ]
+    },
+    {
+      "id": "senior",
+      "title": "Beagle senior",
+      "description": "Avec l’âge, les besoins énergétiques baissent et le confort articulaire devient prioritaire. Une recette senior ou light, associée à un poids stable, protège le dos et les articulations.",
+      "tags": ["senior"],
+      "productIds": ["ultra-premium-direct"],
+      "reasons": [
+        "Ultra Premium Direct propose des formules adaptées aux seniors, avec un apport calorique modéré et des nutriments pour les articulations",
+        "Un bilan vétérinaire annuel (ou semestriel après 10 ans) permet d’ajuster la ration et de détecter les signes précoces"
+      ]
+    },
+    {
+      "id": "adult_weight_control",
+      "title": "Beagle adulte — poids à surveiller",
+      "description": "Plusieurs signaux (appétit marqué, silhouette qui s’arrondit, stérilisation) suggèrent de choisir une recette au contrôle calorique. Le Beagle est gourmand par nature, ce n’est pas un problème de volonté.",
+      "tags": ["weight_control"],
+      "productIds": ["ultra-premium-direct"],
+      "reasons": [
+        "Ultra Premium Direct propose des formules light ou à teneur calorique maîtrisée, idéales pour un Beagle stérilisé ou gourmand",
+        "Associez croquettes adaptées + occupation mentale (Kong, tapis de fouille) pour détourner l’attention de la gamelle"
+      ]
+    },
+    {
+      "id": "adult_sensitive",
+      "title": "Beagle à digestion sensible ou peau réactive",
+      "description": "Sensibilité digestive ou démangeaisons sans diagnostic : une formule sans céréales ou hypoallergénique peut améliorer le confort. Testez sur 3 à 4 semaines et observez.",
+      "tags": ["digestion_sensitive", "skin_caution"],
+      "productIds": ["ultra-premium-direct"],
+      "reasons": [
+        "Ultra Premium Direct a des recettes sans céréales, adaptées aux sensibilités alimentaires légères à modérées",
+        "Un test de 3-4 semaines permet de voir si les symptômes régressent avant d’envisager un régime plus strict",
+        "Si les démangeaisons ou selles molles persistent, consultez un vétérinaire pour écarter une allergie"
+      ]
+    },
+    {
+      "id": "adult_standard",
+      "title": "Beagle adulte au poids stable",
+      "description": "Votre Beagle a un bon équilibre poids/activité. Une croquette adulte classique, avec des portions ajustées à son activité, suffit à le maintenir en forme.",
+      "tags": ["adult"],
+      "productIds": ["ultra-premium-direct"],
+      "reasons": [
+        "Ultra Premium Direct propose des formules adultes équilibrées, avec un bon taux de protéines animales pour un Beagle actif",
+        "Pesez la ration et comptez les friandises dans le total du jour pour prévenir la prise de poids"
+      ]
+    }
+  ]
+}

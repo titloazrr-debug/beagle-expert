@@ -1,0 +1,311 @@
+{
+  "slug": "assurance-sante-beagle",
+  "title": "Quelle protection santé pour mon Beagle ?",
+  "subtitle": "Budget, âge et niveau de couverture.",
+  "emoji": "🛡️",
+  "description": "En 7 questions, définissez le niveau de couverture que vous recherchez et les points à vérifier avant de demander un devis. Plusieurs options à comparer, de façon neutre.",
+  "estimatedMinutes": 3,
+  "mode": "profile",
+  "ctaLabel": "Voir mon profil de couverture",
+  "seo": {
+    "title": "Quelle assurance santé pour un Beagle ? Quiz et comparatif",
+    "description": "Définissez vos priorités en 7 questions et comparez les critères d’une assurance santé Beagle : plafond, franchise, carence, prévention et âge d’admission."
+  },
+  "questions": [
+    {
+      "id": "age",
+      "question": "Quel âge a votre Beagle ?",
+      "helper": "L’âge maximum accepté à la souscription varie selon les assureurs et parfois selon la formule choisie.",
+      "options": [
+        {
+          "id": "age-0",
+          "label": "Moins de 1 an",
+          "scores": { "jeune": 2, "essentielle": 1, "equilibre": 1 }
+        },
+        {
+          "id": "age-1-3",
+          "label": "De 1 à 3 ans",
+          "scores": { "jeune": 2, "equilibre": 1, "renforcee": 1 }
+        },
+        {
+          "id": "age-4-6",
+          "label": "De 4 à 6 ans",
+          "scores": { "adulte": 2, "equilibre": 2 }
+        },
+        {
+          "id": "age-7",
+          "label": "De 7 à moins de 8 ans",
+          "scores": { "senior": 2, "age-admission": 2, "equilibre": 1 }
+        },
+        {
+          "id": "age-8-12",
+          "label": "De 8 à 12 ans",
+          "scores": { "senior": 4, "age-admission": 5 }
+        },
+        {
+          "id": "age-12p",
+          "label": "Plus de 12 ans",
+          "scores": { "senior": 5, "age-admission": 6 }
+        }
+      ]
+    },
+    {
+      "id": "sante",
+      "question": "Votre Beagle présente-t-il déjà un problème de santé connu ou des symptômes en cours ?",
+      "helper": "Une assurance souscrite aujourd’hui ne couvre généralement pas les maladies, blessures ou symptômes apparus auparavant. Aucun détail médical n’est demandé.",
+      "options": [
+        {
+          "id": "sante-non",
+          "label": "Non, rien de connu actuellement",
+          "scores": { "sain": 2, "equilibre": 1 }
+        },
+        {
+          "id": "sante-diag",
+          "label": "Oui, un problème a déjà été diagnostiqué",
+          "scores": { "antecedents": 6, "preexistant": 3 }
+        },
+        {
+          "id": "sante-sympt",
+          "label": "Il présente des symptômes, mais aucun diagnostic n’a encore été posé",
+          "scores": { "antecedents": 6, "symptomes": 3 }
+        },
+        {
+          "id": "sante-nsp",
+          "label": "Je ne sais pas",
+          "scores": { "antecedents": 2, "equilibre": 1 }
+        }
+      ]
+    },
+    {
+      "id": "remboursement",
+      "question": "Quel niveau de remboursement recherchez-vous ?",
+      "helper": "À titre indicatif : essentielle ≈ 50–60 %, équilibrée ≈ 70–80 %, renforcée ≈ 80–90 %, maximale jusqu’à 100 % — selon les formules, sans valeur de recommandation.",
+      "options": [
+        {
+          "id": "rem-ess",
+          "label": "Une protection essentielle pour les grosses dépenses",
+          "scores": { "essentielle": 5, "filet": 2 }
+        },
+        {
+          "id": "rem-eq",
+          "label": "Un équilibre entre cotisation et remboursement",
+          "scores": { "equilibre": 5 }
+        },
+        {
+          "id": "rem-renf",
+          "label": "Une protection renforcée",
+          "scores": { "renforcee": 5 }
+        },
+        {
+          "id": "rem-max",
+          "label": "Le remboursement le plus élevé possible",
+          "scores": { "renforcee": 4, "maximale": 3 }
+        },
+        {
+          "id": "rem-nsp",
+          "label": "Je ne sais pas encore",
+          "scores": { "equilibre": 2 }
+        }
+      ]
+    },
+    {
+      "id": "plafond",
+      "question": "Quel plafond annuel vous rassurerait ?",
+      "helper": "Le plafond est le montant maximal remboursable sur une période. Un taux élevé avec un plafond faible peut rester insuffisant lors de soins coûteux.",
+      "options": [
+        {
+          "id": "pl-bas",
+          "label": "Environ 1 000 à 1 500 €",
+          "scores": { "essentielle": 3, "plafond-bas": 2 }
+        },
+        {
+          "id": "pl-mid",
+          "label": "Environ 2 000 à 3 000 €",
+          "scores": { "equilibre": 3, "plafond-mid": 2 }
+        },
+        {
+          "id": "pl-haut",
+          "label": "4 000 € ou davantage",
+          "scores": { "renforcee": 3, "plafond-haut": 3 }
+        },
+        {
+          "id": "pl-illim",
+          "label": "Une absence de plafond à terme",
+          "scores": { "renforcee": 2, "plafond-haut": 4 }
+        },
+        {
+          "id": "pl-nsp",
+          "label": "Je ne sais pas",
+          "scores": { "equilibre": 1 }
+        }
+      ]
+    },
+    {
+      "id": "avance",
+      "question": "Pouvez-vous avancer une facture vétérinaire importante ?",
+      "helper": "Certains contrats proposent un service d’avance des frais, sous conditions et selon les vétérinaires partenaires.",
+      "options": [
+        {
+          "id": "av-oui",
+          "label": "Oui, sans difficulté particulière",
+          "scores": { "avance-ok": 1, "equilibre": 1 }
+        },
+        {
+          "id": "av-tendu",
+          "label": "Oui, mais cela déséquilibrerait mon budget",
+          "scores": { "avance": 4, "equilibre": 1 }
+        },
+        {
+          "id": "av-non",
+          "label": "Non, l’avance des frais serait un vrai problème",
+          "scores": { "avance": 5, "essentielle": 1 }
+        },
+        {
+          "id": "av-depend",
+          "label": "Cela dépendrait du montant",
+          "scores": { "avance": 2, "equilibre": 1 }
+        }
+      ]
+    },
+    {
+      "id": "prevention",
+      "question": "Souhaitez-vous inclure les soins de prévention ?",
+      "helper": "Selon la formule et les conditions du contrat : vaccins, antiparasitaires, vermifuges, bilan, identification, stérilisation, détartrage, etc.",
+      "options": [
+        {
+          "id": "prev-oui",
+          "label": "Oui, c’est important",
+          "scores": { "prevention": 5, "renforcee": 1 }
+        },
+        {
+          "id": "prev-plus",
+          "label": "Ce serait appréciable, mais pas indispensable",
+          "scores": { "prevention": 2, "equilibre": 2 }
+        },
+        {
+          "id": "prev-non",
+          "label": "Je préfère assurer surtout les accidents et maladies",
+          "scores": { "essentielle": 3, "filet": 2 }
+        },
+        {
+          "id": "prev-nsp",
+          "label": "Je ne sais pas",
+          "scores": { "equilibre": 1 }
+        }
+      ]
+    },
+    {
+      "id": "priorite",
+      "question": "Parmi ces critères, lequel est prioritaire pour vous ?",
+      "options": [
+        {
+          "id": "prio-franchise",
+          "label": "Éviter ou limiter la franchise",
+          "scores": { "franchise": 4, "equilibre": 1 }
+        },
+        {
+          "id": "prio-carence",
+          "label": "Réduire les délais de carence",
+          "scores": { "carence": 4, "equilibre": 1 }
+        },
+        {
+          "id": "prio-age",
+          "label": "Pouvoir assurer un chien plus âgé",
+          "scores": { "age-admission": 5, "senior": 2 }
+        },
+        {
+          "id": "prio-plafond",
+          "label": "Disposer d’un plafond élevé",
+          "scores": { "plafond-haut": 4, "renforcee": 2 }
+        },
+        {
+          "id": "prio-avance",
+          "label": "Bénéficier d’une avance des frais",
+          "scores": { "avance": 5 }
+        },
+        {
+          "id": "prio-tele",
+          "label": "Accéder facilement à un vétérinaire à distance",
+          "scores": { "tele": 4, "equilibre": 1 }
+        },
+        {
+          "id": "prio-prev",
+          "label": "Inclure un budget prévention",
+          "scores": { "prevention": 4 }
+        },
+        {
+          "id": "prio-compare",
+          "label": "Je souhaite surtout comparer les devis",
+          "scores": { "equilibre": 3, "comparer": 2 }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "antecedents",
+      "title": "Votre priorité : distinguer l’existant des futurs imprévus",
+      "description": "Les problèmes apparus avant la souscription ne sont généralement pas pris en charge. Une assurance peut néanmoins couvrir de futurs accidents ou maladies sans rapport, sous réserve de l’acceptation et des exclusions du contrat. Demandez une confirmation écrite des exclusions liées aux antécédents.",
+      "tags": ["antecedents", "preexistant", "symptomes"],
+      "minScore": 4,
+      "productIds": ["santevet"],
+      "reasons": [
+        "Vérifier par écrit ce qui est exclu au titre des antécédents",
+        "Comparer les délais de carence pour les futurs événements sans lien",
+        "Relire plafonds, franchise et conditions d’admission"
+      ]
+    },
+    {
+      "id": "age-admission",
+      "title": "Votre priorité : trouver une offre encore accessible à son âge",
+      "description": "L’âge de votre Beagle réduit le nombre d’offres auxquelles il peut être admis. Ne vous arrêtez pas au tarif : vérifiez l’âge maximal de souscription, les antécédents exclus et le maintien des garanties au fil des années. Plusieurs devis restent indispensables.",
+      "tags": ["age-admission", "senior"],
+      "minScore": 4,
+      "productIds": ["santevet"],
+      "reasons": [
+        "Âge maximal de souscription selon la formule",
+        "Maintien des garanties avec l’âge",
+        "Exclusions et carences adaptées au profil senior"
+      ]
+    },
+    {
+      "id": "renforcee",
+      "title": "Votre priorité : limiter fortement votre reste à charge",
+      "description": "Vous privilégiez un taux élevé et un plafond important. Vérifiez également la franchise, les délais de carence et les éventuelles limites propres à certaines interventions. Les devis permettent de confronter ces critères au coût réel de la cotisation.",
+      "tags": ["renforcee", "maximale", "plafond-haut"],
+      "minScore": 4,
+      "productIds": ["santevet"],
+      "reasons": [
+        "Taux de remboursement affiché selon la formule",
+        "Plafond annuel élevé",
+        "Franchise et carences associées"
+      ]
+    },
+    {
+      "id": "essentielle",
+      "title": "Votre priorité : couvrir les grosses dépenses imprévues",
+      "description": "Vous recherchez avant tout un filet de sécurité en cas d’accident, de maladie ou d’intervention coûteuse, sans nécessairement maximiser chaque remboursement. Comparez soigneusement le plafond annuel, la franchise et les exclusions.",
+      "tags": ["essentielle", "filet", "plafond-bas"],
+      "minScore": 4,
+      "productIds": ["santevet"],
+      "reasons": [
+        "Plafond utile pour les grosses factures",
+        "Franchise et reste à charge",
+        "Périmètre accidents / maladies selon le contrat"
+      ]
+    },
+    {
+      "id": "equilibre",
+      "title": "Votre priorité : un bon équilibre entre couverture et cotisation",
+      "description": "Une formule intermédiaire peut correspondre à vos attentes : taux de remboursement confortable, plafond suffisamment élevé et reste à charge encore maîtrisable. Les devis restent indispensables pour comparer le coût réel et les conditions exactes.",
+      "tags": ["equilibre", "comparer", "adulte", "jeune", "sain"],
+      "productIds": ["santevet"],
+      "reasons": [
+        "Équilibre taux / cotisation",
+        "Plafond annuel cohérent",
+        "Options prévention et services selon la formule"
+      ]
+    }
+  ],
+  "productIds": ["santevet"]
+}

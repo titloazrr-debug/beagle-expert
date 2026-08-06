@@ -1,0 +1,23 @@
+[
+  {
+    "id": "cavalier-king-charles",
+    "name": "Cavalier King Charles Spaniel",
+    "emoji": "👑",
+    "justification": "Compagnon de canapé très affectueux, souvent plus à l’aise avec des sorties modérées et la vie d’intérieur.",
+    "href": "#"
+  },
+  {
+    "id": "bouledogue-francais",
+    "name": "Bouledogue Français",
+    "emoji": "🐾",
+    "justification": "Format compact et rythme de vie plus calme : intéressant si l’endurance type « chien de piste » n’est pas votre priorité.",
+    "href": "#"
+  },
+  {
+    "id": "golden-retriever",
+    "name": "Golden Retriever",
+    "emoji": "🌟",
+    "justification": "Familier, sociable et éducable : une piste si vous voulez un grand compagnon sans l’instinct de fugue du Beagle.",
+    "href": "#"
+  }
+]

@@ -1,0 +1,324 @@
+{
+  "slug": "pret-a-adopter",
+  "title": "Suis-je prêt à adopter un Beagle ?",
+  "subtitle": "Compatibilité avec votre mode de vie.",
+  "emoji": "🏠",
+  "description": "Temps, absences, fugue, bruit, budget et motivation : 8 questions pour savoir si le Beagle colle à votre quotidien, d'après les guides éducation, budget et histoire.",
+  "estimatedMinutes": 4,
+  "mode": "profile",
+  "ctaLabel": "Voir mon score de compatibilité",
+  "seo": {
+    "title": "Quiz : prêt à adopter un Beagle ?",
+    "description": "Test de compatibilité Beagle : exercice, solitude, éducation, aboiements, budget et attentes réalistes."
+  },
+  "basedOn": [
+    "content/raw/guide_education_comportement_beagle.md",
+    "content/raw/guide_budget_beagle.md",
+    "content/raw/histoire_standard_beagle.md"
+  ],
+  "questions": [
+    {
+      "id": "temps",
+      "question": "Combien de temps pouvez-vous consacrer chaque jour aux sorties et à l'occupation ?",
+      "helper": "Les sources citent souvent au moins ~1 h d'activité, idéalement plus.",
+      "options": [
+        {
+          "id": "tm1",
+          "label": "1 h 30 ou plus, avec de la flexibilité",
+          "scores": {
+            "pret": 3,
+            "actif": 2
+          }
+        },
+        {
+          "id": "tm2",
+          "label": "Environ 45 à 60 minutes",
+          "scores": {
+            "pret": 1,
+            "vigilance": 1
+          }
+        },
+        {
+          "id": "tm3",
+          "label": "Moins de 30 minutes la plupart des jours",
+          "scores": {
+            "paspret": 3,
+            "vigilance": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "absence",
+      "question": "Comment se passent vos absences en journée ?",
+      "helper": "Chien de meute : la solitude prolongée est mal vécue.",
+      "options": [
+        {
+          "id": "ab1",
+          "label": "Souvent à la maison ou en télétravail",
+          "scores": {
+            "pret": 2
+          }
+        },
+        {
+          "id": "ab2",
+          "label": "4–6 h avec une solution (promeneur, garderie, proche)",
+          "scores": {
+            "pret": 1,
+            "vigilance": 1,
+            "occupation": 1
+          }
+        },
+        {
+          "id": "ab3",
+          "label": "8 h+ seul régulièrement, sans solution prévue",
+          "scores": {
+            "paspret": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "fugue",
+      "question": "Jardin et sorties hors laisse : quelle est votre approche ?",
+      "options": [
+        {
+          "id": "fg1",
+          "label": "Jardin clos et/ou laisse-longe : je suis OK avec ça",
+          "scores": {
+            "pret": 2,
+            "securite": 1
+          }
+        },
+        {
+          "id": "fg2",
+          "label": "Je prévois GPS + travail du rappel avant toute liberté",
+          "scores": {
+            "pret": 2,
+            "securite": 2
+          }
+        },
+        {
+          "id": "fg3",
+          "label": "Je veux surtout de la liberté en forêt dès le début",
+          "scores": {
+            "vigilance": 2,
+            "paspret": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "question": "Face à un chien têtu mais intelligent, vous êtes…",
+      "options": [
+        {
+          "id": "ed1",
+          "label": "Prêt(e) à des séances courtes, cohérentes, en positif",
+          "scores": {
+            "pret": 2,
+            "education": 2
+          }
+        },
+        {
+          "id": "ed2",
+          "label": "Ouvert(e) à un éducateur ou une formation si besoin",
+          "scores": {
+            "pret": 2,
+            "education": 1
+          }
+        },
+        {
+          "id": "ed3",
+          "label": "En quête d'un chien sage « tout seul », sans beaucoup travailler",
+          "scores": {
+            "paspret": 2,
+            "vigilance": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "question": "Budget mensuel confortable (hors gros imprévus) ?",
+      "helper": "Alimentation, soins, éventuelle assurance, occupation — sur ~15 ans.",
+      "options": [
+        {
+          "id": "ba1",
+          "label": "80 €+ / mois sans stress",
+          "scores": {
+            "pret": 2,
+            "budget": 1
+          }
+        },
+        {
+          "id": "ba2",
+          "label": "40–80 € / mois",
+          "scores": {
+            "pret": 1,
+            "vigilance": 1
+          }
+        },
+        {
+          "id": "ba3",
+          "label": "Je n'ai pas encore budgété alimentation + véto + imprévus",
+          "scores": {
+            "paspret": 2,
+            "vigilance": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "bruit",
+      "question": "Aboiements et « voix carillonnante » : votre contexte ?",
+      "options": [
+        {
+          "id": "br1",
+          "label": "OK si on travaille occupation et calme",
+          "scores": {
+            "pret": 1
+          }
+        },
+        {
+          "id": "br2",
+          "label": "Voisins ou bail très stricts sur le bruit",
+          "scores": {
+            "vigilance": 2
+          }
+        },
+        {
+          "id": "br3",
+          "label": "Je veux un chien silencieux",
+          "scores": {
+            "paspret": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "garde",
+      "question": "Attendez-vous un chien de garde ?",
+      "options": [
+        {
+          "id": "g1",
+          "label": "Non : un compagnon sociable me suffit",
+          "scores": {
+            "pret": 2
+          }
+        },
+        {
+          "id": "g2",
+          "label": "Un aboiement d'alerte, sans plus",
+          "scores": {
+            "pret": 1
+          }
+        },
+        {
+          "id": "g3",
+          "label": "Oui, je compte sur lui pour protéger la maison",
+          "scores": {
+            "paspret": 2,
+            "vigilance": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "motivation",
+      "question": "Pourquoi un Beagle, concrètement ?",
+      "options": [
+        {
+          "id": "mo1",
+          "label": "J'aime l'activité, le flair et le caractère de pisteur",
+          "scores": {
+            "pret": 3
+          }
+        },
+        {
+          "id": "mo2",
+          "label": "Chien de famille doux, avec un vrai cadre d'éducation",
+          "scores": {
+            "pret": 1,
+            "vigilance": 1
+          }
+        },
+        {
+          "id": "mo3",
+          "label": "Il est mignon sur les réseaux — le reste se verra",
+          "scores": {
+            "paspret": 2,
+            "vigilance": 2
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "pret",
+      "title": "Belle compatibilité — vous pouvez avancer sereinement",
+      "description": "Votre mode de vie colle bien aux besoins d'un Beagle. Préparez sécurité anti-fugue, occupation et budget santé avant l'arrivée — et gardez la patience pour l'éducation.",
+      "tags": [
+        "pret"
+      ],
+      "minScore": 10,
+      "productIds": [
+        "tractive-gps",
+        "kong-classic",
+        "nettoyant-auriculaire",
+        "santevet"
+      ],
+      "reasons": [
+        "Temps d'exercice et gestion des absences réalistes",
+        "Tractive pour sécuriser l'instinct de fugue dès les sorties",
+        "Kong + nettoyant oreilles : occupation et prévention de base",
+        "SantéVet pour anticiper les frais liés aux prédispositions de race"
+      ]
+    },
+    {
+      "id": "vigilance",
+      "title": "Compatible… avec un plan d'ajustement",
+      "description": "Ce n'est pas un non. Mais absences, bruit, budget ou liberté hors laisse demandent des solutions concrètes avant d'adopter.",
+      "tags": [
+        "vigilance"
+      ],
+      "minScore": 4,
+      "productIds": [
+        "tractive-gps",
+        "tapis-fouille",
+        "santevet",
+        "ultra-premium-direct"
+      ],
+      "reasons": [
+        "Quelques points de friction : GPS et occupation aident à compenser",
+        "Tapis de fouille pour canaliser le flair et l'énergie",
+        "Assurance et alimentation qualité pour limiter les mauvaises surprises"
+      ]
+    },
+    {
+      "id": "paspret",
+      "title": "Pas le bon moment — ou pas la bonne race",
+      "description": "Un Beagle risquerait d'être frustré (et vous aussi). Solitude longue, peu d'exercice, besoin de silence ou de garde sont des signaux d'incompatibilité importants.",
+      "tags": [
+        "paspret"
+      ],
+      "productIds": [
+        "ultra-premium-direct",
+        "tapis-fouille"
+      ],
+      "reasons": [
+        "Les besoins de race ne collent pas encore à votre quotidien",
+        "Si vous repoussez l'adoption, ces repères restent utiles pour une future réflexion"
+      ]
+    }
+  ],
+  "productIds": [
+    "tractive-gps",
+    "kong-classic",
+    "tapis-fouille",
+    "nettoyant-auriculaire",
+    "santevet",
+    "ultra-premium-direct"
+  ]
+}

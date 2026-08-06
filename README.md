@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Beagle Expert
 
-## Getting Started
+Mini-site expert **Beagle** ultra-interactif (affiliation) — Next.js 15 App Router, TypeScript, Tailwind CSS v4, composants style shadcn/ui.
 
-First, run the development server:
+## Stack
+
+- Next.js 15 + React 19
+- TypeScript strict
+- Tailwind CSS v4
+- Radix Slot / CVA / lucide-react
+- Framer Motion (quiz)
+- Architecture multi-tenant prête (`src/lib/tenant.ts`)
+
+## Démarrage
 
 ```bash
+cd beagle-expert
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                  # Routes App Router
+│   ├── page.tsx          # Accueil
+│   ├── fiche/[slug]/     # Fiches dynamiques
+│   ├── quiz/[slug]/      # Quiz dynamiques
+│   ├── fiches/           # Index fiches
+│   ├── quizzes/          # Index quiz
+│   ├── sitemap.ts
+│   └── robots.ts
+├── components/
+│   ├── ui/               # Button, Card, Badge…
+│   ├── FicheCard.tsx
+│   ├── QuizEngine.tsx
+│   ├── ProductCard.tsx
+│   ├── ProgressBar.tsx
+│   ├── AffiliateCTA.tsx
+│   └── ChatbotWidget.tsx # Aminos.ai ready
+├── data/                 # Contenu (fiches, quiz, produits)
+├── lib/                  # utils, tenant, seo
+└── types/
+```
 
-## Learn More
+## Contenu de départ
 
-To learn more about Next.js, take a look at the following resources:
+**6 fiches** : Santé, Alimentation, Éducation, Soins, Budget, Histoire  
+**4 quiz** : GPS, Surpoids, Jouet occupation, Compatibilité adoption
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Affiliation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Les URLs dans `src/data/products.ts` sont des placeholders. Remplacez `affiliateUrl` par vos liens trackés. Les CTA utilisent `rel="noopener noreferrer sponsored"`.
 
-## Deploy on Vercel
+## Chatbot Aminos.ai
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Créer le widget sur Aminos.ai  
+2. Mettre l’URL du script dans `NEXT_PUBLIC_AMINOS_SCRIPT_URL`  
+3. Sans variable : bouton floating de démo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Multi-tenant (autres races)
+
+- Dupliquer / paramétrer `src/lib/tenant.ts`
+- Cloner `src/data/*` pour une autre race
+- Brancher `NEXT_PUBLIC_TENANT` plus tard pour charger la config dynamiquement
+
+## Scripts
+
+| Commande        | Description        |
+|-----------------|--------------------|
+| `npm run dev`   | Serveur de dev     |
+| `npm run build` | Build production   |
+| `npm run start` | Serveur production |
+| `npm run lint`  | ESLint             |
+
+## SEO
+
+- Metadata + Open Graph par page
+- JSON-LD WebSite / Article / Quiz
+- `sitemap.xml` et `robots.txt` générés

@@ -1,0 +1,285 @@
+{
+  "slug": "jouets-occupation",
+  "title": "Quel jouet d'occupation pour mon Beagle ?",
+  "subtitle": "Destructeur, flair fou, solitude ou gourmand à canaliser ?",
+  "emoji": "🧩",
+  "description": "5 questions pour recommander Kong, tapis de fouille, balle interactive, clicker ou formation — d'après les guides éducation et budget.",
+  "estimatedMinutes": 2,
+  "mode": "product-score",
+  "ctaLabel": "Voir mes jouets recommandés",
+  "seo": {
+    "title": "Quiz jouets d'occupation Beagle",
+    "description": "Trouvez les jouets adaptés à votre Beagle : Kong, snuffle mat, balle friandises, clicker et formation rappel."
+  },
+  "basedOn": [
+    "content/raw/guide_education_comportement_beagle.md",
+    "content/raw/guide_budget_beagle.md"
+  ],
+  "questions": [
+    {
+      "id": "probleme",
+      "question": "Quel est le problème n°1 à la maison ?",
+      "options": [
+        {
+          "id": "p1",
+          "label": "Il détruit (chaussures, coussins, télécommande…)",
+          "scores": {
+            "destructeur": 3,
+            "kong": 3,
+            "occupation": 2
+          }
+        },
+        {
+          "id": "p2",
+          "label": "Il s'ennuie et aboie / « chante »",
+          "scores": {
+            "aboiement": 3,
+            "fouille": 3,
+            "kong": 2,
+            "mental": 2
+          }
+        },
+        {
+          "id": "p3",
+          "label": "Bêtises ou stress quand je pars",
+          "scores": {
+            "solitude": 3,
+            "kong": 3,
+            "cage": 1,
+            "occupation": 2
+          }
+        },
+        {
+          "id": "p4",
+          "label": "Trop d'énergie après une simple balle",
+          "scores": {
+            "flair": 3,
+            "fouille": 3,
+            "mental": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "flair",
+      "question": "Son flair au quotidien ?",
+      "helper": "L'odorat est l'un des points forts de la race : snuffle et pistage sont des alliés.",
+      "options": [
+        {
+          "id": "fl1",
+          "label": "Mode détective permanent (nez au sol non-stop)",
+          "scores": {
+            "flair": 3,
+            "fouille": 3
+          }
+        },
+        {
+          "id": "fl2",
+          "label": "Motivé surtout par la nourriture",
+          "scores": {
+            "kong": 2,
+            "balle": 2,
+            "gourmand": 3
+          }
+        },
+        {
+          "id": "fl3",
+          "label": "Il préfère courir et jouer",
+          "scores": {
+            "balle": 3,
+            "exercice": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "solitude",
+      "question": "Combien de temps reste-t-il seul en semaine ?",
+      "options": [
+        {
+          "id": "s1",
+          "label": "Rarement / quelqu'un est souvent là",
+          "scores": {
+            "ensemble": 2,
+            "clicker": 1
+          }
+        },
+        {
+          "id": "s2",
+          "label": "Quelques heures : il a besoin d'occupation",
+          "scores": {
+            "kong": 2,
+            "fouille": 2,
+            "solitude": 2
+          }
+        },
+        {
+          "id": "s3",
+          "label": "Longues absences fréquentes",
+          "scores": {
+            "solitude": 3,
+            "kong": 3,
+            "cage": 2,
+            "occupation": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "poids",
+      "question": "Côté silhouette et friandises…",
+      "options": [
+        {
+          "id": "po1",
+          "label": "Tendance embonpoint : je dois rationner",
+          "scores": {
+            "balle": 3,
+            "gourmand": 2,
+            "surpoids": 3
+          }
+        },
+        {
+          "id": "po2",
+          "label": "Poids OK, friandises de travail possibles",
+          "scores": {
+            "kong": 1,
+            "fouille": 1,
+            "clicker": 1
+          }
+        },
+        {
+          "id": "po3",
+          "label": "Je veux surtout le fatiguer mentalement, pas le nourrir plus",
+          "scores": {
+            "fouille": 3,
+            "flair": 2,
+            "mental": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "question": "Souhaitez-vous aussi structurer l'éducation ?",
+      "options": [
+        {
+          "id": "ed1",
+          "label": "Oui : clicker / renforcement positif",
+          "scores": {
+            "clicker": 3,
+            "education": 2
+          }
+        },
+        {
+          "id": "ed2",
+          "label": "Oui : rappel et chien de chasse (formation)",
+          "scores": {
+            "formation": 3,
+            "education": 2,
+            "rappel": 2
+          }
+        },
+        {
+          "id": "ed3",
+          "label": "Pour l'instant surtout des jouets d'occupation",
+          "scores": {
+            "kong": 1,
+            "fouille": 1,
+            "balle": 1
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "destructeur-solitude",
+      "title": "Profil « mâchouilleur & solitude »",
+      "description": "Canalisez la mâchoire et l'absence avec un Kong farci, un snuffle mat, et une habituation progressive à la solitude (jamais la cage comme punition).",
+      "tags": [
+        "destructeur",
+        "solitude",
+        "kong"
+      ],
+      "productIds": [
+        "kong-classic",
+        "tapis-fouille",
+        "ultra-premium-direct"
+      ],
+      "reasons": [
+        "Kong Classic : occupation longue et anxiété de séparation",
+        "Tapis de fouille : flair canalisé sans détruire la maison",
+        "Alimentation mesurée (ex. Ultra Premium) pour farcir sans surcharger"
+      ]
+    },
+    {
+      "id": "flair-mental",
+      "title": "Profil « cerveau + nez en feu »",
+      "description": "Le pistage est son métier. Snuffle et défis olfactifs le fatiguent mieux qu'une balle de dix minutes.",
+      "tags": [
+        "flair",
+        "fouille",
+        "mental",
+        "aboiement"
+      ],
+      "productIds": [
+        "tapis-fouille",
+        "kong-classic",
+        "tractive-gps"
+      ],
+      "reasons": [
+        "Snuffle mat : l'outil n°1 pour un nez en feu",
+        "Kong en complément pour le calme post-session",
+        "Tractive si le flair mène encore trop souvent hors de vue"
+      ]
+    },
+    {
+      "id": "gourmand-actif",
+      "title": "Profil « gourmand à canaliser »",
+      "description": "Utilisez la nourriture comme levier… sans le gaver. Distributeurs + éducation positive.",
+      "tags": [
+        "balle",
+        "gourmand",
+        "surpoids",
+        "clicker"
+      ],
+      "productIds": [
+        "kong-classic",
+        "tapis-fouille",
+        "ultra-premium-direct"
+      ],
+      "reasons": [
+        "Kong farci avec une partie de la ration, pas en plus",
+        "Snuffle pour allonger le « travail » alimentaire",
+        "Ultra Premium Direct pour un plan calorique plus maîtrisé"
+      ]
+    },
+    {
+      "id": "education-chasse",
+      "title": "Profil « éducation & rappel »",
+      "description": "Les jouets aident, mais le vrai levier est l'éducation adaptée au chien de chasse.",
+      "tags": [
+        "formation",
+        "education",
+        "rappel",
+        "clicker"
+      ],
+      "productIds": [
+        "tapis-fouille",
+        "kong-classic",
+        "tractive-gps"
+      ],
+      "reasons": [
+        "Canaliser le flair entre deux séances d'éducation",
+        "Kong comme récompense / occupation structurée",
+        "Tractive dès que le rappel n'est pas fiable hors laisse"
+      ]
+    }
+  ],
+  "productIds": [
+    "kong-classic",
+    "tapis-fouille",
+    "tractive-gps",
+    "ultra-premium-direct"
+  ]
+}
