@@ -30,7 +30,11 @@ export function SocialProof({ className = "" }: SocialProofProps) {
         // Première visite : initialiser avec des valeurs de base
         localStorage.setItem(
           "beagle_social_proof",
-          JSON.stringify(counts)
+          JSON.stringify({
+            quizzes: 847,
+            owners: 1200,
+            rating: 4.8,
+          })
         );
       }
       setReady(true);
