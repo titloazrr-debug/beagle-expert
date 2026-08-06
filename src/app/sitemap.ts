@@ -11,6 +11,7 @@ const FICHE_PRIORITY: Record<string, number> = {
   "soins-entretien": 0.85,
   "budget-equipement": 0.85,
   "histoire-standard": 0.8,
+  "esperance-de-vie": 0.95,
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
