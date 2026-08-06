@@ -10,11 +10,9 @@ import { cn } from "@/lib/utils";
 
 const nav = [
   { href: "/par-ou-commencer", label: "Par où commencer" },
-  { href: "/#quiz", label: "Quiz" },
-  { href: "/#fiches", label: "Fiches" },
-  { href: "/fiches", label: "Toutes les fiches" },
-  { href: "/quizzes", label: "Tous les quiz" },
-  { href: "/fiche/budget-equipement#calculateur-budget", label: "💰 Budget" },
+  { href: "/quizzes", label: "Quiz" },
+  { href: "/fiches", label: "Fiches" },
+  { href: "/fiche/budget-equipement#calculateur-budget", label: "💰 Calculateur Budget" },
   { href: "/a-propos", label: "À propos" },
 ];
 
