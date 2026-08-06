@@ -50,14 +50,14 @@ export function Hero() {
       <div className="pointer-events-none absolute -right-16 bottom-0 size-80 rounded-full bg-accent/10 blur-3xl" />
 
       <div className="container-page relative py-8 sm:py-12 lg:py-14">
-        {/* object-contain = visage entier (pas seulement les yeux) ; fond beige si bandes */}
-        <div className="relative mb-5 flex items-center justify-center overflow-hidden rounded-2xl border border-border bg-[#ebe0d0] shadow-[var(--shadow-soft)] sm:mb-8 sm:rounded-[1.75rem]">
+        {/* object-cover plein largeur (pas de bandes) ; ratio proche de la photo pour le visage */}
+        <div className="relative mb-5 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-soft)] sm:mb-8 sm:rounded-[1.75rem]">
           <BeagleImage
             asset={heroImage}
             alt="Beagle regardant la caméra"
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1120px"
-            className="h-auto max-h-[260px] w-full object-contain object-center sm:max-h-[360px] lg:max-h-[420px]"
+            className="aspect-[4/3] w-full object-cover object-center sm:aspect-[3/2]"
             width={heroImage.width}
             height={heroImage.height}
           />
