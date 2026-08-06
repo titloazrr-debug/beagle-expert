@@ -225,7 +225,7 @@ export function Hero() {
 
           {/* CTA calculateur budget sous la grille */}
           <Link
-            href="/fiche/budget-equipement"
+            href="/fiche/budget-equipement#calculateur-budget"
             className="mt-3 flex items-center gap-3 rounded-2xl border-2 border-dashed border-primary/25 bg-primary/[0.03] px-4 py-3.5 transition hover:border-primary/50 hover:bg-primary/[0.06] hover:shadow-sm sm:mt-4 sm:px-5 sm:py-4"
           >
             <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-xl sm:size-11">

@@ -78,7 +78,7 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Button asChild size="xl" className="min-h-14 gap-2 text-base shadow-lg sm:text-lg">
-                <Link href="/fiche/budget-equipement">
+                <Link href="/fiche/budget-equipement#calculateur-budget">
                   <Calculator className="size-5" aria-hidden />
                   Estimer mon budget
                 </Link>

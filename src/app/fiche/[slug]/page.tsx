@@ -318,7 +318,9 @@ export default async function FichePage({ params }: PageProps) {
             })}
 
             {slug === "budget-equipement" && (
-              <BudgetCalculator />
+              <section id="calculateur-budget">
+                <BudgetCalculator />
+              </section>
             )}
 
             {relatedProducts.length > 0 && (

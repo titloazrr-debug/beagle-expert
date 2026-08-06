@@ -14,7 +14,7 @@ const nav = [
   { href: "/#fiches", label: "Fiches" },
   { href: "/fiches", label: "Toutes les fiches" },
   { href: "/quizzes", label: "Tous les quiz" },
-  { href: "/fiche/budget-equipement", label: "💰 Budget" },
+  { href: "/fiche/budget-equipement#calculateur-budget", label: "💰 Budget" },
   { href: "/a-propos", label: "À propos" },
 ];
 
