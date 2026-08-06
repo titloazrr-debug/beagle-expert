@@ -19,6 +19,7 @@ import { AttentionBox } from "@/components/AttentionBox";
 import { ProductCard } from "@/components/ProductCard";
 import { ComparisonBlock } from "@/components/ComparisonBlock";
 import { ComparisonTable } from "@/components/ComparisonTable";
+import { BudgetCalculator } from "@/components/BudgetCalculator";
 import { FicheRelatedLinks } from "@/components/FicheRelatedLinks";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd } from "@/components/JsonLd";
@@ -315,6 +316,10 @@ export default async function FichePage({ params }: PageProps) {
                 </section>
               );
             })}
+
+            {slug === "budget-equipement" && (
+              <BudgetCalculator />
+            )}
 
             {relatedProducts.length > 0 && (
               <section
