@@ -14,6 +14,8 @@ interface ProductCardProps {
   compact?: boolean;
   /** Affiche avantages / inconvénients (défaut: true hors compact) */
   showProsCons?: boolean;
+  /** Callback avant redirection marchande (ex: capture email) */
+  onBeforeNavigate?: (url: string, productName: string) => void;
 }
 
 export function ProductCard({
@@ -23,6 +25,7 @@ export function ProductCard({
   className,
   compact = false,
   showProsCons,
+  onBeforeNavigate,
 }: ProductCardProps) {
   const price =
     product.priceLabel ||
@@ -82,6 +85,11 @@ export function ProductCard({
               {rank !== undefined && (
                 <Badge variant="default" className="tabular-nums">
                   #{rank}
+                </Badge>
+              )}
+              {rank === 1 && (
+                <Badge variant="accent" className="gap-1">
+                  <span aria-hidden>⭐</span> Recommandé
                 </Badge>
               )}
               {product.badge && (
@@ -148,7 +156,17 @@ export function ProductCard({
           <span className="text-[11px] font-medium text-muted-foreground">
             {isPlaceholder ? "Lien bientôt disponible" : "Lien affilié"}
           </span>
-          <span className="inline-flex items-center gap-1.5 rounded-xl bg-accent px-3.5 py-2.5 text-sm font-bold text-accent-foreground shadow-sm transition group-hover:brightness-110">
+          <span
+            onClick={
+              isPlaceholder || !onBeforeNavigate
+                ? undefined
+                : (e) => {
+                    e.preventDefault();
+                    onBeforeNavigate(href, product.name);
+                  }
+            }
+            className="inline-flex items-center gap-1.5 rounded-xl bg-accent px-3.5 py-2.5 text-sm font-bold text-accent-foreground shadow-sm transition group-hover:brightness-110 cursor-pointer"
+          >
             Voir le produit
             {!isPlaceholder && (
               <ExternalLink className="size-3.5 opacity-90" aria-hidden />

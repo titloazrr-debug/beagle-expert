@@ -30,6 +30,8 @@ import {
 } from "@/lib/food-quiz";
 import { ProgressBar } from "@/components/ProgressBar";
 import { ProductCard } from "@/components/ProductCard";
+import { EmailCaptureModal } from "@/components/EmailCaptureModal";
+import { SocialProof } from "@/components/SocialProof";
 import { AlternativeBreedsSection } from "@/components/AlternativeBreedsSection";
 import { InsuranceQuizResult } from "@/components/insurance/InsuranceQuizResult";
 import { FoodQuizResult } from "@/components/food/FoodQuizResult";
@@ -86,6 +88,10 @@ export function QuizEngine({
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<AnswerMap>({});
   const [direction, setDirection] = useState(1);
+  const [emailCapture, setEmailCapture] = useState<{
+    url: string;
+    productName: string;
+  } | null>(null);
   const isInsurance = isInsuranceQuizSlug(quiz.slug);
   const isFood = isFoodQuizSlug(quiz.slug);
 
@@ -598,6 +604,8 @@ export function QuizEngine({
               <AlternativeBreedsSection breeds={alternativeBreeds} />
             )}
 
+            <SocialProof className="mt-4" />
+
             {/* Produits */}
             <div>
               <h3 className="text-lg font-bold tracking-tight">
@@ -630,6 +638,9 @@ export function QuizEngine({
                           product={product}
                           reason={reason}
                           rank={i + 1}
+                          onBeforeNavigate={(url, name) =>
+                            setEmailCapture({ url, productName: name })
+                          }
                         />
                       </div>
                     </motion.div>
@@ -686,6 +697,17 @@ export function QuizEngine({
           </motion.div>
         )}
       </AnimatePresence>
+
+      <EmailCaptureModal
+        isOpen={emailCapture !== null}
+        productName={emailCapture?.productName ?? ""}
+        redirectUrl={emailCapture?.url ?? ""}
+        onClose={() => setEmailCapture(null)}
+        onSuccess={(email) => {
+          console.log("Email capturé:", email);
+          // TODO: envoyer vers API d'emailing
+        }}
+      />
     </div>
   );
 }
