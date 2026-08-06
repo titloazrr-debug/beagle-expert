@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Sparkles, BookOpen, Zap } from "lucide-react";
 import { getTenant } from "@/lib/tenant";
-import { getHeroImage } from "@/lib/beagle-images";
+import { BEAGLE_IMAGES, getHeroImage } from "@/lib/beagle-images";
 import { BeagleImage } from "@/components/BeagleImage";
 import { Button } from "@/components/ui/button";
 import { fiches } from "@/data/fiches";
@@ -41,6 +41,8 @@ const featuredQuizzes = [
 export function Hero() {
   const tenant = getTenant();
   const heroImage = getHeroImage();
+  const sideLeft = BEAGLE_IMAGES.education;
+  const sideRight = BEAGLE_IMAGES.alimentation;
   const quizCount = quizzes.length;
   const ficheCount = fiches.length;
 
@@ -51,9 +53,8 @@ export function Hero() {
 
       <div className="container-page relative py-8 sm:py-12 lg:py-14">
         {/*
-          Mobile : cover 4/3 (inchangé).
-          Desktop : même hauteur courte, visage entier (object-contain)
-          + fond flouté de la même photo (pas de bandes vides).
+          Mobile : 1 photo (hero).
+          Desktop : tryptique 3 colonnes égales (éducation | portrait | alimentation).
         */}
         <div className="relative mb-5 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-soft)] sm:mb-6 sm:rounded-[1.75rem]">
           {/* Mobile */}
@@ -68,30 +69,45 @@ export function Hero() {
               height={heroImage.height}
             />
           </div>
-          {/* Desktop / tablette */}
-          <div className="relative hidden h-[240px] w-full sm:block lg:h-[270px]">
-            <BeagleImage
-              asset={heroImage}
-              alt=""
-              fill
-              priority
-              sizes="(max-width: 1280px) 90vw, 1120px"
-              className="scale-125 object-cover object-center blur-2xl brightness-90"
-              wrapperClassName="absolute inset-0"
-            />
-            <div
-              className="pointer-events-none absolute inset-0 bg-black/5"
-              aria-hidden
-            />
-            <BeagleImage
-              asset={heroImage}
-              alt="Beagle regardant la caméra"
-              fill
-              priority
-              sizes="(max-width: 1280px) 90vw, 1120px"
-              className="object-contain object-center"
-              wrapperClassName="absolute inset-0"
-            />
+          {/* Desktop / tablette : 3 photos */}
+          <div
+            className="hidden h-[240px] w-full grid-cols-3 gap-0 sm:grid lg:h-[270px]"
+            role="img"
+            aria-label="Beagle en promenade, portrait, et moment gourmand"
+          >
+            <div className="relative min-h-0 overflow-hidden">
+              <BeagleImage
+                asset={sideLeft}
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 1280px) 30vw, 360px"
+                className="object-cover object-center"
+                wrapperClassName="absolute inset-0"
+              />
+            </div>
+            <div className="relative min-h-0 overflow-hidden border-x border-white/30">
+              <BeagleImage
+                asset={heroImage}
+                alt="Beagle regardant la caméra"
+                fill
+                priority
+                sizes="(max-width: 1280px) 30vw, 360px"
+                className="object-cover object-[center_35%]"
+                wrapperClassName="absolute inset-0"
+              />
+            </div>
+            <div className="relative min-h-0 overflow-hidden">
+              <BeagleImage
+                asset={sideRight}
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 1280px) 30vw, 360px"
+                className="object-cover object-center"
+                wrapperClassName="absolute inset-0"
+              />
+            </div>
           </div>
         </div>
 
