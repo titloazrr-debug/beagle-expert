@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles, BookOpen, Zap } from "lucide-react";
+import { ArrowRight, Sparkles, BookOpen, Zap, Calculator } from "lucide-react";
 import { getTenant } from "@/lib/tenant";
 import { BEAGLE_IMAGES, getHeroImage } from "@/lib/beagle-images";
 import { BeagleImage } from "@/components/BeagleImage";
@@ -222,6 +222,28 @@ export function Hero() {
               </li>
             ))}
           </ul>
+
+          {/* CTA calculateur budget sous la grille */}
+          <Link
+            href="/fiche/budget-equipement"
+            className="mt-3 flex items-center gap-3 rounded-2xl border-2 border-dashed border-primary/25 bg-primary/[0.03] px-4 py-3.5 transition hover:border-primary/50 hover:bg-primary/[0.06] hover:shadow-sm sm:mt-4 sm:px-5 sm:py-4"
+          >
+            <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-xl sm:size-11">
+              <Calculator className="size-5 text-primary" aria-hidden />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-sm font-extrabold text-foreground sm:text-base">
+                💰 Calculer mon budget Beagle
+              </span>
+              <span className="mt-0.5 block text-xs leading-snug text-muted-foreground">
+                Alimentation, assurance, GPS : une estimation personnalisée en 30 secondes
+              </span>
+            </span>
+            <ArrowRight
+              className="size-5 shrink-0 text-primary opacity-60 transition group-hover:translate-x-0.5 group-hover:opacity-100"
+              aria-hidden
+            />
+          </Link>
         </div>
       </div>
     </section>
