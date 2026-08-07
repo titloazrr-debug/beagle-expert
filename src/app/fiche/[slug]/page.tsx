@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   ArrowLeft,
+  ArrowRight,
   Clock,
   ListChecks,
   Scale,
@@ -139,8 +140,6 @@ export default async function FichePage({ params }: PageProps) {
             content={fiche.dateModified ?? fiche.datePublished}
           />
         )}
-
-        {showMedicalDisclaimer && <MedicalDisclaimer variant="banner" />}
 
         {/* Hero fiche */}
         <header className="relative overflow-hidden border-b border-border/60 bg-gradient-to-br from-muted/40 via-background to-primary/5">
@@ -323,6 +322,56 @@ export default async function FichePage({ params }: PageProps) {
               </section>
             )}
 
+            {relatedQuizzes.length > 0 && (
+              <section
+                className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-primary/10 via-card to-accent/5 p-6 sm:p-8"
+                aria-labelledby="fiche-quiz-cta-heading"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary text-2xl shadow-sm" aria-hidden>
+                    {relatedQuizzes[0]?.emoji ?? "🧭"}
+                  </span>
+                  <div>
+                    <p className="text-xs font-extrabold uppercase tracking-wide text-primary">
+                      Recommandation personnalisée
+                    </p>
+                    <h2
+                      id="fiche-quiz-cta-heading"
+                      className="mt-1 font-[family-name:var(--font-display)] text-lg font-extrabold tracking-tight text-balance sm:text-xl"
+                    >
+                      {relatedQuizzes[0]?.title}
+                    </h2>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                      En 2 à 4 minutes, obtenez des recommandations adaptées à
+                      votre Beagle — avant de consulter la sélection produits
+                      ci-dessous.
+                    </p>
+                    {relatedQuizzes.length > 1 && (
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {relatedQuizzes.slice(1).map((q) => q && (
+                          <Link
+                            key={q.slug}
+                            href={`/quiz/${q.slug}`}
+                            className="inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-card px-3 py-1.5 text-xs font-semibold text-foreground transition hover:border-primary/50 hover:bg-primary/5"
+                          >
+                            <span aria-hidden>{q.emoji}</span>
+                            {q.title}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                    <Button asChild size="lg" className="mt-4">
+                      <Link href={`/quiz/${relatedQuizzes[0]?.slug}`}>
+                        <Sparkles className="size-4" aria-hidden />
+                        Faire le quiz
+                        <ArrowRight className="size-4" aria-hidden />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </section>
+            )}
+
             {relatedProducts.length > 0 && (
               <section
                 className="rounded-3xl border border-primary/15 bg-gradient-to-br from-primary/5 via-card to-accent/5 p-6 sm:p-8"
@@ -397,6 +446,35 @@ export default async function FichePage({ params }: PageProps) {
                 currentSlug={slug}
                 related={relatedFiches}
               />
+            )}
+
+            {fiche.sources && fiche.sources.length > 0 && (
+              <section className="rounded-2xl border border-border bg-muted/20 p-5">
+                <h2 className="text-xs font-extrabold uppercase tracking-wide text-muted-foreground">
+                  Sources vérifiées
+                </h2>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  Mise à jour : {fiche.dateModified || fiche.datePublished}
+                </p>
+                <ul className="mt-3 space-y-1.5">
+                  {fiche.sources.map((src, i) => (
+                    <li key={i} className="text-xs text-muted-foreground/80">
+                      {src.startsWith("http") ? (
+                        <a
+                          href={src}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline underline-offset-2 hover:text-primary"
+                        >
+                          {src.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                        </a>
+                      ) : (
+                        <span>{src}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </section>
             )}
           </div>
 

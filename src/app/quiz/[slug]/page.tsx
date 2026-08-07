@@ -123,8 +123,6 @@ export default async function QuizPage({ params }: PageProps) {
         />
       )}
 
-      {showMedicalDisclaimer && <MedicalDisclaimer variant="banner" />}
-
       <div className="border-b border-border/60 bg-gradient-to-b from-muted/40 to-background">
         <div className="container-page py-6">
           <nav aria-label="Fil d'Ariane" className="mb-3">
