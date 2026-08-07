@@ -67,10 +67,6 @@ export default function MentionsLegalesPage() {
               {tenant.siteUrl}
             </li>
           </ul>
-          <p className="mt-3 text-xs text-muted-foreground">
-            Les mentions « à compléter » doivent être renseignées avant toute
-            mise en production publique.
-          </p>
         </section>
 
         <section className="rounded-2xl border border-border bg-card p-6 shadow-sm">

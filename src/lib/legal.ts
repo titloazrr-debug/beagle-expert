@@ -47,11 +47,11 @@ export function isMedicalQuizSlug(slug: string): boolean {
 /** Coordonnées éditeur (à personnaliser en prod) */
 export const LEGAL_PUBLISHER = {
   siteName: "Beagle Expert",
-  companyName: "Beagle Expert",
-  legalForm: "Projet éditorial / site d’information (à compléter : forme juridique)",
-  address: "Adresse à compléter",
+  companyName: "Thierry Loiseau",
+  legalForm: "Particulier (projet éditorial individuel — SASU en cours de création)",
+  address: "515 route de Falgueyras, 47300 Villeneuve-sur-Lot, France",
   email: "contact@beagle-expert.fr",
-  publicationDirector: "Directeur de la publication à compléter",
+  publicationDirector: "Thierry Loiseau",
   hostName: "Vercel Inc.",
   hostAddress: "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
   hostWebsite: "https://vercel.com",
