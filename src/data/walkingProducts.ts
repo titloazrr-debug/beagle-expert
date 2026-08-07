@@ -49,10 +49,10 @@ const VERIFIED = "2026-08-07";
 export const WALKING_PRODUCTS: WalkingProduct[] = [
   {
     id: "harness-y-placeholder",
-    name: "Harnais en Y confortable (référence à valider)",
+    name: "Harnais en Y confortable",
     category: "y_harness",
-    active: false,
-    retailer: "Partenaire à confirmer",
+    active: true,
+    retailer: "Zooplus",
     affiliateUrlEnv: "NEXT_PUBLIC_HARNESS_Y_AFFILIATE_URL",
     strengths: [
       "Liberté des épaules pour la marche et le flair",
@@ -74,10 +74,10 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
   },
   {
     id: "harness-escape-placeholder",
-    name: "Harnais anti-évasion / 3 points (référence à valider)",
+    name: "Harnais anti-évasion / 3 points",
     category: "escape_proof_harness",
-    active: false,
-    retailer: "Partenaire à confirmer",
+    active: true,
+    retailer: "Zooplus",
     affiliateUrlEnv: "NEXT_PUBLIC_HARNESS_ESCAPE_AFFILIATE_URL",
     strengths: [
       "Conception limitant le recul hors du harnais",
@@ -94,10 +94,10 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
   },
   {
     id: "harness-hiking-placeholder",
-    name: "Harnais rembourré randonnée (référence à valider)",
+    name: "Harnais rembourré randonnée",
     category: "hiking_harness",
-    active: false,
-    retailer: "Partenaire à confirmer",
+    active: true,
+    retailer: "Zooplus",
     affiliateUrlEnv: "NEXT_PUBLIC_HARNESS_HIKING_AFFILIATE_URL",
     strengths: [
       "Confort pour usage prolongé",
@@ -114,10 +114,10 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
   },
   {
     id: "longline-5-placeholder",
-    name: "Longe environ 5 m (référence à valider)",
+    name: "Longe environ 5 m",
     category: "long_line_5",
-    active: false,
-    retailer: "Partenaire à confirmer",
+    active: true,
+    retailer: "Zooplus",
     affiliateUrlEnv: "NEXT_PUBLIC_LONG_LINE_5M_AFFILIATE_URL",
     strengths: [
       "Plus de liberté qu’une laisse courte",
@@ -133,10 +133,10 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
   },
   {
     id: "longline-10-placeholder",
-    name: "Longe environ 10 m (référence à valider)",
+    name: "Longe environ 10 m",
     category: "long_line_10",
-    active: false,
-    retailer: "Partenaire à confirmer",
+    active: true,
+    retailer: "Zooplus",
     affiliateUrlEnv: "NEXT_PUBLIC_LONG_LINE_10M_AFFILIATE_URL",
     strengths: [
       "Exploration élargie tout en restant attaché",
@@ -157,10 +157,10 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
   },
   {
     id: "longline-15-placeholder",
-    name: "Longe 15–20 m (référence à valider)",
+    name: "Longe 15 m et plus",
     category: "long_line_15_plus",
-    active: false,
-    retailer: "Partenaire à confirmer",
+    active: true,
+    retailer: "Zooplus",
     affiliateUrlEnv: "NEXT_PUBLIC_LONG_LINE_15M_AFFILIATE_URL",
     strengths: [
       "Maximum de liberté sécurisée sur terrain adapté",
