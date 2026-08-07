@@ -10,6 +10,7 @@ import {
   ShieldAlert,
   Sparkles,
   Tag,
+  ArrowRight,
 } from "lucide-react";
 import type { Quiz } from "@/types";
 import {
@@ -37,65 +38,113 @@ interface WalkingQuizResultProps {
 function ProductRow({
   product,
   profileId,
+  featured,
 }: {
   product: WalkingProduct;
   profileId: string;
+  featured?: boolean;
 }) {
   const url = resolveWalkingAffiliateUrl(product);
   if (!product.active) return null;
 
   return (
-    <article className="rounded-2xl border border-border bg-card p-4 shadow-sm">
-      <div className="flex flex-wrap items-start justify-between gap-2">
-        <div>
-          <h4 className="font-bold leading-snug">{product.name}</h4>
-          <p className="mt-0.5 text-xs text-muted-foreground">
-            {product.retailer}
-          </p>
-        </div>
+    <article
+      className={cn(
+        "overflow-hidden rounded-3xl border-2 shadow-lg transition hover:-translate-y-0.5",
+        featured
+          ? "border-accent shadow-accent/20"
+          : "border-accent/40 shadow-accent/10"
+      )}
+    >
+      <div
+        className={cn(
+          "px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider",
+          featured
+            ? "bg-accent text-accent-foreground"
+            : "bg-accent/15 text-accent"
+        )}
+      >
+        {featured ? (
+          <span className="inline-flex items-center gap-1.5">
+            <Sparkles className="size-3.5" aria-hidden />
+            Recommandation principale
+          </span>
+        ) : (
+          "À examiner"
+        )}
       </div>
-      {product.strengths.length > 0 && (
-        <ul className="mt-3 space-y-1.5">
-          {product.strengths.slice(0, 3).map((s) => (
-            <li
-              key={s}
-              className="flex items-start gap-2 text-sm text-foreground/85"
+
+      <div className="bg-gradient-to-b from-[#fff8f0] to-card px-5 py-5 sm:px-6">
+        <div className="flex flex-wrap items-start justify-between gap-2">
+          <div className="min-w-0 flex-1">
+            <p className="text-xs font-bold uppercase tracking-wide text-accent">
+              {product.retailer}
+            </p>
+            <h4 className="mt-1 text-lg font-extrabold leading-snug text-foreground sm:text-xl">
+              {product.name}
+            </h4>
+          </div>
+          {featured && (
+            <Badge className="shrink-0 border-0 bg-primary text-primary-foreground">
+              ⭐ Choix du quiz
+            </Badge>
+          )}
+        </div>
+
+        {product.strengths.length > 0 && (
+          <ul className="mt-4 space-y-2">
+            {product.strengths.slice(0, 3).map((s) => (
+              <li
+                key={s}
+                className="flex items-start gap-2.5 text-sm font-medium text-foreground/90"
+              >
+                <CheckCircle2
+                  className="mt-0.5 size-4 shrink-0 text-accent"
+                  aria-hidden
+                />
+                {s}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {url ? (
+          <div className="mt-5 space-y-2">
+            <Button
+              asChild
+              variant="affiliate"
+              size="xl"
+              className="h-14 w-full text-base shadow-lg shadow-accent/30 sm:text-lg"
             >
-              <CheckCircle2
-                className="mt-0.5 size-3.5 shrink-0 text-primary"
-                aria-hidden
-              />
-              {s}
-            </li>
-          ))}
-        </ul>
-      )}
-      {url ? (
-        <Button asChild variant="affiliate" className="mt-4 min-h-11 w-full sm:w-auto">
-          <a
-            href={url}
-            target="_blank"
-            rel="sponsored noopener noreferrer"
-            onClick={() =>
-              WalkingAnalytics.productClick({
-                productId: product.id,
-                placement: "result_equipment",
-                resultProfile: profileId,
-              })
-            }
-          >
-            {product.ctaLabel}
-            <ExternalLink className="size-4" aria-hidden />
-          </a>
-        </Button>
-      ) : (
-        process.env.NODE_ENV === "development" && (
-          <p className="mt-3 text-xs text-muted-foreground">
-            URL absente — configurez{" "}
-            <code className="font-mono">{product.affiliateUrlEnv}</code>
-          </p>
-        )
-      )}
+              <a
+                href={url}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                onClick={() =>
+                  WalkingAnalytics.productClick({
+                    productId: product.id,
+                    placement: "result_equipment",
+                    resultProfile: profileId,
+                  })
+                }
+              >
+                {product.ctaLabel}
+                <ExternalLink className="size-5" aria-hidden />
+              </a>
+            </Button>
+            <p className="text-center text-[11px] text-muted-foreground">
+              Lien affilié · sans surcoût pour vous
+            </p>
+          </div>
+        ) : (
+          process.env.NODE_ENV === "development" && (
+            <p className="mt-4 text-xs text-muted-foreground">
+              URL absente — configurez{" "}
+              <code className="font-mono">{product.affiliateUrlEnv}</code>
+            </p>
+          )
+        )}
+      </div>
     </article>
   );
 }
@@ -105,16 +154,17 @@ export function WalkingQuizResult({
   onRestart,
 }: WalkingQuizResultProps) {
   const result = buildWalkingResult(answers);
+  const hasProducts = result.products.length > 0;
 
   return (
     <div className="space-y-6">
       {/* Header setup */}
       <section
         aria-labelledby="walking-setup-heading"
-        className="overflow-hidden rounded-3xl border-2 border-primary/25 shadow-[var(--shadow-soft)]"
+        className="overflow-hidden rounded-3xl border-2 border-accent/40 shadow-[0_12px_40px_-12px_rgb(107_63_26_/_0.35)]"
       >
-        <div className="bg-gradient-to-br from-primary via-primary to-primary-hover px-6 py-8 sm:px-8">
-          <p className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+        <div className="bg-gradient-to-br from-accent via-[#7a4a22] to-primary px-6 py-8 sm:px-8">
+          <p className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-white">
             <Sparkles className="size-3.5" aria-hidden />
             Votre setup promenade Beagle
           </p>
@@ -126,48 +176,157 @@ export function WalkingQuizResult({
               {result.title}
             </h2>
             {result.badge && (
-              <Badge className="border-0 bg-white/20 text-white">
+              <Badge className="border-0 bg-white/25 text-white">
                 {result.badge}
               </Badge>
             )}
           </div>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/95 sm:text-base">
             {result.description}
           </p>
         </div>
 
-        {/* 4 lignes setup */}
-        <div className="grid gap-3 bg-card p-5 sm:grid-cols-2 sm:p-7">
+        {/* 4 lignes setup — fort contraste */}
+        <div className="grid gap-3 bg-[#1a120c] p-4 sm:grid-cols-2 sm:p-6">
           <SetupLine
             emoji="🦮"
             label="Harnais"
             value={result.setup.harnessType}
             detail={result.setup.harnessDetail}
+            tone="accent"
           />
           <SetupLine
             emoji="🪢"
             label="Laisse / longe"
             value={result.setup.leadLabel}
             detail={`Repère : ${result.setup.leadLengthHint}`}
+            tone="primary"
           />
           <SetupLine
             emoji="🏷️"
             label="Identification"
             value={result.setup.identificationLabel}
+            tone="soft"
           />
           <SetupLine
             emoji="📡"
             label="GPS"
             value={result.setup.gpsLabel}
+            tone={
+              result.gpsRelevance === "high"
+                ? "accent"
+                : result.gpsRelevance === "medium"
+                  ? "primary"
+                  : "soft"
+            }
           />
         </div>
       </section>
+
+      {/* Priorité — bandeau visible */}
+      <section
+        aria-labelledby="walking-priority-heading"
+        className="rounded-2xl border-2 border-primary bg-primary px-5 py-4 text-primary-foreground sm:px-6"
+      >
+        <h3
+          id="walking-priority-heading"
+          className="text-xs font-extrabold uppercase tracking-wider text-white/80"
+        >
+          Votre priorité
+        </h3>
+        <p className="mt-1.5 text-base font-bold leading-snug sm:text-lg">
+          {result.priority}
+        </p>
+      </section>
+
+      {/* Produits partenaires — bloc conversion prioritaire */}
+      {hasProducts && (
+        <section
+          aria-labelledby="walking-products-heading"
+          className="space-y-4"
+        >
+          <div className="rounded-2xl border-2 border-accent/30 bg-accent/10 px-5 py-4">
+            <h3
+              id="walking-products-heading"
+              className="flex items-center gap-2 text-xl font-extrabold tracking-tight text-accent"
+            >
+              <Sparkles className="size-5" aria-hidden />
+              Équipement à examiner
+            </h3>
+            <p className="mt-1.5 text-sm font-medium text-foreground/90">
+              Sélection alignée sur votre profil — cliquez pour voir l’offre.
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+              {WALKING_AFFILIATE_DISCLAIMER}
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {result.products.map((p, i) => (
+              <ProductRow
+                key={p.id}
+                product={p}
+                profileId={result.profileId}
+                featured={i === 0}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* GPS cross-link — CTA fort */}
+      {(result.showGpsCrosslink || result.secondaryGpsCta) &&
+        !result.hasGpsAlready && (
+          <section className="overflow-hidden rounded-3xl border-2 border-primary shadow-lg shadow-primary/15">
+            <div className="bg-primary px-5 py-3 sm:px-6">
+              <p className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-primary-foreground">
+                <Radio className="size-3.5" aria-hidden />
+                {result.gpsRelevance === "high"
+                  ? "GPS : fortement pertinent"
+                  : "GPS : pertinent dans votre situation"}
+              </p>
+            </div>
+            <div className="bg-gradient-to-b from-primary/10 to-card px-5 py-5 sm:px-6">
+              <p className="text-sm leading-relaxed text-foreground/90 sm:text-base">
+                Un GPS permet de localiser un chien qui s’est éloigné. Il
+                complète harnais et longe — il ne les remplace pas.
+              </p>
+              <Button
+                asChild
+                size="xl"
+                className="mt-4 h-14 w-full text-base shadow-lg sm:text-lg"
+              >
+                <Link
+                  href="/quiz/collier-gps"
+                  onClick={() =>
+                    WalkingAnalytics.gpsCrosslinkClick({
+                      resultProfile: result.profileId,
+                      placement: "result_gps_block",
+                    })
+                  }
+                >
+                  Quel GPS pour mon Beagle ?
+                  <ArrowRight className="size-5" aria-hidden />
+                </Link>
+              </Button>
+            </div>
+          </section>
+        )}
+
+      {result.hasGpsAlready && (
+        <p
+          className="rounded-2xl border-2 border-primary/30 bg-primary/10 px-4 py-3 text-sm font-medium text-foreground"
+          role="status"
+        >
+          📡 GPS déjà en place — vérifiez batterie et abonnement. C’est une
+          couche de sécurité utile en plus du harnais et de la longe.
+        </p>
+      )}
 
       {/* Pourquoi */}
       {result.influencers.length > 0 && (
         <section
           aria-labelledby="walking-why-heading"
-          className="rounded-3xl border border-border bg-card p-6 shadow-sm"
+          className="rounded-3xl border-2 border-border bg-card p-6 shadow-sm"
         >
           <h3
             id="walking-why-heading"
@@ -192,32 +351,16 @@ export function WalkingQuizResult({
         </section>
       )}
 
-      {/* Priorité */}
-      <section
-        aria-labelledby="walking-priority-heading"
-        className="rounded-3xl border border-primary/20 bg-primary/5 px-6 py-5"
-      >
-        <h3
-          id="walking-priority-heading"
-          className="text-xs font-bold uppercase tracking-wider text-primary"
-        >
-          Votre priorité
-        </h3>
-        <p className="mt-2 text-base font-semibold leading-snug text-foreground sm:text-lg">
-          {result.priority}
-        </p>
-      </section>
-
       {/* Callouts */}
       {result.callouts.map((c) => (
         <div
           key={c.title + c.body.slice(0, 24)}
           role="note"
           className={cn(
-            "flex gap-3 rounded-2xl border px-4 py-3.5 text-sm leading-relaxed",
+            "flex gap-3 rounded-2xl border-2 px-4 py-3.5 text-sm leading-relaxed",
             c.tone === "warn"
-              ? "border-amber-300/80 bg-amber-50 text-amber-950"
-              : "border-border bg-muted/40 text-foreground/90"
+              ? "border-amber-400 bg-amber-50 text-amber-950"
+              : "border-primary/25 bg-key-bg text-key-fg"
           )}
         >
           {c.tone === "warn" ? (
@@ -236,16 +379,16 @@ export function WalkingQuizResult({
       {result.identificationStatus === "missing_tag" && (
         <section
           aria-labelledby="walking-tag-heading"
-          className="rounded-3xl border border-border bg-card p-6 shadow-sm"
+          className="rounded-3xl border-2 border-accent/35 bg-gradient-to-br from-[#fff8f0] to-card p-6 shadow-md"
         >
           <h3
             id="walking-tag-heading"
-            className="flex items-center gap-2 text-lg font-bold"
+            className="flex items-center gap-2 text-lg font-extrabold text-accent"
           >
-            <Tag className="size-5 text-primary" aria-hidden />
+            <Tag className="size-5" aria-hidden />
             Identification rapide : pensez à une médaille
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-foreground/85">
+          <p className="mt-2 text-sm leading-relaxed text-foreground/90">
             Une médaille indiquant au minimum un numéro de téléphone permet à
             une personne qui retrouve votre Beagle de vous contacter
             immédiatement. Elle complète l’identification officielle mais ne la
@@ -256,7 +399,7 @@ export function WalkingQuizResult({
 
       {result.hasTagAlready && (
         <p
-          className="rounded-2xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground/90"
+          className="rounded-2xl border-2 border-primary/25 bg-primary/8 px-4 py-3 text-sm font-medium text-foreground"
           role="status"
         >
           Vous disposez déjà d’une médaille — pensez simplement à vérifier que
@@ -270,19 +413,22 @@ export function WalkingQuizResult({
       {result.checklist.length > 0 && (
         <section
           aria-labelledby="walking-checklist-heading"
-          className="rounded-3xl border border-border bg-card p-6 shadow-sm"
+          className="rounded-3xl border-2 border-primary/20 bg-card p-6 shadow-sm"
         >
-          <h3 id="walking-checklist-heading" className="text-lg font-bold">
+          <h3
+            id="walking-checklist-heading"
+            className="text-lg font-extrabold"
+          >
             Checklist personnalisée
           </h3>
           <ul className="mt-4 space-y-2.5">
             {result.checklist.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-2.5 text-sm text-foreground/90"
+                className="flex items-start gap-2.5 text-sm font-medium text-foreground/90"
               >
                 <span
-                  className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-md border-2 border-primary/40 text-[10px] font-bold text-primary"
+                  className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-md bg-primary text-[11px] font-extrabold text-primary-foreground"
                   aria-hidden
                 >
                   ✓
@@ -291,66 +437,6 @@ export function WalkingQuizResult({
               </li>
             ))}
           </ul>
-        </section>
-      )}
-
-      {/* Produits partenaires */}
-      {result.products.length > 0 && (
-        <section
-          aria-labelledby="walking-products-heading"
-          className="space-y-4"
-        >
-          <div>
-            <h3 id="walking-products-heading" className="text-lg font-bold">
-              Équipement à examiner
-            </h3>
-            <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-              {WALKING_AFFILIATE_DISCLAIMER}
-            </p>
-          </div>
-          <div className="grid gap-3">
-            {result.products.map((p) => (
-              <ProductRow
-                key={p.id}
-                product={p}
-                profileId={result.profileId}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* GPS cross-link */}
-      {(result.showGpsCrosslink || result.secondaryGpsCta) && (
-        <section className="rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/8 to-card p-6">
-          <h3 className="flex items-center gap-2 text-lg font-bold">
-            <Radio className="size-5 text-primary" aria-hidden />
-            {result.hasGpsAlready
-              ? "GPS déjà en place"
-              : result.gpsRelevance === "high"
-                ? "GPS : fortement pertinent"
-                : "GPS : pertinent dans votre situation"}
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-            {result.hasGpsAlready
-              ? "Vous disposez déjà de cette couche de sécurité. Le GPS localise un chien qui s’est éloigné — il ne remplace ni le rappel ni la longe."
-              : "Un GPS permet de localiser un chien qui s’est éloigné. Il complète harnais et longe, il ne les remplace pas."}
-          </p>
-          {!result.hasGpsAlready && (
-            <Button asChild className="mt-4 min-h-11" variant="default">
-              <Link
-                href="/quiz/collier-gps"
-                onClick={() =>
-                  WalkingAnalytics.gpsCrosslinkClick({
-                    resultProfile: result.profileId,
-                    placement: "result_gps_block",
-                  })
-                }
-              >
-                Voir aussi : Quel GPS pour mon Beagle ?
-              </Link>
-            </Button>
-          )}
         </section>
       )}
 
@@ -383,9 +469,9 @@ export function WalkingQuizResult({
       {/* Cross-links */}
       <section
         aria-labelledby="walking-more-heading"
-        className="rounded-3xl border border-border bg-muted/30 p-6"
+        className="rounded-3xl border-2 border-border bg-muted/40 p-6"
       >
-        <h3 id="walking-more-heading" className="text-lg font-bold">
+        <h3 id="walking-more-heading" className="text-lg font-extrabold">
           À découvrir aussi
         </h3>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -409,7 +495,7 @@ export function WalkingQuizResult({
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="flex min-h-11 items-center gap-3 rounded-2xl border border-border bg-card px-4 py-3 text-sm font-medium transition hover:border-primary/30 hover:shadow-md"
+                className="flex min-h-12 items-center gap-3 rounded-2xl border-2 border-border bg-card px-4 py-3.5 text-sm font-bold transition hover:border-accent hover:bg-accent/5 hover:shadow-md"
                 onClick={() => {
                   if (item.href.includes("collier-gps")) {
                     WalkingAnalytics.gpsCrosslinkClick({
@@ -422,7 +508,8 @@ export function WalkingQuizResult({
                 <span className="text-2xl" aria-hidden>
                   {item.emoji}
                 </span>
-                {item.title}
+                <span className="flex-1">{item.title}</span>
+                <ArrowRight className="size-4 shrink-0 text-accent" aria-hidden />
               </Link>
             </li>
           ))}
@@ -449,23 +536,45 @@ function SetupLine({
   label,
   value,
   detail,
+  tone = "soft",
 }: {
   emoji: string;
   label: string;
   value: string;
   detail?: string;
+  tone?: "accent" | "primary" | "soft";
 }) {
   return (
-    <div className="rounded-2xl border border-border/80 bg-muted/20 px-4 py-3.5">
-      <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+    <div
+      className={cn(
+        "rounded-2xl border-2 px-4 py-4 shadow-md",
+        tone === "accent" &&
+          "border-accent/50 bg-gradient-to-br from-accent to-[#5a3415] text-white",
+        tone === "primary" &&
+          "border-primary/40 bg-gradient-to-br from-primary to-primary-hover text-white",
+        tone === "soft" &&
+          "border-white/20 bg-white/10 text-white backdrop-blur-sm"
+      )}
+    >
+      <p
+        className={cn(
+          "text-xs font-extrabold uppercase tracking-wide",
+          tone === "soft" ? "text-white/75" : "text-white/85"
+        )}
+      >
         <span aria-hidden>{emoji} </span>
         {label}
       </p>
-      <p className="mt-1 text-sm font-bold leading-snug text-foreground sm:text-[15px]">
+      <p className="mt-1.5 text-[15px] font-extrabold leading-snug sm:text-base">
         {value}
       </p>
       {detail && (
-        <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+        <p
+          className={cn(
+            "mt-1.5 text-xs leading-relaxed",
+            tone === "soft" ? "text-white/70" : "text-white/80"
+          )}
+        >
           {detail}
         </p>
       )}

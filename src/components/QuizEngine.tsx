@@ -688,17 +688,21 @@ export function QuizEngine({
 
             <SocialProof className="mt-4" />
 
-            {/* Produits */}
-            <div>
-              <h3 className="text-lg font-bold tracking-tight">
+            {/* Produits — bloc conversion mis en avant */}
+            <div className="rounded-3xl border-2 border-accent/35 bg-gradient-to-b from-accent/10 via-card to-card p-5 shadow-lg shadow-accent/10 sm:p-6">
+              <div className="mb-1 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-accent-foreground">
+                <Sparkles className="size-3.5" aria-hidden />
+                Pour vous
+              </div>
+              <h3 className="mt-2 text-xl font-extrabold tracking-tight text-accent sm:text-2xl">
                 {result.showAlternativeBreeds
                   ? "Si vous avancez malgré tout avec un Beagle"
                   : "Produits recommandés pour vous"}
               </h3>
-              <p className="mt-1 text-sm text-muted-foreground">
+              <p className="mt-1.5 text-sm font-medium text-foreground/90">
                 {result.showAlternativeBreeds
                   ? "Quelques repères utiles si vous gardez le Beagle en tête plus tard."
-                  : "Sélection selon vos réponses — 2 à 4 idées concrètes."}
+                  : "Sélection selon vos réponses — cliquez pour voir l’offre."}
               </p>
               {result.recommendedProducts.length === 0 ? (
                 <p className="mt-4 rounded-2xl border border-dashed border-border bg-muted/30 p-5 text-sm text-muted-foreground">
@@ -706,25 +710,22 @@ export function QuizEngine({
                   Budget et Éducation.
                 </p>
               ) : (
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
                   {result.recommendedProducts.map(({ product, reason }, i) => (
                     <motion.div
                       key={product.id}
                       initial={{ opacity: 0, y: 12 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.08 * i, duration: 0.25 }}
-                      className="rounded-2xl bg-gradient-to-b from-primary/[0.02] to-card p-0.5"
                     >
-                      <div className="rounded-2xl border-2 border-primary/15 bg-card shadow-sm transition hover:shadow-md">
-                        <ProductCard
-                          product={product}
-                          reason={reason}
-                          rank={i + 1}
-                          onBeforeNavigate={(url, name) =>
-                            setEmailCapture({ url, productName: name })
-                          }
-                        />
-                      </div>
+                      <ProductCard
+                        product={product}
+                        reason={reason}
+                        rank={i + 1}
+                        onBeforeNavigate={(url, name) =>
+                          setEmailCapture({ url, productName: name })
+                        }
+                      />
                     </motion.div>
                   ))}
                 </div>
