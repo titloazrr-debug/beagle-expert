@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ClipboardList, Heart, Home, Scale, Shirt, ShoppingBag, Utensils, Stethoscope } from "lucide-react";
+import {
+  ArrowRight,
+  ClipboardList,
+  Footprints,
+  Heart,
+  Home,
+  Radio,
+  Scale,
+  Shirt,
+  ShoppingBag,
+  Stethoscope,
+  Utensils,
+} from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 import { getTenant } from "@/lib/tenant";
 import { Button } from "@/components/ui/button";
@@ -44,6 +56,22 @@ const paths = [
     href: "/quiz/alimentation-croquettes",
     cta: "Lancer le quiz croquettes",
     color: "from-amber-500/20 to-amber-500/5",
+  },
+  {
+    icon: Footprints,
+    label: "Je cherche le bon harnais / équipement de promenade",
+    desc: "Harnais, laisse ou longe : setup adapté à son flair et son rappel.",
+    href: "/quiz/harnais-beagle",
+    cta: "Faire le quiz harnais",
+    color: "from-emerald-500/20 to-emerald-500/5",
+  },
+  {
+    icon: Radio,
+    label: "Je veux un collier GPS pour mon Beagle",
+    desc: "Fugue, grands espaces, rappel : trouvez le GPS adapté.",
+    href: "/quiz/collier-gps",
+    cta: "Faire le quiz GPS",
+    color: "from-sky-500/20 to-sky-500/5",
   },
   {
     icon: Scale,
