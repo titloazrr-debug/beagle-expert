@@ -329,7 +329,7 @@ export function QuizEngine({
                   </li>
                   <li className="rounded-full bg-card px-3 py-1.5 shadow-sm ring-1 ring-border">
                     {isInsurance || isFood
-                      ? "Aucun email demandé"
+                      ? "Email facultatif"
                       : "Recos personnalisées"}
                   </li>
                 </ul>

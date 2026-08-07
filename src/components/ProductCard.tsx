@@ -153,25 +153,27 @@ export function ProductCard({
         )}
 
         <div className="mt-auto flex items-center justify-between gap-2 pt-4">
-          <span className="text-[11px] font-medium text-muted-foreground">
-            {isPlaceholder ? "Lien bientôt disponible" : "Lien affilié"}
-          </span>
-          <span
-            onClick={
-              isPlaceholder || !onBeforeNavigate
-                ? undefined
-                : (e) => {
-                    e.preventDefault();
-                    onBeforeNavigate(href, product.name);
-                  }
-            }
-            className="inline-flex items-center gap-1.5 rounded-xl bg-accent px-3.5 py-2.5 text-sm font-bold text-accent-foreground shadow-sm transition group-hover:brightness-110 cursor-pointer"
-          >
-            Voir le produit
-            {!isPlaceholder && (
-              <ExternalLink className="size-3.5 opacity-90" aria-hidden />
-            )}
-          </span>
+          {isPlaceholder ? (
+            <span className="text-[11px] italic text-muted-foreground">
+              Lien affilié à venir
+            </span>
+          ) : (
+            <>
+              <span className="text-[11px] font-medium text-muted-foreground">
+                Lien affilié
+              </span>
+              <span
+                onClick={(e) => {
+                  e.preventDefault();
+                  onBeforeNavigate?.(href, product.name);
+                }}
+                className="inline-flex items-center gap-1.5 rounded-xl bg-accent px-3.5 py-2.5 text-sm font-bold text-accent-foreground shadow-sm transition group-hover:brightness-110 cursor-pointer"
+              >
+                Voir le produit
+                <ExternalLink className="size-3.5 opacity-90" aria-hidden />
+              </span>
+            </>
+          )}
         </div>
       </div>
     </a>
