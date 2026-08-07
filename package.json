@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "test:insurance": "node scripts/test-insurance.mjs",
     "test:food": "node scripts/test-food.mjs",
-    "test": "node scripts/test-insurance.mjs && node scripts/test-food.mjs",
+    "test:walking": "node scripts/test-walking.mjs",
+    "test": "node scripts/test-insurance.mjs && node scripts/test-food.mjs && node scripts/test-walking.mjs",
     "clean": "rm -rf .next"
   },
   "dependencies": {

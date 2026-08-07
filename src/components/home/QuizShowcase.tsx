@@ -11,6 +11,7 @@ interface QuizShowcaseProps {
 
 /** Ordre d’affichage sur l’accueil */
 const PRIORITY = [
+  "harnais-beagle",
   "pret-a-adopter",
   "assurance-sante-beagle",
   "alimentation-croquettes",
@@ -24,6 +25,12 @@ const HOME_COPY: Record<
   string,
   { badge: string; pitch: string; cta: string }
 > = {
+  "harnais-beagle": {
+    badge: "Nouveau",
+    pitch:
+      "Harnais, laisse, longe & sécurité : composez un setup promenade adapté à son flair, son rappel et votre environnement.",
+    cta: "Trouver son équipement",
+  },
   "pret-a-adopter": {
     badge: "À faire avant d’adopter",
     pitch:
@@ -37,7 +44,7 @@ const HOME_COPY: Record<
     cta: "Définir mes priorités",
   },
   "alimentation-croquettes": {
-    badge: "Nouveau · ~3 min",
+    badge: "~3 min",
     pitch:
       "Âge, silhouette, activité et digestion : quel type de croquettes correspond le mieux à votre Beagle ?",
     cta: "Trouver son profil",

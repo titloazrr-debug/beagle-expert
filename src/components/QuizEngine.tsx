@@ -21,13 +21,22 @@ import {
   shouldShowAlternativeBreeds,
 } from "@/lib/content/quiz-logic";
 import { isInsuranceQuizSlug } from "@/lib/compliance";
-import { FoodAnalytics, InsuranceAnalytics } from "@/lib/analytics";
+import {
+  FoodAnalytics,
+  InsuranceAnalytics,
+  WalkingAnalytics,
+} from "@/lib/analytics";
 import { pickInsuranceResultProfile } from "@/lib/insurance-quiz";
 import {
   buildFoodResult,
   isFoodQuizSlug,
   type FoodAnswers,
 } from "@/lib/food-quiz";
+import {
+  buildWalkingResult,
+  isWalkingQuizSlug,
+  type WalkingAnswers,
+} from "@/lib/walking-quiz";
 import { ProgressBar } from "@/components/ProgressBar";
 import { ProductCard } from "@/components/ProductCard";
 import { EmailCaptureModal } from "@/components/EmailCaptureModal";
@@ -35,6 +44,7 @@ import { SocialProof } from "@/components/SocialProof";
 import { AlternativeBreedsSection } from "@/components/AlternativeBreedsSection";
 import { InsuranceQuizResult } from "@/components/insurance/InsuranceQuizResult";
 import { FoodQuizResult } from "@/components/food/FoodQuizResult";
+import { WalkingQuizResult } from "@/components/walking/WalkingQuizResult";
 import { QuizRecoDisclaimer } from "@/components/legal/QuizRecoDisclaimer";
 import { AffiliateDisclaimer } from "@/components/legal/AffiliateDisclaimer";
 import { Button } from "@/components/ui/button";
@@ -51,7 +61,7 @@ interface QuizEngineProps {
 type Phase = "intro" | "questions" | "result";
 type AnswerMap = Record<string, string | string[]>;
 
-const MULTI_EXCLUSIVE = new Set(["health-none", "health-nsp"]);
+const MULTI_EXCLUSIVE = new Set(["health-none", "health-nsp", "eq-none"]);
 
 function computeAffinityPercent(
   scores: Record<string, number>,
@@ -94,11 +104,14 @@ export function QuizEngine({
   } | null>(null);
   const isInsurance = isInsuranceQuizSlug(quiz.slug);
   const isFood = isFoodQuizSlug(quiz.slug);
+  const isWalking = isWalkingQuizSlug(quiz.slug);
+  const isSpecialized = isInsurance || isFood || isWalking;
 
   useEffect(() => {
     if (isInsurance) InsuranceAnalytics.view();
     if (isFood) FoodAnalytics.view();
-  }, [isInsurance, isFood]);
+    if (isWalking) WalkingAnalytics.view();
+  }, [isInsurance, isFood, isWalking]);
 
   const total = quiz.questions.length;
   const question = quiz.questions[step];
@@ -110,7 +123,7 @@ export function QuizEngine({
   const progressMax = total;
 
   const result = useMemo(() => {
-    if (phase !== "result" || isFood) return null;
+    if (phase !== "result" || isFood || isWalking) return null;
     const flat = flattenAnswers(answers);
     const scores = aggregateScores(quiz, flat);
     const { profile, matchScore } = isInsurance
@@ -171,7 +184,7 @@ export function QuizEngine({
       recommendedProducts,
       showAlternativeBreeds,
     };
-  }, [phase, answers, quiz, isInsurance, isFood]);
+  }, [phase, answers, quiz, isInsurance, isFood, isWalking]);
 
   function selectOption(optionId: string) {
     if (!question) return;
@@ -205,6 +218,7 @@ export function QuizEngine({
 
     if (isInsurance) InsuranceAnalytics.answer(question.id);
     if (isFood) FoodAnalytics.answer(question.id);
+    if (isWalking) WalkingAnalytics.answer(question.id);
   }
 
   function isOptionSelected(optionId: string): boolean {
@@ -220,6 +234,7 @@ export function QuizEngine({
       setDirection(1);
       if (isInsurance) InsuranceAnalytics.start();
       if (isFood) FoodAnalytics.start();
+      if (isWalking) WalkingAnalytics.start();
       return;
     }
     if (!canProceed) return;
@@ -240,6 +255,11 @@ export function QuizEngine({
         FoodAnalytics.complete(food.id);
         FoodAnalytics.resultView(food.id);
       }
+      if (isWalking) {
+        const walking = buildWalkingResult(answers as WalkingAnswers);
+        WalkingAnalytics.complete(walking.profileId);
+        WalkingAnalytics.resultView(walking.profileId);
+      }
     }
   }
 
@@ -254,6 +274,7 @@ export function QuizEngine({
 
   function restart() {
     if (isFood) FoodAnalytics.restart();
+    if (isWalking) WalkingAnalytics.restart();
     setPhase("intro");
     setStep(0);
     setAnswers({});
@@ -264,7 +285,7 @@ export function QuizEngine({
     <div
       className={cn(
         "mx-auto w-full",
-        (isInsurance || isFood) && phase === "result" ? "max-w-3xl" : "max-w-2xl"
+        isSpecialized && phase === "result" ? "max-w-3xl" : "max-w-2xl"
       )}
     >
       {phase !== "intro" && (
@@ -309,16 +330,29 @@ export function QuizEngine({
                     Quiz Beagle Expert · Alimentation
                   </p>
                 )}
+                {isWalking && (
+                  <p className="mt-4 text-xs font-bold uppercase tracking-wide text-primary">
+                    Quiz Beagle Expert · Promenade &amp; sécurité
+                  </p>
+                )}
                 <h1 className="mt-2 font-[family-name:var(--font-display)] text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">
                   {isInsurance
                     ? "Quelle protection santé choisir pour mon Beagle ?"
-                    : quiz.title}
+                    : isWalking
+                      ? "Quel harnais choisir pour mon Beagle ?"
+                      : quiz.title}
                 </h1>
-                <p className="mt-2 text-muted-foreground">{quiz.subtitle}</p>
+                <p className="mt-2 text-muted-foreground">
+                  {isWalking
+                    ? "Harnais, laisse ou longe : trouvez une configuration adaptée en 8 questions."
+                    : quiz.subtitle}
+                </p>
                 <p className="mt-4 text-sm leading-relaxed text-foreground/85 sm:text-[15px]">
                   {isInsurance
                     ? "L’âge du chien, votre capacité à avancer une facture vétérinaire et le niveau de remboursement recherché peuvent fortement changer les critères à privilégier. Répondez à 7 questions pour obtenir un profil de couverture clair avant de comparer les devis."
-                    : quiz.description}
+                    : isWalking
+                      ? "Un bon équipement ne sert pas seulement à retenir votre chien. Il doit lui permettre de marcher, flairer et explorer confortablement tout en conservant un niveau de sécurité adapté à son rappel et à votre environnement."
+                      : quiz.description}
                 </p>
                 <ul className="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-muted-foreground">
                   <li className="rounded-full bg-card px-3 py-1.5 shadow-sm ring-1 ring-border">
@@ -328,9 +362,11 @@ export function QuizEngine({
                     ~{quiz.estimatedMinutes} min
                   </li>
                   <li className="rounded-full bg-card px-3 py-1.5 shadow-sm ring-1 ring-border">
-                    {isInsurance || isFood
-                      ? "Email facultatif"
-                      : "Recos personnalisées"}
+                    {isWalking
+                      ? "Aucun email demandé"
+                      : isInsurance || isFood
+                        ? "Email facultatif"
+                        : "Recos personnalisées"}
                   </li>
                 </ul>
                 <Button
@@ -351,6 +387,12 @@ export function QuizEngine({
                   <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
                     Le quiz ne réalise aucun diagnostic et ne remplace pas un
                     avis vétérinaire.
+                  </p>
+                )}
+                {isWalking && (
+                  <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+                    Ce quiz fournit des repères généraux. Vérifiez toujours
+                    l&apos;ajustement du matériel et son état avant une promenade.
                   </p>
                 )}
               </div>
@@ -494,6 +536,46 @@ export function QuizEngine({
           </motion.div>
         )}
 
+        {phase === "result" && isWalking && (
+          <motion.div
+            key="result-walking"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="mx-auto w-full max-w-3xl space-y-6"
+          >
+            <WalkingQuizResult
+              quiz={quiz}
+              answers={answers as WalkingAnswers}
+              onRestart={restart}
+            />
+            {relatedFiches.length > 0 && (
+              <div className="rounded-3xl border border-border bg-muted/30 p-6">
+                <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight">
+                  <BookOpen className="size-5 text-primary" aria-hidden />
+                  Approfondir avec les fiches
+                </h3>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {relatedFiches.map((f) => (
+                    <Link
+                      key={f.slug}
+                      href={`/fiche/${f.slug}`}
+                      className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4 transition hover:border-primary/30 hover:shadow-md"
+                    >
+                      <span className="text-2xl" aria-hidden>
+                        {f.emoji}
+                      </span>
+                      <span className="text-sm font-bold leading-snug">
+                        {f.title}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </motion.div>
+        )}
+
         {phase === "result" && result && isInsurance && (
           <motion.div
             key="result-insurance"
@@ -535,7 +617,7 @@ export function QuizEngine({
           </motion.div>
         )}
 
-        {phase === "result" && result && !isInsurance && !isFood && (
+        {phase === "result" && result && !isInsurance && !isFood && !isWalking && (
           <motion.div
             key="result"
             initial={{ opacity: 0, y: 20 }}

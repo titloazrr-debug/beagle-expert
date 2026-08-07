@@ -7,13 +7,14 @@ import { Badge } from "@/components/ui/badge";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Quiz Beagle : adoption, assurance, croquettes et plus",
+  title: "Quiz Beagle : adoption, harnais, assurance, croquettes et plus",
   description:
-    "Quiz Beagle gratuits : adoption, croquettes, assurance santé, surpoids, GPS et jouets. Résultats clairs en quelques minutes.",
+    "Quiz Beagle gratuits : harnais & promenade, adoption, croquettes, assurance santé, surpoids, GPS et jouets. Résultats clairs en quelques minutes.",
   path: "/quizzes",
   image: "/images/beagle/og-default.jpg",
   keywords: [
     "quiz Beagle",
+    "harnais Beagle",
     "assurance santé Beagle",
     "croquettes Beagle",
     "adoption Beagle",

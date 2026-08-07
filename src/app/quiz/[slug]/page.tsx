@@ -14,8 +14,10 @@ import { buildMetadata, breadcrumbJsonLd, quizJsonLd } from "@/lib/seo";
 import { isMedicalQuizSlug } from "@/lib/legal";
 import { isInsuranceQuizSlug } from "@/lib/compliance";
 import { isFoodQuizSlug } from "@/lib/food-quiz";
+import { isWalkingQuizSlug, WALKING_FAQ } from "@/lib/walking-quiz";
 import { InsuranceQuizFaq } from "@/components/insurance/InsuranceQuizFaq";
 import { FoodQuizFaq } from "@/components/food/FoodQuizFaq";
+import { WalkingQuizFaq } from "@/components/walking/WalkingQuizFaq";
 import { cn } from "@/lib/utils";
 
 interface PageProps {
@@ -67,6 +69,7 @@ export default async function QuizPage({ params }: PageProps) {
         "histoire-standard",
       ],
       "collier-gps": ["education-comportement", "budget-equipement"],
+      "harnais-beagle": ["education-comportement", "budget-equipement", "soins-entretien"],
       "risque-obesite": ["alimentation", "sante"],
       "alimentation-croquettes": ["alimentation", "sante", "budget-equipement"],
       "assurance-sante-beagle": ["sante", "budget-equipement", "soins-entretien"],
@@ -85,11 +88,15 @@ export default async function QuizPage({ params }: PageProps) {
 
   const insurance = isInsuranceQuizSlug(slug);
   const food = isFoodQuizSlug(slug);
+  const walking = isWalkingQuizSlug(slug);
+  const specialized = insurance || food || walking;
   const breadcrumbName = insurance
     ? "Assurance santé du Beagle"
     : food
       ? "Croquettes pour Beagle"
-      : quiz.title;
+      : walking
+        ? "Harnais pour Beagle"
+        : quiz.title;
 
   return (
     <>
@@ -110,7 +117,7 @@ export default async function QuizPage({ params }: PageProps) {
           },
         ])}
       />
-      {(insurance || food) && (
+      {specialized && (
         <JsonLd
           data={{
             "@context": "https://schema.org",
@@ -119,6 +126,22 @@ export default async function QuizPage({ params }: PageProps) {
             description: quiz.seo.description,
             url: `https://beagle-expert.fr/quiz/${slug}`,
             inLanguage: "fr-FR",
+          }}
+        />
+      )}
+      {walking && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: WALKING_FAQ.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
           }}
         />
       )}
@@ -159,7 +182,7 @@ export default async function QuizPage({ params }: PageProps) {
             <MedicalDisclaimer variant="full" />
           </div>
         )}
-        {!insurance && !food && (
+        {!insurance && !food && !walking && (
           <div className="mx-auto mb-6 max-w-2xl">
             <QuizRecoDisclaimer compact />
           </div>
@@ -184,11 +207,17 @@ export default async function QuizPage({ params }: PageProps) {
           </div>
         )}
 
+        {walking && (
+          <div className="mx-auto mt-12 max-w-3xl">
+            <WalkingQuizFaq />
+          </div>
+        )}
+
         {others.length > 0 && (
           <div
             className={cn(
               "mx-auto mt-16 border-t border-border pt-10",
-              insurance || food ? "max-w-3xl" : "max-w-2xl"
+              specialized ? "max-w-3xl" : "max-w-2xl"
             )}
           >
             <h2 className="text-lg font-bold">Autres quiz</h2>

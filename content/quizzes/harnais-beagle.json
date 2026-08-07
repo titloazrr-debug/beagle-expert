@@ -1,0 +1,337 @@
+{
+  "slug": "harnais-beagle",
+  "title": "Quel harnais pour mon Beagle ?",
+  "subtitle": "Harnais, laisse, longe & sécurité",
+  "emoji": "🦮",
+  "description": "Tire en laisse, suit toutes les odeurs, marche tranquillement ou essaie parfois de reculer hors de son harnais ? Répondez à 8 questions pour trouver le type de harnais et l’équipement de promenade correspondant à son comportement, à votre environnement et au niveau de liberté que vous souhaitez lui laisser.",
+  "estimatedMinutes": 3,
+  "mode": "profile",
+  "ctaLabel": "Trouver son équipement",
+  "seo": {
+    "title": "Quel harnais pour un Beagle ? Quiz harnais, laisse et longe | Beagle Expert",
+    "description": "Harnais en Y, anti-évasion, laisse ou longe ? Répondez à 8 questions pour trouver un équipement de promenade adapté au rappel, au comportement et aux sorties de votre Beagle."
+  },
+  "basedOn": [
+    "content/raw/guide_education_comportement_beagle.md",
+    "content/raw/guide_budget_beagle.md"
+  ],
+  "productIds": ["tractive-gps"],
+  "questions": [
+    {
+      "id": "age",
+      "question": "Quel âge a votre Beagle ?",
+      "helper": "L’âge aide à adapter le confort et le niveau d’exigence, sans interdire une longe aux seniors.",
+      "options": [
+        {
+          "id": "age-puppy",
+          "label": "Moins de 1 an",
+          "scores": { "puppy": 1 }
+        },
+        {
+          "id": "age-adult",
+          "label": "De 1 à 6 ans",
+          "scores": { "adult": 1 }
+        },
+        {
+          "id": "age-senior",
+          "label": "De 7 à 9 ans",
+          "scores": { "senior": 1 }
+        },
+        {
+          "id": "age-senior-adv",
+          "label": "10 ans ou plus",
+          "scores": { "senior_advanced": 1 }
+        }
+      ]
+    },
+    {
+      "id": "pull",
+      "question": "Comment marche-t-il généralement en laisse ?",
+      "helper": "La traction guide l’ajustement et le confort — jamais vers un matériel coercitif.",
+      "options": [
+        {
+          "id": "pull-low",
+          "label": "Il marche plutôt tranquillement",
+          "scores": { "low_pull": 1 }
+        },
+        {
+          "id": "pull-scent",
+          "label": "Il tire surtout lorsqu’une odeur l’intéresse",
+          "scores": { "scent_pull": 1 }
+        },
+        {
+          "id": "pull-frequent",
+          "label": "Il tire souvent",
+          "scores": { "frequent_pull": 1 }
+        },
+        {
+          "id": "pull-strong",
+          "label": "Il tire très fort et peut me déséquilibrer",
+          "scores": { "strong_pull": 1 }
+        },
+        {
+          "id": "pull-variable",
+          "label": "Cela varie énormément selon l’endroit",
+          "scores": { "variable_pull": 1 }
+        }
+      ]
+    },
+    {
+      "id": "escape",
+      "question": "A-t-il déjà essayé de sortir de son harnais ?",
+      "helper": "Cette réponse pèse beaucoup : un Beagle qui recule hors du harnais a besoin d’un modèle plus sécurisant.",
+      "options": [
+        {
+          "id": "escape-low",
+          "label": "Non, jamais",
+          "scores": { "escape_low": 1 }
+        },
+        {
+          "id": "escape-medium",
+          "label": "Il recule parfois lorsqu’il a peur ou refuse d’avancer",
+          "scores": { "escape_medium": 1 }
+        },
+        {
+          "id": "escape-high",
+          "label": "Il a déjà presque réussi à en sortir",
+          "scores": { "escape_high": 3 }
+        },
+        {
+          "id": "escape-history",
+          "label": "Oui, il s’est déjà échappé de son harnais",
+          "scores": { "escape_history": 4 }
+        },
+        {
+          "id": "escape-no-harness",
+          "label": "Il ne porte pas encore de harnais",
+          "scores": { "no_harness": 1 }
+        }
+      ]
+    },
+    {
+      "id": "recall",
+      "question": "Que se passe-t-il quand vous le rappelez ?",
+      "helper": "Aucun quiz ne peut garantir qu’un chien peut être lâché sans risque.",
+      "options": [
+        {
+          "id": "recall-good",
+          "label": "Il revient généralement, même avec des distractions",
+          "scores": { "recall_good": 1 }
+        },
+        {
+          "id": "recall-scent",
+          "label": "Il revient bien sauf lorsqu’une odeur est vraiment intéressante",
+          "scores": { "recall_scent_sensitive": 2 }
+        },
+        {
+          "id": "recall-variable",
+          "label": "Le rappel est encore très aléatoire",
+          "scores": { "recall_variable": 2 }
+        },
+        {
+          "id": "recall-low",
+          "label": "Une fois sur une piste, il semble ne plus m’entendre",
+          "scores": { "recall_low": 3 }
+        },
+        {
+          "id": "recall-never",
+          "label": "Je ne le lâche jamais pour cette raison",
+          "scores": { "never_off_leash": 2 }
+        }
+      ]
+    },
+    {
+      "id": "lost",
+      "question": "Vous est-il déjà arrivé de le perdre de vue ?",
+      "helper": "L’objectif est d’ajouter des couches de sécurité, pas de juger ce qui s’est passé.",
+      "options": [
+        {
+          "id": "lost-never",
+          "label": "Non",
+          "scores": { "lost_never": 1 }
+        },
+        {
+          "id": "lost-short",
+          "label": "Quelques minutes seulement",
+          "scores": { "lost_short": 2 }
+        },
+        {
+          "id": "lost-significant",
+          "label": "Oui, pendant une période qui m’a réellement inquiété",
+          "scores": { "lost_significant": 3 }
+        },
+        {
+          "id": "lost-repeated",
+          "label": "Oui, cela s’est produit plusieurs fois",
+          "scores": { "lost_repeated": 4 }
+        },
+        {
+          "id": "lost-prevention",
+          "label": "Je préfère anticiper avant que cela arrive",
+          "scores": { "prevention": 1 }
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "question": "Où vous promenez-vous le plus souvent ?",
+      "options": [
+        {
+          "id": "env-city",
+          "label": "Ville et trottoirs",
+          "scores": { "city": 1 }
+        },
+        {
+          "id": "env-park",
+          "label": "Parc ou environnement périurbain",
+          "scores": { "park": 1 }
+        },
+        {
+          "id": "env-country",
+          "label": "Campagne et chemins",
+          "scores": { "country": 1 }
+        },
+        {
+          "id": "env-forest",
+          "label": "Forêt",
+          "scores": { "forest": 1 }
+        },
+        {
+          "id": "env-hiking",
+          "label": "Randonnée et grands espaces",
+          "scores": { "hiking": 2 }
+        },
+        {
+          "id": "env-mixed",
+          "label": "Un mélange de plusieurs environnements",
+          "scores": { "mixed": 1 }
+        }
+      ]
+    },
+    {
+      "id": "freedom",
+      "question": "Quelle liberté souhaitez-vous lui laisser ?",
+      "helper": "Cette réponse influence surtout la longueur de laisse ou de longe — des repères, pas des normes absolues.",
+      "options": [
+        {
+          "id": "free-close",
+          "label": "Rester assez près de moi",
+          "scores": { "close": 1 }
+        },
+        {
+          "id": "free-moderate",
+          "label": "Pouvoir flairer autour de moi",
+          "scores": { "moderate_exploration": 1 }
+        },
+        {
+          "id": "free-extended",
+          "label": "Explorer plusieurs mètres devant moi",
+          "scores": { "extended_exploration": 2 }
+        },
+        {
+          "id": "free-max",
+          "label": "Avoir beaucoup de liberté tout en restant attaché",
+          "scores": { "maximum_secured_freedom": 3 }
+        },
+        {
+          "id": "free-offleash",
+          "label": "Je voudrais pouvoir le détacher davantage à terme",
+          "scores": { "off_leash_goal": 2 }
+        }
+      ]
+    },
+    {
+      "id": "equipment",
+      "question": "De quoi dispose-t-il déjà ?",
+      "helper": "Plusieurs réponses possibles — cela personnalise la checklist finale.",
+      "type": "multi",
+      "options": [
+        {
+          "id": "eq-harness",
+          "label": "Harnais",
+          "scores": { "has_harness": 1 }
+        },
+        {
+          "id": "eq-collar",
+          "label": "Collier",
+          "scores": { "has_collar": 1 }
+        },
+        {
+          "id": "eq-leash",
+          "label": "Laisse classique",
+          "scores": { "has_leash": 1 }
+        },
+        {
+          "id": "eq-longline",
+          "label": "Longe",
+          "scores": { "has_longline": 1 }
+        },
+        {
+          "id": "eq-tag",
+          "label": "Médaille avec numéro de téléphone",
+          "scores": { "has_tag": 1 }
+        },
+        {
+          "id": "eq-gps",
+          "label": "Traceur GPS",
+          "scores": { "has_gps": 1 }
+        },
+        {
+          "id": "eq-none",
+          "label": "Aucun de ces équipements",
+          "scores": { "has_none": 1 }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "daily_walk",
+      "title": "Son profil : balade quotidienne",
+      "description": "Votre Beagle semble relativement facile à gérer lors des promenades. Un harnais confortable laissant les épaules libres et une laisse suffisamment longue pour lui permettre de flairer peuvent constituer une base simple.",
+      "tags": ["daily_walk"],
+      "productIds": [],
+      "reasons": []
+    },
+    {
+      "id": "scent_explorer",
+      "title": "Son profil : explorateur au flair",
+      "description": "Votre Beagle aime explorer avec son nez. Une longe peut offrir beaucoup plus de liberté qu’une laisse classique tout en conservant un lien physique lorsque son attention est absorbée par une odeur.",
+      "tags": ["scent_explorer"],
+      "productIds": [],
+      "reasons": []
+    },
+    {
+      "id": "secured_explorer",
+      "title": "Son profil : beaucoup de liberté, avec un filet de sécurité",
+      "description": "Vous souhaitez lui permettre d’explorer largement sans dépendre uniquement de son rappel. Le duo harnais + longe constitue ici la base. Un GPS ajoute une couche de sécurité supplémentaire si le chien parvient malgré tout à s’éloigner.",
+      "tags": ["secured_explorer"],
+      "productIds": ["tractive-gps"],
+      "reasons": []
+    },
+    {
+      "id": "escape_artist",
+      "title": "Son profil : sécurité anti-évasion prioritaire",
+      "description": "Certaines morphologies ou certains comportements permettent au chien de reculer hors d’un harnais classique. Dans votre situation, la priorité est donc moins le style du harnais que sa sécurité d’ajustement.",
+      "tags": ["escape_artist"],
+      "productIds": ["tractive-gps"],
+      "reasons": []
+    },
+    {
+      "id": "hiking",
+      "title": "Son profil : longues sorties et grands espaces",
+      "description": "Pour les longues sorties, le confort, la solidité des attaches et un matériel adapté au terrain passent avant le style.",
+      "tags": ["hiking"],
+      "productIds": ["tractive-gps"],
+      "reasons": []
+    },
+    {
+      "id": "senior_comfort",
+      "title": "Son profil : confort et contrôle en douceur",
+      "description": "Pour un Beagle senior, le confort, la facilité d’enfilage et l’absence de pression inutile deviennent particulièrement importants.",
+      "tags": ["senior_comfort"],
+      "productIds": [],
+      "reasons": []
+    }
+  ]
+}

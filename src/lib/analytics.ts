@@ -76,3 +76,42 @@ export const FoodAnalytics = {
     }),
   restart: () => trackEvent("food_quiz_restart"),
 };
+
+/** Analytics quiz promenade / harnais — pas de détail de réponses envoyé. */
+export const WalkingAnalytics = {
+  view: () => trackEvent("walking_quiz_view"),
+  start: () => trackEvent("walking_quiz_start"),
+  answer: (questionId: string) =>
+    trackEvent("walking_quiz_answer", { question_id: questionId }),
+  complete: (resultProfile: string) =>
+    trackEvent("walking_quiz_complete", { result_profile: resultProfile }),
+  resultView: (resultProfile: string) =>
+    trackEvent("walking_result_view", { result_profile: resultProfile }),
+  productClick: (input: {
+    productId: string;
+    placement: string;
+    resultProfile: string;
+  }) =>
+    trackEvent("walking_product_click", {
+      product_id: input.productId,
+      placement: input.placement,
+      result_profile: input.resultProfile,
+    }),
+  gpsCrosslinkClick: (input: {
+    resultProfile: string;
+    placement: string;
+  }) =>
+    trackEvent("walking_gps_crosslink_click", {
+      result_profile: input.resultProfile,
+      placement: input.placement,
+    }),
+  tagInterestClick: (input: {
+    resultProfile: string;
+    placement: string;
+  }) =>
+    trackEvent("walking_tag_interest_click", {
+      result_profile: input.resultProfile,
+      placement: input.placement,
+    }),
+  restart: () => trackEvent("walking_quiz_restart"),
+};
