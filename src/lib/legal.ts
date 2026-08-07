@@ -50,7 +50,7 @@ export const LEGAL_PUBLISHER = {
   companyName: "Thierry Loiseau",
   legalForm: "Particulier (projet éditorial individuel — SASU en cours de création)",
   address: "515 route de Falgueyras, 47300 Villeneuve-sur-Lot, France",
-  email: "contact@beagle-expert.fr",
+  email: "contact@expert-beagle.fr",
   publicationDirector: "Thierry Loiseau",
   hostName: "Vercel Inc.",
   hostAddress: "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",

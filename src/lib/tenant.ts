@@ -13,7 +13,7 @@ export const tenant: TenantConfig = {
     "Des quiz rapides et des fiches pratiques pour mieux comprendre le Beagle et prendre soin de lui au quotidien.",
   description:
     "Mieux comprendre votre Beagle et faire les bons choix : quiz personnalisés et fiches pratiques sur la santé, l’alimentation, l’éducation et le budget.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://beagle-expert.fr",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://expert-beagle.fr",
   locale: "fr-FR",
   chatbot: {
     enabled: true,
