@@ -36,32 +36,33 @@
     "title": "Tractive vs Weenect",
     "category": "gps",
     "emoji": "📡",
-    "intro": "Pour un Beagle au flair « interrupteur d’écoute », le GPS est un filet de sécurité — pas une baguette magique. Tractive et Weenect sont les deux références grand public les plus comparées en France.",
+    "intro": "Pour un Beagle au flair « interrupteur d’écoute », le GPS est un filet de sécurité — pas une baguette magique. Deux angles complémentaires : Tractive (localisation + activité / bien-être) et Weenect (performance GPS « où est mon chien maintenant ? »).",
     "ficheSlugs": ["education-comportement", "budget-equipement"],
     "left": {
       "productId": "tractive-gps",
       "name": "Tractive GPS",
-      "tagline": "Écosystème riche, suivi LIVE",
+      "tagline": "Où est-il + va-t-il bien ?",
       "points": [
-        "App mature, historique et modes LIVE",
-        "Clôtures virtuelles et alertes de zone",
-        "Large communauté / retours d’usage",
-        "Abonnement nécessaire pour le service"
+        "Localisation live et clôtures virtuelles",
+        "Écosystème app mature (activité / bien-être selon offres)",
+        "Large communauté et retours d’usage",
+        "Abonnement obligatoire pour le service"
       ]
     },
     "right": {
+      "productId": "weenect-gps",
       "name": "Weenect",
-      "tagline": "Alternative francophone populaire",
+      "tagline": "Où est-il maintenant ?",
       "imageEmoji": "📍",
       "points": [
-        "Positionnement fort sur le marché FR",
-        "Suivi GPS + options de rappel selon modèles",
-        "Abonnement également requis",
-        "Comparer autonomie, couverture et SAV au moment de l’achat"
+        "Superlive jusqu’à 1 position par seconde",
+        "Vibreur + sonnerie + lumière (rappel / recherche)",
+        "XS léger (27 g) ; XT pour usages intensifs ; IP68",
+        "Pas de capteurs type cardio/sommeil — focus GPS ; abo obligatoire"
       ]
     },
-    "verdict": "Tractive se distingue souvent par l’expérience app et les fonctions de zone ; Weenect reste une alternative sérieuse, surtout si une offre locale ou un modèle précis vous convient mieux. Comparez l’abonnement sur 12–24 mois, l’autonomie réelle et la couverture réseau dans vos zones de promenade. Aucun GPS ne remplace clôture, longe et travail de rappel.",
-    "disclaimer": "Offres et forfaits évoluent : vérifiez les conditions actuelles avant d’acheter."
+    "verdict": "Weenect si votre priorité est la localisation précise et le vibreur de rappel. Tractive si vous voulez aussi une suite app riche (activité / bien-être). Comparez l’abonnement sur 12–24 mois et la couverture réseau sur vos balades. Aucun GPS ne remplace clôture, longe et travail de rappel.",
+    "disclaimer": "Offres et forfaits évoluent : vérifiez les conditions actuelles avant d’acheter. Données Weenect basées sur la FAQ fabricant (août 2026)."
   },
   {
     "id": "jouets-kong-vs-snuffle",

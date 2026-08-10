@@ -46,18 +46,19 @@
     "name": "Tractive GPS Tracker",
     "category": "collier_gps",
     "price": "environ 40–50€ + abo 5–10€/mois",
-    "shortDescription": "Suivi en temps réel, clôtures virtuelles et bonne autonomie — filet de sécurité pour Beagle fugueur.",
-    "recommendation": "Le Beagle étant un chien de chasse avec un fort instinct de fugue, un collier GPS est fortement recommandé. Tractive est actuellement l’une des meilleures solutions : suivi en temps réel, clôtures virtuelles et bonne autonomie. Particulièrement utile dès les premières sorties hors laisse.",
+    "shortDescription": "GPS + écosystème app riche (localisation et suivi d’activité / bien-être) — filet de sécurité pour Beagle fugueur.",
+    "recommendation": "Tractive convient si vous voulez savoir où est votre Beagle et suivre aussi son activité / bien-être dans l’app. Localisation live, clôtures virtuelles et écosystème mature. À comparer avec Weenect si votre priorité est purement « où est-il maintenant ? » ou le vibreur de rappel.",
     "affiliateUrl": "#",
     "imageEmoji": "📡",
-    "badge": "Sécurité",
+    "badge": "GPS + activité",
     "tags": [
       "gps",
       "tractive",
       "securite",
       "fugueur",
       "campagne",
-      "rappel",
+      "sante",
+      "activite",
       "pret",
       "vigilance"
     ],
@@ -68,19 +69,63 @@
       "budget"
     ],
     "advantages": [
-      "Localisation quasi temps réel via l’app (réseau cellulaire)",
-      "Clôtures virtuelles et alertes de sortie de zone",
-      "Écosystème mature (app, historique, modes LIVE)",
-      "Autonomie correcte pour un usage quotidien",
-      "Très pertinent tant que le rappel hors laisse n’est pas fiable"
+      "Localisation live et clôtures virtuelles",
+      "Écosystème app mature (historique, modes LIVE)",
+      "Orientation « mon chien va-t-il bien ? » (activité / bien-être selon offres)",
+      "Large retour d’expérience utilisateurs",
+      "Pertinent tant que le rappel hors laisse n’est pas fiable"
     ],
     "disadvantages": [
       "Abonnement mensuel obligatoire pour le suivi",
-      "Dépendance au réseau mobile (zones blanches possibles en forêt profonde)",
-      "Poids et volume sur le collier d’un petit Beagle à surveiller",
+      "Dépendance au réseau mobile (zones blanches possibles en forêt)",
+      "Moins centré « GPS pur » que certaines alternatives",
       "Ce n’est pas un substitut au rappel ni à une clôture physique"
     ],
-    "bestFor": "Beagles fugueurs, sorties campagne/forêt, jardins non 100 % sécurisés, ou rappel encore en construction."
+    "bestFor": "Propriétaires qui veulent localisation + suite app (activité / bien-être), sorties risquées ou rappel encore fragile."
+  },
+  {
+    "id": "weenect-gps",
+    "name": "Weenect GPS (XS / XT)",
+    "category": "collier_gps",
+    "price": "boîtier + abo (formules dès ~5€/mois en engagement long — voir offre)",
+    "shortDescription": "GPS performance « où est mon chien maintenant ? » — Superlive, vibreur de rappel, marque française.",
+    "recommendation": "Weenect se positionne sur la performance GPS : savoir où est le Beagle à l’instant T. Mode Superlive jusqu’à une position par seconde, vibreur utile pour le rappel, lumière et sonnerie. Le XS (27 g) convient souvent au Beagle ; le XT vise les usages plus exigeants. Alternative claire à Tractive si le suivi santé n’est pas la priorité.",
+    "affiliateUrl": "#",
+    "imageEmoji": "📍",
+    "badge": "GPS performance",
+    "tags": [
+      "gps",
+      "weenect",
+      "securite",
+      "fugueur",
+      "vibration",
+      "rappel",
+      "budget",
+      "francophone",
+      "campagne",
+      "pret",
+      "vigilance"
+    ],
+    "categories": [
+      "equipement",
+      "gps",
+      "education",
+      "budget"
+    ],
+    "advantages": [
+      "Superlive : jusqu’à 1 position par seconde en recherche",
+      "Vibreur + sonnerie + lumière pour retrouver / rappeler",
+      "XS très léger (27 g) ; XT pour chiens dès 6 kg et usages intensifs",
+      "Étanchéité IP68 ; garantie à vie annoncée fabricant",
+      "Positionnement « GPS à l’essentiel », marque française"
+    ],
+    "disadvantages": [
+      "Abonnement obligatoire (le boîtier ne suffit pas)",
+      "Pas de capteurs type sommeil / rythme cardiaque (choix volontaire de la marque)",
+      "Autonomie réelle selon fréquence de suivi et mode éco",
+      "Comme tout GPS cellulaire : zones blanches possibles"
+    ],
+    "bestFor": "Beagles au flair « interrupteur », besoin de localisation précise et d’aide au rappel (vibreur), sans priorité au suivi santé connecté."
   },
   {
     "id": "santevet",

@@ -1,15 +1,15 @@
 {
   "slug": "collier-gps",
   "title": "Quel collier GPS pour mon Beagle ?",
-  "subtitle": "Fugueur, campagne ou besoin de rappel par vibration ?",
+  "subtitle": "Fugueur, rappel difficile, GPS pur ou suite activité ?",
   "emoji": "📡",
-  "description": "Le Beagle a un fort instinct de poursuite. En 5 questions, on affine entre Tractive et Weenect (guides budget & éducation) — le GPS reste un filet de sécurité, pas un substitut au rappel.",
+  "description": "Le Beagle a un fort instinct de poursuite. En 5 questions, on affine entre Weenect (GPS performance, vibreur) et Tractive (localisation + écosystème activité / bien-être). Le GPS reste un filet de sécurité, pas un substitut au rappel.",
   "estimatedMinutes": 2,
   "mode": "product-score",
   "ctaLabel": "Voir mon collier GPS idéal",
   "seo": {
-    "title": "Quiz collier GPS Beagle — Tractive ou Weenect ?",
-    "description": "Trouvez le collier GPS adapté à votre Beagle : fugue, terrain, rappel, budget et abonnement."
+    "title": "Quiz collier GPS Beagle — Weenect ou Tractive ?",
+    "description": "Trouvez le collier GPS adapté à votre Beagle : fugue, terrain, rappel, priorité (localisation vs activité) et budget."
   },
   "basedOn": [
     "content/raw/guide_budget_beagle.md",
@@ -27,8 +27,9 @@
           "scores": {
             "fugueur": 3,
             "securite": 3,
-            "tractive": 3,
-            "gps": 3
+            "gps": 3,
+            "weenect": 2,
+            "tractive": 2
           }
         },
         {
@@ -37,8 +38,9 @@
           "scores": {
             "fugueur": 2,
             "campagne": 2,
-            "tractive": 2,
-            "gps": 2
+            "gps": 2,
+            "weenect": 2,
+            "tractive": 2
           }
         },
         {
@@ -46,7 +48,7 @@
           "label": "Rarement, mais je préfère anticiper",
           "scores": {
             "gps": 1,
-            "weenect": 1,
+            "weenect": 2,
             "budget": 1
           }
         },
@@ -69,8 +71,10 @@
           "label": "Campagne, forêts, grands espaces",
           "scores": {
             "campagne": 3,
-            "tractive": 3,
-            "fugueur": 1
+            "fugueur": 1,
+            "weenect": 2,
+            "tractive": 2,
+            "gps": 2
           }
         },
         {
@@ -78,8 +82,8 @@
           "label": "Mixte ville + nature le week-end",
           "scores": {
             "gps": 2,
-            "tractive": 1,
-            "weenect": 2
+            "weenect": 2,
+            "tractive": 2
           }
         },
         {
@@ -87,7 +91,8 @@
           "label": "Surtout urbain et parcs",
           "scores": {
             "weenect": 2,
-            "budget": 1
+            "budget": 1,
+            "gps": 1
           }
         }
       ]
@@ -112,7 +117,8 @@
           "scores": {
             "weenect": 2,
             "vibration": 2,
-            "tractive": 1
+            "tractive": 1,
+            "gps": 1
           }
         },
         {
@@ -120,39 +126,51 @@
           "label": "Globalement fiable en environnement connu",
           "scores": {
             "budget": 1,
-            "gps": 1
+            "gps": 1,
+            "tractive": 1
           }
         }
       ]
     },
     {
       "id": "priorite",
-      "question": "Quelle priorité pour l'application / les fonctions ?",
+      "question": "Quelle priorité pour le traceur et l’application ?",
+      "helper": "Weenect se positionne sur « où est mon chien maintenant ? ». Tractive met aussi l’accent sur l’activité / le bien-être dans l’app.",
       "options": [
         {
           "id": "p1",
-          "label": "App en français + aide au rappel (vibration)",
+          "label": "Savoir où il est à l’instant T (GPS à l’essentiel)",
           "scores": {
             "weenect": 3,
-            "vibration": 3,
-            "francophone": 3
+            "gps": 2,
+            "francophone": 1
           }
         },
         {
           "id": "p2",
-          "label": "Suivi live et clôture virtuelle avant tout",
+          "label": "Localisation + suivi d’activité / bien-être dans l’app",
           "scores": {
             "tractive": 3,
-            "securite": 2,
-            "gps": 2
+            "sante": 2,
+            "activite": 2,
+            "gps": 1
           }
         },
         {
           "id": "p3",
+          "label": "Aide au rappel (vibreur) + lumière / sonnerie",
+          "scores": {
+            "weenect": 3,
+            "vibration": 3,
+            "rappel": 2
+          }
+        },
+        {
+          "id": "p4",
           "label": "Le meilleur équilibre simplicité / sécurité",
           "scores": {
-            "tractive": 2,
             "weenect": 2,
+            "tractive": 2,
             "gps": 1
           }
         }
@@ -161,19 +179,20 @@
     {
       "id": "budget",
       "question": "Budget boîtier (hors abonnement mensuel) ?",
-      "helper": "Tractive : environ 40–50€ + abonnement 5–10€/mois (ordre de grandeur).",
+      "helper": "Ordres de grandeur : boîtier souvent ~40–50€ ; abonnement obligatoire chez les deux (Weenect propose aussi des formules longues moins chères au mois).",
       "options": [
         {
           "id": "b1",
-          "label": "Autour de 40–50 €, abo maîtrisé",
+          "label": "Autour de 40–50 €, abo à comparer sur 12–24 mois",
           "scores": {
+            "weenect": 2,
             "tractive": 2,
             "budget": 2
           }
         },
         {
           "id": "b2",
-          "label": "Jusqu'à ~50 €+ si la vibration de rappel est là",
+          "label": "Je privilégie le vibreur de rappel même si l’offre diffère",
           "scores": {
             "weenect": 3,
             "vibration": 2
@@ -181,7 +200,7 @@
         },
         {
           "id": "b3",
-          "label": "La sécurité prime sur le prix",
+          "label": "La sécurité et les fonctions app priment sur le prix",
           "scores": {
             "tractive": 2,
             "weenect": 2,
@@ -195,69 +214,77 @@
     {
       "id": "securite-max",
       "title": "Profil « sécurité max / fugueur »",
-      "description": "Votre Beagle a un risque réel de filer sur une piste. Priorité localisation live et zones de sécurité. Continuez aussi le travail de rappel en environnement contrôlé.",
+      "description": "Votre Beagle a un risque réel de filer sur une piste. Priorité : localisation live et zones de sécurité. Weenect et Tractive répondent tous deux à ce besoin, avec des angles différents (GPS pur vs suite app). Continuez le travail de rappel en environnement contrôlé.",
       "tags": [
         "fugueur",
         "securite",
-        "tractive",
+        "gps",
         "campagne",
-        "kong",
-        "fouille"
+        "weenect",
+        "tractive"
       ],
       "productIds": [
+        "weenect-gps",
         "tractive-gps",
         "kong-classic",
         "tapis-fouille"
       ],
       "reasons": [
-        "Instinct de poursuite et fugue : Tractive pour le suivi live et les clôtures virtuelles",
-        "Kong pour occuper entre deux sorties sécurisées",
-        "Tapis de fouille pour canaliser le flair sans hors-laisse risqué"
+        "Fugue / flair : un GPS live + géofence est un filet, pas une baguette magique",
+        "Weenect : Superlive (jusqu’à 1 pos./s) et vibreur utiles en recherche",
+        "Tractive : alternative solide si vous voulez aussi l’écosystème activité / app",
+        "Occupation (Kong, fouille) pour canaliser le flair sans hors-laisse risqué"
       ]
     },
     {
       "id": "rappel-vibration",
       "title": "Profil « rappel difficile »",
-      "description": "Le nez gagne souvent sur la voix. Un GPS avec rappel par vibration (Weenect) + formation adaptée chien de chasse est le combo le plus cohérent.",
+      "description": "Le nez gagne souvent sur la voix. Un GPS avec vibreur (Weenect) + formation adaptée chien de chasse est le combo le plus cohérent. Tractive reste une alternative si vous privilégiez la suite app plutôt que le vibreur.",
       "tags": [
-        "tractive",
+        "weenect",
+        "vibration",
+        "rappel",
         "fugueur",
-        "securite",
-        "fouille",
-        "kong"
+        "gps"
       ],
       "productIds": [
+        "weenect-gps",
         "tractive-gps",
         "tapis-fouille",
         "kong-classic"
       ],
       "reasons": [
-        "Quand le nez gagne sur la voix, Tractive reste le filet de sécurité prioritaire",
-        "Snuffle mat pour fatiguer le flair en environnement contrôlé",
-        "Kong farci : occupation positive plutôt que poursuite en liberté"
+        "Weenect propose vibreur + sonnerie + lumière pour le rappel / la recherche",
+        "Le GPS ne remplace pas le travail de rappel en longe et en environnement sûr",
+        "Tractive en alternative si l’angle « activité / bien-être » vous parle plus",
+        "Snuffle mat et Kong : fatiguer le flair sans liberté hors contrôle"
       ]
     },
     {
       "id": "anticipation",
       "title": "Profil « anticipation maligne »",
-      "description": "Risque modéré mais réel : un GPS d'entrée de gamme suffit souvent, combiné à laisse/longe et jardin sécurisé.",
+      "description": "Risque modéré mais réel : un GPS d’entrée de gamme suffit souvent, combiné à laisse/longe et jardin sécurisé. Weenect (GPS à l’essentiel) ou Tractive (si vous voulez l’app plus large) selon votre priorité.",
       "tags": [
         "budget",
         "gps",
+        "weenect",
         "tractive",
         "securite"
       ],
       "productIds": [
-        "tractive-gps",
-        "nettoyant-auriculaire"
+        "weenect-gps",
+        "tractive-gps"
       ],
       "reasons": [
-        "Même un Beagle « sage » peut suivre une piste un jour : anticiper avec Tractive",
-        "Bonus prévention : le nettoyant auriculaire fait partie du kit de base Beagle"
+        "Même un Beagle « sage » peut suivre une piste un jour : anticiper est rationnel",
+        "Weenect : angle performance GPS et simplicité d’usage",
+        "Tractive : si vous voulez aussi le suivi d’activité dans l’app",
+        "Laisse, longe et clôture restent la base — le GPS complète"
       ]
     }
   ],
   "productIds": [
+    "weenect-gps",
     "tractive-gps",
     "kong-classic",
     "tapis-fouille",
