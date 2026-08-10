@@ -25,6 +25,7 @@ import {
 import { WalkingAnalytics } from "@/lib/analytics";
 import { BeagleExpertTagCard } from "@/components/walking/BeagleExpertTagCard";
 import { WalkingEducational } from "@/components/walking/WalkingEducational";
+import { QuizCitableConclusion } from "@/components/QuizCitableConclusion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -181,9 +182,37 @@ export function WalkingQuizResult({
               </Badge>
             )}
           </div>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/95 sm:text-base">
-            {result.description}
-          </p>
+        </div>
+
+        <div className="space-y-4 bg-card p-4 sm:p-6">
+          <QuizCitableConclusion
+            profileLabel={result.title}
+            recommendation={`${result.description} Priorité : ${result.priority}`}
+            reasons={[
+              `Harnais : ${result.setup.harnessType}. ${result.setup.harnessDetail}`,
+              `Laisse / longe : ${result.setup.leadLabel} (${result.setup.leadLengthHint}).`,
+              `Identification : ${result.setup.identificationLabel}.`,
+              `GPS : ${result.setup.gpsLabel}.`,
+              ...result.tips.slice(0, 2),
+            ]}
+            actions={[
+              ...result.products
+                .filter((p) => p.active)
+                .map((p) => ({
+                  label: p.name,
+                  detail: p.strengths[0] ?? p.retailer,
+                })),
+              ...(result.showGpsCrosslink
+                ? [
+                    {
+                      label: "Évaluer un collier GPS",
+                      detail:
+                        "Utile si le risque de fugue ou de perte d’attention au flair est élevé.",
+                    },
+                  ]
+                : []),
+            ]}
+          />
         </div>
 
         {/* 4 lignes setup — fort contraste */}

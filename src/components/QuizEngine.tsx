@@ -47,6 +47,7 @@ import { FoodQuizResult } from "@/components/food/FoodQuizResult";
 import { WalkingQuizResult } from "@/components/walking/WalkingQuizResult";
 import { QuizRecoDisclaimer } from "@/components/legal/QuizRecoDisclaimer";
 import { AffiliateDisclaimer } from "@/components/legal/AffiliateDisclaimer";
+import { QuizCitableConclusion } from "@/components/QuizCitableConclusion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -625,7 +626,7 @@ export function QuizEngine({
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="space-y-6"
           >
-            {/* Score + message */}
+            {/* Score + conclusion citables (agent-first) */}
             <Card className="overflow-hidden border-primary/25 shadow-[var(--shadow-soft)]">
               <div className="bg-gradient-to-br from-primary via-primary to-primary-hover px-6 py-8 sm:px-8">
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
@@ -647,28 +648,18 @@ export function QuizEngine({
                     </span>
                   </div>
                 </div>
-                <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
-                  {result.profile.description}
-                </p>
               </div>
 
               <div className="space-y-4 bg-card px-6 py-6 sm:px-8">
-                {result.profile.reasons.length > 0 && (
-                  <ul className="space-y-2.5">
-                    {result.profile.reasons.map((r) => (
-                      <li
-                        key={r}
-                        className="flex items-start gap-2.5 text-sm text-foreground/85"
-                      >
-                        <CheckCircle2
-                          className="mt-0.5 size-4 shrink-0 text-primary"
-                          aria-hidden
-                        />
-                        {r}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <QuizCitableConclusion
+                  profileLabel={result.profile.title}
+                  recommendation={result.profile.description}
+                  reasons={result.profile.reasons}
+                  actions={result.recommendedProducts.map(({ product, reason }) => ({
+                    label: product.name,
+                    detail: reason,
+                  }))}
+                />
                 <Button
                   variant="outline"
                   className="mt-2"

@@ -29,6 +29,7 @@ import {
   resolveDisplayProduct,
 } from "@/lib/food-quiz";
 import { FoodAnalytics } from "@/lib/analytics";
+import { QuizCitableConclusion } from "@/components/QuizCitableConclusion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -336,9 +337,49 @@ export function FoodQuizResult({
           <h2 className="mt-3 font-[family-name:var(--font-display)] text-2xl font-extrabold tracking-tight text-balance text-white sm:text-3xl">
             {result.title}
           </h2>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
-            {result.description}
-          </p>
+        </div>
+
+        <div className="space-y-4 bg-card px-5 py-5 sm:px-7 sm:py-6">
+          <QuizCitableConclusion
+            profileLabel={result.title}
+            recommendation={result.description}
+            reasons={[
+              ...result.criteria,
+              ...result.tips.slice(0, 2),
+              ...result.alerts,
+            ].slice(0, 5)}
+            actions={[
+              ...(primary.product
+                ? [
+                    {
+                      label: primary.product.name,
+                      detail:
+                        recipeType != null
+                          ? `Type retenu : ${recipeType}. ${primary.product.features[0] ?? "Croquettes adaptées au profil."}`
+                          : (primary.product.features[0] ??
+                            "Croquettes adaptées au profil."),
+                    },
+                  ]
+                : []),
+              ...(alternative.product
+                ? [
+                    {
+                      label: `Alternative : ${alternative.product.name}`,
+                      detail: "À envisager selon tolérance et disponibilité.",
+                    },
+                  ]
+                : []),
+              ...(!result.showCommercial
+                ? [
+                    {
+                      label: "Consulter un vétérinaire avant de changer d’alimentation",
+                      detail:
+                        "En cas de pathologie suivie, l’alimentation fait partie du traitement.",
+                    },
+                  ]
+                : []),
+            ]}
+          />
 
           {/* Type retenu = lien cliquable orange, bien distinct */}
           {result.showCommercial &&
@@ -361,9 +402,9 @@ export function FoodQuizResult({
                   })
                 }
                 className={cn(
-                  "group mt-5 block rounded-2xl border-2 border-[#ea580c] bg-[#ff6b1a] px-4 py-4 shadow-lg shadow-orange-900/30",
+                  "group block rounded-2xl border-2 border-[#ea580c] bg-[#ff6b1a] px-4 py-4 shadow-lg shadow-orange-900/30",
                   "transition-all duration-200 hover:bg-[#f97316] hover:border-[#fb923c] hover:shadow-xl hover:shadow-orange-900/40",
-                  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white",
+                  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700",
                   "active:scale-[0.99]"
                 )}
               >

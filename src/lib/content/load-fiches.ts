@@ -21,6 +21,8 @@ interface FicheFrontmatter {
   title: string;
   excerpt: string;
   intro?: string;
+  /** Bloc « En résumé » (2–4 phrases), agent-first / GEO */
+  summary?: string;
   category: FicheCategory;
   emoji: string;
   readingTime: number;
@@ -317,6 +319,7 @@ function readFicheFile(filePath: string): {
     title: fm.title,
     excerpt: fm.excerpt ?? "",
     intro: fm.intro?.trim() || undefined,
+    summary: fm.summary?.trim() || undefined,
     category: fm.category,
     emoji: fm.emoji ?? "🐶",
     readingTime: fm.readingTime ?? 4,

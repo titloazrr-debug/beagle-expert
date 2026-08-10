@@ -61,6 +61,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.55,
     },
+    {
+      url: absoluteUrl("/methodologie"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 
   const ficheRoutes: MetadataRoute.Sitemap = allFiches.map((fiche) => {

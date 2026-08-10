@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen, HeartHandshake, Scale, Sparkles } from "lucide-react";
-import { buildMetadata } from "@/lib/seo";
+import { aboutPageJsonLd, breadcrumbJsonLd, buildMetadata } from "@/lib/seo";
 import { getTenant } from "@/lib/tenant";
+import { JsonLd } from "@/components/JsonLd";
+import { SummaryBox } from "@/components/SummaryBox";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -18,6 +20,20 @@ export default function AProposPage() {
   const tenant = getTenant();
 
   return (
+    <>
+      <JsonLd
+        data={aboutPageJsonLd({
+          path: "/a-propos",
+          name: `À propos de ${tenant.name}`,
+          description: tenant.description,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "À propos", path: "/a-propos" },
+        ])}
+      />
     <div className="border-b border-border/60 bg-gradient-to-b from-muted/40 to-background">
       <div className="container-page py-12 sm:py-16">
         <header className="max-w-2xl">
@@ -27,10 +43,20 @@ export default function AProposPage() {
           <h1 className="mt-2 font-[family-name:var(--font-display)] text-3xl font-extrabold tracking-tight sm:text-4xl">
             À propos de {tenant.name}
           </h1>
+          <SummaryBox
+            className="mt-5"
+            text={`${tenant.name} aide propriétaires et futurs adoptants de Beagle avec des fiches courtes et des quiz pratiques. Objectif : des choix plus éclairés sur la santé, l’alimentation, l’éducation et le budget — sans jargon inutile ni fausse promesse, et sans remplacer un professionnel.`}
+          />
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Aider les propriétaires et futurs adoptants de Beagle à mieux
-            comprendre leur chien et à faire des choix plus éclairés — sans
-            jargon inutile ni fausse promesse.
+            Pour le détail des sources, des critères produits et des limites
+            éditoriales, voir la page{" "}
+            <Link
+              href="/methodologie"
+              className="font-semibold text-primary underline underline-offset-2 hover:no-underline"
+            >
+              Méthodologie et sources
+            </Link>
+            .
           </p>
         </header>
 
@@ -163,8 +189,11 @@ export default function AProposPage() {
             </div>
           </Card>
 
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button asChild>
+              <Link href="/methodologie">Méthodologie et sources</Link>
+            </Button>
+            <Button asChild variant="outline">
               <Link href="/quizzes">Découvrir les quiz</Link>
             </Button>
             <Button asChild variant="outline">
@@ -177,5 +206,6 @@ export default function AProposPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

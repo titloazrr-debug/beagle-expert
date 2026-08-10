@@ -3,7 +3,6 @@
 import {
   AlertTriangle,
   ArrowDown,
-  CheckCircle2,
   RotateCcw,
   Shield,
 } from "lucide-react";
@@ -16,6 +15,7 @@ import {
   priorityHighlightKey,
 } from "@/lib/insurance-quiz";
 import { InsuranceProvidersCompare } from "@/components/insurance/InsuranceProvidersCompare";
+import { QuizCitableConclusion } from "@/components/QuizCitableConclusion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -58,9 +58,6 @@ export function InsuranceQuizResult({
           <h2 className="mt-3 font-[family-name:var(--font-display)] text-2xl font-extrabold tracking-tight text-balance text-white sm:text-3xl">
             {profile.title}
           </h2>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
-            {profile.description}
-          </p>
 
           <Button
             type="button"
@@ -75,6 +72,31 @@ export function InsuranceQuizResult({
         </div>
 
         <div className="space-y-5 bg-card px-6 py-6 sm:px-8">
+          <QuizCitableConclusion
+            profileLabel={profile.title}
+            recommendation={profile.description}
+            reasons={[
+              ...criteria.map((c) => `Critère prioritaire : ${c}`),
+              ...profile.reasons,
+            ].slice(0, 6)}
+            actions={[
+              {
+                label: "Comparer des offres d’assurance adaptées",
+                detail:
+                  "Vérifiez plafonds, franchise, délai de carence et exclusions avant de souscrire.",
+              },
+              ...(preExisting
+                ? [
+                    {
+                      label: "Signaler les antécédents à l’assureur",
+                      detail:
+                        "Les soins liés à un problème déjà connu sont en général exclus.",
+                    },
+                  ]
+                : []),
+            ]}
+          />
+
           {preExisting && (
             <div
               className="rounded-2xl border border-amber-300/80 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950"
@@ -92,26 +114,6 @@ export function InsuranceQuizResult({
               </p>
             </div>
           )}
-
-          <div>
-            <h3 className="text-sm font-extrabold uppercase tracking-wide text-primary">
-              Les 3 critères à vérifier en priorité
-            </h3>
-            <ul className="mt-3 space-y-2">
-              {criteria.map((c) => (
-                <li
-                  key={c}
-                  className="flex items-start gap-2 text-sm text-foreground/90"
-                >
-                  <CheckCircle2
-                    className="mt-0.5 size-4 shrink-0 text-primary"
-                    aria-hidden
-                  />
-                  {c}
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Raccourci aussi sous les critères si l’utilisateur lit le détail */}
           <Button

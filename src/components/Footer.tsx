@@ -69,7 +69,15 @@ export function Footer() {
                 href="/a-propos"
                 className="text-sm text-muted-foreground hover:text-primary"
               >
-                À propos &amp; méthode
+                À propos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/methodologie"
+                className="text-sm text-muted-foreground hover:text-primary"
+              >
+                Méthodologie &amp; sources
               </Link>
             </li>
             <li>

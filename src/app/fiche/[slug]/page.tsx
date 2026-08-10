@@ -17,6 +17,7 @@ import { getProductsByIds } from "@/data/products";
 import { getComparisonsForFiche } from "@/lib/content/load-comparisons";
 import { getComparisonTablesForFiche } from "@/data/comparisons";
 import { AttentionBox } from "@/components/AttentionBox";
+import { SummaryBox } from "@/components/SummaryBox";
 import { ProductCard } from "@/components/ProductCard";
 import { ComparisonBlock } from "@/components/ComparisonBlock";
 import { ComparisonTable } from "@/components/ComparisonTable";
@@ -31,6 +32,7 @@ import {
   breadcrumbJsonLd,
   buildFicheMetadata,
   faqPageJsonLd,
+  productItemListJsonLd,
 } from "@/lib/seo";
 import {
   getFicheCoverImage,
@@ -91,6 +93,13 @@ export default async function FichePage({ params }: PageProps) {
   const introText = fiche.intro || fiche.excerpt;
   const faqItems = fiche.faq ?? [];
   const faqLd = faqItems.length ? faqPageJsonLd(faqItems) : null;
+  const productsLd = productItemListJsonLd({
+    name: `Produits recommandés — ${fiche.title}`,
+    description:
+      "Sélection factuelle liée à cette fiche Beagle (avantages, limites, public cible).",
+    path: `/fiche/${slug}`,
+    products: relatedProducts,
+  });
   const cover = getFicheCoverImage({
     slug: fiche.slug,
     category: fiche.category,
@@ -122,6 +131,7 @@ export default async function FichePage({ params }: PageProps) {
         ])}
       />
       {faqLd && <JsonLd data={faqLd} />}
+      {productsLd && <JsonLd data={productsLd} />}
 
       <article
         className="pb-20"
@@ -201,6 +211,9 @@ export default async function FichePage({ params }: PageProps) {
               >
                 {fiche.title}
               </h1>
+              {fiche.summary ? (
+                <SummaryBox text={fiche.summary} className="mt-5" />
+              ) : null}
               <p
                 className="measure-wide mt-4 text-base leading-[1.7] text-foreground/90 sm:text-lg"
                 itemProp="description"
@@ -454,7 +467,15 @@ export default async function FichePage({ params }: PageProps) {
                   Sources vérifiées
                 </h2>
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                  Mise à jour : {fiche.dateModified || fiche.datePublished}
+                  Mise à jour : {fiche.dateModified || fiche.datePublished}. Voir
+                  aussi notre{" "}
+                  <Link
+                    href="/methodologie"
+                    className="font-semibold text-primary underline underline-offset-2 hover:no-underline"
+                  >
+                    méthodologie éditoriale
+                  </Link>
+                  .
                 </p>
                 <ul className="mt-3 space-y-1.5">
                   {fiche.sources.map((src, i) => (
@@ -489,6 +510,17 @@ export default async function FichePage({ params }: PageProps) {
                 className="mt-3 max-h-[min(60vh,28rem)] space-y-1 overflow-y-auto pr-1"
                 aria-label="Sommaire"
               >
+                {fiche.summary ? (
+                  <a
+                    href="#en-resume-heading"
+                    className="flex gap-2 rounded-xl px-2.5 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/8"
+                  >
+                    <span className="font-bold text-primary/60 tabular-nums">
+                      ★
+                    </span>
+                    <span className="leading-snug">En résumé</span>
+                  </a>
+                ) : null}
                 {fiche.sections.map((s, i) => (
                   <a
                     key={s.id}

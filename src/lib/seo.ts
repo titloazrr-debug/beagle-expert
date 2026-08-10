@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { Fiche } from "@/types";
+import type { Fiche, Product } from "@/types";
 import {
   getDefaultOgImage,
   getFicheOgImageSrc,
@@ -193,6 +193,28 @@ export function organizationJsonLd() {
     description: tenant.description,
     url: tenant.siteUrl,
     inLanguage: "fr-FR",
+    about: {
+      "@type": "Thing",
+      name: `Chien de race ${tenant.breed}`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: tenant.name,
+      url: tenant.siteUrl,
+      description: tenant.description,
+    },
+    hasPart: [
+      {
+        "@type": "AboutPage",
+        name: "Méthodologie et sources",
+        url: absoluteUrl("/methodologie"),
+      },
+      {
+        "@type": "AboutPage",
+        name: `À propos de ${tenant.name}`,
+        url: absoluteUrl("/a-propos"),
+      },
+    ],
     potentialAction: {
       "@type": "SearchAction",
       target: `${tenant.siteUrl}/fiches?q={search_term_string}`,
@@ -261,6 +283,10 @@ export function articleJsonLd({
       name: tenant.name,
       url: tenant.siteUrl,
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["[data-agent-summary]", "h1"],
+    },
   };
 }
 
@@ -316,5 +342,191 @@ export function faqPageJsonLd(
         text: item.answer,
       },
     })),
+  };
+}
+
+function hasUsableProductUrl(url?: string | null): boolean {
+  const u = (url ?? "").trim();
+  return Boolean(u && u !== "#" && !u.toLowerCase().startsWith("javascript:"));
+}
+
+/**
+ * Schema Product — pour citabilité agents / rich results.
+ * Offre uniquement si une URL d’achat réelle est disponible (pas de "#").
+ */
+export function productJsonLd(
+  product: Product,
+  options?: { position?: number; url?: string }
+): Record<string, unknown> {
+  const description = clampMetaDescription(
+    product.recommendation || product.shortDescription || product.name,
+    300
+  );
+  const data: Record<string, unknown> = {
+    "@type": "Product",
+    "@id": absoluteUrl(`/produits#${product.id}`),
+    name: product.name,
+    description,
+    category: product.category || product.categories?.[0] || "Animalier",
+    sku: product.id,
+  };
+
+  const extraProps: Record<string, unknown>[] = [];
+  if (product.bestFor) {
+    extraProps.push({
+      "@type": "PropertyValue",
+      name: "Public cible",
+      value: product.bestFor,
+    });
+  }
+  if (product.advantages?.length) {
+    extraProps.push({
+      "@type": "PropertyValue",
+      name: "Avantages",
+      value: product.advantages.join(" · "),
+    });
+  }
+  if (product.disadvantages?.length) {
+    extraProps.push({
+      "@type": "PropertyValue",
+      name: "Points de vigilance",
+      value: product.disadvantages.join(" · "),
+    });
+  }
+  if (extraProps.length) {
+    data.additionalProperty = extraProps;
+  }
+
+  if (hasUsableProductUrl(product.affiliateUrl)) {
+    const offer: Record<string, unknown> = {
+      "@type": "Offer",
+      url: product.affiliateUrl,
+      priceCurrency: product.currency ?? "EUR",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: tenant.name,
+      },
+    };
+    if (product.priceCents > 0) {
+      offer.price = (product.priceCents / 100).toFixed(2);
+    } else if (product.priceLabel) {
+      offer.priceSpecification = {
+        "@type": "PriceSpecification",
+        priceCurrency: product.currency ?? "EUR",
+        description: product.priceLabel,
+      };
+    }
+    data.offers = offer;
+  } else if (product.priceLabel) {
+    data.offers = {
+      "@type": "Offer",
+      priceCurrency: product.currency ?? "EUR",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: product.currency ?? "EUR",
+        description: product.priceLabel,
+      },
+      availability: "https://schema.org/PreOrder",
+      description: "Lien marchand en cours de finalisation",
+    };
+  }
+
+  if (options?.url) {
+    data.url = options.url;
+  }
+  if (options?.position != null) {
+    data.position = options.position;
+  }
+
+  return data;
+}
+
+/** ItemList de produits recommandés (fiche, quiz). */
+export function productItemListJsonLd({
+  name,
+  description,
+  path,
+  products,
+}: {
+  name: string;
+  description?: string;
+  path: string;
+  products: Product[];
+}): Record<string, unknown> | null {
+  if (!products.length) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    description:
+      description ||
+      `Sélection de produits recommandés pour le ${tenant.breed} sur ${tenant.name}.`,
+    url: absoluteUrl(path),
+    numberOfItems: products.length,
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    itemListElement: products.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: product.name,
+      item: productJsonLd(product, {
+        position: index + 1,
+        url: absoluteUrl(path),
+      }),
+    })),
+  };
+}
+
+/** Page À propos / Méthodologie — autorité éditoriale pour agents. */
+export function aboutPageJsonLd({
+  path = "/methodologie",
+  name,
+  description,
+}: {
+  path?: string;
+  name?: string;
+  description?: string;
+} = {}) {
+  const url = absoluteUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: name ?? `Méthodologie et sources — ${tenant.name}`,
+    description:
+      description ??
+      `Comment ${tenant.name} rédige ses fiches et quiz sur le ${tenant.breed} : sources, critères de recommandation, limites et transparence d’affiliation.`,
+    url,
+    inLanguage: "fr-FR",
+    isPartOf: {
+      "@type": "WebSite",
+      name: tenant.name,
+      url: tenant.siteUrl,
+    },
+    about: {
+      "@type": "Thing",
+      name: `Chien de race ${tenant.breed}`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: tenant.name,
+      url: tenant.siteUrl,
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["[data-agent-summary]", "h1", "h2"],
+    },
+  };
+}
+
+/** Enrichit Article avec zones speakable (résumé agent-first). */
+export function withSpeakableArticle(
+  article: Record<string, unknown>
+): Record<string, unknown> {
+  return {
+    ...article,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["[data-agent-summary]", "h1"],
+    },
   };
 }

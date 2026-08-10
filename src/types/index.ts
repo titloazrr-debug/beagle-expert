@@ -57,6 +57,11 @@ export interface Fiche {
   excerpt: string;
   /** Intro SEO / accroche sous le H1 (optionnelle) */
   intro?: string;
+  /**
+   * Bloc « En résumé » agent-first (2–4 phrases factuelles).
+   * Affiché juste sous le H1 pour extraction GEO / agents IA.
+   */
+  summary?: string;
   category: FicheCategory;
   emoji: string;
   readingTime: number;
