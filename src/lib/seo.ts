@@ -115,12 +115,23 @@ export function buildMetadata({
     },
   ];
 
+  const googleVerification =
+    process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ||
+    process.env.GOOGLE_SITE_VERIFICATION?.trim();
+
   return {
     title: fullTitle,
     description: metaDescription,
     keywords: keywords?.length ? keywords : undefined,
     metadataBase: new URL(tenant.siteUrl),
     alternates: { canonical: url },
+    ...(googleVerification
+      ? {
+          verification: {
+            google: googleVerification,
+          },
+        }
+      : {}),
     openGraph: {
       title: fullTitle,
       description: metaDescription,
