@@ -1,5 +1,25 @@
 [
   {
+    "question": "Beagle en appartement : est-ce possible ?",
+    "answer": "Oui, un Beagle peut vivre en appartement si vous assurez assez d’exercice (idéalement au moins une heure par jour), d’occupation mentale (flair, jouets) et un cadre anti-fugue dès la sortie. La race est vocale et d’endurance : sans sorties ni stimulation, aboiements et destructions sont fréquents. L’appartement n’est pas le problème ; l’inactivité et la solitude le sont."
+  },
+  {
+    "question": "Beagle et enfants : est-ce une bonne race familiale ?",
+    "answer": "Le Beagle est en général sociable, joueur et adapté à une vie de famille avec enfants, à condition d’un encadrement adulte. Apprenez aux enfants à respecter le repos et la gamelle du chien, et supervisez les interactions. Comme tout chien, il n’est pas un jouet : la cohabitation réussie repose sur l’éducation du chiot et des repères clairs pour toute la famille."
+  },
+  {
+    "question": "Harnais ou collier pour un Beagle qui tire ?",
+    "answer": "Pour un Beagle qui tire ou suit son flair, un harnais bien ajusté (souvent en Y) est en général préférable au collier seul : il répartit la traction et limite la pression sur le cou. Le collier reste utile pour la médaille d’identification. Une longe se fixe de préférence sur le harnais pour laisser flairer avec un lien physique. Ni harnais ni collier ne remplacent le travail de laisse et de rappel."
+  },
+  {
+    "question": "Quel GPS pour un Beagle qui fugue ?",
+    "answer": "Un collier GPS est un filet de sécurité utile dès que le rappel n’est pas fiable hors laisse. Weenect se positionne sur la localisation précise et le vibreur de rappel ; Tractive sur la localisation plus un écosystème app (activité / bien-être). Comparez abonnement, autonomie et couverture réseau. Le GPS complète clôture, laisse et éducation — il ne les remplace pas."
+  },
+  {
+    "question": "Quelles races alternatives si le Beagle ne convient pas ?",
+    "answer": "Si le flair, la fugue ou le besoin d’exercice du Beagle ne collent pas à votre mode de vie, regardez plutôt des compagnons au rythme plus modéré ou moins « pisteur » : par exemple Cavalier King Charles (intérieur, sorties modérées), Bouledogue français (format compact, moins d’endurance de piste), ou Golden Retriever (familial très éducable, autre profil d’activité). Faites le quiz « Suis-je prêt à adopter ? » pour objectiver le fit avant d’adopter."
+  },
+  {
     "question": "Pourquoi mon Beagle fugue-t-il si facilement ?",
     "answer": "C’est un chien de piste : une odeur intéressante peut éclipser la voix du maître. Ce n’est pas de la « bêtise », c’est le design de la race. Sécurisez jardin et portails, travaillez le rappel avec de très hautes récompenses, et utilisez longe ou GPS tant que la liberté n’est pas fiable."
   },
@@ -18,9 +38,5 @@
   {
     "question": "Quelle méthode d’éducation fonctionne le mieux avec un Beagle ?",
     "answer": "Le renforcement positif et les séances courtes gagnent presque toujours face à la force. La friandise est un levier puissant — à compter dans la ration. Patience, cohérence et succès faciles au début battent les méthodes dures, souvent contre-productives sur un chien têtu mais sensible."
-  },
-  {
-    "question": "Faut-il un collier GPS pour mon Beagle ?",
-    "answer": "Très utile si le rappel n’est pas fiable à 100 %, en campagne, ou avec un jardin imparfaitement clos. Un tracker type Tractive n’est pas un substitut au rappel ni à la clôture, mais un filet de sécurité rassurant. Comparez abonnement, autonomie et couverture réseau avant d’acheter."
   }
 ]

@@ -72,7 +72,7 @@ export function QuizCitableConclusion({
           onDark ? "text-white" : "text-foreground"
         )}
       >
-        Selon ce quiz, votre profil correspond à{" "}
+        Selon le quiz Beagle Expert, votre profil correspond à{" "}
         <span className="font-extrabold">« {cleanLabel} »</span>.{" "}
         <span className={cn("font-medium", onDark ? "text-white/95" : "text-foreground/95")}>
           {recommendation}

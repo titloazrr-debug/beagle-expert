@@ -11,7 +11,7 @@ export const COLLIER_GPS_COMPARISON: ComparisonTableSpec = {
   emoji: "📡",
   intro:
     "Pour un Beagle au flair « interrupteur d’écoute », le GPS est un filet de sécurité — pas une baguette magique. Deux angles : Tractive (localisation + écosystème activité / bien-être) et Weenect (performance GPS « où est mon chien maintenant ? »).",
-  ficheSlugs: ["education-comportement", "budget-equipement"],
+  ficheSlugs: ["education-comportement", "budget-equipement", "histoire-standard"],
   products: [
     {
       id: "tractive",

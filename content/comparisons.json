@@ -4,17 +4,17 @@
     "title": "Ultra Premium Direct vs Royal Canin Beagle Adult",
     "category": "alimentation",
     "emoji": "🥣",
-    "intro": "Deux approches solides pour nourrir un Beagle : une croquette française polyvalente au bon prix, face à une formule « race » très ciblée embonpoint et digeste. Le meilleur choix dépend surtout du poids de votre chien et de votre budget annuel.",
+    "intro": "Comparaison croquettes Beagle : Ultra Premium Direct (vente directe, rapport qualité-prix) face à Royal Canin Beagle Adult (formule race, focus embonpoint). Le meilleur choix dépend du poids, du budget annuel et de l’avis de votre vétérinaire.",
     "ficheSlugs": ["alimentation", "budget-equipement", "sante"],
     "left": {
       "productId": "ultra-premium-direct",
       "name": "Ultra Premium Direct",
       "tagline": "Premium direct, rapport qualité-prix",
       "points": [
-        "Fort en protéines animales, formules adulte / light",
-        "Prix au kg souvent plus doux sur l’année",
-        "Flexible selon l’âge et l’activité",
-        "Idéal si vous ajustez déjà bien la ration"
+        "Fort en protéines animales, formules adulte / chiot / light",
+        "Prix au kg souvent plus doux sur 12 mois",
+        "Flexible selon l’âge et l’activité du Beagle",
+        "Idéal si vous pesez déjà la ration et suivez la silhouette"
       ]
     },
     "right": {
@@ -28,15 +28,47 @@
         "Prix généralement plus élevé au kilo"
       ]
     },
-    "verdict": "Choisissez Ultra Premium Direct si vous voulez un excellent équilibre composition / budget et une formule light en cas de tendance au gras. Orientez-vous vers une formule race type Royal Canin Beagle Adult si votre véto privilégie ce profil ou si votre Beagle a déjà un embonpoint installé et besoin d’un cadre très spécifique. Dans les deux cas : peser la ration, compter les friandises, et valider le poids de forme avec un professionnel.",
+    "verdict": "Choisissez Ultra Premium Direct si vous voulez un excellent équilibre composition / budget pour un Beagle adulte. Orientez-vous vers Royal Canin Beagle Adult si votre vétérinaire privilégie une formule race ou si l’embonpoint est déjà installé. Dans les deux cas : peser la ration, compter les friandises, valider le poids de forme avec un professionnel.",
     "disclaimer": "Comparaison informative, non exhaustive. Les besoins varient selon l’âge, l’activité et l’état de santé."
   },
   {
+    "id": "alim-upd-vs-hills",
+    "title": "Ultra Premium Direct vs Hill’s Science Plan Medium Adult",
+    "category": "alimentation",
+    "emoji": "🥣",
+    "intro": "Comparaison croquettes Beagle : Ultra Premium Direct (français, vente directe) face à Hill’s Science Plan Medium Adult (référence « science / véto », chiens 10–25 kg). Deux options premium, deux logiques d’achat.",
+    "ficheSlugs": ["alimentation", "budget-equipement", "sante"],
+    "left": {
+      "productId": "ultra-premium-direct",
+      "name": "Ultra Premium Direct",
+      "tagline": "Composition lisible, prix maîtrisé",
+      "points": [
+        "Vente directe : traçabilité et formules chiot / adulte / light",
+        "Bon levier pour un Beagle gourmand au budget contrôlé",
+        "Ajustement simple si stérilisation ou baisse d’activité",
+        "Moins de présence en animalerie classique"
+      ]
+    },
+    "right": {
+      "name": "Hill’s Science Plan Medium Adult",
+      "tagline": "Référence digeste type circuit vétérinaire",
+      "imageEmoji": "🔬",
+      "points": [
+        "Positionnement digestibilité et protéines de qualité",
+        "Format adapté chiens moyens (profil Beagle adulte)",
+        "Large validation terrain / réseau pro",
+        "Prix au kg souvent plus élevé qu’une vente directe"
+      ]
+    },
+    "verdict": "Ultra Premium Direct convient si vous priorisez le rapport qualité-prix et une formule light accessible pour un Beagle prédisposé au gras. Hill’s Science Plan Medium Adult est une alternative premium solide si vous préférez une marque très présente en circuit pro ou si votre vétérinaire l’utilise déjà. L’important reste la portion, pas le logo : un Beagle en surpoids sur croquette « premium » reste un Beagle en surpoids.",
+    "disclaimer": "Marques et gammes évoluent. Vérifiez composition et quantités sur le sachet ; ce n’est pas un conseil nutritionnel personnalisé."
+  },
+  {
     "id": "gps-tractive-vs-weenect",
-    "title": "Tractive vs Weenect",
+    "title": "Tractive vs Weenect : quel GPS pour un Beagle ?",
     "category": "gps",
     "emoji": "📡",
-    "intro": "Pour un Beagle au flair « interrupteur d’écoute », le GPS est un filet de sécurité — pas une baguette magique. Deux angles complémentaires : Tractive (localisation + activité / bien-être) et Weenect (performance GPS « où est mon chien maintenant ? »).",
+    "intro": "Comparaison collier GPS Beagle : Tractive (localisation + activité / bien-être) vs Weenect (performance GPS « où est mon chien maintenant ? », vibreur). Pour un Beagle qui fugue, le GPS est un filet de sécurité — pas un substitut au rappel.",
     "ficheSlugs": ["education-comportement", "budget-equipement"],
     "left": {
       "productId": "tractive-gps",
@@ -58,18 +90,50 @@
         "Superlive jusqu’à 1 position par seconde",
         "Vibreur + sonnerie + lumière (rappel / recherche)",
         "XS léger (27 g) ; XT pour usages intensifs ; IP68",
-        "Pas de capteurs type cardio/sommeil — focus GPS ; abo obligatoire"
+        "Focus GPS pur (pas de capteurs type cardio/sommeil) ; abo obligatoire"
       ]
     },
-    "verdict": "Weenect si votre priorité est la localisation précise et le vibreur de rappel. Tractive si vous voulez aussi une suite app riche (activité / bien-être). Comparez l’abonnement sur 12–24 mois et la couverture réseau sur vos balades. Aucun GPS ne remplace clôture, longe et travail de rappel.",
+    "verdict": "Pour un Beagle qui fugue : Weenect si la priorité est la localisation précise et le vibreur de rappel ; Tractive si vous voulez aussi une suite app riche (activité / bien-être). Comparez l’abonnement sur 12–24 mois et la couverture réseau sur vos balades. Aucun GPS ne remplace clôture, longe et travail de rappel.",
     "disclaimer": "Offres et forfaits évoluent : vérifiez les conditions actuelles avant d’acheter. Données Weenect basées sur la FAQ fabricant (août 2026)."
+  },
+  {
+    "id": "harnais-vs-collier-longe",
+    "title": "Harnais anti-traction vs collier + longe pour Beagle",
+    "category": "education",
+    "emoji": "🦮",
+    "intro": "Comparaison équipement de promenade Beagle : harnais (souvent en Y / anti-traction) face au duo collier + longe. La race tire au flair : le bon matériel protège le cou et garde un lien physique quand le nez prend le dessus.",
+    "ficheSlugs": ["education-comportement", "budget-equipement", "soins-entretien"],
+    "left": {
+      "name": "Harnais (Y / anti-traction)",
+      "tagline": "Confort d’épaules + sécurité traction",
+      "imageEmoji": "🦮",
+      "points": [
+        "Répartit la traction : moins de pression sur le cou",
+        "Mieux adapté si le Beagle tire ou file sur une odeur",
+        "Point d’attache solide pour laisse ou longe",
+        "Réglage important (aisselles, poitrine) pour éviter frottements"
+      ]
+    },
+    "right": {
+      "name": "Collier + longe",
+      "tagline": "Simplicité, identification, exploration contrôlée",
+      "imageEmoji": "🪢",
+      "points": [
+        "Collier utile pour médaille / identification visible",
+        "Longe : liberté de flairer avec lien physique",
+        "Moins adapté seul si traction forte (risque trachée / cou)",
+        "La longe demande un environnement adapté (pas d’obstacles)"
+      ]
+    },
+    "verdict": "Pour un Beagle qui tire ou suit son flair, le harnais bien ajusté est en général le choix principal pour la laisse. Le collier reste utile pour l’identification ; la longe se fixe de préférence sur le harnais pour explorer sans tout miser sur le rappel. En pratique : harnais + laisse au quotidien, longe pour le flair, GPS en filet de sécurité si besoin.",
+    "disclaimer": "Adaptez la taille au poids du chien. En cas de pathologie cervicale ou respiratoire, demandez conseil à votre vétérinaire."
   },
   {
     "id": "jouets-kong-vs-snuffle",
     "title": "Kong Classic vs Tapis de fouille",
     "category": "jouets",
     "emoji": "🧩",
-    "intro": "Occupation ≠ une seule boîte à outils. Kong et snuffle mat répondent à deux besoins différents du Beagle : mastication / résolution vs flair / fouille.",
+    "intro": "Comparaison occupation Beagle : Kong (mastication / résolution) vs tapis de fouille (flair). Deux outils complémentaires pour un chien de piste intelligent.",
     "ficheSlugs": ["education-comportement", "alimentation", "budget-equipement", "histoire-standard"],
     "left": {
       "productId": "kong-classic",
@@ -79,7 +143,7 @@
         "Très résistant, idéal mâchouilleur",
         "Parfait pour absences courtes",
         "Allonge le temps de « travail » alimentaire",
-        "Calories des garnitures à compter"
+        "Calories des garnitures à compter dans la ration"
       ]
     },
     "right": {
@@ -88,20 +152,20 @@
       "tagline": "Flair et fatigue mentale douce",
       "points": [
         "Exploite l’odorat exceptionnel du Beagle",
-        "Fatigue mentale rapide, peu d’espace",
-        "Super par temps de pluie / en appart",
-        "Moins indestructible si le chien arrache"
+        "Fatigue mentale rapide, peu d’espace (appartement)",
+        "Utile par temps de pluie ou en intérieur",
+        "Moins indestructible si le chien arrache le tissu"
       ]
     },
-    "verdict": "Ce n’est pas l’un ou l’autre : le duo est souvent le meilleur combo. Kong pour canaliser la mâchoire et les absences ; tapis de fouille pour le flair et le calme mental. Commencez par celui qui colle au problème du moment (destruction vs sous-stimulation / aboiements d’ennui).",
+    "verdict": "Ce n’est pas l’un ou l’autre : le duo est souvent le meilleur combo Beagle. Kong pour canaliser la mâchoire et les absences ; tapis de fouille pour le flair et le calme mental. Commencez par celui qui colle au problème du moment (destruction vs sous-stimulation / aboiements d’ennui).",
     "disclaimer": "Supervisez les premières séances et adaptez la difficulté pour éviter frustration ou ingestion de tissu."
   },
   {
     "id": "assurance-santevet-vs-epargne",
-    "title": "SantéVet vs épargne / sans assurance",
+    "title": "SantéVet vs pas d’assurance (épargne dédiée)",
     "category": "assurance",
     "emoji": "🛡️",
-    "intro": "Assurer un Beagle n’est pas obligatoire, mais les otites, bilans et imprévus s’additionnent. Voici une lecture transparente entre couverture assurantielle et « auto-assurance » via une cagnotte.",
+    "intro": "Comparaison budget santé Beagle : souscrire une assurance type SantéVet vs s’auto-assurer via une cagnotte. Otites, bilans et imprévus s’additionnent ; le bon choix dépend de votre capacité à absorber une grosse facture.",
     "ficheSlugs": ["sante", "soins-entretien", "budget-equipement"],
     "left": {
       "productId": "santevet",
@@ -110,12 +174,12 @@
       "points": [
         "Protège contre les pics de frais (chirurgie, bilans)",
         "Utile sur une race exposée (oreilles, poids, articulations)",
-        "Cotisation mensuelle prévisible",
-        "Exclusions, franchises et plafonds à lire"
+        "Cotisation mensuelle prévisible (ordre 15–35 € selon formule)",
+        "Exclusions, franchises, carences et plafonds à lire"
       ]
     },
     "right": {
-      "name": "Épargne dédiée (sans contrat)",
+      "name": "Pas d’assurance (épargne dédiée)",
       "tagline": "Flexibilité totale, risque porté seul",
       "imageEmoji": "💰",
       "points": [
@@ -125,7 +189,7 @@
         "Une seule grosse facture peut vider la cagnotte"
       ]
     },
-    "verdict": "L’assurance a du sens si une facture de plusieurs centaines d’euros mettrait le budget en difficulté, ou si vous préférez la prévisibilité. L’épargne dédiée peut suffire si vous mettez de côté régulièrement un montant réaliste (et que vous acceptez le risque d’un gros imprévu). Beaucoup de foyers combinent : petite cagnotte + formule d’assurance raisonnable. Ce n’est jamais un substitut à la prévention (oreilles, poids, bilans).",
+    "verdict": "L’assurance type SantéVet a du sens si une facture de plusieurs centaines d’euros mettrait le budget en difficulté, ou si vous préférez la prévisibilité. Sans assurance, une épargne dédiée réaliste peut suffire si vous acceptez le risque d’un gros imprévu. Beaucoup de foyers combinent petite cagnotte + formule raisonnable. Ce n’est jamais un substitut à la prévention (oreilles, poids, bilans).",
     "disclaimer": "Les garanties d’assurance varient fortement. Lisez le contrat ; ce site ne fournit pas de conseil assurantiel personnalisé."
   }
 ]

@@ -1,19 +1,27 @@
 [
   {
+    "question": "Budget mensuel réel d’un Beagle : combien prévoir ?",
+    "answer": "Ordre de grandeur courant pour un adulte en France : environ 50 à 120 € par mois selon croquettes, assurance (0 ou 15–35 €), hygiène et occupation, hors gros imprévus. Un GPS ajoute souvent 5 à 14 € d’abonnement. Sur 12–15 ans, le coût total dépasse largement le prix d’achat du chiot : budgétez d’abord les postes récurrents, pas seulement l’arrivée."
+  },
+  {
     "question": "Combien coûte un Beagle par an ?",
     "answer": "Comptez surtout croquettes, antiparasitaires, hygiène, occupation et sorties, plus une marge pour les imprévus véto. L’ordre de grandeur varie selon l’assurance, l’alimentation et le mode de vie ; sur ~15 ans, le coût total dépasse largement le prix d’achat. Budgétez aussi le temps d’exercice quotidien."
   },
   {
     "question": "Quel budget prévoir avant d’adopter un Beagle ?",
-    "answer": "En plus du prix d’élevage (souvent cité entre 500 et 1000 € selon sources), prévoyez collier, laisse, panier, jouets, première visite véto, identification et un stock de croquettes. Un collier GPS et une assurance sont des options judicieuses pour beaucoup de foyers."
+    "answer": "En plus du prix d’élevage (souvent cité entre 500 et 1000 € selon sources), prévoyez collier ou harnais, laisse, panier, jouets, première visite véto, identification et un stock de croquettes. Un collier GPS et une assurance sont des options judicieuses pour beaucoup de foyers."
   },
   {
     "question": "L’assurance santé chien vaut-elle le coup pour un Beagle ?",
-    "answer": "Oui si une facture élevée vous mettrait en difficulté, ou si vous préférez lisser les dépenses. Lisez carences, franchises et plafonds. Alternativement, une épargne dédiée peut suffire si vous mettez de côté régulièrement un montant réaliste."
+    "answer": "Oui si une facture élevée vous mettrait en difficulté, ou si vous préférez lisser les dépenses. Lisez carences, franchises et plafonds. Alternativement, une épargne dédiée peut suffire si vous mettez de côté régulièrement un montant réaliste — c’est le cœur de la comparaison « assurance vs pas d’assurance »."
   },
   {
     "question": "Quels équipements sont vraiment utiles pour un Beagle ?",
-    "answer": "Les indispensables : laisse solide, harnais ou collier adapté, panier, gamelles, jouet d’occupation (Kong), et un moyen de sécuriser le flair (longe / clôture). Le GPS est un excellent filet anti-fugue. Le reste (gadgets) est secondaire face à l’exercice et l’éducation."
+    "answer": "Les indispensables : laisse solide, harnais adapté (surtout s’il tire), panier, gamelles, jouet d’occupation (Kong), et un moyen de sécuriser le flair (longe / clôture). Le GPS est un excellent filet anti-fugue. Le reste (gadgets) est secondaire face à l’exercice et l’éducation."
+  },
+  {
+    "question": "Harnais ou collier : que budgéter en premier ?",
+    "answer": "Budgétez d’abord un harnais confortable bien dimensionné pour la promenade quotidienne, plus un collier léger pour la médaille. Une longe utile pour le flair coûte souvent moins cher que plusieurs jouets inutiles. Le GPS vient ensuite si le rappel ou le jardin n’est pas 100 % sûr."
   },
   {
     "question": "Faut-il un collier GPS dès l’arrivée du chiot ?",

@@ -1,5 +1,9 @@
 [
   {
+    "question": "Comment prévenir les otites chez le Beagle ?",
+    "answer": "Inspectez les oreilles une fois par semaine, surtout après pluie ou baignade. Nettoyez avec une lotion auriculaire adaptée (jamais de coton-tige dans le conduit) et séchez soigneusement. Un poids stable et le suivi d’éventuelles allergies réduisent les récidives. Odeur, grattage ou tête penchée : consultez un vétérinaire sans attendre plus de 48 heures."
+  },
+  {
     "question": "Quelles sont les maladies les plus fréquentes chez le Beagle ?",
     "answer": "Les points de vigilance souvent cités sont les otites (oreilles tombantes), le surpoids, les problèmes de dos (dont hernie discale) et, plus rarement, des soucis oculaires ou articulaires. Un Beagle bien suivi reste en général un chien robuste : la prévention quotidienne fait souvent la différence."
   },
@@ -13,7 +17,11 @@
   },
   {
     "question": "Faut-il assurer un Beagle en santé ?",
-    "answer": "Ce n’est pas obligatoire, mais utile si une grosse facture véto mettrait votre budget en difficulté. Otites à répétition, bilans et imprévus s’additionnent vite. Comparez franchises, plafonds et exclusions, et gardez aussi les gestes de prévention (oreilles, poids, bilans)."
+    "answer": "Ce n’est pas obligatoire, mais utile si une grosse facture véto mettrait votre budget en difficulté. Otites à répétition, bilans et imprévus s’additionnent vite. Comparez une assurance type SantéVet à une épargne dédiée : franchises, plafonds et exclusions d’un côté, discipline d’épargne et risque d’imprévu de l’autre."
+  },
+  {
+    "question": "SantéVet ou pas d’assurance pour un Beagle ?",
+    "answer": "Choisissez une assurance si vous voulez lisser les pics de dépenses et qu’une facture élevée vous mettrait en difficulté. Sans assurance, une cagnotte mensuelle réaliste peut suffire si vous acceptez le risque d’un gros imprévu. La prévention (oreilles, poids, bilans) reste indispensable dans les deux cas."
   },
   {
     "question": "Mon Beagle boite ou a mal au dos : est-ce grave ?",
