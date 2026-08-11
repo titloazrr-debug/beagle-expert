@@ -176,7 +176,7 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
   },
   {
     id: "gps-weenect-walking",
-    name: "Weenect GPS (XS / XT)",
+    name: "Weenect XS (chien)",
     category: "gps",
     active: true,
     retailer: "Weenect",
@@ -184,7 +184,8 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     strengths: [
       "Superlive jusqu’à 1 position / s",
       "Vibreur + sonnerie + lumière (rappel / recherche)",
-      "Filet de sécurité si le Beagle s’éloigne au flair",
+      "Léger (27 g) — adapté au Beagle",
+      "Code promo BEAGLEEXPERT : −40 % sur le boîtier",
     ],
     watchouts: [
       "Ne remplace ni le rappel ni la longe",
@@ -196,8 +197,10 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
       "escape_artist",
       "hiking",
       "scent_explorer",
+      "daily_walk",
+      "senior_comfort",
     ],
-    ctaLabel: "Voir le collier GPS Weenect",
+    ctaLabel: "Voir Weenect XS (−40 % code BEAGLEEXPERT)",
   },
   {
     id: "gps-tractive-walking",
@@ -227,8 +230,12 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
   },
 ];
 
-/** Lien affilié Weenect (Affilae) — fallback si env absente au build. */
-export const WEENECT_AFFILIATE_URL_FALLBACK = "https://c3po.link/QZfafMMxFe";
+/** Lien affilié Weenect XS chien (Partner+) — fallback si env absente au build. */
+export const WEENECT_AFFILIATE_URL_FALLBACK =
+  "https://www.weenect.com/r/?id=94&p=2";
+
+/** Code promo lecteurs Beagle Expert (Weenect Partner+). */
+export const WEENECT_PROMO_CODE = "BEAGLEEXPERT";
 
 /** Médaille Beagle Expert — produit futur, désactivé par défaut. */
 export const BEAGLE_EXPERT_TAG_ENABLED = false;

@@ -106,6 +106,11 @@ export function ProductCard({
               {product.badge && (
                 <Badge variant="accent">{product.badge}</Badge>
               )}
+              {product.promoCode && (
+                <Badge className="border-0 bg-primary text-primary-foreground">
+                  {product.promoLabel ?? "Offre partenaire"}
+                </Badge>
+              )}
             </div>
             <h3 className="mt-1.5 text-base font-extrabold leading-snug text-foreground group-hover:text-accent transition-colors sm:text-[1.05rem]">
               {product.name}
@@ -113,6 +118,23 @@ export function ProductCard({
             <p className="mt-1 text-sm font-extrabold text-accent">{price}</p>
           </div>
         </div>
+
+        {product.promoCode && !compact && (
+          <div className="mt-3 rounded-xl border-2 border-primary/30 bg-primary/8 px-3.5 py-2.5">
+            <p className="text-[11px] font-extrabold uppercase tracking-wide text-primary">
+              Code promo lecteurs
+            </p>
+            <p className="mt-1 font-mono text-base font-extrabold tracking-wide text-foreground">
+              {product.promoCode}
+            </p>
+            {product.promoLabel ? (
+              <p className="mt-0.5 text-xs leading-snug text-muted-foreground">
+                {product.promoLabel} — à saisir dans le panier Weenect (ou via le
+                lien ci-dessous).
+              </p>
+            ) : null}
+          </div>
+        )}
 
         {why && (
           <div className="mt-3.5 rounded-xl border-2 border-accent/30 bg-accent/8 px-3.5 py-3">

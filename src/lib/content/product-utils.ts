@@ -57,6 +57,8 @@ export function normalizeContentProduct(raw: {
   affiliateUrl?: string;
   categories?: string[];
   badge?: string;
+  promoCode?: string;
+  promoLabel?: string;
   imageEmoji?: string;
   advantages?: string[];
   disadvantages?: string[];
@@ -81,6 +83,8 @@ export function normalizeContentProduct(raw: {
     affiliateUrl: raw.affiliateUrl?.trim() || "#",
     imageEmoji: raw.imageEmoji ?? emojiForProduct(raw.id, raw.name, tags),
     badge: raw.badge,
+    promoCode: raw.promoCode?.trim() || undefined,
+    promoLabel: raw.promoLabel?.trim() || undefined,
     tags,
     categories: raw.categories ?? (raw.category ? [raw.category] : tags),
     advantages: raw.advantages?.map((s) => s.trim()).filter(Boolean),

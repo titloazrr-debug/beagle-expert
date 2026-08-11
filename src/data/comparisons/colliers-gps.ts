@@ -42,12 +42,12 @@ export const COLLIER_GPS_COMPARISON: ComparisonTableSpec = {
     },
     {
       id: "weenect",
-      name: "Weenect (XS / XT)",
+      name: "Weenect XS / XT",
       emoji: "📍",
-      badge: "GPS performance",
+      badge: "−40 % code BEAGLEEXPERT",
       recommended: true,
-      affiliateUrl: "https://c3po.link/QZfafMMxFe",
-      priceLabel: "Boîtier + abo (formules longues + douces)",
+      affiliateUrl: "https://www.weenect.com/r/?id=94&p=2",
+      priceLabel: "XS dès 26,99 € + abo (code BEAGLEEXPERT)",
       criteria: {
         positionnement: "Où est-il maintenant ?",
         suivi: "Superlive jusqu’à 1 pos. / s",

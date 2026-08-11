@@ -100,6 +100,10 @@ export interface Product {
   affiliateUrl: string;
   imageEmoji: string;
   badge?: string;
+  /** Code promo partenaire (ex. BEAGLEEXPERT) */
+  promoCode?: string;
+  /** Libellé promo court (ex. −40 % sur le boîtier) */
+  promoLabel?: string;
   tags: string[];
   categories: string[];
   /** Points forts (3–5) pour aide à la décision */

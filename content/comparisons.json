@@ -83,18 +83,18 @@
     },
     "right": {
       "productId": "weenect-gps",
-      "name": "Weenect",
+      "name": "Weenect XS / XT",
       "tagline": "Où est-il maintenant ?",
       "imageEmoji": "📍",
       "points": [
         "Superlive jusqu’à 1 position par seconde",
         "Vibreur + sonnerie + lumière (rappel / recherche)",
-        "XS léger (27 g) ; XT pour usages intensifs ; IP68",
-        "Focus GPS pur (pas de capteurs type cardio/sommeil) ; abo obligatoire"
+        "XS léger (27 g) ou XT usages intensifs ; IP68",
+        "Code promo BEAGLEEXPERT : −40 % sur le boîtier ; abo obligatoire"
       ]
     },
-    "verdict": "Pour un Beagle qui fugue : Weenect si la priorité est la localisation précise et le vibreur de rappel ; Tractive si vous voulez aussi une suite app riche (activité / bien-être). Comparez l’abonnement sur 12–24 mois et la couverture réseau sur vos balades. Aucun GPS ne remplace clôture, longe et travail de rappel.",
-    "disclaimer": "Offres et forfaits évoluent : vérifiez les conditions actuelles avant d’acheter. Données Weenect basées sur la FAQ fabricant (août 2026)."
+    "verdict": "Pour un Beagle qui fugue : Weenect si la priorité est la localisation précise et le vibreur de rappel (XS pour la plupart des Beagles, XT si sorties intensives) ; Tractive si vous voulez aussi une suite app riche (activité / bien-être). Lecteurs Beagle Expert : code BEAGLEEXPERT (−40 % boîtier Weenect). Aucun GPS ne remplace clôture, longe et travail de rappel.",
+    "disclaimer": "Offres et forfaits évoluent : vérifiez les conditions actuelles avant d’acheter. Commission partenaire possible. Données Weenect basées sur la FAQ fabricant et le programme Partner+ (août 2026)."
   },
   {
     "id": "harnais-vs-collier-longe",

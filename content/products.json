@@ -85,14 +85,16 @@
   },
   {
     "id": "weenect-gps",
-    "name": "Weenect GPS (XS / XT)",
+    "name": "Weenect XS (chien)",
     "category": "collier_gps",
-    "price": "boîtier + abo (formules dès ~5€/mois en engagement long — voir offre)",
-    "shortDescription": "GPS performance « où est mon chien maintenant ? » — Superlive, vibreur de rappel, marque française.",
-    "recommendation": "Weenect se positionne sur la performance GPS : savoir où est le Beagle à l’instant T. Mode Superlive jusqu’à une position par seconde, vibreur utile pour le rappel, lumière et sonnerie. Le XS (27 g) convient souvent au Beagle ; le XT vise les usages plus exigeants. Alternative claire à Tractive si le suivi santé n’est pas la priorité.",
-    "affiliateUrl": "https://c3po.link/QZfafMMxFe",
+    "price": "26,99 € en promo (44,99 €) + abonnement",
+    "shortDescription": "Traceur GPS léger (27 g) pour Beagle — Superlive, vibreur, code promo BEAGLEEXPERT −40 % sur le boîtier.",
+    "recommendation": "Weenect XS chien : le modèle le plus adapté à la plupart des Beagles (léger, dès 3 kg). Performance GPS « où est mon chien maintenant ? », Superlive jusqu’à 1 pos./s, vibreur pour le rappel. Offre lecteurs Beagle Expert : −40 % sur le boîtier avec le code BEAGLEEXPERT au panier.",
+    "affiliateUrl": "https://www.weenect.com/r/?id=94&p=2",
     "imageEmoji": "📍",
-    "badge": "GPS performance",
+    "badge": "Recommandé Beagle",
+    "promoCode": "BEAGLEEXPERT",
+    "promoLabel": "−40 % sur le boîtier Weenect",
     "tags": [
       "gps",
       "weenect",
@@ -115,9 +117,9 @@
     "advantages": [
       "Superlive : jusqu’à 1 position par seconde en recherche",
       "Vibreur + sonnerie + lumière pour retrouver / rappeler",
-      "XS très léger (27 g) ; XT pour chiens dès 6 kg et usages intensifs",
+      "XS très léger (27 g), adapté au Beagle",
       "Étanchéité IP68 ; garantie à vie annoncée fabricant",
-      "Positionnement « GPS à l’essentiel », marque française"
+      "Code promo partenaire BEAGLEEXPERT (−40 % boîtier)"
     ],
     "disadvantages": [
       "Abonnement obligatoire (le boîtier ne suffit pas)",
@@ -125,7 +127,50 @@
       "Autonomie réelle selon fréquence de suivi et mode éco",
       "Comme tout GPS cellulaire : zones blanches possibles"
     ],
-    "bestFor": "Beagles au flair « interrupteur », besoin de localisation précise et d’aide au rappel (vibreur), sans priorité au suivi santé connecté."
+    "bestFor": "Beagle adulte ou chiot dès ~3 kg : localisation précise et aide au rappel, sans priorité au suivi santé connecté."
+  },
+  {
+    "id": "weenect-xt",
+    "name": "Weenect XT (chien)",
+    "category": "collier_gps",
+    "price": "38,99 € en promo (64,99 €) + abonnement",
+    "shortDescription": "Traceur GPS robuste pour usages intensifs — antenne XL, autonomie max, code BEAGLEEXPERT −40 %.",
+    "recommendation": "Weenect XT : pour Beagles dès 6 kg et sorties exigeantes (campagne, randonnée). Antenne XL, autonomie plus longue, lampe plus puissante. Même positionnement GPS performance + vibreur. Code promo BEAGLEEXPERT : −40 % sur le boîtier au panier.",
+    "affiliateUrl": "https://www.weenect.com/r/?id=94&p=3",
+    "imageEmoji": "📡",
+    "badge": "Usage intensif",
+    "promoCode": "BEAGLEEXPERT",
+    "promoLabel": "−40 % sur le boîtier Weenect",
+    "tags": [
+      "gps",
+      "weenect",
+      "securite",
+      "fugueur",
+      "vibration",
+      "rappel",
+      "campagne",
+      "pret",
+      "vigilance"
+    ],
+    "categories": [
+      "equipement",
+      "gps",
+      "education",
+      "budget"
+    ],
+    "advantages": [
+      "Antenne XL, couverture annoncée très large",
+      "Autonomie élevée en mode éco (jusqu’à ~3 semaines selon fabricant)",
+      "Vibreur + sonnerie + lumière ultra-puissante",
+      "Code promo partenaire BEAGLEEXPERT (−40 % boîtier)"
+    ],
+    "disadvantages": [
+      "Plus lourd que le XS (~54 g)",
+      "Abonnement obligatoire",
+      "Surdimensionné pour un usage uniquement urbain calme",
+      "Zones blanches possibles comme tout GPS cellulaire"
+    ],
+    "bestFor": "Beagles dès 6 kg, sorties nature intensives ou besoin d’autonomie maximale."
   },
   {
     "id": "santevet",

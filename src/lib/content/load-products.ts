@@ -20,6 +20,8 @@ interface RawCatalogProduct {
   affiliateUrl?: string;
   imageEmoji?: string;
   badge?: string;
+  promoCode?: string;
+  promoLabel?: string;
   tags?: string[];
   categories?: string[];
   advantages?: string[];
@@ -45,6 +47,8 @@ export function loadProductCatalog(): Product[] {
       affiliateUrl: p.affiliateUrl,
       imageEmoji: p.imageEmoji,
       badge: p.badge,
+      promoCode: p.promoCode,
+      promoLabel: p.promoLabel,
       tags: p.tags,
       categories: p.categories,
       advantages: p.advantages,

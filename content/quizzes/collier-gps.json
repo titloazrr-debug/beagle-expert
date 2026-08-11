@@ -225,21 +225,22 @@
       ],
       "productIds": [
         "weenect-gps",
+        "weenect-xt",
         "tractive-gps",
         "kong-classic",
         "tapis-fouille"
       ],
       "reasons": [
         "Fugue / flair : un GPS live + géofence est un filet, pas une baguette magique",
-        "Weenect : Superlive (jusqu’à 1 pos./s) et vibreur utiles en recherche",
-        "Tractive : alternative solide si vous voulez aussi l’écosystème activité / app",
-        "Occupation (Kong, fouille) pour canaliser le flair sans hors-laisse risqué"
+        "Weenect XS : Superlive + vibreur ; code BEAGLEEXPERT (−40 % boîtier)",
+        "Weenect XT : option usages intensifs / autonomie max",
+        "Tractive : alternative si vous voulez aussi l’écosystème activité / app"
       ]
     },
     {
       "id": "rappel-vibration",
       "title": "Profil « rappel difficile »",
-      "description": "Le nez gagne souvent sur la voix. Un GPS avec vibreur (Weenect) + formation adaptée chien de chasse est le combo le plus cohérent. Tractive reste une alternative si vous privilégiez la suite app plutôt que le vibreur.",
+      "description": "Le nez gagne souvent sur la voix. Un GPS avec vibreur (Weenect) + formation adaptée chien de chasse est le combo le plus cohérent. Offre lecteurs : code BEAGLEEXPERT (−40 % sur le boîtier). Tractive reste une alternative si vous privilégiez la suite app.",
       "tags": [
         "weenect",
         "vibration",
@@ -249,21 +250,22 @@
       ],
       "productIds": [
         "weenect-gps",
+        "weenect-xt",
         "tractive-gps",
         "tapis-fouille",
         "kong-classic"
       ],
       "reasons": [
         "Weenect propose vibreur + sonnerie + lumière pour le rappel / la recherche",
+        "Code promo BEAGLEEXPERT : −40 % sur le boîtier au panier Weenect",
         "Le GPS ne remplace pas le travail de rappel en longe et en environnement sûr",
-        "Tractive en alternative si l’angle « activité / bien-être » vous parle plus",
-        "Snuffle mat et Kong : fatiguer le flair sans liberté hors contrôle"
+        "Tractive en alternative si l’angle « activité / bien-être » vous parle plus"
       ]
     },
     {
       "id": "anticipation",
       "title": "Profil « anticipation maligne »",
-      "description": "Risque modéré mais réel : un GPS d’entrée de gamme suffit souvent, combiné à laisse/longe et jardin sécurisé. Weenect (GPS à l’essentiel) ou Tractive (si vous voulez l’app plus large) selon votre priorité.",
+      "description": "Risque modéré mais réel : un GPS d’entrée de gamme suffit souvent, combiné à laisse/longe et jardin sécurisé. Weenect XS (GPS à l’essentiel, code BEAGLEEXPERT) ou Tractive (app plus large) selon votre priorité.",
       "tags": [
         "budget",
         "gps",
@@ -273,11 +275,12 @@
       ],
       "productIds": [
         "weenect-gps",
+        "weenect-xt",
         "tractive-gps"
       ],
       "reasons": [
         "Même un Beagle « sage » peut suivre une piste un jour : anticiper est rationnel",
-        "Weenect : angle performance GPS et simplicité d’usage",
+        "Weenect XS : performance GPS + promo lecteurs BEAGLEEXPERT (−40 %)",
         "Tractive : si vous voulez aussi le suivi d’activité dans l’app",
         "Laisse, longe et clôture restent la base — le GPS complète"
       ]
@@ -285,6 +288,7 @@
   ],
   "productIds": [
     "weenect-gps",
+    "weenect-xt",
     "tractive-gps",
     "kong-classic",
     "tapis-fouille",
