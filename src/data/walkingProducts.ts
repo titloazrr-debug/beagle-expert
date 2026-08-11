@@ -175,6 +175,31 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     ctaLabel: "Voir la longe longue",
   },
   {
+    id: "gps-weenect-walking",
+    name: "Weenect GPS (XS / XT)",
+    category: "gps",
+    active: true,
+    retailer: "Weenect",
+    affiliateUrlEnv: "NEXT_PUBLIC_WEENECT_AFFILIATE_URL",
+    strengths: [
+      "Superlive jusqu’à 1 position / s",
+      "Vibreur + sonnerie + lumière (rappel / recherche)",
+      "Filet de sécurité si le Beagle s’éloigne au flair",
+    ],
+    watchouts: [
+      "Ne remplace ni le rappel ni la longe",
+      "Abonnement généralement requis",
+    ],
+    verifiedAt: VERIFIED,
+    suitableProfiles: [
+      "secured_explorer",
+      "escape_artist",
+      "hiking",
+      "scent_explorer",
+    ],
+    ctaLabel: "Voir le collier GPS Weenect",
+  },
+  {
     id: "gps-tractive-walking",
     name: "Tractive GPS Tracker",
     category: "gps",
@@ -189,6 +214,7 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     watchouts: [
       "Ne remplace ni le rappel ni la longe",
       "Abonnement généralement requis",
+      "Lien affilié en attente de partenariat",
     ],
     verifiedAt: VERIFIED,
     suitableProfiles: [
@@ -200,6 +226,9 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     ctaLabel: "Voir le collier GPS",
   },
 ];
+
+/** Lien affilié Weenect (Affilae) — fallback si env absente au build. */
+export const WEENECT_AFFILIATE_URL_FALLBACK = "https://c3po.link/QZfafMMxFe";
 
 /** Médaille Beagle Expert — produit futur, désactivé par défaut. */
 export const BEAGLE_EXPERT_TAG_ENABLED = false;
@@ -217,7 +246,11 @@ export function resolveWalkingAffiliateUrl(
   if (typeof process === "undefined") return null;
   const env = process.env as Record<string, string | undefined>;
   const url = env[product.affiliateUrlEnv]?.trim();
-  if (url && /^https?:\/\//i.test(url)) return url;
+  if (url && url !== "#" && /^https?:\/\//i.test(url)) return url;
+  // Fallback catalogue Weenect (lien Affilae actif)
+  if (product.affiliateUrlEnv === "NEXT_PUBLIC_WEENECT_AFFILIATE_URL") {
+    return WEENECT_AFFILIATE_URL_FALLBACK;
+  }
   return null;
 }
 

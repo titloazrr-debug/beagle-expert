@@ -46,7 +46,7 @@ export const COLLIER_GPS_COMPARISON: ComparisonTableSpec = {
       emoji: "📍",
       badge: "GPS performance",
       recommended: true,
-      affiliateUrl: "#",
+      affiliateUrl: "https://c3po.link/QZfafMMxFe",
       priceLabel: "Boîtier + abo (formules longues + douces)",
       criteria: {
         positionnement: "Où est-il maintenant ?",
