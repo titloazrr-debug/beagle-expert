@@ -43,6 +43,7 @@ import { isMedicalFicheCategory } from "@/lib/legal";
 import { MedicalDisclaimer } from "@/components/legal/MedicalDisclaimer";
 import { QuizRecoDisclaimer } from "@/components/legal/QuizRecoDisclaimer";
 import { AffiliateDisclaimer } from "@/components/legal/AffiliateDisclaimer";
+import { WeenectPartnerOffer } from "@/components/partners/WeenectPartnerOffer";
 import { cn } from "@/lib/utils";
 import { getTenant } from "@/lib/tenant";
 
@@ -422,6 +423,10 @@ export default async function FichePage({ params }: PageProps) {
                 </div>
               </section>
             )}
+
+            {relatedProducts.some(
+              (p) => p.id === "weenect-gps" || p.id === "weenect-xt"
+            ) && <WeenectPartnerOffer className="mt-2" />}
 
             {(comparisons.length > 0 || comparisonTables.length > 0) && (
               <section

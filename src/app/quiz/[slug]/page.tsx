@@ -26,6 +26,7 @@ import type { Product } from "@/types";
 import { InsuranceQuizFaq } from "@/components/insurance/InsuranceQuizFaq";
 import { FoodQuizFaq } from "@/components/food/FoodQuizFaq";
 import { WalkingQuizFaq } from "@/components/walking/WalkingQuizFaq";
+import { WeenectPartnerOffer } from "@/components/partners/WeenectPartnerOffer";
 import { cn } from "@/lib/utils";
 
 /** Mappe les recettes croquettes vers le type Product (JSON-LD ItemList). */
@@ -239,6 +240,17 @@ export default async function QuizPage({ params }: PageProps) {
             slug === "pret-a-adopter" ? alternativeBreeds : []
           }
         />
+
+        {(slug === "collier-gps" || walking) && (
+          <div
+            className={cn(
+              "mx-auto mt-10",
+              specialized ? "max-w-3xl" : "max-w-2xl"
+            )}
+          >
+            <WeenectPartnerOffer />
+          </div>
+        )}
 
         {insurance && (
           <div className="mx-auto mt-12 max-w-3xl">

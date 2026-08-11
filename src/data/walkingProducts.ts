@@ -4,6 +4,11 @@
  * Liens affiliés via variables d’env uniquement — jamais inventés.
  */
 
+import {
+  WEENECT_PROMO_CODE,
+  WEENECT_XS_DOG_URL,
+} from "@/lib/partners/weenect";
+
 export type WalkingProductCategory =
   | "y_harness"
   | "escape_proof_harness"
@@ -231,11 +236,9 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
 ];
 
 /** Lien affilié Weenect XS chien (Partner+) — fallback si env absente au build. */
-export const WEENECT_AFFILIATE_URL_FALLBACK =
-  "https://www.weenect.com/r/?id=94&p=2";
+export const WEENECT_AFFILIATE_URL_FALLBACK = WEENECT_XS_DOG_URL;
 
-/** Code promo lecteurs Beagle Expert (Weenect Partner+). */
-export const WEENECT_PROMO_CODE = "BEAGLEEXPERT";
+export { WEENECT_PROMO_CODE };
 
 /** Médaille Beagle Expert — produit futur, désactivé par défaut. */
 export const BEAGLE_EXPERT_TAG_ENABLED = false;
