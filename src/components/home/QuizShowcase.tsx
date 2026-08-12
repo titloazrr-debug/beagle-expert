@@ -9,15 +9,15 @@ interface QuizShowcaseProps {
   quizzes: Quiz[];
 }
 
-/** Ordre d’affichage sur l’accueil */
+/** Ordre d’affichage sur l’accueil — fugue / sécurité d’abord */
 const PRIORITY = [
+  "collier-gps",
   "harnais-beagle",
   "pret-a-adopter",
-  "assurance-sante-beagle",
+  "jouets-occupation",
   "alimentation-croquettes",
   "risque-obesite",
-  "collier-gps",
-  "jouets-occupation",
+  "assurance-sante-beagle",
 ];
 
 /** Copy accueil centré sur la question du visiteur (sans casser les titres SEO des pages quiz) */
@@ -25,16 +25,22 @@ const HOME_COPY: Record<
   string,
   { badge: string; pitch: string; cta: string }
 > = {
-  "harnais-beagle": {
-    badge: "Nouveau",
+  "collier-gps": {
+    badge: "Priorité fugue",
     pitch:
-      "Harnais, laisse, longe & sécurité : composez un setup promenade adapté à son flair, son rappel et votre environnement.",
+      "Une odeur, et le Beagle peut disparaître. Quiz GPS : filet de sécurité selon rappel, terrain et priorité (localisation pure type Weenect vs suite app).",
+    cta: "Trouver le GPS anti-fugue",
+  },
+  "harnais-beagle": {
+    badge: "Setup promenade",
+    pitch:
+      "Harnais, laisse, longe & identification : composez un setup qui tient quand le flair tire plus fort que la voix.",
     cta: "Trouver son équipement",
   },
   "pret-a-adopter": {
     badge: "À faire avant d’adopter",
     pitch:
-      "Temps, absences, promenades, bruit, budget : votre quotidien est-il vraiment compatible avec un Beagle ?",
+      "Temps, absences, promenades, bruit, budget — et capacité à gérer la fugue : le Beagle est-il compatible avec votre vie ?",
     cta: "Tester ma compatibilité",
   },
   "assurance-sante-beagle": {
@@ -55,16 +61,10 @@ const HOME_COPY: Record<
       "Portions, friandises, activité et silhouette : repérez les habitudes qui favorisent la prise de poids.",
     cta: "Évaluer son risque",
   },
-  "collier-gps": {
-    badge: "Environ 2 min",
-    pitch:
-      "Un Beagle peut tout oublier dès qu’une piste se présente. Identifiez le GPS adapté à vos sorties et à son tempérament.",
-    cta: "Trouver le GPS adapté",
-  },
   "jouets-occupation": {
     badge: "Flair & énergie",
     pitch:
-      "Gourmandise, flair, solitude ou destruction : quelle activité d’occupation lui conviendra vraiment ?",
+      "Canaliser le nez à la maison limite l’ennui… et parfois l’envie de filer dès la porte ouverte.",
     cta: "Trouver son activité",
   },
 };

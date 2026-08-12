@@ -51,7 +51,7 @@ export function Header() {
             </Link>
           ))}
           <Button asChild size="sm" className="ml-2">
-            <Link href="/quiz/pret-a-adopter">Faire le quiz d&apos;adoption</Link>
+            <Link href="/quiz/collier-gps">Quiz GPS anti-fugue</Link>
           </Button>
         </nav>
 
@@ -84,8 +84,8 @@ export function Header() {
             </Link>
           ))}
           <Button asChild className="mt-2">
-            <Link href="/quiz/pret-a-adopter" onClick={() => setOpen(false)}>
-              Faire le quiz d&apos;adoption
+            <Link href="/quiz/collier-gps" onClick={() => setOpen(false)}>
+              Quiz GPS anti-fugue
             </Link>
           </Button>
         </nav>

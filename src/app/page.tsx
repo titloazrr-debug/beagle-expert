@@ -2,8 +2,9 @@ import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { QuizShowcase } from "@/components/home/QuizShowcase";
 import { FichesPreview } from "@/components/home/FichesPreview";
+import { WeenectPartnerOffer } from "@/components/partners/WeenectPartnerOffer";
 import { Button } from "@/components/ui/button";
-import { Calculator, Compass, TrendingUp } from "lucide-react";
+import { Calculator, Compass, Radio, TrendingUp } from "lucide-react";
 import { fiches } from "@/data/fiches";
 import { quizzes } from "@/data/quizzes";
 import { getTenant } from "@/lib/tenant";
@@ -28,6 +29,76 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Pilier éditorial : fugue — le sujet #1 du Beagle */}
+      <section
+        id="fugue"
+        className="scroll-mt-20 border-b border-border/60 bg-gradient-to-b from-muted/40 to-background py-14 sm:py-16"
+      >
+        <div className="container-page">
+          <div className="mx-auto max-w-3xl">
+            <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent">
+              <Radio className="size-3.5" aria-hidden />
+              Sujet central · race de piste
+            </p>
+            <h2 className="mt-2 font-[family-name:var(--font-display)] text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">
+              La fugue du Beagle n&apos;est pas de la « bêtise »
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              C&apos;est un chien de chasse sélectionné pour suivre une voie
+              jusqu&apos;au bout. Dès qu&apos;une odeur prend le dessus, le
+              rappel peut s&apos;éteindre. Le bon plan :{" "}
+              <strong className="font-semibold text-foreground">
+                cadre + équipement + filet GPS
+              </strong>
+              , pas la panique ni la punition.
+            </p>
+            <ul className="mt-5 space-y-2.5 text-sm leading-relaxed text-foreground sm:text-base">
+              <li className="flex gap-2">
+                <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+                <span>
+                  <strong className="font-semibold">Avant la liberté :</strong>{" "}
+                  harnais, laisse ou longe, jardin sécurisé, rappel en
+                  environnement pauvre en odeurs.
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+                <span>
+                  <strong className="font-semibold">Filet de sécurité :</strong>{" "}
+                  un collier GPS (ex. Weenect, avec vibreur) pour localiser si
+                  le nez a gagné — sans remplacer clôture ni éducation.
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+                <span>
+                  <strong className="font-semibold">En pratique :</strong>{" "}
+                  commencez par le quiz GPS ou la fiche éducation — deux
+                  minutes qui clarifient plus qu&apos;un achat impulsif.
+                </span>
+              </li>
+            </ul>
+            <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+              <Button asChild size="lg">
+                <Link href="/quiz/collier-gps">Faire le quiz collier GPS</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/quiz/harnais-beagle">Setup harnais / longe</Link>
+              </Button>
+              <Button asChild variant="ghost" size="lg">
+                <Link href="/fiche/education-comportement">
+                  Fiche fugue &amp; rappel
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-3xl">
+            <WeenectPartnerOffer />
+          </div>
+        </div>
+      </section>
+
       <QuizShowcase quizzes={quizzes} />
       <FichesPreview fiches={fiches} />
 
@@ -37,14 +108,14 @@ export default function HomePage() {
             <div className="absolute -right-8 -top-8 size-40 rounded-full bg-white/10 blur-2xl" />
             <div className="relative max-w-2xl">
               <h2 className="font-[family-name:var(--font-display)] text-2xl font-extrabold tracking-tight text-white text-balance sm:text-3xl">
-                Avant d&apos;adopter un {tenant.breed}, accordez-vous quatre
-                minutes de réflexion
+                Avant d&apos;adopter un {tenant.breed} : flair, énergie… et
+                fugue
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-white/90 sm:text-base">
-                Le Beagle peut être un formidable compagnon, à condition que son
-                énergie, son flair et son caractère correspondent à votre mode
-                de vie. Notre quiz vous aide à faire le point sur vos absences,
-                votre budget, votre environnement et vos attentes.
+                Un Beagle épanoui demande des sorties, de l&apos;occupation
+                mentale et un plan anti-fugue réaliste. Le quiz d&apos;adoption
+                croise mode de vie, absences, budget et environnement — pour
+                éviter les mauvaises surprises.
               </p>
               <Button
                 asChild

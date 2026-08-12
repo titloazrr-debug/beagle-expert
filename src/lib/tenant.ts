@@ -34,9 +34,9 @@ export const tenant: TenantConfig = {
   breed: "Beagle",
   breedPlural: "Beagles",
   tagline:
-    "Des quiz rapides et des fiches pratiques pour mieux comprendre le Beagle et prendre soin de lui au quotidien.",
+    "Flair, fugue, santé, budget : quiz et fiches pour sécuriser le quotidien d’un Beagle de piste.",
   description:
-    "Mieux comprendre votre Beagle et faire les bons choix : quiz personnalisés et fiches pratiques sur la santé, l’alimentation, l’éducation et le budget.",
+    "Guide Beagle centré sur la fugue, le rappel et les bons équipements (GPS, harnais), plus santé, alimentation et budget — quiz personnalisés et fiches claires.",
   siteUrl: resolveSiteUrl(),
   locale: "fr-FR",
   chatbot: {

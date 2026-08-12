@@ -26,12 +26,36 @@ export const metadata: Metadata = buildMetadata({
 
 const paths = [
   {
+    icon: Radio,
+    label: "Mon Beagle fugue ou risque de filer",
+    desc: "Flair « interrupteur », rappel fragile, campagne : le sujet n°1 de la race. Quiz GPS + cadre anti-fugue.",
+    href: "/quiz/collier-gps",
+    cta: "Faire le quiz collier GPS",
+    color: "from-sky-500/25 to-sky-500/5",
+  },
+  {
+    icon: Footprints,
+    label: "Je cherche harnais / longe anti-traction",
+    desc: "Setup promenade : harnais, laisse ou longe quand le nez tire plus fort que la voix.",
+    href: "/quiz/harnais-beagle",
+    cta: "Faire le quiz harnais",
+    color: "from-emerald-500/20 to-emerald-500/5",
+  },
+  {
     icon: Home,
     label: "Je songe à adopter un Beagle",
-    desc: "Le Beagle est-il fait pour vous ? Faites le quiz.",
+    desc: "Compatibilité mode de vie — y compris gestion de la fugue et de l’énergie.",
     href: "/quiz/pret-a-adopter",
     cta: "Faire le quiz « Suis-je prêt ? »",
     color: "from-primary/20 to-primary/5",
+  },
+  {
+    icon: ClipboardList,
+    label: "Je veux comprendre fugue & rappel",
+    desc: "Fiche éducation : pourquoi il file, comment travailler le rappel, quoi sécuriser.",
+    href: "/fiche/education-comportement",
+    cta: "Lire la fiche éducation",
+    color: "from-indigo-500/20 to-indigo-500/5",
   },
   {
     icon: Stethoscope,
@@ -58,22 +82,6 @@ const paths = [
     color: "from-amber-500/20 to-amber-500/5",
   },
   {
-    icon: Footprints,
-    label: "Je cherche le bon harnais / équipement de promenade",
-    desc: "Harnais, laisse ou longe : setup adapté à son flair et son rappel.",
-    href: "/quiz/harnais-beagle",
-    cta: "Faire le quiz harnais",
-    color: "from-emerald-500/20 to-emerald-500/5",
-  },
-  {
-    icon: Radio,
-    label: "Je veux un collier GPS pour mon Beagle",
-    desc: "Fugue, grands espaces, rappel : trouvez le GPS adapté.",
-    href: "/quiz/collier-gps",
-    cta: "Faire le quiz GPS",
-    color: "from-sky-500/20 to-sky-500/5",
-  },
-  {
     icon: Scale,
     label: "Mon Beagle a un problème de poids",
     desc: "Quiz risque d'obésité : évaluez sa silhouette.",
@@ -84,23 +92,15 @@ const paths = [
   {
     icon: Shirt,
     label: "Je veux un budget pour mon Beagle",
-    desc: "Frais, équipement, assurance : combien ça coûte ?",
+    desc: "Frais, équipement, assurance, GPS : combien ça coûte ?",
     href: "/fiche/budget-equipement",
     cta: "Voir la fiche budget",
     color: "from-purple-500/20 to-purple-500/5",
   },
   {
-    icon: ClipboardList,
-    label: "Je veux choisir une assurance santé",
-    desc: "Quiz personnalisé pour trouver la bonne couverture.",
-    href: "/quiz/assurance-sante-beagle",
-    cta: "Faire le quiz assurance",
-    color: "from-teal-500/20 to-teal-500/5",
-  },
-  {
     icon: ShoppingBag,
     label: "Je cherche des produits pour mon Beagle",
-    desc: "Croquettes, GPS, jouets : notre sélection.",
+    desc: "GPS, harnais, croquettes, jouets : nos fiches et quiz.",
     href: "/fiches",
     cta: "Voir les fiches",
     color: "from-pink-500/20 to-pink-500/5",
@@ -160,17 +160,25 @@ export default function ParOuCommencerPage() {
             Vous ne savez toujours pas ?
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Commencez par le quiz « Suis-je prêt à adopter un Beagle ? » — c&apos;est
-            le point d&apos;entrée le plus complet. En 4 minutes, vous saurez si le
-            Beagle correspond à votre mode de vie, et vous repartirez avec des
-            pistes concrètes.
+            Si votre Beagle est déjà là : commencez par la{" "}
+            <strong className="font-semibold text-foreground">fugue et le rappel</strong>{" "}
+            (quiz GPS ou fiche éducation). Si vous hésitez encore à adopter : le
+            quiz « Suis-je prêt ? » croise mode de vie, absences et capacité à
+            gérer un chien de piste.
           </p>
-          <Button asChild size="lg" className="mt-5">
-            <Link href="/quiz/pret-a-adopter">
-              Faire le quiz « Suis-je prêt ? »
-              <ArrowRight className="size-4" aria-hidden />
-            </Link>
-          </Button>
+          <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+            <Button asChild size="lg">
+              <Link href="/quiz/collier-gps">
+                Quiz GPS anti-fugue
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/quiz/pret-a-adopter">
+                Quiz « Suis-je prêt ? »
+              </Link>
+            </Button>
+          </div>
         </section>
       </div>
     </div>

@@ -1,15 +1,15 @@
 {
   "slug": "collier-gps",
   "title": "Quel collier GPS pour mon Beagle ?",
-  "subtitle": "Fugueur, rappel difficile, GPS pur ou suite activité ?",
+  "subtitle": "Anti-fugue : flair, rappel, terrain — filet de sécurité réaliste",
   "emoji": "📡",
-  "description": "Le Beagle a un fort instinct de poursuite. En 5 questions, on affine entre Weenect (GPS performance, vibreur) et Tractive (localisation + écosystème activité / bien-être). Le GPS reste un filet de sécurité, pas un substitut au rappel.",
+  "description": "Le Beagle est un chien de piste : une odeur peut faire oublier le rappel. En 5 questions, on affine le filet GPS (Weenect : localisation + vibreur ; Tractive : localisation + suite app). Le GPS complète harnais, longe et clôture — il ne les remplace pas.",
   "estimatedMinutes": 2,
   "mode": "product-score",
-  "ctaLabel": "Voir mon collier GPS idéal",
+  "ctaLabel": "Voir mon GPS anti-fugue",
   "seo": {
-    "title": "Quiz collier GPS Beagle — Weenect ou Tractive ?",
-    "description": "Trouvez le collier GPS adapté à votre Beagle : fugue, terrain, rappel, priorité (localisation vs activité) et budget."
+    "title": "Quiz GPS Beagle anti-fugue — Weenect ou Tractive ?",
+    "description": "Quel collier GPS pour un Beagle qui fugue ? Quiz : terrain, rappel, Weenect (vibreur) ou Tractive, budget. Filet de sécurité, pas magie."
   },
   "basedOn": [
     "content/raw/guide_budget_beagle.md",

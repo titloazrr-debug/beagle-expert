@@ -8,7 +8,24 @@ interface FichesPreviewProps {
   fiches: Fiche[];
 }
 
+/** Éducation (fugue) en tête de liste sur l’accueil */
+const FICHE_PRIORITY = [
+  "education-comportement",
+  "budget-equipement",
+  "sante",
+  "alimentation",
+  "esperance-de-vie",
+  "soins-entretien",
+  "histoire-standard",
+];
+
 export function FichesPreview({ fiches }: FichesPreviewProps) {
+  const sorted = [...fiches].sort((a, b) => {
+    const ia = FICHE_PRIORITY.indexOf(a.slug);
+    const ib = FICHE_PRIORITY.indexOf(b.slug);
+    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+  });
+
   return (
     <section
       id="fiches"
@@ -21,13 +38,12 @@ export function FichesPreview({ fiches }: FichesPreviewProps) {
               Les fiches Beagle Expert
             </p>
             <h2 className="mt-2 font-[family-name:var(--font-display)] text-3xl font-extrabold tracking-tight sm:text-4xl">
-              L&apos;essentiel à connaître sur votre beagle
+              L&apos;essentiel : fugue, santé, budget…
             </h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Alimentation, santé, éducation, entretien ou budget : des fiches
-              courtes et structurées pour comprendre rapidement les besoins
-              spécifiques du Beagle — avant une adoption, ou dès qu&apos;une
-              question se pose au quotidien.
+              Éducation et anti-fugue d&apos;abord, puis santé, alimentation et
+              budget : des fiches courtes pour les vrais sujets de la race —
+              avant d&apos;adopter, ou dès qu&apos;une question se pose.
             </p>
           </div>
           <Button asChild variant="outline">
@@ -39,7 +55,7 @@ export function FichesPreview({ fiches }: FichesPreviewProps) {
         </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {fiches.map((fiche, i) => (
+          {sorted.map((fiche, i) => (
             <FicheCard key={fiche.slug} fiche={fiche} featured={i < 2} />
           ))}
         </div>
