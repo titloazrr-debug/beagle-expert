@@ -8,6 +8,7 @@ const FICHE_PRIORITY: Record<string, number> = {
   sante: 0.9,
   alimentation: 0.9,
   "education-comportement": 0.9,
+  "solitude-aboiements-destruction": 0.9,
   "soins-entretien": 0.85,
   "budget-equipement": 0.85,
   "histoire-standard": 0.8,

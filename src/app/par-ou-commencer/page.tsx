@@ -50,6 +50,14 @@ const paths = [
     color: "from-primary/20 to-primary/5",
   },
   {
+    icon: Home,
+    label: "Mon Beagle aboie ou détruit quand je sors",
+    desc: "Solitude, anxiété de séparation, Kong et paliers d'absence : le vrai sujet en appartement.",
+    href: "/fiche/solitude-aboiements-destruction",
+    cta: "Lire la fiche solitude",
+    color: "from-rose-500/20 to-rose-500/5",
+  },
+  {
     icon: ClipboardList,
     label: "Je veux comprendre fugue & rappel",
     desc: "Fiche éducation : pourquoi il file, comment travailler le rappel, quoi sécuriser.",

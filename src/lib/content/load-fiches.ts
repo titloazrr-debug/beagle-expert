@@ -50,9 +50,14 @@ const DEFAULT_RELATED_FICHES: Record<string, string[]> = {
   sante: ["alimentation", "soins-entretien", "education-comportement"],
   alimentation: ["sante", "budget-equipement", "education-comportement"],
   "education-comportement": [
+    "solitude-aboiements-destruction",
     "sante",
     "alimentation",
-    "histoire-standard",
+  ],
+  "solitude-aboiements-destruction": [
+    "education-comportement",
+    "budget-equipement",
+    "alimentation",
   ],
   "soins-entretien": ["sante", "budget-equipement", "alimentation"],
   "budget-equipement": [

@@ -11,6 +11,7 @@ interface FichesPreviewProps {
 /** Éducation (fugue) en tête de liste sur l’accueil */
 const FICHE_PRIORITY = [
   "education-comportement",
+  "solitude-aboiements-destruction",
   "budget-equipement",
   "sante",
   "alimentation",

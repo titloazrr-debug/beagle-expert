@@ -95,6 +95,7 @@ const FICHE_SLUG_TO_IMAGE: Record<string, BeagleImageKey> = {
   sante: "sante",
   alimentation: "alimentation",
   "education-comportement": "education",
+  "solitude-aboiements-destruction": "education",
   "soins-entretien": "soins",
   "budget-equipement": "budget",
   "histoire-standard": "histoire",

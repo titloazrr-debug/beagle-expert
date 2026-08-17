@@ -1,0 +1,138 @@
+# Brief Grok Build — Nouvelle fiche « Solitude, aboiements et destructions du Beagle » + Maillage & Actualisation
+
+## Contexte & Objectif
+Le Beagle étant un chien de meute historique, la gestion de la solitude (anxiété de séparation, hurlements/aboiements en appartement, destructions d'objets) est la douleur n°1 des propriétaires en milieu urbain/périurbain.
+Cette fiche cible ces requêtes précises pour capter un trafic qualifié, l'orienter vers les solutions d'occupation mentale (Kong Classic, Tapis de fouille, enrichissement) et mailler avec le quiz `/quiz/jouets-occupation`.
+
+---
+
+## 1. Nouvelle fiche : `content/fiches/solitude-aboiements-destruction.mdx`
+
+Créer le fichier avec le frontmatter et la structure suivante :
+
+```mdx
+---
+slug: solitude-aboiements-destruction
+title: "Beagle seul à la maison : gérer la solitude, aboiements et destructions"
+excerpt: "Chien de meute par excellence, le Beagle supporte mal la solitude improvisée. Méthode d'apprentissage par paliers, dépense olfactive et solutions concrètes pour éviter les dégâts."
+intro: "Le Beagle est un chien de meute : la solitude ne lui est pas naturelle. Laissée sans apprentissage, elle peut vite mener aux aboiements plaintifs et aux destructions. Avec de la progressivité et une vraie dépense olfactive, un Beagle peut pourtant rester calme pendant vos absences."
+summary: "Pour qu'un Beagle reste seul sans aboyer ni détruire : habituation par micro-absences dès le départ, dépense physique ET mentale avant le départ (flair > simple tour de pâté de maison), et occupation longue durée (Kong congelé, tapis de fouille). Pas de punition au retour."
+category: education
+emoji: "🏠"
+readingTime: 5
+datePublished: "2026-08-17"
+dateModified: "2026-08-17"
+keywords:
+  - beagle seul a la maison
+  - beagle solitude
+  - beagle aboiement appartement
+  - beagle destruction
+  - anxiete separation beagle
+  - occuper un beagle
+seo:
+  title: "Beagle seul à la maison : stopper aboiements et destructions"
+  description: "Comment laisser un Beagle seul sans stress, aboiements ni destructions ? Méthode d'habituation, dépense mentale et outils d'occupation testés."
+relatedProducts:
+  - id: kong-classic
+  - id: tapis-fouille
+relatedQuizzes:
+  - jouets-occupation
+  - pret-a-adopter
+relatedFiches:
+  - education-comportement
+  - budget-equipement
+sources:
+  - "content/raw/guide_education_comportement_beagle.md"
+  - "content/raw/guide_budget_beagle.md"
+---
+
+## Pourquoi le Beagle vit mal la solitude improvisée
+
+Le Beagle n'est pas « capricieux » : il a été sélectionné pendant des siècles pour vivre et chasser en **meute soudée**. Pour lui, l'isolement total est une anomalie biologique.
+
+- **L'anxiété de séparation** : sensation de détresse réelle quand le groupe s'éloigne.
+- **L'ennui et le trop-plein d'énergie** : un chien de piste sous-stimulé s'occupe avec sa mâchoire ou sa voix.
+- **La voix de chasseur** : l'aboiement du Beagle (la « voix carillonnante ») porte très loin, ce qui pose vite problème avec le voisinage en appartement.
+
+> **Point clé**  
+> Un Beagle fatigué mentalement (flair) s'endort. Un Beagle simplement enfermé cherche une issue ou une activité de substitution.
+
+---
+
+## La méthode en 4 étapes pour des absences sereines
+
+### 1. La dépense avant le départ : faire travailler le nez
+Une promenade de 20 minutes où le chien marche au pied sans renifler ne suffit pas. Laissez-le explorer, pister et analyser les odeurs. 15 minutes de pistage fatiguent davantage le système nerveux qu'une heure de marche rapide monotone.
+
+### 2. L'apprentissage progressif (la règle des paliers)
+N'attendez pas de devoir partir 8 heures d'un coup :
+- Commencez par changer de pièce en fermant la porte 30 secondes.
+- Sortez de la maison 2 minutes, puis 5, 15, 30 minutes, 1 heure.
+- Rentrez toujours dans le calme : pas de grandes effusions émotionnelles qui valideraient le fait que le départ était un événement stressant.
+
+### 3. Laisser une occupation masticatoire de haute valeur
+Le réflexe de mastication et de léchage libère des endorphines apaisantes chez le chien :
+- **Le Kong Classic garni et congelé** (pâtée, croquettes humidifiées, fromage frais) : offre 30 à 45 minutes d'activité concentrée pendant le pic d'anxiété du départ.
+- **Le tapis de fouille (snuffle mat)** : pour disperser une partie de la ration du matin avant de franchir la porte.
+
+### 4. Gérer l'espace
+Certains Beagles paniquent dans un grand salon vide avec vue sur la rue (aboiements à chaque passant). Un espace restreint, sécurisé, calme et sans stimuli visuels extérieurs anxiogènes aide souvent le chien à se poser dans son panier.
+
+---
+
+## Ce qu'il ne faut jamais faire
+
+- **Punir les bêtises au retour** : le chien associera votre retour à la punition, ce qui augmentera son stress pour les départs suivants.
+- **Le laisser 8 heures seul dès le premier mois** sans solution intermédiaire (promeneur, passage à midi, voisin).
+- **Multiplier les départs « dramatiques »** avec de longs au revoir.
+
+---
+
+## FAQ Solitude & Beagle
+
+### Combien de temps un Beagle adulte peut-il rester seul ?
+Idéalement, pas plus de 4 à 6 heures consécutives. Au-delà, prévoyez une coupure (visite d'un dog-sitter, proche ou retour le midi) pour ses besoins et sa stimulation mentale.
+
+### Que faire s'il aboie dès que je passe la porte ?
+Filmez-le avec une caméra connectée pour identifier s'il s'agit d'excitation passagère (s'arrête après 5 min) ou d'une réelle détresse de panique. Reprenez les micro-absences de 30 secondes sans jamais revenir pendant qu'il aboie.
+
+### Les jouets suffisent-ils à régler les destructions ?
+Ils canalisent l'énergie pendant l'absence, mais doivent être combinés avec une vraie dépense olfactive avant le départ.
+```
+
+---
+
+## 2. Fichier FAQ structuré : `content/faqs/solitude-aboiements-destruction.json`
+
+Créer le fichier JSON pour les rich snippets FAQPage Schema :
+
+```json
+[
+  {
+    "question": "Combien de temps un Beagle adulte peut-il rester seul à la maison ?",
+    "answer": "Un Beagle adulte équilibré et habitué peut tolérer 4 à 6 heures d’absence. Au-delà, son tempérament de chien de meute et son besoin d’activité rendent la solitude difficile sans coupure (promeneur, visite)."
+  },
+  {
+    "question": "Comment empêcher un Beagle d'aboyer en appartement pendant mes absences ?",
+    "answer": "Dépensez son flair avant de partir (promenade avec pistage), donnez-lui un jouet d'occupation longue durée au moment du départ (Kong congelé) et pratiquez des départs progressifs sans rituels anxiogènes."
+  },
+  {
+    "question": "Pourquoi le Beagle détruit-il des objets quand il est seul ?",
+    "answer": "La destruction chez le Beagle est presque toujours le résultat de l'ennui, d'un manque d'activité physique/mentale ou d'une anxiété de séparation liée à son instinct grégaire."
+  }
+]
+```
+
+---
+
+## 3. Maillage interne & Actualisation des dates
+
+1. **Dans `content/fiches/education-comportement.mdx`** :
+   - Dans la section "Solitude, aboiements, ennui", ajouter un lien textuel vers la nouvelle fiche : `[guide complet sur la solitude et les aboiements du Beagle](/fiche/solitude-aboiements-destruction)`.
+   - Mettre à jour `dateModified: "2026-08-17"`.
+
+2. **Dans `content/fiches/budget-equipement.mdx`** :
+   - Mettre à jour `dateModified: "2026-08-17"`.
+
+3. **Vérification compilation** :
+   - Lancer `npm run build` pour confirmer la génération statique de la 7e fiche et son inclusion automatique dans `sitemap.xml`.
