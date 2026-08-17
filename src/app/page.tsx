@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { Hero } from "@/components/home/Hero";
 import { QuizShowcase } from "@/components/home/QuizShowcase";
 import { FichesPreview } from "@/components/home/FichesPreview";
@@ -7,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Calculator, Compass, TrendingUp } from "lucide-react";
 import { fiches } from "@/data/fiches";
 import { quizzes } from "@/data/quizzes";
+import { organizationJsonLd } from "@/lib/seo";
 import { getTenant } from "@/lib/tenant";
 import { AffiliateDisclaimer } from "@/components/legal/AffiliateDisclaimer";
 import { MedicalDisclaimer } from "@/components/legal/MedicalDisclaimer";
@@ -16,6 +18,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={organizationJsonLd()} />
       <Hero />
 
       <section className="border-b border-border/40 py-6">
