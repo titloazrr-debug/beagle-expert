@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Fraunces } from "next/font/google";
+import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ChatbotWidget } from "@/components/ChatbotWidget";
@@ -15,11 +15,11 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const fontDisplay = Plus_Jakarta_Sans({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
-  axes: ["SOFT", "WONK", "opsz"],
+  weight: ["600", "700", "800"],
 });
 
 const tenant = getTenant();
@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${dmSans.variable} ${fraunces.variable} flex min-h-screen flex-col font-sans antialiased`}
+        className={`${dmSans.variable} ${fontDisplay.variable} flex min-h-screen flex-col font-sans antialiased`}
       >
         <JsonLd data={organizationJsonLd()} />
         <Header />

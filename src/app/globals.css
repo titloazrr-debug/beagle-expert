@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-/* Fraunces : forcer les axes de variation pour désactiver les glyphes "WONK"
-   (ex. le "f" tordu à haute graisse) */
-h1, h2, h3, h4, h5, h6, [class*="font-display"], [class*="font-[family-name:var(--font-display)]"] {
-  font-variation-settings: "WONK" 0, "SOFT" 0 !important;
-}
-
-
 /* ——— Design system Beagle Expert (contraste & lisibilité renforcés) ——— */
 :root {
   /* Fonds doux beige */
