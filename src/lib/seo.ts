@@ -119,19 +119,20 @@ export function buildMetadata({
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ||
     process.env.GOOGLE_SITE_VERIFICATION?.trim();
 
+  const otherVerification: Record<string, string> = {
+    "p:domain_verify": "477327ac9043963119a47a3c553c084a",
+  };
+
   return {
     title: fullTitle,
     description: metaDescription,
     keywords: keywords?.length ? keywords : undefined,
     metadataBase: new URL(tenant.siteUrl),
     alternates: { canonical: url },
-    ...(googleVerification
-      ? {
-          verification: {
-            google: googleVerification,
-          },
-        }
-      : {}),
+    verification: {
+      ...(googleVerification ? { google: googleVerification } : {}),
+      other: otherVerification,
+    },
     openGraph: {
       title: fullTitle,
       description: metaDescription,
