@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Fraunces : désactiver l'axe "WONK" (glyphes volontairement déformés,
+   ex. le "f" qui paraît tordu dans les titres) et forcer un rendu classique. */
+:where(h1, h2, h3, .font-display) {
+  font-variation-settings: "WONK" 0, "SOFT" 0;
+}
+
 /* ——— Design system Beagle Expert (contraste & lisibilité renforcés) ——— */
 :root {
   /* Fonds doux beige */
