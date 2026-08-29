@@ -9,32 +9,32 @@ import { quizzes } from "@/data/quizzes";
 
 const featuredQuizzes = [
   {
-    e: "📡",
-    t: "Quel GPS anti-fugue ?",
-    d: "Flair, rappel, Weenect ou Tractive",
-    href: "/quiz/collier-gps",
-    badge: "Priorité",
-  },
-  {
-    e: "🦮",
-    t: "Quel harnais / setup ?",
-    d: "Traction, longe, sécurité promenade",
-    href: "/quiz/harnais-beagle",
-    badge: "Promenade",
-  },
-  {
-    e: "🏠",
-    t: "Suis-je prêt à adopter ?",
-    d: "Compatibilité mode de vie",
-    href: "/quiz/pret-a-adopter",
+    e: "🩺",
+    t: "Santé & Espérance de vie",
+    d: "Pathologies, longévité, prévention",
+    href: "/fiche/esperance-de-vie",
     badge: "Essentiel",
   },
   {
-    e: "🎓",
-    t: "Fugue & éducation",
-    d: "Rappel, flair, cadre anti-évasion",
-    href: "/fiche/education-comportement",
-    badge: "Fiche",
+    e: "🥩",
+    t: "Croquettes & Alimentation",
+    d: "Rations, silhouette, choix croquettes",
+    href: "/quiz/alimentation-croquettes",
+    badge: "Nutrition",
+  },
+  {
+    e: "💰",
+    t: "Budget & Assurance",
+    d: "Coûts réels, soins, mutuelle",
+    href: "/fiche/budget-equipement",
+    badge: "Repères",
+  },
+  {
+    e: "📡",
+    t: "Fugue, Rappel & GPS",
+    d: "Sécurité promenade, longe, traceur",
+    href: "/quiz/collier-gps",
+    badge: "Sécurité",
   },
 ];
 
@@ -123,30 +123,30 @@ export function Hero() {
         </p>
 
         <h1 className="mt-3 max-w-3xl font-[family-name:var(--font-display)] text-[1.65rem] font-extrabold leading-[1.2] tracking-tight text-foreground text-balance sm:text-4xl sm:leading-[1.15] lg:text-[2.5rem]">
-          Le Beagle suit son flair.
+          Le guide de référence du Beagle :
           <span className="mt-1 block text-primary sm:mt-0 sm:inline">
             {" "}
-            Anticiper la fugue, c&apos;est le protéger.
+            santé, alimentation, éducation &amp; vie quotidienne.
           </span>
         </h1>
 
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:mt-4 sm:text-base sm:leading-[1.7]">
-          Race de piste : une odeur, et le monde disparaît. Quiz et fiches pour
-          sécuriser les sorties (harnais, longe, GPS), comprendre le rappel et
-          faire les bons choix — sans panique ni fausse promesse.
+          Du chiot au chien âgé : des repères fiables, des quiz interactifs et des
+          conseils concrets pour vivre sereinement avec un chien vif, attachant et au
+          flair infatigable.
         </p>
 
         <div className="mt-5 flex flex-col gap-2.5 sm:mt-6 sm:flex-row sm:items-center sm:gap-3">
           <Button asChild size="lg" className="min-h-11 shadow-md shadow-primary/20 sm:min-h-12">
-            <Link href="/quiz/collier-gps">
-              <Zap className="size-4 sm:size-5" aria-hidden />
-              Quel GPS pour mon Beagle ?
+            <Link href="/fiches">
+              <BookOpen className="size-4 sm:size-5" aria-hidden />
+              Explorer les guides essentiels
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="min-h-11 sm:min-h-12">
-            <Link href="/fiche/education-comportement">
-              <BookOpen className="size-4 sm:size-5" aria-hidden />
-              Comprendre fugue &amp; rappel
+            <Link href="/quiz/collier-gps">
+              <Zap className="size-4 sm:size-5" aria-hidden />
+              Quiz GPS &amp; anti-fugue
             </Link>
           </Button>
         </div>

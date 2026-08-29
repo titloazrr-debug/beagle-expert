@@ -9,15 +9,15 @@ interface QuizShowcaseProps {
   quizzes: Quiz[];
 }
 
-/** Ordre d’affichage sur l’accueil — fugue / sécurité d’abord */
+/** Ordre d’affichage sur l’accueil — équilibré santé, alimentation, budget & sécurité */
 const PRIORITY = [
+  "alimentation-croquettes",
+  "assurance-sante-beagle",
   "collier-gps",
   "harnais-beagle",
   "pret-a-adopter",
-  "jouets-occupation",
-  "alimentation-croquettes",
   "risque-obesite",
-  "assurance-sante-beagle",
+  "jouets-occupation",
 ];
 
 /** Copy accueil centré sur la question du visiteur (sans casser les titres SEO des pages quiz) */

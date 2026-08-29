@@ -8,14 +8,14 @@ interface FichesPreviewProps {
   fiches: Fiche[];
 }
 
-/** Éducation (fugue) en tête de liste sur l’accueil */
+/** Fiches mises en avant sur l'accueil : Santé, Nutrition, Budget, Éducation */
 const FICHE_PRIORITY = [
-  "education-comportement",
-  "solitude-aboiements-destruction",
-  "budget-equipement",
+  "esperance-de-vie",
   "sante",
   "alimentation",
-  "esperance-de-vie",
+  "budget-equipement",
+  "education-comportement",
+  "solitude-aboiements-destruction",
   "soins-entretien",
   "histoire-standard",
 ];
@@ -39,11 +39,11 @@ export function FichesPreview({ fiches }: FichesPreviewProps) {
               Les fiches Beagle Expert
             </p>
             <h2 className="mt-2 font-[family-name:var(--font-display)] text-3xl font-extrabold tracking-tight sm:text-4xl">
-              L&apos;essentiel : fugue, santé, budget…
+              L&apos;essentiel : santé, alimentation, budget &amp; éducation
             </h2>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Éducation et anti-fugue d&apos;abord, puis santé, alimentation et
-              budget : des fiches courtes pour les vrais sujets de la race —
+              Santé, longévité, nutrition, budget et comportement : des dossiers
+              complets et vérifiés pour répondre à toutes les questions sur la race —
               avant d&apos;adopter, ou dès qu&apos;une question se pose.
             </p>
           </div>
