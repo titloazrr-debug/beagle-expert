@@ -14,6 +14,7 @@ const FICHE_PRIORITY = [
   "sante",
   "alimentation",
   "budget-equipement",
+  "assurance-chien-beagle",
   "education-comportement",
   "solitude-aboiements-destruction",
   "soins-entretien",
