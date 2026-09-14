@@ -1,31 +1,23 @@
 [
   {
-    "question": "Combien de temps vit un Beagle ?",
-    "answer": "Un Beagle vit en moyenne 12 à 15 ans. Certains, minces et bien suivis, atteignent 16 à 17 ans. Le poids, les dents, les oreilles et le suivi vétérinaire pèsent plus que la chance."
-  },
-  {
-    "question": "Quelle est l’espérance de vie moyenne d’un Beagle ?",
-    "answer": "En moyenne, un Beagle vit environ 12 à 15 ans. Certains dépassent cet intervalle avec un poids stable, une alimentation adaptée et un suivi vétérinaire régulier. L’espérance de vie varie selon l’individu, l’élevage, le mode de vie et les soins."
+    "question": "Combien de temps vit un Beagle en moyenne ?",
+    "answer": "Un Beagle vit en moyenne 12 à 15 ans. Certains, minces et bien suivis, atteignent 16 à 17 ans. Les femelles ont souvent un léger avantage, autour de 6 à 12 mois. Le poids, les dents, les oreilles et le suivi vétérinaire pèsent plus que la chance."
   },
   {
     "question": "Quels facteurs allongent la vie d’un Beagle ?",
     "answer": "Les leviers les plus concrets sont le contrôle du poids, une ration adaptée à l’âge et à l’activité, l’hygiène dentaire, le nettoyage des oreilles, l’exercice quotidien et les bilans vétérinaires. Un surpoids chronique et des otites négligées réduisent souvent le confort et la longévité."
   },
   {
-    "question": "À partir de quel âge un Beagle est-il considéré comme senior ?",
-    "answer": "On parle de sénior vers 7–8 ans. Ce n’est pas trop tard : un bilan plus fréquent, une ration éventuellement light ou senior et une activité adaptée (sans efforts brusques) aident à bien vieillir."
+    "question": "À partir de quel âge un Beagle est-il considéré comme sénior ?",
+    "answer": "On parle de sénior vers 7–8 ans. Ce n’est pas trop tard : rations plus douces, promenades adaptées et bilans plus fréquents aident à bien vieillir. Un changement soudain d’appétit, d’énergie ou de caractère n’est pas « juste l’âge » : consultez."
   },
   {
-    "question": "Le Beagle est-il une race qui vit longtemps ?",
-    "answer": "Oui, relativement : 12–15 ans est une longévité correcte pour un chien de taille moyenne. Ce n’est pas une race « fragile » par défaut, mais des prédispositions (otites, poids, dos) demandent une prévention simple et régulière."
+    "question": "Le Beagle vit-il longtemps par rapport aux autres races de sa taille ?",
+    "answer": "Le Beagle se situe autour de 12 à 15 ans, contre 10 à 13 ans en moyenne pour un chien de taille comparable. La différence se joue surtout sur le poids et le suivi vétérinaire."
   },
   {
     "question": "Espérance de vie Beagle mâle ou femelle : y a-t-il une différence ?",
     "answer": "La fourchette reste 12 à 15 ans pour les deux. Les femelles vivent souvent 6 à 12 mois de plus en moyenne. Chez le mâle, le surpoids et les comportements à risque (fugue) pèsent souvent davantage que le sexe."
-  },
-  {
-    "question": "À partir de quand un Beagle est-il considéré comme vieux ?",
-    "answer": "On parle de sénior vers 7–8 ans. Ce n’est pas « trop tard » : rations, promenades plus douces et bilans plus fréquents aident à bien vieillir. Un changement soudain n’est pas « juste l’âge » : consultez."
   },
   {
     "question": "Quelle est l’espérance de vie d’un Beagle-Harrier ?",
@@ -46,9 +38,5 @@
   {
     "question": "Quel âge a mon Beagle en années humaines ?",
     "answer": "Un Beagle de 2 ans correspond à environ 24 ans humains, 8 ans à environ 50 ans, et 12 ans à environ 70 ans. La règle du « ×7 » est fausse : un chien vieillit très vite les deux premières années, puis beaucoup plus lentement."
-  },
-  {
-    "question": "Un Beagle vit-il plus longtemps qu'un chien de taille moyenne ?",
-    "answer": "Légèrement. Le Beagle se situe autour de 12 à 15 ans, contre 10 à 13 ans en moyenne pour un chien de taille comparable. La différence se joue surtout sur le poids et le suivi vétérinaire."
   }
 ]
