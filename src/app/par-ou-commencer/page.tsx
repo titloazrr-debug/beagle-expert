@@ -106,6 +106,14 @@ const paths = [
     color: "from-purple-500/20 to-purple-500/5",
   },
   {
+    icon: Scale,
+    label: "Je me demande s'il faut une assurance",
+    desc: "Plafond, franchise, carences : ce qui compte avant de signer. Puis le quiz pour affiner.",
+    href: "/fiche/assurance-chien-beagle",
+    cta: "Lire la fiche assurance",
+    color: "from-teal-500/20 to-teal-500/5",
+  },
+  {
     icon: ShoppingBag,
     label: "Je cherche des produits pour mon Beagle",
     desc: "GPS, harnais, croquettes, jouets : nos fiches et quiz.",

@@ -65,6 +65,11 @@ const DEFAULT_RELATED_FICHES: Record<string, string[]> = {
     "alimentation",
     "education-comportement",
   ],
+  "assurance-chien-beagle": [
+    "sante",
+    "budget-equipement",
+    "esperance-de-vie",
+  ],
   "histoire-standard": [
     "education-comportement",
     "budget-equipement",

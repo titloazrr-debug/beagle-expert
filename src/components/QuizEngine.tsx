@@ -355,6 +355,18 @@ export function QuizEngine({
                       ? "Un bon équipement ne sert pas seulement à retenir votre chien. Il doit lui permettre de marcher, flairer et explorer confortablement tout en conservant un niveau de sécurité adapté à son rappel et à votre environnement."
                       : quiz.description}
                 </p>
+                {isInsurance && (
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/85">
+                    <Link
+                      href="/fiche/assurance-chien-beagle"
+                      className="font-medium text-primary underline-offset-2 hover:underline"
+                    >
+                      Pour comprendre les critères avant de faire le quiz
+                    </Link>
+                    , lisez la fiche assurance chien Beagle (plafond, franchise,
+                    carences, exclusions).
+                  </p>
+                )}
                 <ul className="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-muted-foreground">
                   <li className="rounded-full bg-card px-3 py-1.5 shadow-sm ring-1 ring-border">
                     {total} questions
