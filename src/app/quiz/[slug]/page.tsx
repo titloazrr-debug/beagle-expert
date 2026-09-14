@@ -39,7 +39,7 @@ function foodProductsAsCatalog(): Product[] {
     category: "croquettes",
     priceCents: 0,
     affiliateUrl: "#",
-    imageEmoji: "🥣",
+    imageEmoji: "🍻",
     tags: p.tags,
     categories: ["alimentation", "croquettes"],
     advantages: p.features,
@@ -100,7 +100,12 @@ export default async function QuizPage({ params }: PageProps) {
       "harnais-beagle": ["education-comportement", "budget-equipement", "soins-entretien"],
       "risque-obesite": ["alimentation", "sante"],
       "alimentation-croquettes": ["alimentation", "sante", "budget-equipement"],
-      "assurance-sante-beagle": ["sante", "budget-equipement", "soins-entretien"],
+      "assurance-sante-beagle": [
+        "assurance-chien-beagle",
+        "sante",
+        "budget-equipement",
+        "esperance-de-vie",
+      ],
       "jouets-occupation": ["education-comportement", "budget-equipement"],
     };
     const slugs = fallbackMap[slug] ?? [];
