@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Une assurance santé est-elle obligatoire pour un chien ?",
+    "answer": "Non, jamais obligatoire en France. L’identification (puce I-CAD) l’est ; l’assurance santé reste un choix selon votre budget et votre capacité à absorber une grosse facture vétérinaire."
+  },
+  {
+    "question": "Combien coûte une assurance pour un Beagle ?",
+    "answer": "Souvent 15 à 45 € par mois selon l’âge du chien et la formule (accidents seuls ou accidents + maladies + prévention). Un Beagle assuré jeune coûte en général moins cher par mois qu’un sénior souscrit tard."
+  },
+  {
+    "question": "Une maladie déjà déclarée est-elle couverte ?",
+    "answer": "En règle générale, non. Les maladies, blessures ou symptômes apparus avant la souscription sont exclus. Une assurance peut toutefois couvrir de futurs problèmes sans rapport, sous réserve d’acceptation et des conditions du contrat."
+  },
+  {
+    "question": "À quel âge faut-il souscrire ?",
+    "answer": "Le plus tôt possible, idéalement avant 2 ans, tant que le dossier médical est encore léger. Plus la souscription est précoce, plus le choix de formules est large. Au-delà d’un certain âge, beaucoup de contrats ferment."
+  },
+  {
+    "question": "Médaillon et assurance, c’est la même chose ?",
+    "answer": "Non, deux sujets distincts. Le médaillon d’identification (puce, médaille au collier) se remplace pour quelques euros. L’assurance santé est un contrat avec plafond, franchise et exclusions. Un gadget vendu avec une mutuelle ne transforme pas la médaille du collier en remboursement véto."
+  }
+]

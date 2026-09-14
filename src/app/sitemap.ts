@@ -13,6 +13,7 @@ const FICHE_PRIORITY: Record<string, number> = {
   "budget-equipement": 0.85,
   "histoire-standard": 0.8,
   "esperance-de-vie": 0.95,
+  "assurance-chien-beagle": 0.9,
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
