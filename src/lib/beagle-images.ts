@@ -98,7 +98,9 @@ const FICHE_SLUG_TO_IMAGE: Record<string, BeagleImageKey> = {
   "solitude-aboiements-destruction": "education",
   "soins-entretien": "soins",
   "budget-equipement": "budget",
+  "assurance-chien-beagle": "budget",
   "histoire-standard": "histoire",
+  "esperance-de-vie": "sante",
 };
 
 const CATEGORY_TO_IMAGE: Record<string, BeagleImageKey> = {

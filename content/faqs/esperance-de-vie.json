@@ -13,7 +13,7 @@
   },
   {
     "question": "À partir de quel âge un Beagle est-il considéré comme senior ?",
-    "answer": "On parle souvent de senior autour de 8–10 ans, parfois un peu plus tôt selon l’état de santé. À cet âge, un bilan plus fréquent, une ration éventuellement light ou senior et une activité adaptée (sans efforts brusques) aident à bien vieillir."
+    "answer": "On parle de sénior vers 7–8 ans. Ce n’est pas trop tard : un bilan plus fréquent, une ration éventuellement light ou senior et une activité adaptée (sans efforts brusques) aident à bien vieillir."
   },
   {
     "question": "Le Beagle est-il une race qui vit longtemps ?",
@@ -33,7 +33,7 @@
   },
   {
     "question": "Quel est l’âge maximum d’un Beagle ?",
-    "answer": "Un plafond réaliste se situe vers 17–18 ans. Vingt ans est exceptionnel. Les records à 27–28 ans circulent (souvent un chien nommé Butch) mais ne doivent pas servir de promesse."
+    "answer": "Un plafond réaliste se situe vers 17–18 ans, exceptionnellement 19–20. Les records à 27–28 ans circulent (souvent un chien nommé Butch) mais ne doivent pas servir de promesse."
   },
   {
     "question": "Quel est le plus vieux Beagle du monde ?",
@@ -42,5 +42,13 @@
   {
     "question": "Quelle est la principale cause de mortalité chez les Beagles ?",
     "answer": "Chez l’adulte, les études de clinique (dont VetCompass au Royaume-Uni) mettent en avant les cancers et tumeurs, puis une qualité de vie trop dégradée. L’otite est la maladie du quotidien, rarement la cause du décès. Le surpoids raccourcit la vie en aggravant le reste."
+  },
+  {
+    "question": "Quel âge a mon Beagle en années humaines ?",
+    "answer": "Un Beagle de 2 ans correspond à environ 24 ans humains, 8 ans à environ 50 ans, et 12 ans à environ 70 ans. La règle du « ×7 » est fausse : un chien vieillit très vite les deux premières années, puis beaucoup plus lentement."
+  },
+  {
+    "question": "Un Beagle vit-il plus longtemps qu'un chien de taille moyenne ?",
+    "answer": "Légèrement. Le Beagle se situe autour de 12 à 15 ans, contre 10 à 13 ans en moyenne pour un chien de taille comparable. La différence se joue surtout sur le poids et le suivi vétérinaire."
   }
 ]
