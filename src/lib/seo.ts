@@ -119,9 +119,16 @@ export function buildMetadata({
     process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ||
     process.env.GOOGLE_SITE_VERIFICATION?.trim();
 
+  const bingVerification =
+    process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION?.trim() ||
+    process.env.BING_SITE_VERIFICATION?.trim();
+
   const otherVerification: Record<string, string> = {
     "p:domain_verify": "477327ac9043963119a47a3c553c084a",
   };
+  if (bingVerification) {
+    otherVerification["msvalidate.01"] = bingVerification;
+  }
 
   return {
     title: fullTitle,

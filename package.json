@@ -6,6 +6,8 @@
     "dev": "next dev",
     "dev:clean": "rm -rf .next && next dev",
     "build": "next build",
+    "postbuild": "node scripts/submit-indexnow.mjs --from-build",
+    "indexnow": "node scripts/submit-indexnow.mjs --force",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
