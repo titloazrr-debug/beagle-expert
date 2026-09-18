@@ -47,7 +47,7 @@
     "category": "collier_gps",
     "price": "environ 40–50€ + abo 5–10€/mois",
     "shortDescription": "GPS + écosystème app riche (localisation et suivi d’activité / bien-être) — filet de sécurité pour Beagle fugueur.",
-    "recommendation": "Tractive convient si vous voulez savoir où est votre Beagle et suivre aussi son activité / bien-être dans l’app. Localisation live, clôtures virtuelles et écosystème mature. À comparer avec Weenect si votre priorité est purement « où est-il maintenant ? » ou le vibreur de rappel.",
+    "recommendation": "Tractive convient si vous voulez localisation + suite app (activité / bien-être) et que l’origine de la marque n’est pas un filtre. Société autrichienne : ça localise en France, le SAV n’est pas français. À comparer avec Weenect (Lyon) si vous voulez une marque FR et le vibreur de rappel.",
     "affiliateUrl": "#",
     "imageEmoji": "📡",
     "badge": "GPS + activité",
@@ -79,9 +79,10 @@
       "Abonnement mensuel obligatoire pour le suivi",
       "Dépendance au réseau mobile (zones blanches possibles en forêt)",
       "Moins centré « GPS pur » que certaines alternatives",
+      "Marque autrichienne : le SAV n’est pas un siège français (l’app fonctionne en France)",
       "Ce n’est pas un substitut au rappel ni à une clôture physique"
     ],
-    "bestFor": "Propriétaires qui veulent localisation + suite app (activité / bien-être), sorties risquées ou rappel encore fragile."
+    "bestFor": "Propriétaires qui veulent localisation + suite app, et pour qui l’origine française de la marque n’est pas un critère."
   },
   {
     "id": "weenect-gps",
@@ -104,6 +105,7 @@
       "rappel",
       "budget",
       "francophone",
+      "france",
       "campagne",
       "pret",
       "vigilance"
@@ -119,6 +121,7 @@
       "Vibreur + sonnerie + lumière pour retrouver / rappeler",
       "XS très léger (27 g), adapté au Beagle",
       "Étanchéité IP68 ; garantie à vie annoncée fabricant",
+      "Marque française (Lyon), app et SAV en français",
       "Code promo partenaire BEAGLEEXPERT (−40 % boîtier)"
     ],
     "disadvantages": [
@@ -127,7 +130,7 @@
       "Autonomie réelle selon fréquence de suivi et mode éco",
       "Comme tout GPS cellulaire : zones blanches possibles"
     ],
-    "bestFor": "Beagle adulte ou chiot dès ~3 kg : localisation précise et aide au rappel, sans priorité au suivi santé connecté."
+    "bestFor": "Beagle en France dès ~3 kg : localisation précise, vibreur, marque et SAV français — sans priorité au suivi santé connecté."
   },
   {
     "id": "weenect-xt",
@@ -149,6 +152,8 @@
       "vibration",
       "rappel",
       "campagne",
+      "france",
+      "francophone",
       "pret",
       "vigilance"
     ],
@@ -160,6 +165,7 @@
     ],
     "advantages": [
       "Antenne XL, couverture annoncée très large",
+      "Marque française (Lyon), SAV en français",
       "Autonomie élevée en mode éco (jusqu’à ~3 semaines selon fabricant)",
       "Vibreur + sonnerie + lumière ultra-puissante",
       "Code promo partenaire BEAGLEEXPERT (−40 % boîtier)"

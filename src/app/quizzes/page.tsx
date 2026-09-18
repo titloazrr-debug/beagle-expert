@@ -19,6 +19,7 @@ export const metadata: Metadata = buildMetadata({
     "croquettes Beagle",
     "adoption Beagle",
     "collier GPS Beagle",
+    "collier GPS Beagle France",
     "surpoids Beagle",
   ],
 });

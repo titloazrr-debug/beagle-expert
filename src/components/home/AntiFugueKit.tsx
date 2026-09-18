@@ -21,9 +21,9 @@ const LAYERS = [
   {
     emoji: "📡",
     title: "3. Traceur GPS (Weenect)",
-    body: "Si malgré tout il part : localisation live, vibreur de rappel. Filet de sécurité — pas un substitut à la laisse. Offre lecteurs : code BEAGLEEXPERT (−40 % boîtier).",
-    href: "/quiz/collier-gps",
-    cta: "Faire le quiz GPS",
+    body: "Si malgré tout il part : localisation live, vibreur de rappel, marque française. Filet de sécurité — pas un substitut à la laisse. Offre lecteurs : code BEAGLEEXPERT (−40 % boîtier).",
+    href: "/fiche/collier-gps-beagle",
+    cta: "Quel GPS en France ?",
   },
 ] as const;
 

@@ -81,6 +81,13 @@ export default async function QuizPage({ params }: PageProps) {
   // Fiches qui pointent vers ce quiz, sinon fallback thématique
   let relatedFiches = fiches
     .filter((f) => f.relatedQuizSlugs?.includes(slug))
+    .sort((a, b) => {
+      if (slug === "collier-gps") {
+        if (a.slug === "collier-gps-beagle") return -1;
+        if (b.slug === "collier-gps-beagle") return 1;
+      }
+      return 0;
+    })
     .slice(0, 4)
     .map((f) => ({
       slug: f.slug,
@@ -96,7 +103,11 @@ export default async function QuizPage({ params }: PageProps) {
         "budget-equipement",
         "histoire-standard",
       ],
-      "collier-gps": ["education-comportement", "budget-equipement"],
+      "collier-gps": [
+        "collier-gps-beagle",
+        "education-comportement",
+        "budget-equipement",
+      ],
       "harnais-beagle": ["education-comportement", "budget-equipement", "soins-entretien"],
       "risque-obesite": ["alimentation", "sante"],
       "alimentation-croquettes": ["alimentation", "sante", "budget-equipement"],

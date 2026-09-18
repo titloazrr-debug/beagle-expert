@@ -65,11 +65,11 @@
   },
   {
     "id": "gps-tractive-vs-weenect",
-    "title": "Tractive vs Weenect : quel GPS pour un Beagle ?",
+    "title": "Tractive vs Weenect : quel GPS pour un Beagle en France ?",
     "category": "gps",
     "emoji": "📡",
-    "intro": "Comparaison collier GPS Beagle : Tractive (localisation + activité / bien-être) vs Weenect (performance GPS « où est mon chien maintenant ? », vibreur). Pour un Beagle qui fugue, le GPS est un filet de sécurité — pas un substitut au rappel.",
-    "ficheSlugs": ["education-comportement", "budget-equipement"],
+    "intro": "Les deux localisent en France. Weenect (Lyon) : GPS « où est-il maintenant ? », vibreur, SAV français. Tractive (Autriche) : localisation + suite activité. Filet de sécurité, pas un substitut au rappel.",
+    "ficheSlugs": ["collier-gps-beagle", "education-comportement", "budget-equipement"],
     "left": {
       "productId": "tractive-gps",
       "name": "Tractive GPS",
@@ -77,7 +77,7 @@
       "points": [
         "Localisation live et clôtures virtuelles",
         "Écosystème app mature (activité / bien-être selon offres)",
-        "Large communauté et retours d’usage",
+        "Marque autrichienne — fonctionne en France, SAV hors France",
         "Abonnement obligatoire pour le service"
       ]
     },
@@ -87,13 +87,13 @@
       "tagline": "Où est-il maintenant ?",
       "imageEmoji": "📍",
       "points": [
+        "Marque française (Lyon), SAV et app en français",
         "Superlive jusqu’à 1 position par seconde",
         "Vibreur + sonnerie + lumière (rappel / recherche)",
-        "XS léger (27 g) ou XT usages intensifs ; IP68",
         "Code promo BEAGLEEXPERT : −40 % sur le boîtier ; abo obligatoire"
       ]
     },
-    "verdict": "Pour un Beagle qui fugue : Weenect si la priorité est la localisation précise et le vibreur de rappel (XS pour la plupart des Beagles, XT si sorties intensives) ; Tractive si vous voulez aussi une suite app riche (activité / bien-être). Lecteurs Beagle Expert : code BEAGLEEXPERT (−40 % boîtier Weenect). Aucun GPS ne remplace clôture, longe et travail de rappel.",
+    "verdict": "En France, Weenect est le choix le plus cohérent pour un Beagle au rappel fragile : marque française, vibreur, Superlive. Tractive reste valable si l’app activité compte plus que l’origine de la marque. Code BEAGLEEXPERT (−40 % boîtier Weenect). Aucun GPS ne remplace clôture, longe et travail de rappel.",
     "disclaimer": "Offres et forfaits évoluent : vérifiez les conditions actuelles avant d’acheter. Commission partenaire possible. Données Weenect basées sur la FAQ fabricant et le programme Partner+ (août 2026)."
   },
   {

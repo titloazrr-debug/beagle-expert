@@ -16,6 +16,7 @@ const FICHE_PRIORITY = [
   "budget-equipement",
   "assurance-chien-beagle",
   "education-comportement",
+  "collier-gps-beagle",
   "solitude-aboiements-destruction",
   "soins-entretien",
   "histoire-standard",

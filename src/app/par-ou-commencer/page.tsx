@@ -28,9 +28,9 @@ const paths = [
   {
     icon: Radio,
     label: "Mon Beagle fugue ou risque de filer",
-    desc: "Flair « interrupteur », rappel fragile, campagne : le sujet n°1 de la race. Quiz GPS + cadre anti-fugue.",
-    href: "/quiz/collier-gps",
-    cta: "Faire le quiz collier GPS",
+    desc: "Flair « interrupteur », rappel fragile : collier GPS en France (Weenect vs Tractive) + cadre anti-fugue.",
+    href: "/fiche/collier-gps-beagle",
+    cta: "Quel collier GPS en France ?",
     color: "from-sky-500/25 to-sky-500/5",
   },
   {

@@ -190,6 +190,7 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
       "Superlive jusqu’à 1 position / s",
       "Vibreur + sonnerie + lumière (rappel / recherche)",
       "Léger (27 g) — adapté au Beagle",
+      "Marque française (Lyon), SAV en français",
       "Code promo BEAGLEEXPERT : −40 % sur le boîtier",
     ],
     watchouts: [
@@ -222,6 +223,7 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     watchouts: [
       "Ne remplace ni le rappel ni la longe",
       "Abonnement généralement requis",
+      "Marque autrichienne (fonctionne en France, SAV hors France)",
       "Lien affilié en attente de partenariat",
     ],
     verifiedAt: VERIFIED,

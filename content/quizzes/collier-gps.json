@@ -1,15 +1,15 @@
 {
   "slug": "collier-gps",
   "title": "Quel collier GPS pour mon Beagle ?",
-  "subtitle": "Anti-fugue : flair, rappel, terrain — filet de sécurité réaliste",
+  "subtitle": "Anti-fugue en France : flair, rappel, marque FR — filet de sécurité réaliste",
   "emoji": "📡",
-  "description": "Le Beagle est un chien de piste : une odeur peut faire oublier le rappel. En 5 questions, on affine le filet GPS (Weenect : localisation + vibreur ; Tractive : localisation + suite app). Le GPS complète harnais, longe et clôture — il ne les remplace pas.",
-  "estimatedMinutes": 2,
+  "description": "Le Beagle est un chien de piste : une odeur peut faire oublier le rappel. En 6 questions, on affine le filet GPS en France (Weenect, marque lyonnaise : localisation + vibreur ; Tractive, Autriche : localisation + suite app). Le GPS complète harnais, longe et clôture — il ne les remplace pas.",
+  "estimatedMinutes": 3,
   "mode": "product-score",
   "ctaLabel": "Voir mon GPS anti-fugue",
   "seo": {
-    "title": "Quiz GPS Beagle anti-fugue — Weenect ou Tractive ?",
-    "description": "Quel collier GPS pour un Beagle qui fugue ? Quiz : terrain, rappel, Weenect (vibreur) ou Tractive, budget. Filet de sécurité, pas magie."
+    "title": "Quiz : quel collier GPS Beagle en France ?",
+    "description": "Quel collier GPS pour mon Beagle en France ? Quiz : Weenect (marque FR, vibreur) ou Tractive, terrain, rappel. Filet de sécurité, pas magie."
   },
   "basedOn": [
     "content/raw/guide_budget_beagle.md",
@@ -177,6 +177,50 @@
       ]
     },
     {
+      "id": "france",
+      "question": "Pour un usage en France, qu’est-ce qui compte le plus ?",
+      "helper": "Weenect et Tractive localisent tous les deux en France. La différence se joue sur l’origine de la marque, le SAV et les fonctions (vibreur vs suite activité).",
+      "options": [
+        {
+          "id": "fr1",
+          "label": "Marque et SAV français (siège en France)",
+          "scores": {
+            "weenect": 3,
+            "france": 3,
+            "francophone": 2
+          }
+        },
+        {
+          "id": "fr2",
+          "label": "Peu importe l’origine : je veux l’app la plus complète (activité / bien-être)",
+          "scores": {
+            "tractive": 3,
+            "sante": 2,
+            "activite": 2
+          }
+        },
+        {
+          "id": "fr3",
+          "label": "App en français + localisation précise, sans suite « santé »",
+          "scores": {
+            "weenect": 2,
+            "france": 2,
+            "gps": 2,
+            "francophone": 1
+          }
+        },
+        {
+          "id": "fr4",
+          "label": "Le prix du boîtier et de l’abo, quelle que soit la marque",
+          "scores": {
+            "budget": 2,
+            "weenect": 1,
+            "tractive": 1
+          }
+        }
+      ]
+    },
+    {
       "id": "budget",
       "question": "Budget boîtier (hors abonnement mensuel) ?",
       "helper": "Ordres de grandeur : boîtier souvent ~40–50€ ; abonnement obligatoire chez les deux (Weenect propose aussi des formules longues moins chères au mois).",
@@ -214,13 +258,14 @@
     {
       "id": "securite-max",
       "title": "Profil « sécurité max / fugueur »",
-      "description": "Votre Beagle a un risque réel de filer sur une piste. Priorité : localisation live et zones de sécurité. Weenect et Tractive répondent tous deux à ce besoin, avec des angles différents (GPS pur vs suite app). Continuez le travail de rappel en environnement contrôlé.",
+      "description": "Votre Beagle a un risque réel de filer sur une piste. Priorité : localisation live et zones de sécurité. En France, Weenect (marque lyonnaise, vibreur) est en général le filet le plus cohérent ; Tractive reste une alternative si l’app activité compte plus que l’origine de la marque. Continuez le travail de rappel en environnement contrôlé.",
       "tags": [
         "fugueur",
         "securite",
         "gps",
         "campagne",
         "weenect",
+        "france",
         "tractive"
       ],
       "productIds": [
@@ -232,9 +277,9 @@
       ],
       "reasons": [
         "Fugue / flair : un GPS live + géofence est un filet, pas une baguette magique",
-        "Weenect XS : Superlive + vibreur ; code BEAGLEEXPERT (−40 % boîtier)",
+        "Weenect XS : Superlive + vibreur, marque française ; code BEAGLEEXPERT (−40 % boîtier)",
         "Weenect XT : option usages intensifs / autonomie max",
-        "Tractive : alternative si vous voulez aussi l’écosystème activité / app"
+        "Tractive : alternative autrichienne si vous voulez aussi l’écosystème activité / app"
       ]
     },
     {
@@ -246,7 +291,8 @@
         "vibration",
         "rappel",
         "fugueur",
-        "gps"
+        "gps",
+        "france"
       ],
       "productIds": [
         "weenect-gps",

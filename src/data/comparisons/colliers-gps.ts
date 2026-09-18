@@ -7,11 +7,16 @@ import type { ComparisonTableSpec } from "@/types";
  */
 export const COLLIER_GPS_COMPARISON: ComparisonTableSpec = {
   id: "table-tractive-vs-weenect",
-  title: "Tractive GPS vs Weenect",
+  title: "Tractive GPS vs Weenect (usage France)",
   emoji: "📡",
   intro:
-    "Pour un Beagle au flair « interrupteur d’écoute », le GPS est un filet de sécurité — pas une baguette magique. Deux angles : Tractive (localisation + écosystème activité / bien-être) et Weenect (performance GPS « où est mon chien maintenant ? »).",
-  ficheSlugs: ["education-comportement", "budget-equipement", "histoire-standard"],
+    "Les deux localisent en France. Weenect (Lyon) : GPS « où est-il maintenant ? », vibreur, SAV français. Tractive (Autriche) : localisation + suite activité / bien-être. Filet de sécurité, pas une baguette magique.",
+  ficheSlugs: [
+    "collier-gps-beagle",
+    "education-comportement",
+    "budget-equipement",
+    "histoire-standard",
+  ],
   products: [
     {
       id: "tractive",
@@ -38,6 +43,9 @@ export const COLLIER_GPS_COMPARISON: ComparisonTableSpec = {
         garantie: "Selon conditions fabricant",
         prix_tracker: "~40–50€",
         clarte: "Comparer forfaits sur 12–24 mois",
+        origine: "Autriche (Tractive GmbH)",
+        sav: "Support européen, pas un siège français",
+        reseau_fr: "Oui (réseau mobile France / UE)",
       },
     },
     {
@@ -66,10 +74,39 @@ export const COLLIER_GPS_COMPARISON: ComparisonTableSpec = {
         garantie: "À vie (défauts de fabrication — annonce fabricant)",
         prix_tracker: "Selon modèle XS / XT + promos",
         clarte: "Comparer formules abo + promo affilié si dispo",
+        origine: "France (Lyon)",
+        sav: "SAV et app en français, siège en France",
+        reseau_fr: "Oui (SIM multi-réseaux, France incluse)",
       },
     },
   ],
   categories: [
+    {
+      id: "france",
+      label: "Usage en France",
+      criteria: [
+        {
+          key: "origine",
+          label: "Origine de la marque",
+          winnerId: "weenect",
+          detail:
+            "Weenect : entreprise française (Lyon). Tractive : société autrichienne. Les deux vendent et localisent en France ; le filtre « marque FR » ne retient que Weenect.",
+        },
+        {
+          key: "sav",
+          label: "SAV / interlocuteur",
+          winnerId: "weenect",
+          detail:
+            "Un foyer qui veut un support en français, dans le fuseau et le droit français, penche vers Weenect. Tractive reste utilisable en France via son app.",
+        },
+        {
+          key: "reseau_fr",
+          label: "Réseau en France",
+          detail:
+            "Les deux s’appuient sur GPS + réseau cellulaire français / européen. Zones blanches possibles en forêt profonde, quelle que soit la marque.",
+        },
+      ],
+    },
     {
       id: "angle",
       label: "Positionnement",
@@ -109,9 +146,9 @@ export const COLLIER_GPS_COMPARISON: ComparisonTableSpec = {
         },
         {
           key: "portee",
-          label: "Portée / réseau",
+          label: "Portée / réseau (hors France)",
           detail:
-            "Les deux s’appuient sur GPS + réseau cellulaire : des zones blanches restent possibles en forêt profonde.",
+            "Couverture internationale via SIM multi-réseaux. Utile en voyage ; en France le critère réseau est déjà dans « Usage en France ».",
         },
         {
           key: "zone",
@@ -187,7 +224,7 @@ export const COLLIER_GPS_COMPARISON: ComparisonTableSpec = {
     },
   ],
   verdict:
-    "Choisissez Weenect si votre priorité est la localisation précise et l’aide au rappel (vibreur), sans besoin de suite « santé connectée ». Orientez-vous vers Tractive si vous voulez aussi un écosystème app riche (activité / bien-être). Pour un Beagle fugueur, les deux restent des filets de sécurité : aucun GPS ne remplace clôture, longe et travail de rappel.",
+    "En France, Weenect est le choix le plus cohérent si vous voulez une marque française, un SAV francophone et un vibreur de rappel — le cas le plus fréquent chez le Beagle. Tractive reste valable si l’app activité / bien-être compte plus que l’origine de la marque. Aucun GPS ne remplace clôture, longe et travail de rappel.",
   disclaimer:
     "Tarifs, autonomies et forfaits évoluent. Données Weenect basées sur la FAQ fabricant (août 2026). Vérifiez les fiches constructeur avant d’acheter. Liens affiliés possibles sans surcoût pour vous.",
 };

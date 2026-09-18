@@ -28,7 +28,7 @@ const HOME_COPY: Record<
   "collier-gps": {
     badge: "Priorité fugue",
     pitch:
-      "Une odeur, et le Beagle peut disparaître. Quiz GPS : filet de sécurité selon rappel, terrain et priorité (localisation pure type Weenect vs suite app).",
+      "Une odeur, et le Beagle peut disparaître. Quiz GPS en France : Weenect (marque FR, vibreur) vs Tractive, selon rappel et terrain.",
     cta: "Trouver le GPS anti-fugue",
   },
   "harnais-beagle": {

@@ -367,6 +367,18 @@ export function QuizEngine({
                     carences, exclusions).
                   </p>
                 )}
+                {quiz.slug === "collier-gps" && (
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/85">
+                    <Link
+                      href="/fiche/collier-gps-beagle"
+                      className="font-medium text-primary underline-offset-2 hover:underline"
+                    >
+                      Quel collier GPS pour un Beagle en France ?
+                    </Link>{" "}
+                    Weenect (marque FR, vibreur) vs Tractive, réseau, SAV et abo
+                    — à lire avant ou après le quiz.
+                  </p>
+                )}
                 <ul className="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-muted-foreground">
                   <li className="rounded-full bg-card px-3 py-1.5 shadow-sm ring-1 ring-border">
                     {total} questions
