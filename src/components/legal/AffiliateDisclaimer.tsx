@@ -65,10 +65,6 @@ export function AffiliateDisclaimer({
             Cette rémunération nous aide à maintenir le site et à continuer de
             proposer des contenus gratuits et de qualité.
           </p>
-          <p>
-            Nos recommandations restent indépendantes et basées sur notre
-            expertise.
-          </p>
         </div>
         {/* Texte concaténé aussi disponible pour copier-coller légal exact */}
         <p className="sr-only">{AFFILIATE_DISCLAIMER_FULL}</p>

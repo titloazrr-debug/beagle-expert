@@ -12,6 +12,11 @@ export type BeagleImageKey =
   | "soins"
   | "budget"
   | "histoire"
+  | "jouets"
+  | "gps"
+  | "solitude"
+  | "assurance"
+  | "esperance"
   | "og-default";
 
 export interface BeagleImageAsset {
@@ -81,6 +86,41 @@ export const BEAGLE_IMAGES: Record<BeagleImageKey, BeagleImageAsset> = {
     width: PHOTO_W,
     height: PHOTO_H,
   },
+  jouets: {
+    key: "jouets",
+    src: `${BASE}/jouets.jpg`,
+    alt: "Beagle tricolore avec un jouet en caoutchouc rouge dans la gueule",
+    width: 768,
+    height: 1152,
+  },
+  gps: {
+    key: "gps",
+    src: `${BASE}/gps.jpg`,
+    alt: "Beagle tricolore qui renifle un chemin, un petit boîtier GPS sur le collier",
+    width: 768,
+    height: 1152,
+  },
+  solitude: {
+    key: "solitude",
+    src: `${BASE}/solitude.jpg`,
+    alt: "Beagle couché sur un tapis devant une porte fermée",
+    width: 768,
+    height: 1152,
+  },
+  assurance: {
+    key: "assurance",
+    src: `${BASE}/assurance.jpg`,
+    alt: "Beagle assis dans une salle d'attente, à côté de son maître",
+    width: 768,
+    height: 1152,
+  },
+  esperance: {
+    key: "esperance",
+    src: `${BASE}/esperance.jpg`,
+    alt: "Beagle plus âgé allongé dans une tache de soleil",
+    width: 768,
+    height: 1152,
+  },
   "og-default": {
     key: "og-default",
     src: `${BASE}/og-default.jpg`,
@@ -95,13 +135,14 @@ const FICHE_SLUG_TO_IMAGE: Record<string, BeagleImageKey> = {
   sante: "sante",
   alimentation: "alimentation",
   "education-comportement": "education",
-  "collier-gps-beagle": "education",
-  "solitude-aboiements-destruction": "education",
+  "collier-gps-beagle": "gps",
+  "solitude-aboiements-destruction": "solitude",
   "soins-entretien": "soins",
   "budget-equipement": "budget",
-  "assurance-chien-beagle": "budget",
+  "assurance-chien-beagle": "assurance",
   "histoire-standard": "histoire",
-  "esperance-de-vie": "sante",
+  "esperance-de-vie": "esperance",
+  "jouets-beagle-destructeur": "jouets",
 };
 
 const CATEGORY_TO_IMAGE: Record<string, BeagleImageKey> = {

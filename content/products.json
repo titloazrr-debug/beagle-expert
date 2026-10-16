@@ -290,11 +290,11 @@
     "name": "Kong Classic",
     "category": "jouet",
     "price": "à partir de 8,19 €, 10,99 € en taille M",
-    "shortDescription": "Caoutchouc rouge farcissable, pour les mâcheurs moyens : occupation et calme en absence.",
-    "recommendation": "Le Kong Classic rouge se farcit et occupe un Beagle pendant l’absence. Zoomalia le destine aux mâcheurs moyens : un chien qui éventre tout tiendra plus longtemps sur le Kong Extreme, en caoutchouc plus dense. Taille M (7–16 kg) ou L (13–30 kg) pour un Beagle adulte.",
+    "shortDescription": "Jouet en caoutchouc rouge, à remplir de croquettes. Pour un chien qui aime mâcher sans tout détruire.",
+    "recommendation": "Le Kong Classic rouge se remplit avec quelques croquettes. Le chien mâche et cherche en même temps. Zoomalia le destine aux chiens qui mâchent modérément : s’il éventre le rouge, le Kong Extreme, plus dense, tient plus longtemps. Taille M (7–16 kg) ou L (13–30 kg) pour un Beagle adulte.",
     "affiliateUrl": "https://www.zoomalia.com/animalerie/jouet-kong-classic-chien-6-tailles-caoutchouc-moyen-dur-pour-chiens-p-18940.html",
     "imageEmoji": "🔴",
-    "badge": "Indispensable",
+    "badge": "Pour commencer",
     "tags": [
       "kong",
       "jouet",
@@ -311,30 +311,30 @@
       "budget"
     ],
     "advantages": [
-      "Très résistant pour un Beagle motivé / mâchouilleur",
-      "Farcissable : allonge le temps d’occupation et active le cerveau",
-      "Utile pour les absences courtes et le calme en caisse/panier",
-      "Prix d’entrée accessible, durable si bien choisi (taille / modèle)",
-      "Compatible renforcement positif (récompense longue)"
+      "Tient mieux qu’une peluche chez un chien qui mâche",
+      "Peut être rempli de croquettes ou de friandises",
+      "Occupe plus longtemps qu’une friandise donnée à la main",
+      "Convient pour une absence courte, en surveillant les premières fois",
+      "La taille M ou L correspond à la plupart des Beagles adultes"
     ],
     "disadvantages": [
-      "Les calories des garnitures comptent dans la ration du jour",
-      "Un Kong trop facile devient vite un « snack express »",
-      "Surveillance recommandée au début (morceaux trop durs / usage abusif)",
-      "Ne remplace pas la marche ni le travail de flair en extérieur"
+      "Les croquettes glissées dedans comptent dans le repas",
+      "S’il est trop facile à vider, le chien a fini en une minute",
+      "À surveiller au début, surtout s’il arrache des morceaux",
+      "Ne remplace pas la promenade ni le temps passé à renifler"
     ],
-    "bestFor": "Beagles gourmands, absences régulières, besoin d’occupation solo — tant qu’il ne réduit pas le caoutchouc rouge en morceaux."
+    "bestFor": "Un Beagle qui aime mâcher et qui ne réduit pas le caoutchouc rouge en morceaux."
   },
   {
     "id": "kong-extreme",
     "name": "Kong Extreme",
     "category": "jouet",
     "price": "à partir de 9,99 €, 12,99 € en taille M",
-    "shortDescription": "Même forme farcissable que le Classic, en caoutchouc noir plus dense pour les mâcheurs puissants.",
-    "recommendation": "Le Kong Extreme est le Classic pour les chiens qui détruisent le rouge. Caoutchouc naturel plus dur, toujours creux pour y glisser une partie de la ration. Ce n’est pas un jouet incassable : retirez-le dès qu’un morceau part. Taille M pour un Beagle de 7 à 16 kg.",
+    "shortDescription": "Même forme que le Classic, en caoutchouc noir plus résistant.",
+    "recommendation": "Le Kong Extreme est le Classic pour les chiens qui abîment le rouge. Le caoutchouc est plus dur, et il se remplit aussi de croquettes. Il n’est pas incassable : retirez-le dès qu’un morceau part. Taille M pour un Beagle de 7 à 16 kg.",
     "affiliateUrl": "https://www.zoomalia.com/animalerie/jouet-kong-chien-extreme-5-tailles-caoutchouc-dur-pour-chiens-adultes-energiques-p-18941.html",
     "imageEmoji": "⚫",
-    "badge": "Mâcheur puissant",
+    "badge": "Pour les chiens qui mâchent fort",
     "tags": [
       "kong",
       "jouet",
@@ -349,14 +349,14 @@
     ],
     "advantages": [
       "Caoutchouc plus dense que le Classic rouge",
-      "Farcissable : la mastication reste lente et encadrée",
-      "Un seul tenant, sans couture ni pièce rapportée",
+      "Peut être rempli de croquettes ou de friandises",
+      "D’une seule pièce, sans couture ni petit accessoire collé",
       "Taille M adaptée à la plupart des Beagles adultes"
     ],
     "disadvantages": [
       "Plus dur sous la dent : surveiller l’usure et les dents",
       "Aucun caoutchouc n’est indestructible face à un Beagle acharné",
-      "Les calories de la farce comptent dans la ration du jour",
+      "Les croquettes glissées dedans comptent dans le repas",
       "À retirer dès qu’un fragment se détache"
     ],
     "bestFor": "Beagle qui détruit le Kong Classic ou les jouets souples en quelques minutes."
@@ -366,8 +366,8 @@
     "name": "Kong Wobbler",
     "category": "jouet",
     "price": "18,99 € en S, 21,99 € en M",
-    "shortDescription": "Distributeur qui roule et lâche la ration par petites doses. Ce n’est pas un jouet à mâcher.",
-    "recommendation": "Le Kong Wobbler se remplit d’une partie de la ration. Il se redresse et ne lâche des croquettes que lorsqu’il roule. Le chien travaille pour manger. C’est du plastique : un Beagle qui mâche fort peut le fendre. On le sort pour le repas, puis on le range. Taille M (13×19 cm) pour un Beagle adulte.",
+    "shortDescription": "Distributeur qui roule et lâche les croquettes petit à petit. Ce n’est pas un jouet à mâcher.",
+    "recommendation": "Le Kong Wobbler se remplit avec une partie des croquettes. Il se redresse et n’en lâche que lorsqu’il roule. Le chien doit le pousser pour manger. C’est du plastique : un Beagle qui mâche fort peut le fendre. On le sort pour le repas, puis on le range. Taille M (13×19 cm) pour un Beagle adulte.",
     "affiliateUrl": "https://www.zoomalia.com/animalerie/kong-chien-wobbler-distributeur-de-nourriture-p-18949.html",
     "imageEmoji": "🎯",
     "badge": "Distributeur",
@@ -384,10 +384,10 @@
       "budget"
     ],
     "advantages": [
-      "La ration sort au fur et à mesure, le repas dure plus longtemps",
+      "Les croquettes sortent au fur et à mesure, le repas dure plus longtemps",
       "Le chien pousse et cherche, au lieu de tout avaler",
       "Ouverture vissée, facile à remplir et à laver",
-      "Complète le Kong farci : l’un se mâche, l’autre se pousse"
+      "Complète le Kong : l’un se mâche, l’autre se pousse"
     ],
     "disadvantages": [
       "Plastique : un gros mâcheur peut le fendre s’il le prend en gueule",
@@ -395,15 +395,15 @@
       "Les croquettes versées comptent dans la ration du jour",
       "La taille S est courte pour un Beagle adulte"
     ],
-    "bestFor": "Beagle glouton qu’on veut occuper avec son repas, sous surveillance."
+    "bestFor": "Un Beagle qui finit sa gamelle trop vite, pendant que vous êtes là."
   },
   {
     "id": "tapis-fouille",
     "name": "Tapis de fouille Trixie",
     "category": "jouet",
     "price": "25,99 €",
-    "shortDescription": "Tapis à renifler 50×34 cm : le flair du Beagle travaille, la mâchoire se repose.",
-    "recommendation": "Le Trixie Activity Sniffing Carpet (50×34 cm) disperse une partie de la ration dans des pompons. Utile pour fatiguer un Beagle par le nez. Ce n’est pas un jouet à mâcher : un destructeur peut arracher le polyester.",
+    "shortDescription": "Tapis à renifler 50×34 cm : le chien cherche des croquettes, sans mâcher.",
+    "recommendation": "Le Trixie Activity Sniffing Carpet (50×34 cm) cache une partie des croquettes dans des bandes de tissu. Le chien les retrouve avec son nez. Ce n’est pas un jouet à mâcher : un destructeur peut arracher le polyester.",
     "affiliateUrl": "https://www.zoomalia.com/animalerie/jeu-de-strategie-pour-chien-et-chat-trixie-activity-sniffing-carpet-level-1-p-41046.html",
     "imageEmoji": "🌿",
     "badge": "Flair",
@@ -423,19 +423,19 @@
       "budget"
     ],
     "advantages": [
-      "Exploite le flair exceptionnel du Beagle (besoin naturel)",
-      "Fatigue mentale rapide, souvent en 10–20 minutes",
-      "Peu d’effort physique pour le maître, fort impact bien-être",
-      "Idéal par mauvais temps ou en appartement",
-      "Peut remplacer une partie des croquettes du repas (enrichissement)"
+      "Fait travailler l’odorat du Beagle",
+      "Une séance de 10 à 20 minutes suffit souvent",
+      "Simple à proposer à la maison",
+      "Pratique pour occuper son chien à l’intérieur",
+      "On y cache une partie des croquettes du repas"
     ],
     "disadvantages": [
-      "Moins « indestructible » qu’un Kong chez un gros mâcheur",
+      "Moins résistant qu’un Kong si le chien mâche le tissu",
       "À laver régulièrement (salive, croquettes, odeurs)",
       "Certains chiens arrachent le tissu s’ils sont très frustrés",
       "Moins adapté comme occupation longue en totale solitude"
     ],
-    "bestFor": "Beagles nerveux ou sous-stimulés mentalement, jours de pluie, travail du calme via le flair à la maison."
+    "bestFor": "Un Beagle qui a besoin de chercher, surtout à la maison ou quand il pleut."
   },
   {
     "id": "nettoyant-auriculaire",

@@ -138,7 +138,7 @@ export function ProductCard({
         {why && (
           <div className="mt-3.5 rounded-xl border-2 border-accent/30 bg-accent/8 px-3.5 py-3">
             <p className="text-[11px] font-extrabold uppercase tracking-wide text-accent">
-              Pourquoi pour vous
+              Pourquoi choisir ce modèle ?
             </p>
             <p
               className={cn(

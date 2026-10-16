@@ -47,6 +47,31 @@ import { WeenectPartnerOffer } from "@/components/partners/WeenectPartnerOffer";
 import { cn } from "@/lib/utils";
 import { getTenant } from "@/lib/tenant";
 
+function InlineText({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (link) {
+      const href = link[2];
+      if (href.startsWith("/")) {
+        return (
+          <Link
+            key={i}
+            href={href}
+            className="font-semibold text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary"
+          >
+            {link[1]}
+          </Link>
+        );
+      }
+      return <span key={i}>{link[1]}</span>;
+    }
+    const bold = part.match(/^\*\*([^*]+)\*\*$/);
+    if (bold) return <strong key={i}>{bold[1]}</strong>;
+    return <span key={i}>{part}</span>;
+  });
+}
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
@@ -235,7 +260,11 @@ export default async function FichePage({ params }: PageProps) {
                   asset={cover}
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 960px"
-                  className="aspect-[16/10] w-full object-cover object-center sm:aspect-[2/1]"
+                  className={
+                    cover.height > cover.width
+                      ? "mx-auto aspect-[2/3] w-full max-w-md object-cover object-center"
+                      : "aspect-[16/10] w-full object-cover object-center sm:aspect-[2/1]"
+                  }
                   width={cover.width}
                   height={cover.height}
                 />
@@ -283,6 +312,38 @@ export default async function FichePage({ params }: PageProps) {
                     </h2>
                   </div>
 
+                  {fiche.prose && section.blocks?.length ? (
+                    <div className="measure-wide mt-6 space-y-4 text-base leading-[1.75] text-foreground">
+                      {section.blocks.map((block, bi) => {
+                        if (block.type === "h3") {
+                          return (
+                            <h3
+                              key={bi}
+                              className="pt-2 text-lg font-bold tracking-tight text-foreground"
+                            >
+                              {block.text}
+                            </h3>
+                          );
+                        }
+                        if (block.type === "ul") {
+                          return (
+                            <ul key={bi} className="list-disc space-y-2 pl-5">
+                              {block.items.map((item, ii) => (
+                                <li key={ii} className="leading-[1.7]">
+                                  <InlineText text={item} />
+                                </li>
+                              ))}
+                            </ul>
+                          );
+                        }
+                        return (
+                          <p key={bi}>
+                            <InlineText text={block.text} />
+                          </p>
+                        );
+                      })}
+                    </div>
+                  ) : (
                   <ul className="prose-readable measure-wide mt-6 space-y-3.5">
                     {section.bullets.map((bullet) => (
                       <li
@@ -297,6 +358,7 @@ export default async function FichePage({ params }: PageProps) {
                       </li>
                     ))}
                   </ul>
+                  )}
 
                   {section.attention && (
                     <AttentionBox
@@ -443,8 +505,8 @@ export default async function FichePage({ params }: PageProps) {
                   </h2>
                 </div>
                 <p className="measure-wide px-1 text-sm leading-relaxed text-muted-foreground">
-                  Lectures croisées neutres : forces, limites, et quand choisir
-                  l’une ou l’autre option.
+                  Deux options côte à côte : ce que chacune apporte, et dans quel
+                  cas la choisir.
                 </p>
                 {comparisonTables.map((t) => (
                   <ComparisonTable key={t.id} table={t} />

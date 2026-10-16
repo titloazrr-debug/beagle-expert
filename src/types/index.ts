@@ -33,10 +33,17 @@ export type FicheCategory =
   | "budget"
   | "histoire";
 
+export type FicheBlock =
+  | { type: "p"; text: string }
+  | { type: "h3"; text: string }
+  | { type: "ul"; items: string[] };
+
 export interface FicheSection {
   id: string;
   title: string;
   bullets: string[];
+  /** Ordre réel du markdown (paragraphes, intertitres, listes). */
+  blocks?: FicheBlock[];
   attention?: {
     title?: string;
     text: string;
@@ -74,6 +81,8 @@ export interface Fiche {
     title: string;
     description: string;
   };
+  /** Affiche le corps en paragraphes plutôt qu’en liste de puces. */
+  prose?: boolean;
   sections: FicheSection[];
   relatedProductIds?: string[];
   relatedQuizSlugs?: string[];

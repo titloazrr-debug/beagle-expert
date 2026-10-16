@@ -5,6 +5,7 @@ import path from "path";
 import type {
   FaqItem,
   Fiche,
+  FicheBlock,
   FicheCategory,
   FicheSection,
   Product,
@@ -32,6 +33,8 @@ interface FicheFrontmatter {
   /** Image OG spécifique (chemin public, ex. /og/sante.jpg) */
   ogImage?: string;
   seo: { title: string; description: string };
+  /** Corps en paragraphes (la fiche jouets, par exemple). */
+  prose?: boolean;
   relatedProducts?: Array<{
     id: string;
     name?: string;
@@ -112,6 +115,7 @@ export function parseFicheBody(
     if (!titleLine) continue;
 
     const bullets: string[] = [];
+    const blocks: FicheBlock[] = [];
     let attention: FicheSection["attention"];
     const ctaLines: string[] = [];
     let inAttention = false;
@@ -151,7 +155,8 @@ export function parseFicheBody(
       if (/^###\s+/.test(line)) {
         if (inAttention) flushAttention();
         inCta = false;
-        // Ignore autres ### (ex. Checklist) → puces si listes suivent
+        const heading = decodeEntities(line.replace(/^###\s+/, "").replace(/\*\*/g, "").trim());
+        if (heading) blocks.push({ type: "h3", text: heading });
         continue;
       }
 
@@ -212,7 +217,12 @@ export function parseFicheBody(
       if (/^[-*]\s+/.test(line)) {
         const bullet = decodeEntities(line.replace(/^[-*]\s+/, "").trim());
         if (inCta) ctaLines.push(bullet);
-        else bullets.push(bullet);
+        else {
+          bullets.push(bullet);
+          const last = blocks[blocks.length - 1];
+          if (last?.type === "ul") last.items.push(bullet);
+          else blocks.push({ type: "ul", items: [bullet] });
+        }
         continue;
       }
 
@@ -227,7 +237,9 @@ export function parseFicheBody(
 
       // Plain paragraph → bullet if short enough and meaningful
       if (!inCta && line.length > 20 && !line.startsWith("#")) {
-        bullets.push(decodeEntities(line));
+        const text = decodeEntities(line);
+        bullets.push(text);
+        blocks.push({ type: "p", text });
       }
     }
 
@@ -257,6 +269,7 @@ export function parseFicheBody(
         : attention
           ? [attention.text]
           : ["Voir le détail ci-dessous."],
+      blocks: blocks.length ? blocks : undefined,
       attention,
       productIds: productIds.length ? productIds : undefined,
       ctaLines: ctaLines.length ? ctaLines : undefined,
@@ -341,6 +354,7 @@ function readFicheFile(filePath: string): {
       title: fm.seo?.title ?? fm.title,
       description: fm.seo?.description ?? fm.excerpt ?? "",
     },
+    prose: fm.prose === true,
     sections,
     relatedProductIds: products.map((p) => p.id),
     relatedQuizSlugs: fm.relatedQuizzes ?? [],

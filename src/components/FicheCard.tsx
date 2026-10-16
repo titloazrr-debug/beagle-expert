@@ -40,7 +40,10 @@ export function FicheCard({
               asset={cover}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover transition duration-300 group-hover:scale-[1.03]"
+              className={cn(
+                "object-cover transition duration-300 group-hover:scale-[1.03]",
+                cover.height > cover.width && "object-[center_46%]"
+              )}
               wrapperClassName="absolute inset-0"
             />
           </div>

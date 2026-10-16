@@ -133,32 +133,32 @@
     "title": "Kong Classic vs Tapis de fouille",
     "category": "jouets",
     "emoji": "🧩",
-    "intro": "Comparaison occupation Beagle : Kong (mastication / résolution) vs tapis de fouille (flair). Deux outils complémentaires pour un chien de piste intelligent.",
+    "intro": "Le Kong et le tapis de fouille n’occupent pas un Beagle de la même façon. L’un se mâche, l’autre se renifle.",
     "ficheSlugs": ["education-comportement", "jouets-beagle-destructeur", "alimentation", "budget-equipement", "histoire-standard"],
     "left": {
       "productId": "kong-classic",
       "name": "Kong Classic",
-      "tagline": "Mastication + farce longue durée",
+      "tagline": "Pour mâcher et chercher une friandise",
       "points": [
-        "Très résistant, idéal mâchouilleur",
-        "Parfait pour absences courtes",
-        "Allonge le temps de « travail » alimentaire",
-        "Calories des garnitures à compter dans la ration"
+        "Caoutchouc d’une seule pièce, prévu pour être mâché",
+        "On y glisse une partie des croquettes",
+        "Utile pour une occupation calme",
+        "Les croquettes glissées dedans comptent dans le repas"
       ]
     },
     "right": {
       "productId": "tapis-fouille",
       "name": "Tapis de fouille",
-      "tagline": "Flair et fatigue mentale douce",
+      "tagline": "Pour chercher avec le nez",
       "points": [
-        "Exploite l’odorat exceptionnel du Beagle",
-        "Fatigue mentale rapide, peu d’espace (appartement)",
-        "Utile par temps de pluie ou en intérieur",
-        "Moins indestructible si le chien arrache le tissu"
+        "Le chien cherche des croquettes cachées dans le tissu",
+        "Pratique à la maison, surtout quand il pleut",
+        "La séance est courte",
+        "S’il arrache le tissu, on range le tapis"
       ]
     },
-    "verdict": "Ce n’est pas l’un ou l’autre : le duo est souvent le meilleur combo Beagle. Kong pour canaliser la mâchoire et les absences ; tapis de fouille pour le flair et le calme mental. Commencez par celui qui colle au problème du moment (destruction vs sous-stimulation / aboiements d’ennui).",
-    "disclaimer": "Supervisez les premières séances et adaptez la difficulté pour éviter frustration ou ingestion de tissu."
+    "verdict": "Inutile de choisir l’un contre l’autre. Le Kong convient à un chien qui aime mâcher. Le tapis convient à un chien qui a besoin de chercher. Beaucoup de Beagles utilisent les deux, à des moments différents.",
+    "disclaimer": "Surveillez les premières séances. Retirez le jouet s’il se fissure, et le tapis s’il est déchiré."
   },
   {
     "id": "assurance-santevet-vs-epargne",
