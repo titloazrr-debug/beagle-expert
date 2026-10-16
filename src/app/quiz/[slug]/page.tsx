@@ -14,39 +14,17 @@ import {
   absoluteUrl,
   buildMetadata,
   breadcrumbJsonLd,
-  productItemListJsonLd,
   quizJsonLd,
 } from "@/lib/seo";
 import { isMedicalQuizSlug } from "@/lib/legal";
 import { isInsuranceQuizSlug } from "@/lib/compliance";
 import { isFoodQuizSlug } from "@/lib/food-quiz";
 import { isWalkingQuizSlug, WALKING_FAQ } from "@/lib/walking-quiz";
-import { FOOD_PRODUCTS } from "@/data/foodProducts";
-import type { Product } from "@/types";
 import { InsuranceQuizFaq } from "@/components/insurance/InsuranceQuizFaq";
 import { FoodQuizFaq } from "@/components/food/FoodQuizFaq";
 import { WalkingQuizFaq } from "@/components/walking/WalkingQuizFaq";
 import { WeenectPartnerOffer } from "@/components/partners/WeenectPartnerOffer";
 import { cn } from "@/lib/utils";
-
-/** Mappe les recettes croquettes vers le type Product (JSON-LD ItemList). */
-function foodProductsAsCatalog(): Product[] {
-  return FOOD_PRODUCTS.filter((p) => p.active).map((p) => ({
-    id: p.id,
-    name: p.name,
-    shortDescription: p.features.slice(0, 2).join(". "),
-    recommendation: p.features[0],
-    category: "croquettes",
-    priceCents: 0,
-    affiliateUrl: "#",
-    imageEmoji: "🥣",
-    tags: p.tags,
-    categories: ["alimentation", "croquettes"],
-    advantages: p.features,
-    disadvantages: p.cautions,
-    bestFor: `Stade de vie : ${p.lifeStage}. Protéine : ${p.proteinSource}.`,
-  }));
-}
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -146,19 +124,6 @@ export default async function QuizPage({ params }: PageProps) {
         ? "Harnais pour Beagle"
         : quiz.title;
 
-  const catalogProducts = food
-    ? foodProductsAsCatalog()
-    : (quiz.productCatalog ?? []);
-  const productsLd =
-    catalogProducts.length > 0
-      ? productItemListJsonLd({
-          name: `Produits du quiz — ${quiz.title}`,
-          description: quiz.seo.description,
-          path: `/quiz/${slug}`,
-          products: catalogProducts,
-        })
-      : null;
-
   return (
     <>
       <JsonLd
@@ -194,7 +159,6 @@ export default async function QuizPage({ params }: PageProps) {
           }}
         />
       )}
-      {productsLd && <JsonLd data={productsLd} />}
       {walking && (
         <JsonLd
           data={{

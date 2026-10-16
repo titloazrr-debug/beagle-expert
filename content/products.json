@@ -42,6 +42,75 @@
     "bestFor": "Propriétaires qui veulent une croquette premium française, un contrôle calorique simple et un bon rapport qualité-prix pour un Beagle adulte ou en tendance surpoids."
   },
   {
+    "id": "royal-canin-beagle-adult",
+    "name": "Royal Canin Beagle Adult",
+    "category": "croquettes",
+    "price": "environ 31 € le sac de 3 kg",
+    "shortDescription": "Croquette race pour Beagle de plus de 12 mois, forme pensée pour ralentir la prise.",
+    "recommendation": "Royal Canin Beagle Adult est la formule race pour un Beagle adulte. La croquette est dessinée pour limiter la gloutonnerie et soutenir le poids de forme. Le prix au kilo est souvent plus haut qu’une vente directe. La portion pèse plus que le logo.",
+    "affiliateUrl": "https://www.zoomalia.com/animalerie/royal-canin-beagle-adult-p-89919.html",
+    "imageEmoji": "🥣",
+    "badge": "Formule race",
+    "tags": [
+      "croquettes",
+      "alimentation",
+      "royal-canin",
+      "adulte",
+      "surpoids"
+    ],
+    "categories": [
+      "alimentation",
+      "croquettes"
+    ],
+    "advantages": [
+      "Formule annoncée pour le Beagle adulte à partir de 12 mois",
+      "Forme de croquette prévue pour ralentir l’ingestion",
+      "Disponible en animalerie, dont Zoomalia",
+      "Repère simple si le vétérinaire a déjà orienté vers une gamme race"
+    ],
+    "disadvantages": [
+      "Prix au kilo souvent plus élevé qu’une marque en vente directe",
+      "Pas une croquette légère au sens strict : la ration reste à peser",
+      "Transition progressive sur 7 à 10 jours",
+      "Ne remplace pas un avis vétérinaire en cas de pathologie"
+    ],
+    "bestFor": "Beagle adulte dont on veut une formule race, surtout s’il engloutit sa gamelle."
+  },
+  {
+    "id": "hills-science-plan-medium",
+    "name": "Hill’s Science Plan Adult Medium",
+    "category": "croquettes",
+    "price": "à partir d’environ 23 €",
+    "shortDescription": "Croquette au poulet pour chien adulte de taille moyenne (11–25 kg).",
+    "recommendation": "Hill’s Science Plan Canine Adult Medium au poulet vise les chiens adultes de taille moyenne, le gabarit d’un Beagle. C’est une formule digeste du circuit vétérinaire, pas une croquette « race Beagle ». Utile si le chien est déjà suivi sur cette marque.",
+    "affiliateUrl": "https://www.zoomalia.com/animalerie/hill-s-science-plan-canine-adult-medium-pour-chien-de-taille-moyenne-au-poulet-p-15750.html",
+    "imageEmoji": "🥣",
+    "badge": "Taille moyenne",
+    "tags": [
+      "croquettes",
+      "alimentation",
+      "hills",
+      "adulte"
+    ],
+    "categories": [
+      "alimentation",
+      "croquettes"
+    ],
+    "advantages": [
+      "Calibrée pour un adulte de taille moyenne, donc le poids d’un Beagle",
+      "Circuit science / vétérinaire, formule au poulet",
+      "Disponible sur Zoomalia en plusieurs tailles de sac",
+      "Repère stable si le chien est déjà sur Hill’s"
+    ],
+    "disadvantages": [
+      "Pas une formule spécifique Beagle",
+      "Prix premium selon le format de sac",
+      "Transition progressive sur 7 à 10 jours",
+      "En cas de maladie, seule une alimentation prescrite fait foi"
+    ],
+    "bestFor": "Beagle adulte déjà habitué à Hill’s, ou foyer qui veut une croquette de taille moyenne facile à trouver."
+  },
+  {
     "id": "tractive-gps",
     "name": "Tractive GPS Tracker",
     "category": "collier_gps",
