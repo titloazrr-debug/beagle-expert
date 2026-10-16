@@ -289,7 +289,7 @@
     "id": "kong-classic",
     "name": "Kong Classic",
     "category": "jouet",
-    "price": "environ 11–12 € en taille M ou L",
+    "price": "à partir de 8,19 €, 10,99 € en taille M",
     "shortDescription": "Caoutchouc rouge farcissable, pour les mâcheurs moyens : occupation et calme en absence.",
     "recommendation": "Le Kong Classic rouge se farcit et occupe un Beagle pendant l’absence. Zoomalia le destine aux mâcheurs moyens : un chien qui éventre tout tiendra plus longtemps sur le Kong Extreme, en caoutchouc plus dense. Taille M (7–16 kg) ou L (13–30 kg) pour un Beagle adulte.",
     "affiliateUrl": "https://www.zoomalia.com/animalerie/jouet-kong-classic-chien-6-tailles-caoutchouc-moyen-dur-pour-chiens-p-18940.html",
@@ -329,7 +329,7 @@
     "id": "kong-extreme",
     "name": "Kong Extreme",
     "category": "jouet",
-    "price": "environ 10 € en taille M",
+    "price": "à partir de 9,99 €, 12,99 € en taille M",
     "shortDescription": "Même forme farcissable que le Classic, en caoutchouc noir plus dense pour les mâcheurs puissants.",
     "recommendation": "Le Kong Extreme est le Classic pour les chiens qui détruisent le rouge. Caoutchouc naturel plus dur, toujours creux pour y glisser une partie de la ration. Ce n’est pas un jouet incassable : retirez-le dès qu’un morceau part. Taille M pour un Beagle de 7 à 16 kg.",
     "affiliateUrl": "https://www.zoomalia.com/animalerie/jouet-kong-chien-extreme-5-tailles-caoutchouc-dur-pour-chiens-adultes-energiques-p-18941.html",
@@ -360,6 +360,42 @@
       "À retirer dès qu’un fragment se détache"
     ],
     "bestFor": "Beagle qui détruit le Kong Classic ou les jouets souples en quelques minutes."
+  },
+  {
+    "id": "kong-wobbler",
+    "name": "Kong Wobbler",
+    "category": "jouet",
+    "price": "18,99 € en S, 21,99 € en M",
+    "shortDescription": "Distributeur qui roule et lâche la ration par petites doses. Ce n’est pas un jouet à mâcher.",
+    "recommendation": "Le Kong Wobbler se remplit d’une partie de la ration. Il se redresse et ne lâche des croquettes que lorsqu’il roule. Le chien travaille pour manger. C’est du plastique : un Beagle qui mâche fort peut le fendre. On le sort pour le repas, puis on le range. Taille M (13×19 cm) pour un Beagle adulte.",
+    "affiliateUrl": "https://www.zoomalia.com/animalerie/kong-chien-wobbler-distributeur-de-nourriture-p-18949.html",
+    "imageEmoji": "🎯",
+    "badge": "Distributeur",
+    "tags": [
+      "kong",
+      "jouet",
+      "occupation",
+      "gourmand",
+      "education"
+    ],
+    "categories": [
+      "education",
+      "jouets",
+      "budget"
+    ],
+    "advantages": [
+      "La ration sort au fur et à mesure, le repas dure plus longtemps",
+      "Le chien pousse et cherche, au lieu de tout avaler",
+      "Ouverture vissée, facile à remplir et à laver",
+      "Complète le Kong farci : l’un se mâche, l’autre se pousse"
+    ],
+    "disadvantages": [
+      "Plastique : un gros mâcheur peut le fendre s’il le prend en gueule",
+      "À ranger après la séance, ce n’est pas un jouet d’absence",
+      "Les croquettes versées comptent dans la ration du jour",
+      "La taille S est courte pour un Beagle adulte"
+    ],
+    "bestFor": "Beagle glouton qu’on veut occuper avec son repas, sous surveillance."
   },
   {
     "id": "tapis-fouille",
