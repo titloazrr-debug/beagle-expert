@@ -220,10 +220,10 @@
     "id": "kong-classic",
     "name": "Kong Classic",
     "category": "jouet",
-    "price": "environ 10–15€",
-    "shortDescription": "Jouet farcissable ultra-résistant : occupation mentale et calme en absence.",
-    "recommendation": "Le Kong Classic est un excellent choix pour occuper un Beagle. Farcissable de friandises, il stimule mentalement le chien et aide à réduire l’anxiété de séparation, un point sensible chez cette race de meute.",
-    "affiliateUrl": "#",
+    "price": "environ 11–12 € en taille M ou L",
+    "shortDescription": "Caoutchouc rouge farcissable, pour les mâcheurs moyens : occupation et calme en absence.",
+    "recommendation": "Le Kong Classic rouge se farcit et occupe un Beagle pendant l’absence. Zoomalia le destine aux mâcheurs moyens : un chien qui éventre tout tiendra plus longtemps sur le Kong Extreme, en caoutchouc plus dense. Taille M (7–16 kg) ou L (13–30 kg) pour un Beagle adulte.",
+    "affiliateUrl": "https://www.zoomalia.com/animalerie/jouet-kong-classic-chien-6-tailles-caoutchouc-moyen-dur-pour-chiens-p-18940.html",
     "imageEmoji": "🔴",
     "badge": "Indispensable",
     "tags": [
@@ -254,16 +254,52 @@
       "Surveillance recommandée au début (morceaux trop durs / usage abusif)",
       "Ne remplace pas la marche ni le travail de flair en extérieur"
     ],
-    "bestFor": "Beagles gourmands, absences régulières, besoin d’occupation solo et de canaliser la mastication destructive."
+    "bestFor": "Beagles gourmands, absences régulières, besoin d’occupation solo — tant qu’il ne réduit pas le caoutchouc rouge en morceaux."
+  },
+  {
+    "id": "kong-extreme",
+    "name": "Kong Extreme",
+    "category": "jouet",
+    "price": "environ 10 € en taille M",
+    "shortDescription": "Même forme farcissable que le Classic, en caoutchouc noir plus dense pour les mâcheurs puissants.",
+    "recommendation": "Le Kong Extreme est le Classic pour les chiens qui détruisent le rouge. Caoutchouc naturel plus dur, toujours creux pour y glisser une partie de la ration. Ce n’est pas un jouet incassable : retirez-le dès qu’un morceau part. Taille M pour un Beagle de 7 à 16 kg.",
+    "affiliateUrl": "https://www.zoomalia.com/animalerie/jouet-kong-chien-extreme-5-tailles-caoutchouc-dur-pour-chiens-adultes-energiques-p-18941.html",
+    "imageEmoji": "⚫",
+    "badge": "Mâcheur puissant",
+    "tags": [
+      "kong",
+      "jouet",
+      "occupation",
+      "destructeur",
+      "education"
+    ],
+    "categories": [
+      "education",
+      "jouets",
+      "budget"
+    ],
+    "advantages": [
+      "Caoutchouc plus dense que le Classic rouge",
+      "Farcissable : la mastication reste lente et encadrée",
+      "Un seul tenant, sans couture ni pièce rapportée",
+      "Taille M adaptée à la plupart des Beagles adultes"
+    ],
+    "disadvantages": [
+      "Plus dur sous la dent : surveiller l’usure et les dents",
+      "Aucun caoutchouc n’est indestructible face à un Beagle acharné",
+      "Les calories de la farce comptent dans la ration du jour",
+      "À retirer dès qu’un fragment se détache"
+    ],
+    "bestFor": "Beagle qui détruit le Kong Classic ou les jouets souples en quelques minutes."
   },
   {
     "id": "tapis-fouille",
-    "name": "Tapis de fouille (Snuffle Mat)",
+    "name": "Tapis de fouille Trixie",
     "category": "jouet",
-    "price": "environ 15–30€",
-    "shortDescription": "Active le flair exceptionnel du Beagle et le fatigue mentalement en douceur.",
-    "recommendation": "Le Beagle possède l’un des meilleurs odorats canins. Un tapis de fouille (snuffle mat) exploite parfaitement cet instinct et fatigue mentalement le chien, ce qui est très utile pour canaliser son énergie.",
-    "affiliateUrl": "#",
+    "price": "25,99 €",
+    "shortDescription": "Tapis à renifler 50×34 cm : le flair du Beagle travaille, la mâchoire se repose.",
+    "recommendation": "Le Trixie Activity Sniffing Carpet (50×34 cm) disperse une partie de la ration dans des pompons. Utile pour fatiguer un Beagle par le nez. Ce n’est pas un jouet à mâcher : un destructeur peut arracher le polyester.",
+    "affiliateUrl": "https://www.zoomalia.com/animalerie/jeu-de-strategie-pour-chien-et-chat-trixie-activity-sniffing-carpet-level-1-p-41046.html",
     "imageEmoji": "🌿",
     "badge": "Flair",
     "tags": [
@@ -298,12 +334,14 @@
   },
   {
     "id": "nettoyant-auriculaire",
-    "name": "Nettoyant auriculaire",
+    "name": "Douxo Spa nettoyant auriculaire",
     "category": "soin",
-    "price": "environ 10–15€",
-    "shortDescription": "Soin de base pour oreilles tombantes : prévention simple des otites.",
-    "recommendation": "Les oreilles tombantes du Beagle favorisent les otites. Un nettoyage régulier avec un nettoyant auriculaire adapté est l’un des gestes de prévention les plus importants.",
-    "affiliateUrl": "#",
+    "price": "environ 10 € les 120 ml",
+    "shortDescription": "Lotion auriculaire pour oreilles tombantes : un geste simple contre l’humidité et le cérumen.",
+    "recommendation": "Les oreilles tombantes du Beagle gardent chaleur et humidité. Le Douxo Spa nettoyant auriculaire (120 ml) sert à l’entretien courant, pas à soigner une otite déjà installée. Code VDA15 : −15 % sur Zoomalia.",
+    "affiliateUrl": "https://www.zoomalia.com/animalerie/douxo-spa-nettoyant-auriculaire-pour-chien-et-chat-p-170169.html",
+    "promoCode": "VDA15",
+    "promoLabel": "−15 % avec le code VDA15 sur Zoomalia",
     "imageEmoji": "👂",
     "badge": "Essentiel",
     "tags": [

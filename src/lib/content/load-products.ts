@@ -7,6 +7,10 @@ import {
   mergeProducts,
   normalizeContentProduct,
 } from "@/lib/content/product-utils";
+import {
+  isZoomaliaDestination,
+  zoomaliaLink,
+} from "@/lib/partners/zoomalia";
 
 let cache: Product[] | null = null;
 
@@ -44,7 +48,10 @@ export function loadProductCatalog(): Product[] {
       price: p.price,
       shortDescription: p.shortDescription,
       recommendation: p.recommendation,
-      affiliateUrl: p.affiliateUrl,
+      affiliateUrl:
+        p.affiliateUrl && isZoomaliaDestination(p.affiliateUrl)
+          ? zoomaliaLink(p.affiliateUrl)
+          : p.affiliateUrl,
       imageEmoji: p.imageEmoji,
       badge: p.badge,
       promoCode: p.promoCode,

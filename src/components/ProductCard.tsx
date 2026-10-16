@@ -129,8 +129,7 @@ export function ProductCard({
             </p>
             {product.promoLabel ? (
               <p className="mt-0.5 text-xs leading-snug text-muted-foreground">
-                {product.promoLabel} — à saisir dans le panier Weenect (ou via le
-                lien ci-dessous).
+                {product.promoLabel}. À saisir au moment du paiement.
               </p>
             ) : null}
           </div>

@@ -18,6 +18,7 @@ const FICHE_PRIORITY = [
   "education-comportement",
   "collier-gps-beagle",
   "solitude-aboiements-destruction",
+  "jouets-beagle-destructeur",
   "soins-entretien",
   "histoire-standard",
 ];

@@ -134,7 +134,7 @@
     "category": "jouets",
     "emoji": "🧩",
     "intro": "Comparaison occupation Beagle : Kong (mastication / résolution) vs tapis de fouille (flair). Deux outils complémentaires pour un chien de piste intelligent.",
-    "ficheSlugs": ["education-comportement", "alimentation", "budget-equipement", "histoire-standard"],
+    "ficheSlugs": ["education-comportement", "jouets-beagle-destructeur", "alimentation", "budget-equipement", "histoire-standard"],
     "left": {
       "productId": "kong-classic",
       "name": "Kong Classic",

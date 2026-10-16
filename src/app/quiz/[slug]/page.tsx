@@ -86,6 +86,10 @@ export default async function QuizPage({ params }: PageProps) {
         if (a.slug === "collier-gps-beagle") return -1;
         if (b.slug === "collier-gps-beagle") return 1;
       }
+      if (slug === "jouets-occupation") {
+        if (a.slug === "jouets-beagle-destructeur") return -1;
+        if (b.slug === "jouets-beagle-destructeur") return 1;
+      }
       return 0;
     })
     .slice(0, 4)
