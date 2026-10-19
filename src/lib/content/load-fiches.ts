@@ -175,7 +175,11 @@ export function parseFicheBody(
           continue;
         }
         if (inAttention) {
-          attentionBuf.push(content.replace(/^\*\*.*?\*\*\s*/, ""));
+          // Le texte d'encadré est rendu en texte brut : retirer aussi le gras
+          // inline, sinon les astérisques s'affichent en clair.
+          attentionBuf.push(
+            content.replace(/^\*\*.*?\*\*\s*/, "").replace(/\*\*/g, "")
+          );
         }
         continue;
       } else if (inAttention) {
