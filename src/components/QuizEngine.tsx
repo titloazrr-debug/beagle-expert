@@ -50,6 +50,7 @@ import { AffiliateDisclaimer } from "@/components/legal/AffiliateDisclaimer";
 import { QuizCitableConclusion } from "@/components/QuizCitableConclusion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { isMissingOutboundUrl } from "@/lib/outbound-link";
 import { cn } from "@/lib/utils";
 
 interface QuizEngineProps {
@@ -717,7 +718,12 @@ export function QuizEngine({
               <p className="mt-1.5 text-sm font-medium text-foreground/90">
                 {result.showAlternativeBreeds
                   ? "Quelques repères utiles si vous gardez le Beagle en tête plus tard."
-                  : "Sélection selon vos réponses — cliquez pour voir l’offre."}
+                  : result.recommendedProducts.some(
+                        ({ product }) =>
+                          !isMissingOutboundUrl(product.affiliateUrl)
+                      )
+                    ? "Sélection selon vos réponses — cliquez pour voir l’offre."
+                    : "Sélection selon vos réponses."}
               </p>
               {result.recommendedProducts.length === 0 ? (
                 <p className="mt-4 rounded-2xl border border-dashed border-border bg-muted/30 p-5 text-sm text-muted-foreground">
@@ -737,6 +743,7 @@ export function QuizEngine({
                         product={product}
                         reason={reason}
                         rank={i + 1}
+                        utmCampaign={`quiz-${quiz.slug}`}
                         onBeforeNavigate={(url, name) =>
                           setEmailCapture({ url, productName: name })
                         }
@@ -746,11 +753,15 @@ export function QuizEngine({
                 </div>
               )}
               <QuizRecoDisclaimer className="mt-4" compact />
-              <AffiliateDisclaimer
-                variant="box"
-                className="mt-2"
-                showLegalLink
-              />
+              {result.recommendedProducts.some(
+                ({ product }) => !isMissingOutboundUrl(product.affiliateUrl)
+              ) && (
+                <AffiliateDisclaimer
+                  variant="box"
+                  className="mt-2"
+                  showLegalLink
+                />
+              )}
             </div>
 
             {/* Fiches liées */}

@@ -106,7 +106,15 @@ export interface Product {
   /** Affichage libre (ex. "40-50€ + abo 5-10€/mois") */
   priceLabel?: string;
   currency?: string;
+  /** Lien affilié. « # » ou vide = pas de lien affilié (aucun libellé d'attente). */
   affiliateUrl: string;
+  /**
+   * Site officiel, non affilié. Utilisé seulement s'il n'y a pas de lien affilié.
+   * Les UTM de provenance sont ajoutées à l'affichage.
+   */
+  officialUrl?: string;
+  /** Libellé du bouton sortant (affilié ou officiel). */
+  ctaLabel?: string;
   imageEmoji: string;
   badge?: string;
   /** Code promo partenaire (ex. BEAGLEEXPERT) */

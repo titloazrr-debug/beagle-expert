@@ -174,13 +174,11 @@ function ProviderCard({
               <ExternalLink className="size-3.5" aria-hidden />
             </a>
           </Button>
-        ) : (
+        ) : isDev ? (
           <p className="rounded-xl border border-dashed border-border bg-muted/30 px-3 py-2.5 text-center text-xs text-muted-foreground">
-            {isDev
-              ? "Partenariat en cours de validation (dev)"
-              : "Devis : partenariat en cours de validation"}
+            Partenariat en cours de validation (dev)
           </p>
-        )}
+        ) : null}
         <a
           href={provider.sourceDocumentUrl}
           target="_blank"

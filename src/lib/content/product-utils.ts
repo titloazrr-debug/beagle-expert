@@ -1,4 +1,5 @@
 import type { Product } from "@/types";
+import { isMissingOutboundUrl } from "@/lib/outbound-link";
 
 /** Extrait un prix approximatif en centimes depuis une fourchette textuelle. */
 export function parsePriceToCents(price?: string): number {
@@ -55,6 +56,8 @@ export function normalizeContentProduct(raw: {
   category?: string;
   tags?: string[];
   affiliateUrl?: string;
+  officialUrl?: string;
+  ctaLabel?: string;
   categories?: string[];
   badge?: string;
   promoCode?: string;
@@ -81,6 +84,10 @@ export function normalizeContentProduct(raw: {
     priceCents: parsePriceToCents(priceLabel),
     priceLabel,
     affiliateUrl: raw.affiliateUrl?.trim() || "#",
+    officialUrl: isMissingOutboundUrl(raw.officialUrl)
+      ? undefined
+      : raw.officialUrl!.trim(),
+    ctaLabel: raw.ctaLabel?.trim() || undefined,
     imageEmoji: raw.imageEmoji ?? emojiForProduct(raw.id, raw.name, tags),
     badge: raw.badge,
     promoCode: raw.promoCode?.trim() || undefined,
@@ -122,6 +129,10 @@ export function mergeProducts(list: Product[]): Product[] {
         p.affiliateUrl && p.affiliateUrl !== "#"
           ? p.affiliateUrl
           : existing.affiliateUrl,
+      officialUrl: !isMissingOutboundUrl(p.officialUrl)
+        ? p.officialUrl
+        : existing.officialUrl,
+      ctaLabel: p.ctaLabel ?? existing.ctaLabel,
       advantages:
         (p.advantages?.length ?? 0) > 0 ? p.advantages : existing.advantages,
       disadvantages:

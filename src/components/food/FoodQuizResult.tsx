@@ -455,12 +455,14 @@ export function FoodQuizResult({
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
             {FOOD_BRAND_INTRO}
           </p>
-          <p
-            className="mt-3 border-t border-border/60 pt-3 text-xs leading-relaxed text-muted-foreground"
-            role="note"
-          >
-            {FOOD_AFFILIATE_DISCLAIMER}
-          </p>
+          {primaryCta?.isAffiliate && (
+            <p
+              className="mt-3 border-t border-border/60 pt-3 text-xs leading-relaxed text-muted-foreground"
+              role="note"
+            >
+              {FOOD_AFFILIATE_DISCLAIMER}
+            </p>
+          )}
         </Card>
       )}
 

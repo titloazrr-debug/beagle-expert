@@ -22,6 +22,8 @@ interface RawCatalogProduct {
   shortDescription?: string;
   recommendation?: string;
   affiliateUrl?: string;
+  officialUrl?: string;
+  ctaLabel?: string;
   imageEmoji?: string;
   badge?: string;
   promoCode?: string;
@@ -52,6 +54,8 @@ export function loadProductCatalog(): Product[] {
         p.affiliateUrl && isZoomaliaDestination(p.affiliateUrl)
           ? zoomaliaLink(p.affiliateUrl)
           : p.affiliateUrl,
+      officialUrl: p.officialUrl,
+      ctaLabel: p.ctaLabel,
       imageEmoji: p.imageEmoji,
       badge: p.badge,
       promoCode: p.promoCode,

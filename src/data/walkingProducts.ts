@@ -224,7 +224,6 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
       "Ne remplace ni le rappel ni la longe",
       "Abonnement généralement requis",
       "Marque autrichienne (fonctionne en France, SAV hors France)",
-      "Lien affilié en attente de partenariat",
     ],
     verifiedAt: VERIFIED,
     suitableProfiles: [
