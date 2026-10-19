@@ -5,6 +5,11 @@ import {
   getFicheOgImageSrc,
 } from "@/lib/beagle-images";
 import { getTenant } from "@/lib/tenant";
+import {
+  isMissingOutboundUrl,
+  referralCampaignFromPath,
+  withReferralUtm,
+} from "@/lib/outbound-link";
 
 const tenant = getTenant();
 
@@ -376,8 +381,23 @@ export function faqPageJsonLd(
 }
 
 function hasUsableProductUrl(url?: string | null): boolean {
-  const u = (url ?? "").trim();
-  return Boolean(u && u !== "#" && !u.toLowerCase().startsWith("javascript:"));
+  return !isMissingOutboundUrl(url);
+}
+
+function productOfferUrl(
+  product: Product,
+  pageUrl?: string
+): string | null {
+  if (hasUsableProductUrl(product.affiliateUrl)) {
+    return product.affiliateUrl.trim();
+  }
+  if (hasUsableProductUrl(product.officialUrl)) {
+    return withReferralUtm(
+      product.officialUrl!.trim(),
+      referralCampaignFromPath(pageUrl)
+    );
+  }
+  return null;
 }
 
 /**
@@ -427,17 +447,20 @@ export function productJsonLd(
     data.additionalProperty = extraProps;
   }
 
-  if (hasUsableProductUrl(product.affiliateUrl)) {
+  const offerUrl = productOfferUrl(product, options?.url);
+  if (offerUrl || product.priceCents > 0 || product.priceLabel) {
     const offer: Record<string, unknown> = {
       "@type": "Offer",
-      url: product.affiliateUrl,
       priceCurrency: product.currency ?? "EUR",
-      availability: "https://schema.org/InStock",
-      seller: {
+    };
+    if (offerUrl) {
+      offer.url = offerUrl;
+      offer.availability = "https://schema.org/InStock";
+      offer.seller = {
         "@type": "Organization",
         name: tenant.name,
-      },
-    };
+      };
+    }
     if (product.priceCents > 0) {
       offer.price = (product.priceCents / 100).toFixed(2);
     } else if (product.priceLabel) {
@@ -448,18 +471,6 @@ export function productJsonLd(
       };
     }
     data.offers = offer;
-  } else if (product.priceLabel) {
-    data.offers = {
-      "@type": "Offer",
-      priceCurrency: product.currency ?? "EUR",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: product.currency ?? "EUR",
-        description: product.priceLabel,
-      },
-      availability: "https://schema.org/PreOrder",
-      description: "Lien marchand en cours de finalisation",
-    };
   }
 
   if (options?.url) {

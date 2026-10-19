@@ -62,12 +62,7 @@ export function BeagleExpertTagCard({ resultProfile }: BeagleExpertTagCardProps)
                 <ExternalLink className="size-4" aria-hidden />
               </a>
             </Button>
-          ) : (
-            <p className="mt-3 text-xs text-muted-foreground">
-              Bientôt disponible — configurez{" "}
-              <code className="font-mono">NEXT_PUBLIC_BEAGLE_EXPERT_TAG_URL</code>.
-            </p>
-          )}
+          ) : null}
         </div>
       </div>
     </section>

@@ -19,6 +19,7 @@ import { getComparisonTablesForFiche } from "@/data/comparisons";
 import { AttentionBox } from "@/components/AttentionBox";
 import { SummaryBox } from "@/components/SummaryBox";
 import { ProductCard } from "@/components/ProductCard";
+import { isMissingOutboundUrl } from "@/lib/outbound-link";
 import { ComparisonBlock } from "@/components/ComparisonBlock";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { BudgetCalculator } from "@/components/BudgetCalculator";
@@ -463,15 +464,23 @@ export default async function FichePage({ params }: PageProps) {
                   </h2>
                 </div>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Avantages, limites et public cible. Liens affiliés sans surcoût
-                  pour vous.
+                  Avantages, limites et public cible.
+                  {relatedProducts.some(
+                    (p) => !isMissingOutboundUrl(p.affiliateUrl)
+                  )
+                    ? " Liens affiliés sans surcoût pour vous."
+                    : ""}
                 </p>
                 <QuizRecoDisclaimer className="mt-4" compact />
-                <AffiliateDisclaimer
-                  variant="box"
-                  className="mt-3"
-                  showLegalLink
-                />
+                {relatedProducts.some(
+                  (p) => !isMissingOutboundUrl(p.affiliateUrl)
+                ) && (
+                  <AffiliateDisclaimer
+                    variant="box"
+                    className="mt-3"
+                    showLegalLink
+                  />
+                )}
                 <div className="mt-6 grid gap-4 lg:grid-cols-1 xl:grid-cols-1">
                   {relatedProducts.map((p, i) => (
                     <ProductCard
@@ -480,6 +489,7 @@ export default async function FichePage({ params }: PageProps) {
                       reason={p.recommendation || p.shortDescription}
                       rank={i + 1}
                       showProsCons
+                      utmCampaign={`fiche-${slug}`}
                     />
                   ))}
                 </div>

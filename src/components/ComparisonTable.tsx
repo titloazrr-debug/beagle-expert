@@ -16,6 +16,7 @@ import type {
 } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { isMissingOutboundUrl } from "@/lib/outbound-link";
 import { cn } from "@/lib/utils";
 
 interface ComparisonTableProps {
@@ -27,10 +28,6 @@ function formatValue(value: string | number | boolean | undefined): string {
   if (value === undefined) return "—";
   if (typeof value === "boolean") return value ? "Oui" : "Non";
   return String(value);
-}
-
-function isPlaceholderUrl(url: string): boolean {
-  return !url || url === "#";
 }
 
 function ProductHeader({
@@ -77,14 +74,7 @@ function ProductHeader({
 }
 
 function ProductCta({ product }: { product: ComparisonTableProduct }) {
-  const placeholder = isPlaceholderUrl(product.affiliateUrl);
-  if (placeholder) {
-    return (
-      <p className="rounded-xl border border-dashed border-border bg-muted/40 px-3 py-2 text-center text-xs text-muted-foreground">
-        Lien affilié à configurer
-      </p>
-    );
-  }
+  if (isMissingOutboundUrl(product.affiliateUrl)) return null;
   return (
     <Button asChild variant="affiliate" className="min-h-11 w-full shadow-md">
       <a
@@ -397,7 +387,7 @@ export function ComparisonTable({ table, className }: ComparisonTableProps) {
           </table>
         </div>
 
-        {selected && (
+        {selected && !isMissingOutboundUrl(selected.affiliateUrl) && (
           <p className="mt-3 text-center text-xs text-muted-foreground">
             Sélection :{" "}
             <strong className="text-foreground">{selected.name}</strong>

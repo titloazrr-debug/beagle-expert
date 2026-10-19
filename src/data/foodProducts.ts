@@ -1,8 +1,10 @@
+import { withReferralUtm } from "@/lib/outbound-link";
+
 /**
  * Recettes Ultra Premium Direct pour le quiz croquettes.
  * active: true = afficher la reco (type + fiche).
- * Liens d’achat : variables NEXT_PUBLIC_UPD_* uniquement (jamais inventés).
- * Sans URL → la carte s’affiche, le bouton d’affiliation reste masqué.
+ * Liens d’achat affiliés : variables NEXT_PUBLIC_UPD_* uniquement (jamais inventés).
+ * Sans lien affilié → bouton vers le site officiel, non affilié, avec UTM.
  */
 
 export type GrainStatus = "grain_free" | "low_grain" | "contains_grain";
@@ -213,6 +215,9 @@ export function resolveAffiliateUrl(product: FoodProduct): string | null {
   return resolvePublicUrl(product.affiliateUrlEnv);
 }
 
+/** Site public Ultra Premium Direct (vente directe, pas un lien affilié). */
+const UPD_OFFICIAL_HOME = "https://www.ultrapremiumdirect.com/";
+
 /**
  * URL cliquable pour le CTA produit.
  * 1) lien affilié si configuré
@@ -229,11 +234,11 @@ export function resolveProductCtaUrl(product: FoodProduct): {
   const official =
     resolvePublicUrl(product.officialUrlEnv) ??
     resolvePublicUrl(FOOD_RATION_CALCULATOR_FALLBACK_ENV) ??
-    resolvePublicUrl("NEXT_PUBLIC_UPD_OFFICIAL_HOME_URL");
-  if (official) return { url: official, isAffiliate: false };
+    resolvePublicUrl("NEXT_PUBLIC_UPD_OFFICIAL_HOME_URL") ??
+    UPD_OFFICIAL_HOME;
 
   return {
-    url: "https://www.ultrapremiumdirect.com/",
+    url: withReferralUtm(official, "quiz-alimentation-croquettes"),
     isAffiliate: false,
   };
 }

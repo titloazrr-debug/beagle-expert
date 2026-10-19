@@ -4,6 +4,7 @@ import type { Product } from "@/types";
 import { ExternalLink, UserCheck } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ProductProsCons } from "@/components/ProductProsCons";
+import { resolveProductOutbound } from "@/lib/outbound-link";
 import { formatPrice, cn } from "@/lib/utils";
 
 interface ProductCardProps {
@@ -14,8 +15,10 @@ interface ProductCardProps {
   compact?: boolean;
   /** Affiche avantages / inconvénients (défaut: true hors compact) */
   showProsCons?: boolean;
-  /** Callback avant redirection marchande (ex: capture email) */
+  /** Callback avant redirection affiliée (ex: capture email) */
   onBeforeNavigate?: (url: string, productName: string) => void;
+  /** Campagne UTM des liens officiels non affiliés (ex. fiche-alimentation). */
+  utmCampaign?: string;
 }
 
 export function ProductCard({
@@ -26,6 +29,7 @@ export function ProductCard({
   compact = false,
   showProsCons,
   onBeforeNavigate,
+  utmCampaign,
 }: ProductCardProps) {
   const price =
     product.priceLabel ||
@@ -36,12 +40,7 @@ export function ProductCard({
   const why =
     reason || product.recommendation || product.shortDescription;
 
-  const href =
-    !product.affiliateUrl || product.affiliateUrl === "#"
-      ? "#"
-      : product.affiliateUrl;
-
-  const isPlaceholder = href === "#";
+  const outbound = resolveProductOutbound(product, { utmCampaign });
   const displayProsCons =
     showProsCons ??
     (!compact &&
@@ -49,25 +48,16 @@ export function ProductCard({
         product.advantages?.length || product.disadvantages?.length
       ));
 
-  return (
-    <a
-      href={href}
-      target={isPlaceholder ? undefined : "_blank"}
-      rel={isPlaceholder ? undefined : "noopener noreferrer sponsored"}
-      data-affiliate="true"
-      onClick={isPlaceholder ? (e) => e.preventDefault() : undefined}
-      className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-2xl border-2 bg-card shadow-[var(--shadow-card)]",
-        rank === 1
-          ? "border-accent shadow-accent/15"
-          : "border-accent/30",
-        "transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-[0_8px_28px_-8px_rgb(107_63_26_/_0.35)]",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-        isPlaceholder && "cursor-default",
-        className
-      )}
-      aria-disabled={isPlaceholder || undefined}
-    >
+  const cardClass = cn(
+    "group relative flex h-full flex-col overflow-hidden rounded-2xl border-2 bg-card shadow-[var(--shadow-card)]",
+    rank === 1 ? "border-accent shadow-accent/15" : "border-accent/30",
+    outbound &&
+      "transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-[0_8px_28px_-8px_rgb(107_63_26_/_0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+    className
+  );
+
+  const cardBody = (
+    <>
       <div
         className={cn(
           "absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-accent via-accent-soft to-primary",
@@ -184,33 +174,49 @@ export function ProductCard({
           </p>
         )}
 
-        <div className="mt-auto pt-4">
-          {isPlaceholder ? (
-            <span className="block rounded-xl border border-dashed border-border bg-muted/40 px-3 py-3 text-center text-[11px] italic text-muted-foreground">
-              Lien affilié à venir
-            </span>
-          ) : (
+        {outbound && (
+          <div className="mt-auto pt-4">
             <span
-              onClick={(e) => {
-                e.preventDefault();
-                onBeforeNavigate?.(href, product.name);
-              }}
+              onClick={
+                outbound.kind === "affiliate" && onBeforeNavigate
+                  ? (e) => {
+                      e.preventDefault();
+                      onBeforeNavigate(outbound.url, product.name);
+                    }
+                  : undefined
+              }
               className={cn(
                 "flex w-full min-h-12 cursor-pointer items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3.5 text-sm font-extrabold text-accent-foreground shadow-md shadow-accent/25 transition group-hover:brightness-110",
                 rank === 1 && "min-h-14 text-base shadow-lg shadow-accent/30"
               )}
             >
-              Voir le produit
+              {outbound.label}
               <ExternalLink className="size-4 opacity-95" aria-hidden />
             </span>
-          )}
-          {!isPlaceholder && (
-            <p className="mt-2 text-center text-[10px] font-medium text-muted-foreground">
-              Lien affilié · sans surcoût pour vous
-            </p>
-          )}
-        </div>
+            {outbound.kind === "affiliate" && (
+              <p className="mt-2 text-center text-[10px] font-medium text-muted-foreground">
+                Lien affilié · sans surcoût pour vous
+              </p>
+            )}
+          </div>
+        )}
       </div>
+    </>
+  );
+
+  if (!outbound) {
+    return <article className={cardClass}>{cardBody}</article>;
+  }
+
+  return (
+    <a
+      href={outbound.url}
+      target="_blank"
+      rel={outbound.rel}
+      data-affiliate={outbound.kind === "affiliate" ? "true" : undefined}
+      className={cardClass}
+    >
+      {cardBody}
     </a>
   );
 }
