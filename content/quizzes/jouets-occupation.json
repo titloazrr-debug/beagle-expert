@@ -9,7 +9,7 @@
   "ctaLabel": "Voir mes jouets recommandés",
   "seo": {
     "title": "Quiz jouets d'occupation Beagle",
-    "description": "Trouvez les jouets adaptés à votre Beagle : Kong, snuffle mat, balle friandises, clicker et formation rappel."
+    "description": "Cinq questions pour trouver un jouet d'occupation adapté à votre Beagle : Kong, tapis de fouille, balle à friandises, clicker ou travail du rappel."
   },
   "basedOn": [
     "content/raw/guide_education_comportement_beagle.md",

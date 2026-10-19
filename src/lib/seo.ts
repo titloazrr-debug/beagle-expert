@@ -58,10 +58,21 @@ export function toIsoDate(value?: string | Date | null): string | undefined {
   return parsed.toISOString().slice(0, 10);
 }
 
+/** Longueur maximale d'un titre avant troncature dans les résultats Google. */
+const TITLE_MAX = 60;
+
 export function brandTitle(title: string): string {
-  if (title === tenant.name) return title;
-  if (title.includes(tenant.name)) return title;
-  return `${title} | ${tenant.name}`;
+  const suffix = ` | ${tenant.name}`;
+  let clean = title.trim();
+  // Quelques titres de quiz embarquent déjà le suffixe : on le normalise
+  // avant de décider s'il tient dans les 60 caractères.
+  if (clean.endsWith(suffix)) clean = clean.slice(0, -suffix.length).trim();
+  if (clean === tenant.name || clean.includes(tenant.name)) return clean;
+
+  const withBrand = `${clean}${suffix}`;
+  // La marque n'est ajoutée que si le titre reste entier dans les résultats.
+  // Le site est déjà identifié par son domaine dans le SERP.
+  return withBrand.length <= TITLE_MAX ? withBrand : clean;
 }
 
 /** Tronque une meta description sans couper un mot (cible SEO ~155). */

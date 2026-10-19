@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Quiz Beagle : adoption, harnais, assurance, croquettes et plus",
+  title: "Quiz Beagle : adoption, harnais, assurance et croquettes",
   description:
     "Quiz Beagle gratuits : harnais & promenade, adoption, croquettes, assurance santé, surpoids, GPS et jouets. Résultats clairs en quelques minutes.",
   path: "/quizzes",

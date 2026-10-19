@@ -1,5 +1,5 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { JsonLd } from "@/components/JsonLd";
 import { Hero } from "@/components/home/Hero";
 import { QuizShowcase } from "@/components/home/QuizShowcase";
 import { FichesPreview } from "@/components/home/FichesPreview";
@@ -8,17 +8,30 @@ import { Button } from "@/components/ui/button";
 import { Calculator, Compass, TrendingUp } from "lucide-react";
 import { fiches } from "@/data/fiches";
 import { quizzes } from "@/data/quizzes";
-import { organizationJsonLd } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { getTenant } from "@/lib/tenant";
 import { AffiliateDisclaimer } from "@/components/legal/AffiliateDisclaimer";
 import { MedicalDisclaimer } from "@/components/legal/MedicalDisclaimer";
 
-export default function HomePage() {
-  const tenant = getTenant();
+const tenant = getTenant();
 
+export const metadata: Metadata = buildMetadata({
+  title: "Beagle : le guide complet (santé, alimentation, éducation)",
+  description: tenant.description,
+  path: "/",
+  image: "/images/beagle/og-default.jpg",
+  keywords: [
+    "Beagle",
+    "guide Beagle",
+    "quiz Beagle",
+    "santé Beagle",
+    "éducation Beagle",
+  ],
+});
+
+export default function HomePage() {
   return (
     <>
-      <JsonLd data={organizationJsonLd()} />
       <Hero />
 
       <section className="border-b border-border/40 py-6">

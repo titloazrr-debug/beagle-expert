@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = buildMetadata({
   title: "Par où commencer ? — guide pour nouveaux visiteurs",
   description:
-    "Vous arrivez sur Beagle Expert ? Suivez le guide : quiz, fiches, conseils pratiques selon votre situation.",
+    "Vous arrivez sur Beagle Expert ? Choisissez le quiz ou la fiche selon votre situation : adoption, fugue, croquettes, santé, jouets ou budget.",
   path: "/par-ou-commencer",
 });
 

@@ -78,7 +78,7 @@ export function Hero() {
             <div className="relative min-h-0 overflow-hidden">
               <BeagleImage
                 asset={sideLeft}
-                alt=""
+                alt="Beagle tricolore qui renifle le sol en promenade"
                 fill
                 priority
                 sizes="(max-width: 1280px) 30vw, 360px"
@@ -100,7 +100,7 @@ export function Hero() {
             <div className="relative min-h-0 overflow-hidden">
               <BeagleImage
                 asset={sideRight}
-                alt=""
+                alt="Beagle qui mange des croquettes dans sa gamelle"
                 fill
                 priority
                 sizes="(max-width: 1280px) 30vw, 360px"

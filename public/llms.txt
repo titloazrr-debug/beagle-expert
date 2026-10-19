@@ -1,0 +1,35 @@
+# Beagle Expert
+
+> Guide de référence francophone consacré au Beagle : santé, alimentation,
+> éducation, budget, équipements et vie quotidienne. Fiches synthétiques et
+> quiz interactifs, rédigés à partir de sources vétérinaires et cynologiques
+> citées. Certains liens sont affiliés.
+
+## Fiches
+
+- [Espérance de vie du Beagle](/fiche/esperance-de-vie) : combien de temps vit un Beagle, signes du vieillissement, facteurs qui allongent ou raccourcissent la vie.
+- [Santé du Beagle](/fiche/sante) : les 7 pathologies les plus fréquentes (otites, surpoids, hernie discale, dysplasie, hypothyroïdie), signes d'alerte et prévention.
+- [Croquettes et alimentation](/fiche/alimentation) : ration selon le poids, erreurs fréquentes, comparatif des marques.
+- [Éducation et comportement](/fiche/education-comportement) : rappel, fugue, flair, méthodes d'éducation positive.
+- [Beagle seul à la maison](/fiche/solitude-aboiements-destruction) : paliers d'absence, aboiements, destructions.
+- [Jouets pour Beagle destructeur](/fiche/jouets-beagle-destructeur) : quels jouets résistent, lesquels cassent les dents.
+- [Soins et entretien](/fiche/soins-entretien) : pelage, oreilles, dents, griffes.
+- [Budget et équipement](/fiche/budget-equipement) : coût réel d'un Beagle, assurance, GPS.
+- [Assurance chien Beagle](/fiche/assurance-chien-beagle) : plafond, franchise, carence, exclusions.
+- [Collier GPS pour Beagle](/fiche/collier-gps-beagle) : comparatif et critères de choix en France.
+- [Histoire et standard](/fiche/histoire-standard) : origines, chasse, standard FCI.
+
+## Quiz interactifs
+
+- [Suis-je prêt à adopter un Beagle ?](/quiz/pret-a-adopter)
+- [Quelles croquettes pour mon Beagle ?](/quiz/alimentation-croquettes)
+- [Risque de surpoids](/quiz/risque-obesite)
+- [Quel collier GPS ?](/quiz/collier-gps)
+- [Quel harnais ?](/quiz/harnais-beagle)
+- [Quel jouet d'occupation ?](/quiz/jouets-occupation)
+- [Quelle assurance santé ?](/quiz/assurance-sante-beagle)
+
+## À propos
+
+- [Méthodologie et sources](/methodologie)
+- [À propos](/a-propos)
