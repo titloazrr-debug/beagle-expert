@@ -15,6 +15,7 @@ const FICHE_PRIORITY: Record<string, number> = {
   "esperance-de-vie": 0.95,
   "assurance-chien-beagle": 0.9,
   "collier-gps-beagle": 0.95,
+  "harnais-anti-evasion-beagle": 0.9,
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {

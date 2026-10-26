@@ -191,5 +191,37 @@
     },
     "verdict": "L’assurance type SantéVet a du sens si une facture de plusieurs centaines d’euros mettrait le budget en difficulté, ou si vous préférez la prévisibilité. Sans assurance, une épargne dédiée réaliste peut suffire si vous acceptez le risque d’un gros imprévu. Beaucoup de foyers combinent petite cagnotte + formule raisonnable. Ce n’est jamais un substitut à la prévention (oreilles, poids, bilans).",
     "disclaimer": "Les garanties d’assurance varient fortement. Lisez le contrat ; ce site ne fournit pas de conseil assurantiel personnalisé."
+  },
+  {
+    "id": "harnais-webmaster-vs-idc",
+    "title": "Ruffwear Web Master vs Julius-K9 IDC Powerharness",
+    "category": "education",
+    "emoji": "🦮",
+    "intro": "Deux façons de limiter le recul, lues sur les fiches fabricant. Le Web Master est un harnais à trois sangles. L'IDC Powerharness est un harnais de poitrine avec sangle de ventre. Le Flagline, plus léger, est décrit à part sur la fiche.",
+    "ficheSlugs": ["harnais-anti-evasion-beagle"],
+    "left": {
+      "productId": "ruffwear-web-master",
+      "name": "Ruffwear Web Master",
+      "tagline": "Trois sangles, dont une ventrale",
+      "points": [
+        "Présenté par Ruffwear pour les chiens qui sortent des autres harnais",
+        "Sangle ventrale et quatre points de réglage sur la page produit",
+        "Boucle au cou : pas besoin de passer le harnais par la tête",
+        "79,99 dollars sur la boutique américaine le 26 octobre 2026"
+      ]
+    },
+    "right": {
+      "productId": "julius-k9-idc-powerharness",
+      "name": "Julius-K9 IDC Powerharness",
+      "tagline": "Poitrail + sangle de ventre",
+      "points": [
+        "Harnais de ville, fermeture en un clic, poignée sur le dos",
+        "Sangle de ventre à régler : paume sous le dos, quatre doigts devant",
+        "La FAQ de la marque dit qu'une sortie reste possible",
+        "45,99 dollars sur la boutique américaine le 26 octobre 2026"
+      ]
+    },
+    "verdict": "Si le Beagle a déjà reculé hors d'un harnais, le Web Master correspond mieux à ce que Ruffwear décrit pour ce cas : trois sangles. L'IDC Powerharness convient à une balade urbaine si l'on règle vraiment la sangle de ventre, en sachant que la marque elle-même n'en fait pas une garantie. Le Flagline reste l'option légère, avec six réglages. Aucun des trois n'a été testé ici sur un Beagle.",
+    "disclaimer": "Lecture des pages officielles, pas un essai comparatif. Les prix cités sont en dollars, sur les boutiques américaines, à la date de mise à jour. Pas de lien affilié sur ces modèles."
   }
 ]

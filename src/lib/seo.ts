@@ -4,6 +4,7 @@ import {
   getDefaultOgImage,
   getFicheOgImageSrc,
 } from "@/lib/beagle-images";
+import { annualSelectionHeadline } from "@/lib/selection-year";
 import { getTenant } from "@/lib/tenant";
 import {
   isMissingOutboundUrl,
@@ -205,7 +206,7 @@ export function buildFicheMetadata(fiche: Fiche): Metadata {
     toIsoDate(fiche.dateModified) ?? published;
 
   return buildMetadata({
-    title: fiche.seo.title,
+    title: annualSelectionHeadline(fiche.slug) ?? fiche.seo.title,
     description: fiche.seo.description,
     path,
     image: getFicheOgImageSrc({

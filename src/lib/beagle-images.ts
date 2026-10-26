@@ -136,6 +136,7 @@ const FICHE_SLUG_TO_IMAGE: Record<string, BeagleImageKey> = {
   alimentation: "alimentation",
   "education-comportement": "education",
   "collier-gps-beagle": "gps",
+  "harnais-anti-evasion-beagle": "education",
   "solitude-aboiements-destruction": "solitude",
   "soins-entretien": "soins",
   "budget-equipement": "budget",
