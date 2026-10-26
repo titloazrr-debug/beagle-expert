@@ -4,7 +4,14 @@
  */
 export const SELECTION_YEAR = 2027;
 
-/** Date éditoriale de cette sélection (reprise en dateModified des fiches). */
+/**
+ * Date éditoriale des sélections annuelles (« Mis à jour le … » et dateModified).
+ * Format ISO AAAA-MM-JJ. Cette valeur est la seule source : le frontmatter
+ * des fiches ne la remplace pas.
+ *
+ * À régler sur la date réelle de mise en ligne, juste avant le merge.
+ * 2026-10-26 est la date de préparation, pas celle de publication.
+ */
 export const SELECTION_UPDATED_ON = "2026-10-26";
 
 const MONTHS_FR = [
