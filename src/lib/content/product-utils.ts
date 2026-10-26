@@ -1,13 +1,19 @@
 import type { Product } from "@/types";
 import { isMissingOutboundUrl } from "@/lib/outbound-link";
 
-/** Extrait un prix approximatif en centimes depuis une fourchette textuelle. */
+/** Extrait un prix en centimes. « 94,90 € » vaut 9490, pas 9400. */
 export function parsePriceToCents(price?: string): number {
   if (!price) return 0;
   const match = price.replace(/\s/g, "").match(/(\d+)(?:[.,](\d+))?/);
   if (!match) return 0;
   const euros = parseInt(match[1], 10);
-  return euros * 100;
+  const frac = match[2];
+  if (!frac) return euros * 100;
+  const cents =
+    frac.length === 1
+      ? parseInt(frac, 10) * 10
+      : parseInt(frac.slice(0, 2), 10);
+  return euros * 100 + cents;
 }
 
 export function emojiForProduct(

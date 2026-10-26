@@ -68,6 +68,10 @@ export default async function QuizPage({ params }: PageProps) {
         if (a.slug === "jouets-beagle-destructeur") return -1;
         if (b.slug === "jouets-beagle-destructeur") return 1;
       }
+      if (slug === "harnais-beagle") {
+        if (a.slug === "harnais-anti-evasion-beagle") return -1;
+        if (b.slug === "harnais-anti-evasion-beagle") return 1;
+      }
       return 0;
     })
     .slice(0, 4)
@@ -90,7 +94,12 @@ export default async function QuizPage({ params }: PageProps) {
         "education-comportement",
         "budget-equipement",
       ],
-      "harnais-beagle": ["education-comportement", "budget-equipement", "soins-entretien"],
+      "harnais-beagle": [
+        "harnais-anti-evasion-beagle",
+        "education-comportement",
+        "budget-equipement",
+        "soins-entretien",
+      ],
       "risque-obesite": ["alimentation", "sante"],
       "alimentation-croquettes": ["alimentation", "sante", "budget-equipement"],
       "assurance-sante-beagle": [

@@ -35,10 +35,10 @@ const paths = [
   },
   {
     icon: Footprints,
-    label: "Je cherche harnais / longe anti-traction",
-    desc: "Setup promenade : harnais, laisse ou longe quand le nez tire plus fort que la voix.",
-    href: "/quiz/harnais-beagle",
-    cta: "Faire le quiz harnais",
+    label: "Je cherche un harnais anti-évasion",
+    desc: "Pourquoi un Beagle recule hors d'un harnais classique, comment le mesurer, puis le quiz pour affiner le setup.",
+    href: "/fiche/harnais-anti-evasion-beagle",
+    cta: "Lire la fiche harnais",
     color: "from-emerald-500/20 to-emerald-500/5",
   },
   {

@@ -8,8 +8,8 @@ const LAYERS = [
     emoji: "🦮",
     title: "1. Harnais anti-évasion",
     body: "Un Beagle peut reculer hors d’un harnais classique. Un modèle bien ajusté (souvent en Y ou multi-points) limite la traction sur le cou et les sorties de sangle.",
-    href: "/quiz/harnais-beagle",
-    cta: "Trouver le bon harnais",
+    href: "/fiche/harnais-anti-evasion-beagle",
+    cta: "Choisir un harnais anti-évasion",
   },
   {
     emoji: "🪢",
