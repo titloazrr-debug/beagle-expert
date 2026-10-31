@@ -225,12 +225,12 @@
       "productIds": [
         "tapis-fouille",
         "kong-classic",
-        "tractive-gps"
+        "weenect-gps"
       ],
       "reasons": [
         "Snuffle mat : l'outil n°1 pour un nez en feu",
         "Kong en complément pour le calme post-session",
-        "Tractive si le flair mène encore trop souvent hors de vue"
+        "Weenect si le flair mène encore trop souvent hors de vue"
       ]
     },
     {
@@ -267,19 +267,19 @@
       "productIds": [
         "tapis-fouille",
         "kong-classic",
-        "tractive-gps"
+        "weenect-gps"
       ],
       "reasons": [
         "Canaliser le flair entre deux séances d'éducation",
         "Kong comme récompense / occupation structurée",
-        "Tractive dès que le rappel n'est pas fiable hors laisse"
+        "Weenect dès que le rappel n'est pas fiable hors laisse"
       ]
     }
   ],
   "productIds": [
     "kong-classic",
     "tapis-fouille",
-    "tractive-gps",
+    "weenect-gps",
     "ultra-premium-direct"
   ]
 }
