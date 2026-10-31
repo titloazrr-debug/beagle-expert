@@ -264,14 +264,14 @@
       ],
       "minScore": 10,
       "productIds": [
-        "tractive-gps",
+        "weenect-gps",
         "kong-classic",
         "nettoyant-auriculaire",
         "santevet"
       ],
       "reasons": [
         "Temps d'exercice et gestion des absences réalistes",
-        "Tractive pour sécuriser l'instinct de fugue dès les sorties",
+        "Weenect XS pour sécuriser l'instinct de fugue dès les sorties",
         "Kong + nettoyant oreilles : occupation et prévention de base",
         "SantéVet pour anticiper les frais liés aux prédispositions de race"
       ]
@@ -285,7 +285,7 @@
       ],
       "minScore": 4,
       "productIds": [
-        "tractive-gps",
+        "weenect-gps",
         "tapis-fouille",
         "santevet",
         "ultra-premium-direct"
@@ -314,7 +314,7 @@
     }
   ],
   "productIds": [
-    "tractive-gps",
+    "weenect-gps",
     "kong-classic",
     "tapis-fouille",
     "nettoyant-auriculaire",

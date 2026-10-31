@@ -49,7 +49,7 @@ const VERIFIED = "2026-08-07";
 
 /**
  * Placeholders partenaires (Zooplus, etc.) — active: false jusqu’à validation manuelle.
- * Tractive GPS : réutilise le catalogue existant côté UI si URL dispo.
+ * Tractive n’est pas proposé : gps-tractive-walking reste inactif.
  */
 export const WALKING_PRODUCTS: WalkingProduct[] = [
   {
@@ -212,7 +212,7 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     id: "gps-tractive-walking",
     name: "Tractive GPS Tracker",
     category: "gps",
-    active: true,
+    active: false,
     retailer: "Tractive",
     affiliateUrlEnv: "NEXT_PUBLIC_TRACTIVE_AFFILIATE_URL",
     strengths: [
