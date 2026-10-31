@@ -39,6 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
+# Extension Chrome (artefacts de build)
+/extension/dist/
+/extension/*.zip
+/extension/node_modules/
+
 # Vidéos destinées à Pinterest, pas au site
 public/videos/pinterest/*.mp4
 next-env.d.ts
