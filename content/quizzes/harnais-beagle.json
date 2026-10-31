@@ -15,7 +15,7 @@
     "content/raw/guide_education_comportement_beagle.md",
     "content/raw/guide_budget_beagle.md"
   ],
-  "productIds": ["tractive-gps"],
+  "productIds": ["weenect-gps"],
   "questions": [
     {
       "id": "age",
@@ -306,7 +306,7 @@
       "title": "Son profil : beaucoup de liberté, avec un filet de sécurité",
       "description": "Vous souhaitez lui permettre d’explorer largement sans dépendre uniquement de son rappel. Le duo harnais + longe constitue ici la base. Un GPS ajoute une couche de sécurité supplémentaire si le chien parvient malgré tout à s’éloigner.",
       "tags": ["secured_explorer"],
-      "productIds": ["tractive-gps"],
+      "productIds": ["weenect-gps"],
       "reasons": []
     },
     {
@@ -314,7 +314,7 @@
       "title": "Son profil : sécurité anti-évasion prioritaire",
       "description": "Certaines morphologies ou certains comportements permettent au chien de reculer hors d’un harnais classique. Dans votre situation, la priorité est donc moins le style du harnais que sa sécurité d’ajustement.",
       "tags": ["escape_artist"],
-      "productIds": ["tractive-gps"],
+      "productIds": ["weenect-gps"],
       "reasons": []
     },
     {
@@ -322,7 +322,7 @@
       "title": "Son profil : longues sorties et grands espaces",
       "description": "Pour les longues sorties, le confort, la solidité des attaches et un matériel adapté au terrain passent avant le style.",
       "tags": ["hiking"],
-      "productIds": ["tractive-gps"],
+      "productIds": ["weenect-gps"],
       "reasons": []
     },
     {

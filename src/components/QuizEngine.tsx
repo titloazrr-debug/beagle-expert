@@ -376,8 +376,7 @@ export function QuizEngine({
                     >
                       Quel collier GPS pour un Beagle en France ?
                     </Link>{" "}
-                    Weenect (marque FR, vibreur) vs Tractive, réseau, SAV et abo
-                    — à lire avant ou après le quiz.
+                    Réseau, SAV et abonnement — à lire avant ou après le quiz.
                   </p>
                 )}
                 <ul className="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-muted-foreground">
