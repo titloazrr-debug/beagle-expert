@@ -12,6 +12,7 @@ const nav = [
   { href: "/par-ou-commencer", label: "Par où commencer" },
   { href: "/quizzes", label: "Quiz" },
   { href: "/fiches", label: "Fiches" },
+  { href: "/aliments", label: "Aliments" },
   { href: "/fiche/budget-equipement#calculateur-budget", label: "💰 Calculateur Budget" },
   { href: "/a-propos", label: "À propos" },
 ];

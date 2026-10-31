@@ -51,6 +51,22 @@ export default function HomePage() {
       <QuizShowcase quizzes={quizzes} />
       <FichesPreview fiches={fiches} />
 
+      <section className="border-t border-border/60 py-10">
+        <div className="container-page">
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Un Beagle a vidé l&apos;assiette ?{" "}
+            <Link
+              href="/aliments"
+              className="font-semibold text-primary underline underline-offset-2 hover:no-underline"
+            >
+              Mon chien peut-il manger…
+            </Link>{" "}
+            — chocolat, raisin, oignon, fruits : toxique ou non, sans remplacer
+            le vétérinaire.
+          </p>
+        </div>
+      </section>
+
       <section className="border-t border-border/60 py-16 sm:py-20">
         <div className="container-page">
           <div className="relative overflow-hidden rounded-[2rem] border border-primary/30 bg-gradient-to-br from-primary to-primary-hover px-6 py-12 sm:px-12">

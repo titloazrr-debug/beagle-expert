@@ -114,6 +114,14 @@ export function Footer() {
             </li>
             <li>
               <Link
+                href="/aliments"
+                className="text-sm text-muted-foreground hover:text-primary"
+              >
+                Mon chien peut-il manger… ?
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/quizzes"
                 className="text-sm text-muted-foreground hover:text-primary"
               >

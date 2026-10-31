@@ -4,7 +4,7 @@
  * Production Vercel : lancé par `postbuild` si VERCEL_ENV=production.
  * Manuel : `npm run indexnow`
  */
-import { readdirSync } from "fs";
+import { readFileSync, readdirSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
@@ -26,6 +26,7 @@ const STATIC_PATHS = [
   "/politique-de-confidentialite",
   "/a-propos",
   "/methodologie",
+  "/aliments",
 ];
 
 function collectUrls() {
@@ -34,6 +35,12 @@ function collectUrls() {
   for (const file of readdirSync(join(root, "content/fiches"))) {
     if (!file.endsWith(".mdx")) continue;
     urls.push(`${SITE}/fiche/${file.replace(/\.mdx$/, "")}`);
+  }
+  const aliments = JSON.parse(
+    readFileSync(join(root, "content/aliments.json"), "utf8")
+  );
+  for (const aliment of aliments.aliments) {
+    urls.push(`${SITE}/aliments/${aliment.slug}`);
   }
   for (const file of readdirSync(join(root, "content/quizzes"))) {
     if (!file.endsWith(".json")) continue;
