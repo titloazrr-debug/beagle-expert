@@ -4,8 +4,8 @@ import {
   getDefaultOgImage,
   getFicheOgImageSrc,
 } from "@/lib/beagle-images";
-import { SITE_AUTHOR } from "@/lib/author";
 import { getTenant } from "@/lib/tenant";
+import { SITE_AUTHOR } from "@/lib/author";
 
 const tenant = getTenant();
 
