@@ -35,6 +35,7 @@ import {
   faqPageJsonLd,
   productItemListJsonLd,
 } from "@/lib/seo";
+import { SITE_AUTHOR } from "@/lib/author";
 import {
   getFicheCoverImage,
   getFicheOgImageSrc,
@@ -167,7 +168,7 @@ export default async function FichePage({ params }: PageProps) {
       >
         <meta itemProp="headline" content={fiche.title} />
         <meta itemProp="description" content={fiche.seo.description} />
-        <meta itemProp="author" content={tenant.name} />
+        <meta itemProp="author" content={SITE_AUTHOR.name} />
         {fiche.datePublished && (
           <meta itemProp="datePublished" content={fiche.datePublished} />
         )}
@@ -229,6 +230,12 @@ export default async function FichePage({ params }: PageProps) {
                 <Clock className="size-3" aria-hidden />
                 {fiche.readingTime} min de lecture
               </Badge>
+              <Link
+                href={SITE_AUTHOR.urlPath}
+                className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold text-foreground transition hover:border-primary/40 hover:text-primary"
+              >
+                Rédigé par {SITE_AUTHOR.name}
+              </Link>
             </div>
 
             <div className="mt-5 max-w-3xl">

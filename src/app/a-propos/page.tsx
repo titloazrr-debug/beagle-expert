@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen, HeartHandshake, Scale, Sparkles } from "lucide-react";
 import { aboutPageJsonLd, breadcrumbJsonLd, buildMetadata } from "@/lib/seo";
+import { SITE_AUTHOR } from "@/lib/author";
 import { getTenant } from "@/lib/tenant";
 import { JsonLd } from "@/components/JsonLd";
 import { SummaryBox } from "@/components/SummaryBox";
@@ -47,6 +48,20 @@ export default function AProposPage() {
             className="mt-5"
             text={`${tenant.name} aide propriétaires et futurs adoptants de Beagle avec des fiches courtes et des quiz pratiques. Objectif : des choix plus éclairés sur la santé, l’alimentation, l’éducation et le budget — sans jargon inutile ni fausse promesse, et sans remplacer un professionnel.`}
           />
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            Les fiches sont rédigées par{" "}
+            <strong className="font-semibold text-foreground">
+              {SITE_AUTHOR.name}
+            </strong>
+            , éditeur du site. Le détail figure dans les{" "}
+            <Link
+              href="/mentions-legales"
+              className="font-semibold text-primary underline underline-offset-2 hover:no-underline"
+            >
+              mentions légales
+            </Link>
+            .
+          </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             Pour le détail des sources, des critères produits et des limites
             éditoriales, voir la page{" "}

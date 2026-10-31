@@ -14,6 +14,7 @@ import { FICHES_DIR } from "@/lib/content/paths";
 import { getProductById, getProductsByIds } from "@/lib/content/load-products";
 import { resolveFicheFaq } from "@/lib/content/load-faqs";
 import { normalizeContentProduct } from "@/lib/content/product-utils";
+import { mentionsTractive } from "@/lib/mentions-tractive";
 import { parseFrontmatter } from "@/lib/content/parse-frontmatter";
 import { toIsoDate, todayIsoDate } from "@/lib/seo";
 
@@ -296,7 +297,9 @@ function readFicheFile(filePath: string): {
   }
 
   // Résolution prioritaire via content/products.json
-  const relatedIds = (fm.relatedProducts ?? []).map((p) => p.id);
+  const relatedIds = (fm.relatedProducts ?? [])
+    .map((p) => p.id)
+    .filter((id) => !mentionsTractive(id));
   let products = getProductsByIds(relatedIds);
 
   // Fallback si IDs absents du catalogue
@@ -313,6 +316,8 @@ function readFicheFile(filePath: string): {
       })
     );
   }
+
+  products = products.filter((p) => !mentionsTractive(p.id, p.name));
 
   // Enrichit le matching section CTA avec tout le catalogue connu
   const catalogForMatch = [

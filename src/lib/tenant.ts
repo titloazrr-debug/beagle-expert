@@ -4,6 +4,35 @@ import type { TenantConfig } from "@/types";
 export const CANONICAL_SITE_URL = "https://expert-beagle.fr";
 
 /**
+ * N'accepte une URL de script chatbot que si ce n'est pas une page du site.
+ * En production, NEXT_PUBLIC_AMINOS_SCRIPT_URL valait https://expert-beagle.fr :
+ * le widget l'injectait dans <script src>, le navigateur recevait du HTML et
+ * levait « Unexpected token '<' » sur toutes les pages.
+ */
+export function sanitizeChatbotScriptUrl(
+  raw: string | undefined | null
+): string | undefined {
+  const value = (raw ?? "").trim();
+  if (!value) return undefined;
+  try {
+    const url = new URL(value);
+    if (url.protocol !== "https:") return undefined;
+    const host = url.hostname.toLowerCase();
+    const siteHost = new URL(resolveSiteUrl()).hostname.toLowerCase();
+    if (
+      host === siteHost ||
+      host === "expert-beagle.fr" ||
+      host === "www.expert-beagle.fr"
+    ) {
+      return undefined;
+    }
+    return url.toString();
+  } catch {
+    return undefined;
+  }
+}
+
+/**
  * URL publique du site.
  * - Priorité à NEXT_PUBLIC_SITE_URL si c’est un vrai domaine custom
  * - Ignore les URLs *.vercel.app (preview / ancien domaine) pour ne pas
@@ -42,8 +71,10 @@ export const tenant: TenantConfig = {
   chatbot: {
     enabled: true,
     provider: "aminos",
-    // Remplacer par l'URL de script Aminos.ai une fois le compte créé
-    scriptUrl: process.env.NEXT_PUBLIC_AMINOS_SCRIPT_URL,
+    // Script Aminos externe uniquement. Une URL du site lui-même est ignorée.
+    scriptUrl: sanitizeChatbotScriptUrl(
+      process.env.NEXT_PUBLIC_AMINOS_SCRIPT_URL
+    ),
   },
   social: {
     twitter: "@BeagleExpert",
