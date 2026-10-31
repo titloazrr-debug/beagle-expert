@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { MessageCircle, X, Sparkles } from "lucide-react";
-import { getTenant } from "@/lib/tenant";
+import { getTenant, sanitizeChatbotScriptUrl } from "@/lib/tenant";
 import { cn } from "@/lib/utils";
 
 /**
@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export function ChatbotWidget() {
   const tenant = getTenant();
   const [open, setOpen] = useState(false);
-  const scriptUrl = tenant.chatbot?.scriptUrl;
+  const scriptUrl = sanitizeChatbotScriptUrl(tenant.chatbot?.scriptUrl);
 
   useEffect(() => {
     if (!tenant.chatbot?.enabled || !scriptUrl) return;

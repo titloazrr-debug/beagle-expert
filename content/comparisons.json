@@ -69,7 +69,7 @@
     "category": "gps",
     "emoji": "📡",
     "intro": "Les deux localisent en France. Weenect (Lyon) : GPS « où est-il maintenant ? », vibreur, SAV français. Tractive (Autriche) : localisation + suite activité. Filet de sécurité, pas un substitut au rappel.",
-    "ficheSlugs": ["collier-gps-beagle", "education-comportement", "budget-equipement"],
+    "ficheSlugs": [],
     "left": {
       "productId": "tractive-gps",
       "name": "Tractive GPS",

@@ -5,11 +5,7 @@ import {
   getFicheOgImageSrc,
 } from "@/lib/beagle-images";
 import { getTenant } from "@/lib/tenant";
-import {
-  isMissingOutboundUrl,
-  referralCampaignFromPath,
-  withReferralUtm,
-} from "@/lib/outbound-link";
+import { SITE_AUTHOR } from "@/lib/author";
 
 const tenant = getTenant();
 
@@ -168,7 +164,7 @@ export function buildMetadata({
         ? {
             publishedTime,
             modifiedTime: modifiedTime ?? publishedTime,
-            authors: [tenant.name],
+            authors: [SITE_AUTHOR.name],
             section: tenant.breed,
             tags: keywords,
           }
@@ -250,11 +246,6 @@ export function organizationJsonLd() {
         url: absoluteUrl("/a-propos"),
       },
     ],
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${tenant.siteUrl}/fiches?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -296,9 +287,9 @@ export function articleJsonLd({
     keywords: keywords?.join(", "),
     image: [imageUrl],
     author: {
-      "@type": "Organization",
-      name: tenant.name,
-      url: tenant.siteUrl,
+      "@type": "Person",
+      name: SITE_AUTHOR.name,
+      url: absoluteUrl(SITE_AUTHOR.urlPath),
     },
     publisher: {
       "@type": "Organization",
@@ -380,41 +371,27 @@ export function faqPageJsonLd(
   };
 }
 
-function hasUsableProductUrl(url?: string | null): boolean {
-  return !isMissingOutboundUrl(url);
-}
-
-function productOfferUrl(
-  product: Product,
-  pageUrl?: string
-): string | null {
-  if (hasUsableProductUrl(product.affiliateUrl)) {
-    return product.affiliateUrl.trim();
-  }
-  if (hasUsableProductUrl(product.officialUrl)) {
-    return withReferralUtm(
-      product.officialUrl!.trim(),
-      referralCampaignFromPath(pageUrl)
-    );
-  }
-  return null;
-}
-
 /**
- * Schema Product — pour citabilité agents / rich results.
- * Offre uniquement si une URL d’achat réelle est disponible (pas de "#").
+ * Schema Product descriptif.
+ * Beagle Expert ne vend pas ces produits tiers : pas d'Offer, pas de seller,
+ * pas d'availability. Un Offer au nom du site serait un marchand fictif
+ * (schema.org + consignes Google sur les fiches marchandes).
+ * @id ancré sur la page qui cite le produit : /produits n'existe pas.
  */
 export function productJsonLd(
   product: Product,
-  options?: { position?: number; url?: string }
+  options?: { url?: string }
 ): Record<string, unknown> {
   const description = clampMetaDescription(
     product.recommendation || product.shortDescription || product.name,
     300
   );
+  const pageUrl = options?.url?.split("#")[0];
   const data: Record<string, unknown> = {
     "@type": "Product",
-    "@id": absoluteUrl(`/produits#${product.id}`),
+    "@id": pageUrl
+      ? `${pageUrl}#product-${product.id}`
+      : `${absoluteUrl("/")}#product-${product.id}`,
     name: product.name,
     description,
     category: product.category || product.categories?.[0] || "Animalier",
@@ -445,39 +422,6 @@ export function productJsonLd(
   }
   if (extraProps.length) {
     data.additionalProperty = extraProps;
-  }
-
-  const offerUrl = productOfferUrl(product, options?.url);
-  if (offerUrl || product.priceCents > 0 || product.priceLabel) {
-    const offer: Record<string, unknown> = {
-      "@type": "Offer",
-      priceCurrency: product.currency ?? "EUR",
-    };
-    if (offerUrl) {
-      offer.url = offerUrl;
-      offer.availability = "https://schema.org/InStock";
-      offer.seller = {
-        "@type": "Organization",
-        name: tenant.name,
-      };
-    }
-    if (product.priceCents > 0) {
-      offer.price = (product.priceCents / 100).toFixed(2);
-    } else if (product.priceLabel) {
-      offer.priceSpecification = {
-        "@type": "PriceSpecification",
-        priceCurrency: product.currency ?? "EUR",
-        description: product.priceLabel,
-      };
-    }
-    data.offers = offer;
-  }
-
-  if (options?.url) {
-    data.url = options.url;
-  }
-  if (options?.position != null) {
-    data.position = options.position;
   }
 
   return data;
@@ -511,7 +455,6 @@ export function productItemListJsonLd({
       position: index + 1,
       name: product.name,
       item: productJsonLd(product, {
-        position: index + 1,
         url: absoluteUrl(path),
       }),
     })),
@@ -546,6 +489,11 @@ export function aboutPageJsonLd({
     about: {
       "@type": "Thing",
       name: `Chien de race ${tenant.breed}`,
+    },
+    author: {
+      "@type": "Person",
+      name: SITE_AUTHOR.name,
+      url: absoluteUrl(SITE_AUTHOR.urlPath),
     },
     publisher: {
       "@type": "Organization",
