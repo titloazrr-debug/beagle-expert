@@ -6,6 +6,7 @@ import {
 } from "@/lib/beagle-images";
 import { getTenant } from "@/lib/tenant";
 import { SITE_AUTHOR } from "@/lib/author";
+import { mentionsTractive } from "@/lib/mentions-tractive";
 
 const tenant = getTenant();
 
@@ -76,17 +77,16 @@ export function brandTitle(title: string): string {
   return withBrand.length <= TITLE_MAX ? withBrand : clean;
 }
 
-/** Tronque une meta description sans couper un mot (cible SEO ~155). */
-export function clampMetaDescription(
-  text: string,
-  max = 155
-): string {
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (clean.length <= max) return clean;
-  const slice = clean.slice(0, max - 1);
-  const lastSpace = slice.lastIndexOf(" ");
-  const base = lastSpace > 80 ? slice.slice(0, lastSpace) : slice;
-  return `${base.replace(/[.,;:\-–—\s]+$/, "")}…`;
+/**
+ * Meta description de l’accueil (phrase entière, 140–155 caractères).
+ * Distincte de tenant.description, qui reste le texte du JSON-LD WebSite.
+ */
+export const HOME_META_DESCRIPTION =
+  "Le guide Beagle réunit des fiches et des quiz sur la santé, l'alimentation, l'éducation, le budget et la vie quotidienne, du chiot au chien âgé.";
+
+/** Nettoie une description écrite. Aucune troncature, aucun « … » ajouté. */
+export function clampMetaDescription(text: string): string {
+  return text.replace(/\s+/g, " ").trim();
 }
 
 export function buildMetadata({
@@ -174,7 +174,6 @@ export function buildMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description: metaDescription,
-      site: tenant.social?.twitter,
       images: [ogImageUrl],
     },
     robots: noIndex
@@ -275,7 +274,7 @@ export function articleJsonLd({
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
-    description: clampMetaDescription(description, 300),
+    description: clampMetaDescription(description),
     url,
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -372,62 +371,11 @@ export function faqPageJsonLd(
 }
 
 /**
- * Schema Product descriptif.
- * Beagle Expert ne vend pas ces produits tiers : pas d'Offer, pas de seller,
- * pas d'availability. Un Offer au nom du site serait un marchand fictif
- * (schema.org + consignes Google sur les fiches marchandes).
- * @id ancré sur la page qui cite le produit : /produits n'existe pas.
+ * Liste de produits cités sur une fiche.
+ * ListItem uniquement (position, name, url) : pas de type Product,
+ * donc pas d’offers, d’avis ni de note. Pas de prix. Pas de Tractive.
+ * L’url pointe vers la carte sur la même page.
  */
-export function productJsonLd(
-  product: Product,
-  options?: { url?: string }
-): Record<string, unknown> {
-  const description = clampMetaDescription(
-    product.recommendation || product.shortDescription || product.name,
-    300
-  );
-  const pageUrl = options?.url?.split("#")[0];
-  const data: Record<string, unknown> = {
-    "@type": "Product",
-    "@id": pageUrl
-      ? `${pageUrl}#product-${product.id}`
-      : `${absoluteUrl("/")}#product-${product.id}`,
-    name: product.name,
-    description,
-    category: product.category || product.categories?.[0] || "Animalier",
-    sku: product.id,
-  };
-
-  const extraProps: Record<string, unknown>[] = [];
-  if (product.bestFor) {
-    extraProps.push({
-      "@type": "PropertyValue",
-      name: "Public cible",
-      value: product.bestFor,
-    });
-  }
-  if (product.advantages?.length) {
-    extraProps.push({
-      "@type": "PropertyValue",
-      name: "Avantages",
-      value: product.advantages.join(" · "),
-    });
-  }
-  if (product.disadvantages?.length) {
-    extraProps.push({
-      "@type": "PropertyValue",
-      name: "Points de vigilance",
-      value: product.disadvantages.join(" · "),
-    });
-  }
-  if (extraProps.length) {
-    data.additionalProperty = extraProps;
-  }
-
-  return data;
-}
-
-/** ItemList de produits recommandés (fiche, quiz). */
 export function productItemListJsonLd({
   name,
   description,
@@ -439,7 +387,11 @@ export function productItemListJsonLd({
   path: string;
   products: Product[];
 }): Record<string, unknown> | null {
-  if (!products.length) return null;
+  const listed = products.filter(
+    (product) => !mentionsTractive(product.id, product.name)
+  );
+  if (!listed.length) return null;
+  const pageUrl = absoluteUrl(path);
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -447,16 +399,14 @@ export function productItemListJsonLd({
     description:
       description ||
       `Sélection de produits recommandés pour le ${tenant.breed} sur ${tenant.name}.`,
-    url: absoluteUrl(path),
-    numberOfItems: products.length,
+    url: pageUrl,
+    numberOfItems: listed.length,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
-    itemListElement: products.map((product, index) => ({
+    itemListElement: listed.map((product, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: product.name,
-      item: productJsonLd(product, {
-        url: absoluteUrl(path),
-      }),
+      url: `${pageUrl}#produit-${product.id}`,
     })),
   };
 }

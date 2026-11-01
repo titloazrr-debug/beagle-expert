@@ -490,14 +490,15 @@ export default async function FichePage({ params }: PageProps) {
                 )}
                 <div className="mt-6 grid gap-4 lg:grid-cols-1 xl:grid-cols-1">
                   {relatedProducts.map((p, i) => (
-                    <ProductCard
-                      key={p.id}
-                      product={p}
-                      reason={p.recommendation || p.shortDescription}
-                      rank={i + 1}
-                      showProsCons
-                      utmCampaign={`fiche-${slug}`}
-                    />
+                    <div key={p.id} id={`produit-${p.id}`}>
+                      <ProductCard
+                        product={p}
+                        reason={p.recommendation || p.shortDescription}
+                        rank={i + 1}
+                        showProsCons
+                        utmCampaign={`fiche-${slug}`}
+                      />
+                    </div>
                   ))}
                 </div>
               </section>
