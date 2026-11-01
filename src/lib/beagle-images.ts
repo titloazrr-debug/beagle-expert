@@ -55,6 +55,7 @@ export const BEAGLE_IMAGES: Record<BeagleImageKey, BeagleImageAsset> = {
     alt: "Beagle en bonne forme — santé, prévention et suivi vétérinaire",
     width: PHOTO_W,
     height: PHOTO_H,
+    thumbPosition: "center 100%",
   },
   alimentation: {
     key: "alimentation",
