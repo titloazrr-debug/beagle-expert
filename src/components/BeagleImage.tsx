@@ -37,6 +37,13 @@ export function BeagleImage({
   const w = width ?? asset.width;
   const h = height ?? asset.height;
 
+  // Cette version de next/image précharge avec `priority`, mais n’écrit
+  // fetchpriority="high" que si on le passe explicitement. Lighthouse
+  // s’appuie sur cet attribut pour la photo LCP.
+  const priorityProps = priority
+    ? { priority: true as const, fetchPriority: "high" as const, loading: "eager" as const }
+    : { priority: false as const };
+
   if (fill) {
     return (
       <div className={cn("relative overflow-hidden", wrapperClassName)}>
@@ -47,8 +54,8 @@ export function BeagleImage({
           sizes={sizes ?? "100vw"}
           quality={quality}
           className={cn("object-cover", className)}
-          priority={priority}
           {...rest}
+          {...priorityProps}
         />
       </div>
     );
@@ -63,8 +70,8 @@ export function BeagleImage({
       sizes={sizes}
       quality={quality}
       className={cn("h-auto w-full object-cover", className)}
-      priority={priority}
       {...rest}
+      {...priorityProps}
     />
   );
 

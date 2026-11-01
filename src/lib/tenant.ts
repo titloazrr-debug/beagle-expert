@@ -76,9 +76,6 @@ export const tenant: TenantConfig = {
       process.env.NEXT_PUBLIC_AMINOS_SCRIPT_URL
     ),
   },
-  social: {
-    twitter: "@BeagleExpert",
-  },
 };
 
 export function getTenant(): TenantConfig {

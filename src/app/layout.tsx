@@ -2,10 +2,14 @@ import type { Metadata } from "next";
 import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ChatbotWidget } from "@/components/ChatbotWidget";
+import { ChatbotWidgetLazy } from "@/components/ChatbotWidgetLazy";
 import { CookieBanner } from "@/components/legal/CookieBanner";
 import { JsonLd } from "@/components/JsonLd";
-import { buildMetadata, organizationJsonLd } from "@/lib/seo";
+import {
+  buildMetadata,
+  HOME_META_DESCRIPTION,
+  organizationJsonLd,
+} from "@/lib/seo";
 import { getTenant } from "@/lib/tenant";
 import "./globals.css";
 
@@ -26,7 +30,7 @@ const tenant = getTenant();
 
 export const metadata: Metadata = buildMetadata({
   title: tenant.name,
-  description: tenant.description,
+  description: HOME_META_DESCRIPTION,
   path: "/",
   image: "/images/beagle/og-default.jpg",
   keywords: [
@@ -52,7 +56,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <ChatbotWidget />
+        <ChatbotWidgetLazy />
         <CookieBanner />
       </body>
     </html>

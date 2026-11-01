@@ -7,6 +7,19 @@ import { Button } from "@/components/ui/button";
 import { fiches } from "@/data/fiches";
 import { quizzes } from "@/data/quizzes";
 
+/**
+ * Photo principale : largeur du cadre, pas 100vw.
+ * Mobile : contenu de .container-page (padding 1,25 rem de chaque côté),
+ * autour de 370 px sur un téléphone courant.
+ * À partir de sm : colonne centrale du triptyque, plafonnée vers 370 px.
+ */
+const HERO_MAIN_SIZES =
+  "(max-width: 639px) calc(100vw - 2.5rem), (max-width: 1152px) calc((100vw - 3rem) / 3), 370px";
+
+/** Photos latérales, masquées sous 640 px : même colonne, sans priorité. */
+const HERO_SIDE_SIZES =
+  "(max-width: 639px) 8rem, (max-width: 1152px) calc((100vw - 3rem) / 3), 370px";
+
 const featuredQuizzes = [
   {
     e: "🩺",
@@ -63,7 +76,7 @@ export function Hero() {
               asset={heroImage}
               alt="Beagle regardant la caméra"
               priority
-              sizes="100vw"
+              sizes={HERO_MAIN_SIZES}
               className="aspect-[4/3] max-h-[220px] w-full object-cover object-center"
               width={heroImage.width}
               height={heroImage.height}
@@ -80,8 +93,7 @@ export function Hero() {
                 asset={sideLeft}
                 alt="Beagle tricolore qui renifle le sol en promenade"
                 fill
-                priority
-                sizes="(max-width: 1280px) 30vw, 360px"
+                sizes={HERO_SIDE_SIZES}
                 className="object-cover object-center"
                 wrapperClassName="absolute inset-0"
               />
@@ -92,7 +104,7 @@ export function Hero() {
                 alt="Beagle regardant la caméra"
                 fill
                 priority
-                sizes="(max-width: 1280px) 30vw, 360px"
+                sizes={HERO_MAIN_SIZES}
                 className="object-cover object-[center_35%]"
                 wrapperClassName="absolute inset-0"
               />
@@ -102,8 +114,7 @@ export function Hero() {
                 asset={sideRight}
                 alt="Beagle qui mange des croquettes dans sa gamelle"
                 fill
-                priority
-                sizes="(max-width: 1280px) 30vw, 360px"
+                sizes={HERO_SIDE_SIZES}
                 className="object-cover object-center"
                 wrapperClassName="absolute inset-0"
               />

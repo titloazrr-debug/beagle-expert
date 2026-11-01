@@ -16,6 +16,8 @@ import { resolveFicheFaq } from "@/lib/content/load-faqs";
 import { normalizeContentProduct } from "@/lib/content/product-utils";
 import { mentionsTractive } from "@/lib/mentions-tractive";
 import { parseFrontmatter } from "@/lib/content/parse-frontmatter";
+import { getComparisonsForFiche } from "@/lib/content/load-comparisons";
+import { readingMinutesForFiche } from "@/lib/reading-time";
 import { toIsoDate, todayIsoDate } from "@/lib/seo";
 
 interface FicheFrontmatter {
@@ -27,7 +29,8 @@ interface FicheFrontmatter {
   summary?: string;
   category: FicheCategory;
   emoji: string;
-  readingTime: number;
+  /** Ignoré : le temps affiché est calculé (readingMinutesForFiche). */
+  readingTime?: number;
   keywords?: string[];
   datePublished?: string;
   dateModified?: string;
@@ -354,7 +357,15 @@ function readFicheFile(filePath: string): {
     summary: fm.summary?.trim() || undefined,
     category: fm.category,
     emoji: fm.emoji ?? "🐶",
-    readingTime: fm.readingTime ?? 4,
+    readingTime: readingMinutesForFiche({
+      intro: fm.intro,
+      excerpt: fm.excerpt,
+      summary: fm.summary,
+      body: content,
+      faq,
+      products,
+      comparisons: getComparisonsForFiche(fm.slug),
+    }),
     keywords: fm.keywords ?? [],
     datePublished,
     dateModified,

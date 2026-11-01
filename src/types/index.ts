@@ -20,9 +20,6 @@ export interface TenantConfig {
     scriptUrl?: string;
     provider?: "aminos" | "custom";
   };
-  social?: {
-    twitter?: string;
-  };
 }
 
 export type FicheCategory =
