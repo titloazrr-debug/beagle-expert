@@ -186,6 +186,10 @@ describe("limites du Store", () => {
     const text = match[1].trim();
     assert.ok(text.length > 0);
     assert.ok(text.length <= 132, `${text.length} caractères`);
+    assert.match(
+      store,
+      /https:\/\/expert-beagle\.fr\/extension\/confidentialite/
+    );
   });
 });
 

@@ -33,6 +33,8 @@ La liste est embarquée dans l'extension et fonctionne hors ligne. Un bouton « 
 
 Ce n'est pas un avis vétérinaire. L'extension ne vend rien, n'affiche pas de publicité, ne modifie ni la recherche Google ni la page de nouvel onglet, et ne lit pas les pages que vous visitez : seul le texte que vous sélectionnez est comparé, sur votre appareil, à la liste.
 
+Politique de confidentialité : https://expert-beagle.fr/extension/confidentialite
+
 ## Usage unique
 
 Indiquer si un aliment est toxique pour le chien, d'après la base publique Expert Beagle.
@@ -68,9 +70,11 @@ Le texte sélectionné reste sur l'appareil. Il n'est pas historisé et il n'est
 
 ## Politique de confidentialité
 
-Le texte à publier est `extension/POLITIQUE-DE-CONFIDENTIALITE.md`.
+URL à coller dans la fiche du Chrome Web Store :
 
-Le Chrome Web Store exige une URL HTTPS publique. Tant que cette page n'existe pas sur expert-beagle.fr, l'envoi en revue ne peut pas aboutir. Ne pas coller un lien vers un fichier local.
+https://expert-beagle.fr/extension/confidentialite
+
+Le manifeste Chrome n'a pas de champ pour cette URL : elle se saisit dans le tableau de bord, pas dans `manifest.json`. Le même texte est dans `extension/POLITIQUE-DE-CONFIDENTIALITE.md` et sur la page du site.
 
 ## Étapes de publication manuelle
 
@@ -82,7 +86,7 @@ Le Chrome Web Store exige une URL HTTPS publique. Tant que cette page n'existe p
 6. Catégorie : Productivité. Langue : français.
 7. Icône : déjà dans le zip, 128 pixels (`extension/icons/icon128.png`, un beagle stylisé).
 8. Captures d'écran : le Store demande au moins une image en 1280×800 ou 640×400. Prévoir deux captures de la fenêtre de résultat, une pour « raisin » (verdict toxique) et une pour « carotte » (verdict sans danger). Chaque capture doit montrer le résumé, le bouton « Voir la fiche » et les deux numéros.
-9. URL de politique de confidentialité : publier d'abord le markdown sur une page HTTPS du site, puis coller cette URL.
+9. URL de politique de confidentialité : https://expert-beagle.fr/extension/confidentialite
 10. Onglet Vie privée : aucune donnée collectée. Coller la justification des autorisations ci-dessus. Usage unique : la phrase de la section « Usage unique ».
 11. Enregistrer l'élément. Le laisser en brouillon, ou non publié, le temps d'une relecture. Ne pas cliquer sur Publier tant que la fiche, les captures et l'URL de confidentialité n'ont pas été relues.
 12. Pour une version suivante : augmenter `version` dans `extension/manifest.json`, relancer `npm run build`, téléverser le nouveau zip. Les numéros du CNITV et du CAPAE-Ouest sont dans le code de l'extension, pas dans `index.json` : un changement de numéro demande une nouvelle version.

@@ -25,6 +25,7 @@ Base sur les aliments toxiques ou sans danger pour les chiens en général (ton 
 
 - [Index des aliments](/aliments)
 - Liste machine pour l'extension : [/aliments/index.json](/aliments/index.json)
+- [Confidentialité de l'extension Chrome](/extension/confidentialite) : l'extension ne collecte pas de données.
 
 ## Quiz interactifs
 

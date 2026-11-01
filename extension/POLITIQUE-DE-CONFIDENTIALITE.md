@@ -1,8 +1,10 @@
 # Politique de confidentialité — Toxique pour mon chien ?
 
+Page publique : https://expert-beagle.fr/extension/confidentialite
+
 Extension Chrome « Toxique pour mon chien ? », proposée avec le site [expert-beagle.fr](https://expert-beagle.fr).
 
-Dernière mise à jour : 31 octobre 2026.
+Dernière mise à jour : 31 octobre 2026. Cette page décrit uniquement l'extension. Le site a sa propre politique : https://expert-beagle.fr/politique-de-confidentialite
 
 ## Ce que fait l'extension
 
