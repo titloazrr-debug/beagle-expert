@@ -18,6 +18,8 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      // Extension Chrome, projet à part : pas le lint ni le build du site.
+      "extension/**",
     ],
   },
 ];

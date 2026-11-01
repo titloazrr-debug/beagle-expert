@@ -19,6 +19,14 @@
 - [Collier GPS pour Beagle](/fiche/collier-gps-beagle) : comparatif et critères de choix en France.
 - [Histoire et standard](/fiche/histoire-standard) : origines, chasse, standard FCI.
 
+## Mon chien peut-il manger… ?
+
+Base sur les aliments toxiques ou sans danger pour les chiens en général (ton Beagle gourmand). Pas de produit, pas de lien affilié. Chaque fiche a un verdict, les signes, la conduite à tenir et les sources.
+
+- [Index des aliments](/aliments)
+- Liste machine pour l'extension : [/aliments/index.json](/aliments/index.json)
+- [Confidentialité de l'extension Chrome](/extension/confidentialite) : l'extension ne collecte pas de données.
+
 ## Quiz interactifs
 
 - [Suis-je prêt à adopter un Beagle ?](/quiz/pret-a-adopter)

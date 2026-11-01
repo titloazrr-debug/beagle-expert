@@ -1,0 +1,236 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f1e8;
+  --card: #fffcf7;
+  --ink: #0a0806;
+  --muted: #3a3128;
+  --line: #d0bfa8;
+  --green: #1f4a2c;
+  --green-deep: #163822;
+  --red: #9b2c2c;
+  --safe-bg: #e6f0e8;
+  --safe-ink: #122a1a;
+  --warn-bg: #fde8b8;
+  --warn-ink: #3d2808;
+  --mod-bg: #fff6dc;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 380px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 16px 10px;
+  background: var(--green);
+  color: white;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 750;
+}
+
+.top p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.search { padding: 12px 16px 4px; }
+
+.search label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.search-row { display: flex; gap: 8px; }
+
+input[type="search"] {
+  flex: 1;
+  min-width: 0;
+  border: 1.5px solid var(--line);
+  background: white;
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 9px 10px;
+  font: inherit;
+}
+
+button,
+.fiche {
+  border: 0;
+  border-radius: 10px;
+  background: var(--green);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button { padding: 9px 12px; }
+
+button:hover,
+.fiche:hover { background: var(--green-deep); }
+
+button:disabled { opacity: 0.6; cursor: progress; }
+
+main { padding: 8px 16px 4px; }
+
+.card {
+  margin: 0 0 10px;
+  padding: 12px;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-left-width: 6px;
+  border-radius: 12px;
+}
+
+.verdict-toxique { border-left-color: var(--red); }
+.verdict-a-eviter { border-left-color: #9a6412; }
+.verdict-avec-moderation { border-left-color: #c4922a; }
+.verdict-sans-danger { border-left-color: var(--green); }
+
+.badge {
+  display: inline-block;
+  margin: 0 0 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.verdict-toxique .badge { background: var(--red); color: white; }
+.verdict-a-eviter .badge { background: var(--warn-bg); color: var(--warn-ink); }
+.verdict-avec-moderation .badge { background: var(--mod-bg); color: var(--warn-ink); }
+.verdict-sans-danger .badge { background: var(--safe-bg); color: var(--safe-ink); }
+
+h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.resume { margin: 0 0 10px; }
+
+.fiche {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.ambiguous,
+.unknown-body,
+.unknown-title { margin: 0 0 8px; }
+
+.unknown-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.unknown-body { color: var(--muted); }
+
+footer {
+  padding: 8px 16px 14px;
+}
+
+.emergency {
+  padding: 12px;
+  border: 1.5px solid color-mix(in srgb, var(--red) 45%, white);
+  border-radius: 12px;
+  background: #fff6f4;
+}
+
+.emergency-title {
+  margin: 0 0 8px;
+  font-weight: 750;
+}
+
+.phones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.phones li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 8px;
+}
+
+.phone-name { font-weight: 800; }
+
+.phone-detail,
+.hours,
+.poison-note,
+.meta,
+.foot-links {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.phone-detail { grid-column: 1; }
+
+.phone {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  align-self: center;
+  color: var(--green);
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hours { grid-column: 1; }
+
+.poison-note { margin: 8px 0 0; }
+
+.meta { margin: 10px 0 6px; }
+
+.foot-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.foot-links button,
+#update {
+  background: transparent;
+  color: var(--green);
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.foot-links a {
+  color: var(--green);
+  font-weight: 700;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}

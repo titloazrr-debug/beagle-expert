@@ -139,6 +139,13 @@ export default function MentionsLegalesPage() {
             >
               politique de confidentialité
             </Link>
+            . L’extension Chrome « Toxique pour mon chien ? » a la sienne :{" "}
+            <Link
+              href="/extension/confidentialite"
+              className="font-semibold text-primary hover:underline"
+            >
+              confidentialité de l’extension
+            </Link>
             .
           </p>
         </section>

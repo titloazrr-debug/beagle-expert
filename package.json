@@ -14,7 +14,9 @@
     "test:insurance": "node scripts/test-insurance.mjs",
     "test:food": "node scripts/test-food.mjs",
     "test:walking": "node scripts/test-walking.mjs",
-    "test": "node scripts/test-insurance.mjs && node scripts/test-food.mjs && node scripts/test-walking.mjs",
+    "test": "node scripts/test-insurance.mjs && node scripts/test-food.mjs && node scripts/test-walking.mjs && node scripts/test-aliments.mjs",
+    "test:extension": "npm test --prefix extension",
+    "build:extension": "npm run build --prefix extension",
     "clean": "rm -rf .next"
   },
   "dependencies": {

@@ -1,0 +1,14 @@
+{
+  "name": "toxique-pour-mon-chien",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Extension Chrome : un aliment est-il toxique pour le chien ?",
+  "type": "module",
+  "scripts": {
+    "test": "node --test src/*.test.js",
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

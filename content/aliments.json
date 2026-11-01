@@ -1,0 +1,743 @@
+{
+  "verifiedAt": "2026-10-31",
+  "aliments": [
+    {
+      "slug": "chocolat-noir",
+      "nom": "Chocolat noir",
+      "emoji": "🍫",
+      "question": "Mon chien peut-il manger du chocolat noir ?",
+      "synonymes": ["cacao", "chocolat amer", "chocolat à pâtisser", "poudre de cacao"],
+      "formes": ["chocolat noir", "chocolats noirs", "tablette de chocolat noir", "chocolat à 70 %"],
+      "verdict": "toxique",
+      "resume": "Le chocolat noir est toxique pour le chien : il concentre la théobromine et la caféine, qui peuvent toucher le cœur et le système nerveux.",
+      "reponse": "Non. Le chocolat noir est beaucoup plus toxique que le chocolat au lait ou le blanc : il concentre la théobromine et un peu de caféine, que le chien élimine plus lentement que l'humain.",
+      "pourquoi": "Le CAPAE-Ouest classe le chocolat noir comme bien plus toxique que le chocolat au lait et le chocolat blanc. Le principe en cause est la théobromine, avec un peu de caféine : deux alcaloïdes de la famille des méthylxanthines. Le Merck Veterinary Manual range les produits du plus chargé au moins chargé : poudre de cacao, chocolat de pâtissier, puis chocolat noir ou demi-sucré, puis chocolat au lait. L'ASPCA rappelle que plus la part de cacao est élevée, plus le risque est grand. Le Beagle, lui, ne fait pas la différence : il vole la tablette entière.",
+      "signes": "Le CAPAE décrit une soif, des vomissements, puis une agitation avec tremblements — ou, au contraire, une faiblesse et un abattement. Les premiers signes peuvent arriver dans l'heure, ou seulement plusieurs heures après. L'évolution dure souvent 12 à 24 heures ; dans les cas graves, des troubles cardiaques et un coma sont possibles, et l'intoxication peut être mortelle. Le Merck situe le début habituel entre 6 et 12 heures (soif, vomissements, diarrhée, agitation), avec une possible aggravation vers des tremblements, des convulsions et un cœur très rapide ou irrégulier. Les signes graves peuvent persister jusqu'à 72 heures. Le CAPAE précise que le chocolat n'est pas particulièrement toxique pour le foie.",
+      "apresIngestion": "Appelez tout de suite, même pour un carré, sans chercher une quantité « encore acceptable » : le Merck indique que la gravité varie selon la sensibilité de chaque animal. Notez le type de chocolat, le pourcentage de cacao s'il est écrit, et à peu près ce qui a disparu.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/chocolat-au-lait", "label": "Chocolat au lait"},
+        {"href": "/aliments/chocolat-blanc", "label": "Chocolat blanc"},
+        {"href": "/aliments/cafe-et-the", "label": "Café et thé"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Le chocolat", "url": "https://www.centre-antipoison-animal.com/chocolat.html", "editeur": "CAPAE-Ouest"},
+        {"titre": "Food Hazards — Chocolate", "url": "https://www.merckvetmanual.com/special-pet-topics/poisoning/food-hazards", "editeur": "Merck Veterinary Manual"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"}
+      ],
+      "seo": {
+        "title": "Chocolat noir : toxique pour le chien",
+        "description": "Le chocolat noir est toxique pour le chien (théobromine, caféine). Signes, délai, et qui appeler : vétérinaire, CNITV ou CAPAE-Ouest."
+      },
+      "keywords": ["chocolat noir chien", "chien chocolat", "théobromine chien", "intoxication chocolat chien"]
+    },
+    {
+      "slug": "chocolat-au-lait",
+      "nom": "Chocolat au lait",
+      "emoji": "🍫",
+      "question": "Mon chien peut-il manger du chocolat au lait ?",
+      "synonymes": ["chocolat au lait", "chocolat lait", "tablette au lait"],
+      "formes": ["chocolat au lait", "chocolats au lait", "du chocolat au lait"],
+      "verdict": "toxique",
+      "resume": "Le chocolat au lait est toxique pour le chien : il contient moins de théobromine que le noir, mais ce n'est pas une quantité anodine.",
+      "reponse": "Non. Le chocolat au lait contient les mêmes substances que le noir, la théobromine et la caféine, en moindre concentration. Moins dangereux ne veut pas dire sans danger.",
+      "pourquoi": "Le CAPAE-Ouest indique que le chocolat noir est beaucoup plus toxique que le chocolat au lait, pas que le lait serait inoffensif. Le Merck place le chocolat au lait en dernier parmi les chocolats qui contiennent encore ces méthylxanthines, après le cacao, le chocolat de pâtissier et le chocolat noir. L'ASPCA relie le risque à la teneur en cacao : elle est plus basse dans le lait, elle n'est pas nulle. On ne publie pas ici de seuil en grammes : la sensibilité varie d'un chien à l'autre (Merck).",
+      "signes": "Les signes sont ceux du chocolat : soif, vomissements, agitation et tremblements ou au contraire faiblesse (CAPAE), parfois diarrhée, urines abondantes, cœur rapide ou irrégulier, convulsions dans les cas sévères (Merck). Le CAPAE situe le début dans l'heure ou plusieurs heures après, pour une évolution souvent de 12 à 24 heures. Le Merck décrit un début habituel entre 6 et 12 heures, et des signes qui peuvent durer jusqu'à 72 heures si l'intoxication est sévère.",
+      "apresIngestion": "Appelez votre vétérinaire ou un centre antipoison sans attendre les tremblements. Gardez l'emballage : le centre a besoin du type de chocolat, pas d'une estimation au jugé.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/chocolat-noir", "label": "Chocolat noir"},
+        {"href": "/aliments/chocolat-blanc", "label": "Chocolat blanc"},
+        {"href": "/aliments/xylitol", "label": "Xylitol"},
+        {"href": "/fiche/sante", "label": "Santé du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Le chocolat", "url": "https://www.centre-antipoison-animal.com/chocolat.html", "editeur": "CAPAE-Ouest"},
+        {"titre": "Food Hazards — Chocolate", "url": "https://www.merckvetmanual.com/special-pet-topics/poisoning/food-hazards", "editeur": "Merck Veterinary Manual"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"}
+      ],
+      "seo": {
+        "title": "Chocolat au lait : toxique pour le chien",
+        "description": "Le chocolat au lait reste toxique pour le chien, même s'il contient moins de théobromine que le noir. Signes, délai et numéros d'urgence."
+      },
+      "keywords": ["chocolat au lait chien", "chien chocolat au lait", "théobromine"]
+    },
+    {
+      "slug": "chocolat-blanc",
+      "nom": "Chocolat blanc",
+      "emoji": "🤍",
+      "question": "Mon chien peut-il manger du chocolat blanc ?",
+      "synonymes": ["chocolat blanc", "white chocolate"],
+      "formes": ["chocolat blanc", "chocolats blancs", "du chocolat blanc"],
+      "verdict": "a-eviter",
+      "resume": "Le chocolat blanc contient très peu de théobromine, mais ce n'est pas une friandise pour chien : il reste un aliment gras à ne pas donner.",
+      "reponse": "Mieux vaut ne pas en donner. Le Merck juge négligeables la théobromine et la caféine du chocolat blanc, contrairement au noir et au lait. Ce n'est pas pour autant un aliment de chien.",
+      "pourquoi": "Le CAPAE-Ouest indique que le noir est beaucoup plus toxique que le lait et le blanc. Le Merck écrit que le chocolat blanc contient des quantités insignifiantes de théobromine et de caféine. L'ASPCA le place au plus bas de l'échelle des méthylxanthines. En revanche, l'ASPCA rappelle que les aliments très gras peuvent provoquer vomissements, diarrhée et, chez certains animaux, une pancréatite. Le chocolat blanc entre dans cette catégorie : on ne le partage pas. Si l'emballage mentionne un édulcorant comme le xylitol, le problème change de nature : le xylitol est toxique pour le chien (Merck, FDA).",
+      "signes": "Le tableau classique du chocolat (agitation, tremblements, troubles cardiaques) est celui des méthylxanthines, peu présentes ici selon le Merck. Un chien qui a mangé une quantité importante d'un aliment gras peut surtout vomir ou avoir la diarrhée (ASPCA). S'il tremble, semble très agité ou anormalement fatigué, les signes décrits pour le chocolat par le CAPAE restent une raison d'appeler, parce que la composition réelle du produit peut différer de l'idée qu'on s'en fait.",
+      "apresIngestion": "Appelez pour faire évaluer le produit, surtout si la quantité est importante, si le chien vomit, ou si l'emballage indique « sans sucre » ou du xylitol. Ne décidez pas seul qu'un chocolat blanc est forcément anodin.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/chocolat-noir", "label": "Chocolat noir"},
+        {"href": "/aliments/chocolat-au-lait", "label": "Chocolat au lait"},
+        {"href": "/aliments/xylitol", "label": "Xylitol"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Le chocolat", "url": "https://www.centre-antipoison-animal.com/chocolat.html", "editeur": "CAPAE-Ouest"},
+        {"titre": "Food Hazards — Chocolate", "url": "https://www.merckvetmanual.com/special-pet-topics/poisoning/food-hazards", "editeur": "Merck Veterinary Manual"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"},
+        {"titre": "Xylitol Toxicosis in Dogs", "url": "https://www.merckvetmanual.com/toxicology/food-hazards/xylitol-toxicosis-in-dogs", "editeur": "Merck Veterinary Manual"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"}
+      ],
+      "seo": {
+        "title": "Chocolat blanc : à éviter pour le chien",
+        "description": "Le chocolat blanc a très peu de théobromine, mais il reste à éviter pour le chien. Que faire s'il en a mangé, et quand le xylitol change tout."
+      },
+      "keywords": ["chocolat blanc chien", "chien chocolat blanc", "théobromine chocolat blanc"]
+    },
+    {
+      "slug": "raisin",
+      "nom": "Raisin et raisins secs",
+      "emoji": "🍇",
+      "question": "Mon chien peut-il manger du raisin ou des raisins secs ?",
+      "synonymes": ["raisin sec", "raisins secs", "raisins de Corinthe", "Vitis vinifera", "tamarin"],
+      "formes": ["raisin", "raisins", "du raisin", "des raisins", "un raisin", "raisin sec", "raisins secs", "des raisins secs"],
+      "verdict": "toxique",
+      "resume": "Le raisin et les raisins secs sont toxiques pour le chien : ils peuvent provoquer une insuffisance rénale, et aucune quantité n'est à considérer comme sûre.",
+      "reponse": "Non. Raisin frais, raisin tombé de la vigne ou raisins secs : le CAPAE-Ouest les considère comme toxiques pour le chien, et les raisins secs conservent toute leur toxicité. Aucune quantité n'est à présenter comme sûre.",
+      "pourquoi": "Le CAPAE-Ouest écrit que le principe toxique du raisin (Vitis vinifera) n'est pas identifié sur sa fiche, et que la sensibilité varie d'un animal à l'autre. Les raisins secs sont plus concentrés. Le Merck Veterinary Manual retient l'acide tartrique comme principe proposé : sa teneur varie selon les fruits, ce qui explique des effets imprévisibles. Le même chapitre regroupe raisins, raisins secs, raisins de Corinthe et tamarins. L'ASPCA indique aussi que l'acide tartrique est soupçonné, et que le chien le gère mal, avec un risque d'atteinte des reins. VCA Animal Hospitals qualifie raisins et raisins secs d'extrêmement toxiques, capables d'entraîner une insuffisance rénale. On ne donne donc pas de seuil « en dessous duquel » ce serait sans risque.",
+      "signes": "Le CAPAE décrit, dans les heures qui suivent, des vomissements, des nausées, une diarrhée, une douleur abdominale et un abattement. L'intoxication évolue en général sur quelques jours. Dans les cas graves, une insuffisance rénale aiguë apparaît en 48 à 72 heures, avec moins d'urine et une urée qui monte : le pronostic est alors très réservé. Le Merck situe vomissements ou diarrhée dans les 6 à 12 heures, et l'insuffisance rénale dans les 1 à 3 jours. Il indique qu'une fois l'insuffisance rénale installée, l'issue est souvent mortelle.",
+      "apresIngestion": "Appelez immédiatement, même pour quelques grains ou une poignée de raisins secs volée dans un cake. Ne surveillez pas « pour voir ». Le vétérinaire ou le centre décidera de la prise en charge : ne faites pas vomir votre chien vous-même.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/xylitol", "label": "Xylitol"},
+        {"href": "/aliments/oignon", "label": "Oignon et ail"},
+        {"href": "/aliments/chocolat-noir", "label": "Chocolat noir"},
+        {"href": "/fiche/sante", "label": "Santé du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Le raisin", "url": "https://www.centre-antipoison-animal.com/raisin.html", "editeur": "CAPAE-Ouest"},
+        {"titre": "Food Hazards — Raisins and Grapes", "url": "https://www.merckvetmanual.com/special-pet-topics/poisoning/food-hazards", "editeur": "Merck Veterinary Manual"},
+        {"titre": "Grape, Raisin, and Tamarind Toxicosis in Dogs", "url": "https://www.merckvetmanual.com/toxicology/food-hazards/grape-raisin-and-tamarind-vitis-spp-tamarindus-spp-toxicosis-in-dogs", "editeur": "Merck Veterinary Manual"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"},
+        {"titre": "Fall food dos and don'ts for dogs", "url": "https://vcahospitals.com/urgent-care/health-and-safety-tips/fall-food-dos-and-donts-dogs", "editeur": "VCA Animal Hospitals"}
+      ],
+      "seo": {
+        "title": "Raisin et raisins secs : toxiques pour le chien",
+        "description": "Raisin et raisins secs peuvent provoquer une insuffisance rénale chez le chien. Aucune quantité n'est sûre. Signes, délai, CNITV et CAPAE-Ouest."
+      },
+      "keywords": ["raisin chien", "raisins secs chien", "chien raisin toxique", "insuffisance rénale raisin chien"]
+    },
+    {
+      "slug": "oignon",
+      "nom": "Oignon et ail",
+      "emoji": "🧅",
+      "question": "Mon chien peut-il manger de l'oignon ou de l'ail ?",
+      "synonymes": ["ail", "poireau", "ciboulette", "Allium cepa", "échalote"],
+      "formes": ["oignon", "oignons", "de l'oignon", "des oignons", "ail", "gousse d'ail", "gousses d'ail", "de l'ail", "poireau", "poireaux"],
+      "verdict": "toxique",
+      "resume": "L'oignon, l'ail, le poireau et la ciboulette sont toxiques pour le chien : leurs composés soufrés peuvent détruire les globules rouges, même cuits.",
+      "reponse": "Non. Oignon, ail, poireau et ciboulette appartiennent aux Allium. Crus ou cuits, en gros morceau ou en petites doses répétées, ils peuvent rendre le chien malade.",
+      "pourquoi": "Le CAPAE-Ouest explique que certains composés soufrés de l'oignon détruisent les globules rouges, donc le transport de l'oxygène. L'ail et le poireau, du même genre, peuvent provoquer une intoxication comparable. L'ASPCA et VCA ajoutent la ciboulette à cette famille, avec un risque d'irritation digestive et d'anémie. La FDA liste l'ail et l'oignon parmi les aliments dangereux. Le CAPAE cite des situations très concrètes : reste de tarte à l'oignon, bulbe volé, petits pots pour bébé, complément à l'ail trop dosé. Certaines races, comme les Akita, y sont plus sensibles ; cela ne rend pas les autres races, Beagle compris, à l'abri.",
+      "signes": "Le CAPAE décrit une évolution sur plusieurs jours : baisse d'entrain, fatigue, vomissements ou diarrhée, difficultés respiratoires. Le signe le plus caractéristique est une urine foncée, parfois marron. Ces signes peuvent n'apparaître que plusieurs jours après l'ingestion. Avec un traitement et des quantités modérées, l'issue n'est en général pas mortelle, mais l'organisme met plusieurs jours à éliminer les toxines. Ce n'est pas une raison d'attendre sans appeler.",
+      "apresIngestion": "Appelez même si le chien semble aller bien : les signes peuvent être différés de plusieurs jours. Un reste de plat, une sauce ou un complément à l'ail comptent. Ne faites pas vomir votre chien vous-même.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/raisin", "label": "Raisin et raisins secs"},
+        {"href": "/aliments/chocolat-noir", "label": "Chocolat noir"},
+        {"href": "/aliments/pomme-de-terre", "label": "Pomme de terre"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Les oignons et l'ail", "url": "https://www.centre-antipoison-animal.com/oignon.html", "editeur": "CAPAE-Ouest"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"},
+        {"titre": "Fall food dos and don'ts for dogs", "url": "https://vcahospitals.com/urgent-care/health-and-safety-tips/fall-food-dos-and-donts-dogs", "editeur": "VCA Animal Hospitals"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"}
+      ],
+      "seo": {
+        "title": "Oignon et ail : toxiques pour le chien",
+        "description": "Oignon, ail, poireau et ciboulette sont toxiques pour le chien, crus ou cuits. Urine foncée, fatigue, parfois plusieurs jours après. Qui appeler."
+      },
+      "keywords": ["oignon chien", "ail chien", "poireau chien", "intoxication oignon chien"]
+    },
+    {
+      "slug": "xylitol",
+      "nom": "Xylitol",
+      "emoji": "🍬",
+      "question": "Mon chien peut-il manger du xylitol ?",
+      "synonymes": ["édulcorant", "sucre de bouleau", "chewing-gum sans sucre", "beurre de cacahuète sans sucre"],
+      "formes": ["xylitol", "du xylitol", "gomme sans sucre", "chewing-gum sans sucre", "bonbon sans sucre"],
+      "verdict": "toxique",
+      "resume": "Le xylitol est toxique pour le chien : il peut faire chuter le sucre sanguin très vite, et abîmer le foie.",
+      "reponse": "Non. Le xylitol, cet édulcorant des produits « sans sucre », provoque chez le chien une hypoglycémie qui peut être rapide, et parfois une atteinte du foie.",
+      "pourquoi": "Le Merck Veterinary Manual décrit le xylitol comme un sucre-alcool présent dans des chewing-gums, bonbons, beurres de cacahuète, gâteaux et bien d'autres produits sans sucre. Chez le chien, l'ingestion entraîne une baisse sévère et rapide de la glycémie, et, lors d'expositions plus importantes, une atteinte ou une défaillance du foie. L'ASPCA cite aussi dentifrices et pâtisseries. La FDA ajoute sirops contre la toux et bains de bouche. On ne donne pas de dose « encore sûre » : le Merck demande justement de ne pas gérer cela à la maison.",
+      "signes": "Le Merck (chapitre grand public) indique que les signes d'hypoglycémie peuvent commencer dans les 30 minutes, ou plus tard si le produit ralentit l'absorption, comme certaines gommes à mâcher : vomissements, faiblesse, incoordination, abattement, convulsions, coma. Les signes d'atteinte du foie peuvent n'arriver qu'au bout de 1 à 2 jours : abattement, vomissements, jaune sur la peau ou le blanc des yeux. L'ASPCA décrit les mêmes premiers signes et une possible atteinte du foie dans les 12 à 24 heures, avec des troubles de la coagulation.",
+      "apresIngestion": "Appelez immédiatement. Le Merck déconseille explicitement de faire vomir le chien à la maison, parce que l'hypoglycémie peut s'installer très vite. Le charbon n'est pas utile : il ne fixe pas le xylitol. Emportez l'emballage.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/chocolat-blanc", "label": "Chocolat blanc"},
+        {"href": "/aliments/raisin", "label": "Raisin et raisins secs"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"},
+        {"href": "/fiche/sante", "label": "Santé du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Food Hazards — Xylitol", "url": "https://www.merckvetmanual.com/special-pet-topics/poisoning/food-hazards", "editeur": "Merck Veterinary Manual"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"}
+      ],
+      "seo": {
+        "title": "Xylitol : toxique pour le chien",
+        "description": "Le xylitol (chewing-gum, bonbons, beurre de cacahuète sans sucre) peut provoquer hypoglycémie et atteinte du foie chez le chien. Ne pas faire vomir."
+      },
+      "keywords": ["xylitol chien", "chewing-gum chien", "édulcorant chien", "hypoglycémie chien xylitol"]
+    },
+    {
+      "slug": "avocat",
+      "nom": "Avocat",
+      "emoji": "🥑",
+      "question": "Mon chien peut-il manger de l'avocat ?",
+      "synonymes": ["avocatier", "Persea americana", "persine", "noyau d'avocat"],
+      "formes": ["avocat", "avocats", "de l'avocat", "noyau d'avocat", "peau d'avocat"],
+      "verdict": "a-eviter",
+      "resume": "L'avocat est à éviter pour le chien : le CAPAE déconseille d'en donner, la chair peut troubler la digestion, et le noyau peut se coincer.",
+      "reponse": "Mieux vaut ne pas en donner. Le CAPAE-Ouest considère la plante entière comme toxique et recommande de l'exclure de l'alimentation des animaux. La FDA, de son côté, juge l'avocat seulement légèrement toxique pour le chien, bien plus dangereux pour les oiseaux.",
+      "pourquoi": "Le CAPAE-Ouest (Persea americana) écrit que feuille, fruit et graine sont toxiques. Les appels concernent surtout les oiseaux, mais aussi le chien. L'ingestion porte le plus souvent sur la chair, parfois sur les feuilles d'un avocatier en pot. Les doses toxiques sont mal connues, d'où la consigne du centre : ne pas en donner. La FDA classe l'avocat comme seulement légèrement toxique pour le chien et le chat, et sévèrement toxique pour les oiseaux, lapins, chevaux et ruminants. Preventive Vet (Dr Cathy Alinovi) nomme la persine dans les feuilles, le fruit, l'écorce et les graines : le chien est rarement affecté par les quantités présentes dans la chair seule, mais vomissements et diarrhée sont possibles, et le gras peut favoriser une pancréatite. Le noyau est un risque d'étouffement et de blocage (Preventive Vet, FDA).",
+      "signes": "Le CAPAE décrit, dans les heures qui suivent, des troubles digestifs (vomissements surtout, diarrhée, perte d'appétit), souvent des difficultés respiratoires, et parfois des œdèmes ou des épanchements. Preventive Vet retient vomissements et diarrhée, et le risque lié au gras. Un noyau avalé peut se coincer dans l'œsophage, l'estomac ou l'intestin (FDA) : les signes d'un corps coincé peuvent n'être visibles qu'après un délai.",
+      "apresIngestion": "S'il a mangé de la chair et qu'il vomit, respire mal ou semble abattu, appelez. S'il a avalé le noyau, appelez aussi : le risque mécanique ne se voit pas toujours tout de suite. Ne faites pas vomir votre chien vous-même.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/noyaux", "label": "Noyaux de fruits"},
+        {"href": "/aliments/raisin", "label": "Raisin et raisins secs"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "L'avocat", "url": "https://www.centre-antipoison-animal.com/avocat.html", "editeur": "CAPAE-Ouest"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"},
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"},
+        {"titre": "Food Hazards — Avocado", "url": "https://www.merckvetmanual.com/special-pet-topics/poisoning/food-hazards", "editeur": "Merck Veterinary Manual"}
+      ],
+      "seo": {
+        "title": "Avocat : à éviter pour le chien",
+        "description": "L'avocat est à éviter pour le chien : chair, feuilles et noyau. Ce que disent le CAPAE, la FDA et Preventive Vet, et qui appeler."
+      },
+      "keywords": ["avocat chien", "noyau avocat chien", "persine chien"]
+    },
+    {
+      "slug": "noyaux",
+      "nom": "Noyaux de fruits",
+      "emoji": "🍑",
+      "question": "Mon chien peut-il manger un noyau de prune, d'abricot ou de pêche ?",
+      "synonymes": ["noyau de prune", "noyau d'abricot", "noyau de pêche", "noyau de cerise", "Prunus", "cyanure"],
+      "formes": ["noyau", "noyaux", "noyau de prune", "noyaux de prune", "noyau d'abricot", "noyau de pêche", "noyau de cerise"],
+      "verdict": "toxique",
+      "resume": "Les noyaux de prune, d'abricot, de pêche ou de cerise sont toxiques à éviter absolument : ils peuvent se coincer, et libérer du cyanure s'ils sont croqués.",
+      "reponse": "Non. Le noyau n'est pas une friandise. Le risque le plus fréquent est qu'il se coince. S'il est broyé, il peut aussi libérer du cyanure.",
+      "pourquoi": "La FDA explique que les noyaux des Prunus — cerise, nectarine, pêche, prune — contiennent du cyanure. L'empoisonnement est rare, sauf si le chien en mange beaucoup et les mâche : il faut que le noyau soit écrasé ou broyé pour libérer le cyanure. Le blocage digestif est le risque le plus important. L'abricotier figure dans la liste des plantes dangereuses de la même page. Le Merck classe les Prunus (abricot, pêche, prune, cerise, amande) parmi les plantes à hétérosides cyanogènes. Le cyanure est libéré quand la graine est abîmée, par exemple croquée. Une graine avalée entière ne libère en principe pas le cyanure. Les fruits du commerce en contiennent très peu dans leurs graines, et une intoxication sévère est peu fréquente, sauf ingestion importante. Cela ne rend pas le noyau anodin : un seul peut obstruer le tube digestif.",
+      "signes": "Si une intoxication au cyanure se déclare, le Merck indique un début très rapide, souvent en 10 à 60 minutes : vomissements, diarrhée, respiration rapide, détresse, collapsus, convulsions. Pour l'obstruction, la FDA décrit un autre tempo : un objet coincé dans l'estomac ou l'intestin peut ne se remarquer qu'au bout de plusieurs jours, avec vomissements, diarrhée, chien moins actif, refus de manger et douleur au ventre. Un étouffement, lui, est immédiat.",
+      "apresIngestion": "Appelez, que le noyau ait été croqué ou avalé entier. Ne tentez pas de le faire vomir vous-même : un noyau qui remonte peut se bloquer. La chair du fruit, sans noyau, est une autre question : voir les fiches abricot et pomme.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/abricot", "label": "Abricot (la chair)"},
+        {"href": "/aliments/pomme", "label": "Pomme"},
+        {"href": "/aliments/mangue", "label": "Mangue"},
+        {"href": "/fiche/sante", "label": "Santé du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"},
+        {"titre": "Houseplants and Ornamentals — cyanogenic glycosides", "url": "https://www.merckvetmanual.com/toxicology/poisonous-plants/houseplants-and-ornamentals-toxic-to-animals", "editeur": "Merck Veterinary Manual"},
+        {"titre": "Cyanogenic Glycoside–Containing Plants", "url": "https://www.merckvetmanual.com/multimedia/table/cyanogenic-glycosidecontaining-plants-of-veterinary-importance", "editeur": "Merck Veterinary Manual"}
+      ],
+      "seo": {
+        "title": "Noyaux de prune, abricot, pêche : danger",
+        "description": "Noyau de prune, d'abricot ou de pêche : risque de blocage, et cyanure si le noyau est croqué. Que faire, sans faire vomir son chien."
+      },
+      "keywords": ["noyau prune chien", "noyau abricot chien", "noyau pêche chien", "cyanure chien"]
+    },
+    {
+      "slug": "os-cuits",
+      "nom": "Os cuits",
+      "emoji": "🦴",
+      "question": "Mon chien peut-il manger un os cuit ?",
+      "synonymes": ["os de poulet", "os de volaille", "os de dinde", "carcasse"],
+      "formes": ["os cuit", "os cuits", "os de poulet", "os de poulet cuit", "os de dinde", "carcasse de poulet"],
+      "verdict": "a-eviter",
+      "resume": "Les os cuits sont à éviter : ils peuvent se briser en éclats, blesser, étouffer ou boucher le tube digestif.",
+      "reponse": "Non. VCA Animal Hospitals le dit pour les os de dinde : ils peuvent s'écharper, étouffer ou bloquer, et il ne faut en donner ni crus ni cuits.",
+      "pourquoi": "Ce n'est pas un poison au sens d'une substance, c'est un danger mécanique. VCA écrit que les os de dinde peuvent se briser en éclats et provoquer un étouffement ou un blocage, qu'ils soient crus ou cuits, et qu'il ne faut jamais en donner. La FDA décrit le même scénario avec les os de dinde, de poulet ou de steak récupérés après le repas : ils se cassent en morceaux coupants, blessent la bouche, l'œsophage et l'estomac, peuvent percer l'intestin au passage et provoquer une infection grave, ou rester coincés. L'ASPCA indique aussi que les os peuvent blesser ou obstruer le tube digestif.",
+      "signes": "Un étouffement est immédiat : c'est une urgence. Si un morceau est coincé plus bas, la FDA indique qu'on peut ne s'en apercevoir qu'au bout de plusieurs jours : vomissements, diarrhée, chien moins actif, refus de manger, douleur au ventre. Un blocage qui dure peut rendre l'animal très malade ; une perforation est une infection potentiellement mortelle.",
+      "apresIngestion": "Appelez votre vétérinaire. Ne faites pas vomir votre chien : un éclat qui remonte peut se planter. Ne donnez pas de pain ou d'huile « pour faire passer » : ce geste n'est pas la conduite recommandée par ces sources, et la FDA oriente vers le vétérinaire.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/noyaux", "label": "Noyaux de fruits"},
+        {"href": "/aliments/avocat", "label": "Avocat"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Fall food dos and don'ts for dogs", "url": "https://vcahospitals.com/urgent-care/health-and-safety-tips/fall-food-dos-and-donts-dogs", "editeur": "VCA Animal Hospitals"},
+        {"titre": "Take the Oh No Out of Your Pets' Holiday", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/take-oh-no-out-your-and-your-pets-holiday-ho-ho-ho", "editeur": "FDA"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"}
+      ],
+      "seo": {
+        "title": "Os cuits : à éviter pour le chien",
+        "description": "Les os cuits peuvent s'écharper, étouffer ou boucher le tube digestif du chien. Que faire s'il en a mangé, sans le faire vomir."
+      },
+      "keywords": ["os cuit chien", "os de poulet chien", "chien os de dinde"]
+    },
+    {
+      "slug": "alcool",
+      "nom": "Alcool",
+      "emoji": "🍷",
+      "question": "Mon chien peut-il manger ou boire de l'alcool ?",
+      "synonymes": ["éthanol", "bière", "vin", "punch", "pâte à pain", "fruits fermentés"],
+      "formes": ["alcool", "de l'alcool", "bière", "vin", "pâte à pain", "pâte crue"],
+      "verdict": "toxique",
+      "resume": "L'alcool est toxique pour le chien : l'éthanol déprime le système nerveux, et la pâte à pain crue ajoute un risque de dilatation de l'estomac.",
+      "reponse": "Non. Bière, vin, punch ou fruits qui fermentent : l'éthanol est toxique pour le chien. La pâte à pain crue est un piège de plus, parce qu'elle continue de gonfler dans l'estomac.",
+      "pourquoi": "Le CAPAE-Ouest rappelle que l'alcool le plus courant est l'éthanol : boissons, mais aussi produits fermentés, notamment les fruits, et la pâte à pain. Le chien est l'espèce la plus concernée. Les accidents viennent souvent d'un punch sucré laissé à portée, de pommes pourries ou de pâte crue. L'ASPCA décrit les mêmes effets de l'alcool, et précise que la pâte levée produit aussi de l'alcool dans l'estomac, tout en pouvant ballonner et tordre l'estomac. La FDA liste les boissons alcoolisées et la pâte crue parmi les dangers.",
+      "signes": "Le CAPAE indique un délai variable : 15 à 30 minutes si le chien est à jeun, jusqu'à 2 heures s'il a l'estomac plein. Puis troubles de l'équilibre, prostration, somnolence, paralysie, difficultés respiratoires, coma, et parfois la mort par défaillance circulatoire. L'ASPCA ajoute vomissements, diarrhée, tremblements et modifications du pH sanguin. Pour la pâte, le CAPAE décrit des lésions liées à la dilatation de l'estomac.",
+      "apresIngestion": "Appelez tout de suite. Ne faites pas vomir votre chien vous-même. Pour la pâte à pain spécifiquement, le CAPAE indique de faire boire immédiatement de l'eau très froide afin de freiner la levure, en parallèle de l'appel : ce n'est pas un traitement complet, c'est le geste que le centre décrit en attendant la prise en charge.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/raisin", "label": "Raisin et raisins secs"},
+        {"href": "/aliments/xylitol", "label": "Xylitol"},
+        {"href": "/fiche/sante", "label": "Santé du Beagle"}
+      ],
+      "sources": [
+        {"titre": "L'alcool", "url": "https://www.centre-antipoison-animal.com/l-alcool.html", "editeur": "CAPAE-Ouest"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"},
+        {"titre": "Food Hazards — Bread Dough", "url": "https://www.merckvetmanual.com/special-pet-topics/poisoning/food-hazards", "editeur": "Merck Veterinary Manual"}
+      ],
+      "seo": {
+        "title": "Alcool : toxique pour le chien",
+        "description": "L'alcool et la pâte à pain crue sont toxiques pour le chien. Délai des signes, dilatation de l'estomac, et qui appeler sans faire vomir."
+      },
+      "keywords": ["alcool chien", "bière chien", "pâte à pain chien", "éthanol chien"]
+    },
+    {
+      "slug": "cafe-et-the",
+      "nom": "Café et thé",
+      "emoji": "☕",
+      "question": "Mon chien peut-il boire du café ou du thé ?",
+      "synonymes": ["caféine", "théine", "marc de café", "thé", "boisson énergisante"],
+      "formes": ["café", "du café", "marc de café", "grains de café", "thé", "du thé", "sachet de thé", "théine"],
+      "verdict": "toxique",
+      "resume": "Le café et le thé sont toxiques pour le chien à cause de la caféine, une méthylxanthine qui stimule le cœur et le système nerveux.",
+      "reponse": "Non. Café, thé, marc, sachets ou boisson énergisante : la caféine est toxique pour le chien. Un Beagle qui lape le fond du mug n'est pas un petit humain.",
+      "pourquoi": "VCA Animal Hospitals (Renee Schmid, Ahna Brutlag et Lynn Buzhardt) répond oui à la question « la caféine est-elle toxique ? ». Le café en est une source majeure, le thé aussi, avec les sodas, les boissons énergisantes, le marc, les grains et certains compléments. L'ASPCA rapproche chocolat, café et caféine : ce sont des méthylxanthines. La FDA liste la caféine du café, du thé, des sodas et des boissons énergisantes. Le chien y est plus sensible que l'humain (VCA). On ne retient pas ici de volume « encore acceptable ».",
+      "signes": "VCA décrit une accélération du cœur, une hyperactivité, de l'agitation, un chien qui ne tient pas en place, qui tourne ou vocalise, des troubles digestifs et des urines plus fréquentes. Une grosse ingestion peut être mortelle. Les signes peuvent commencer dans les quelques heures et durer jusqu'à plusieurs jours. L'ASPCA ajoute halètement, soif, rythme cardiaque anormal, tremblements et convulsions. VCA indique que le foie, le cœur, les reins et le système nerveux peuvent être touchés.",
+      "apresIngestion": "Appelez dès que vous constatez l'ingestion, sans attendre de voir s'il « redescend ». Le marc, les grains, un sachet de thé ou une boisson énergisante ne se gèrent pas comme une tasse renversée : le centre a besoin du produit exact. Ne faites pas vomir votre chien vous-même.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/chocolat-noir", "label": "Chocolat noir"},
+        {"href": "/aliments/xylitol", "label": "Xylitol"},
+        {"href": "/fiche/sante", "label": "Santé du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Caffeine Toxicity in Pets", "url": "https://vcahospitals.com/know-your-pet/caffeine-toxicity-in-pets", "editeur": "VCA Animal Hospitals"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"}
+      ],
+      "seo": {
+        "title": "Café et thé : toxiques pour le chien",
+        "description": "Café, thé et caféine sont toxiques pour le chien. Signes possibles dès les premières heures, et qui appeler : vétérinaire, CNITV ou CAPAE."
+      },
+      "keywords": ["café chien", "thé chien", "caféine chien", "marc de café chien"]
+    },
+    {
+      "slug": "noix-de-macadamia",
+      "nom": "Noix de macadamia",
+      "emoji": "🌰",
+      "question": "Mon chien peut-il manger des noix de macadamia ?",
+      "synonymes": ["macadamia", "noix de macadamia"],
+      "formes": ["macadamia", "noix de macadamia", "noix de macadamias", "des macadamias"],
+      "verdict": "toxique",
+      "resume": "Les noix de macadamia sont toxiques pour le chien : elles peuvent provoquer faiblesse, vomissements, tremblements et fièvre dans les 12 heures.",
+      "reponse": "Non. Le chien est, à ce jour, la seule espèce chez qui le Merck décrit une maladie après ingestion de noix de macadamia.",
+      "pourquoi": "Le Merck Veterinary Manual constate cette intoxication chez le chien, sans désigner de substance précise dans le chapitre grand public. Le diagnostic repose sur le récit, les signes, et l'élimination d'autres causes. L'ASPCA et la FDA les classent parmi les aliments à ne pas donner. Les autres noix grasses (amandes, pécan, noix) ne sont pas le même tableau : l'ASPCA les associe surtout au gras, aux vomissements, à la diarrhée et parfois à une pancréatite. La macadamia a un tableau à part.",
+      "signes": "Dans les 12 heures, le Merck décrit des vomissements, une faiblesse, un abattement, une incoordination, parfois des tremblements et de la fièvre. Les signes se résolvent en général en 12 à 48 heures. L'ASPCA retient faiblesse, incoordination, abattement, vomissements, tremblements et hyperthermie, en général dans les 12 heures, avec une récupération attendue en 24 à 72 heures. Les cas sévères peuvent avoir besoin de soins de soutien (Merck) : ce n'est pas à surveiller seul jusqu'au lendemain.",
+      "apresIngestion": "Appelez même si le chien marche encore. Ne faites pas vomir votre chien vous-même : c'est au vétérinaire d'en décider. Notez le nombre approximatif de noix et l'heure.",
+      "preparation": null,
+      "liens": [
+        {"href": "/aliments/chocolat-noir", "label": "Chocolat noir"},
+        {"href": "/aliments/xylitol", "label": "Xylitol"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Food Hazards — Macadamia Nuts", "url": "https://www.merckvetmanual.com/special-pet-topics/poisoning/food-hazards", "editeur": "Merck Veterinary Manual"},
+        {"titre": "People Foods to Avoid Feeding Your Pets", "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets", "editeur": "ASPCA Animal Poison Control"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"}
+      ],
+      "seo": {
+        "title": "Noix de macadamia : toxiques pour le chien",
+        "description": "Les noix de macadamia rendent le chien faible, vomissant, tremblant, parfois fiévreux, souvent dans les 12 heures. Qui appeler."
+      },
+      "keywords": ["macadamia chien", "noix de macadamia chien", "noix toxique chien"]
+    },
+    {
+      "slug": "melon",
+      "nom": "Melon",
+      "emoji": "🍈",
+      "question": "Mon chien peut-il manger du melon ?",
+      "synonymes": ["cantaloup", "melon charentais", "melon cantaloup"],
+      "formes": ["melon", "du melon", "des morceaux de melon"],
+      "verdict": "avec-moderation",
+      "resume": "Le melon peut être partagé en petit morceau, sans écorce ni pépins : ce n'est pas toxique, mais c'est sucré.",
+      "reponse": "Oui, en petit morceau, sans l'écorce ni les pépins. Preventive Vet le range parmi les fruits que le chien peut goûter, et rappelle que les fruits sucrés restent une friandise.",
+      "pourquoi": "Il n'y a pas, dans ces sources, de substance toxique associée à la chair du melon cantaloup. Preventive Vet (Dr Cathy Alinovi) le liste avec consigne de retirer l'écorce, et rappelle que les fruits — surtout les plus sucrés — ne doivent pas dépasser une petite part de la ration, de l'ordre de 10 % des calories de la journée, friandises comprises. VCA Animal Hospitals demande de ne pas abuser des fruits sucrés, de les laver, et de retirer écorces, peaux épaisses et pépins pour éviter une dent cassée, un étouffement ou un blocage.",
+      "signes": "Un fruit nouveau peut provoquer vomissements, diarrhée ou gaz (Preventive Vet, VCA). Ce n'est pas le tableau d'un poison, mais ce n'est pas à ignorer si le chien est abattu ou vomit beaucoup. Une écorce ou une masse de pépins avalée peut se coincer : les signes d'obstruction décrits par la FDA (vomissements, refus de manger, douleur) concernent ce type de corps étranger.",
+      "apresIngestion": "Un petit morceau de chair, c'est le scénario prévu. S'il a avalé l'écorce, beaucoup de pépins, ou s'il vomit et ne reprend pas son état, appelez. Ne faites pas vomir votre chien vous-même.",
+      "preparation": "Lavez le melon. Retirez l'écorce et les pépins. Donnez un petit morceau de chair, nature, pas de melon au sirop. Un seul aliment nouveau à la fois, et quelques jours avant d'en essayer un autre (Preventive Vet). Le Beagle quémandera la suite : la suite attend un autre jour.",
+      "liens": [
+        {"href": "/aliments/pasteque", "label": "Pastèque"},
+        {"href": "/aliments/banane", "label": "Banane"},
+        {"href": "/aliments/raisin", "label": "Raisin — toxique"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"},
+        {"titre": "Can you feed pets certain fruits and veggies", "url": "https://vcahospitals.com/resources/preventive-dog/nutrition/can-you-feed-pets-certain-fruits-and-veggies", "editeur": "VCA Animal Hospitals"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"}
+      ],
+      "seo": {
+        "title": "Melon : le chien peut en manger un peu",
+        "description": "Le chien peut manger un peu de melon sans écorce ni pépins. Pas le repas : c'est sucré. Comment le préparer, et quand appeler."
+      },
+      "keywords": ["melon chien", "chien peut-il manger du melon", "cantaloup chien"]
+    },
+    {
+      "slug": "banane",
+      "nom": "Banane",
+      "emoji": "🍌",
+      "question": "Mon chien peut-il manger une banane ?",
+      "synonymes": ["banane"],
+      "formes": ["banane", "bananes", "une banane", "de la banane"],
+      "verdict": "avec-moderation",
+      "resume": "La banane peut être donnée en petit morceau, sans la peau : elle n'est pas toxique, mais elle est sucrée.",
+      "reponse": "Oui, un petit morceau de chair, sans la peau. VCA la cite parmi les fruits possibles, et Preventive Vet rappelle qu'elle est riche en sucre.",
+      "pourquoi": "VCA Animal Hospitals liste la banane parmi les options à proposer avec modération, à la place de friandises très caloriques. Preventive Vet la classe dans les fruits sûrs à condition de la peler, et prévient : trop de sucre, surtout si le chien est déjà en surpoids. Les friandises, fruits compris, restent autour de 10 % des calories de la journée selon cette source. Rien à voir avec le raisin.",
+      "signes": "Comme pour tout fruit nouveau : vomissements, diarrhée ou gaz si la quantité est trop forte ou l'introduction trop brusque (Preventive Vet, VCA). La peau n'est pas au menu : un gros morceau peut être difficile à avaler.",
+      "apresIngestion": "Quelques bouchées de chair pelée ne justifient pas un appel. S'il a englouti une grande quantité, la peau, ou s'il vomit et reste abattu, contactez votre vétérinaire. Ne le faites pas vomir vous-même.",
+      "preparation": "Pelée, en rondelles ou en petits morceaux, nature. Pas de banane flambée, pas de chocolat autour — le chocolat, lui, est toxique. Un Beagle gourmand fera croire que la première rondelle ne compte pas. Elle compte.",
+      "liens": [
+        {"href": "/aliments/pomme", "label": "Pomme"},
+        {"href": "/aliments/fraise", "label": "Fraise"},
+        {"href": "/aliments/chocolat-noir", "label": "Chocolat noir"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Can you feed pets certain fruits and veggies", "url": "https://vcahospitals.com/resources/preventive-dog/nutrition/can-you-feed-pets-certain-fruits-and-veggies", "editeur": "VCA Animal Hospitals"},
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"}
+      ],
+      "seo": {
+        "title": "Banane : le chien peut en manger un peu",
+        "description": "Le chien peut manger un peu de banane pelée. C'est sucré : petite quantité seulement. Peau à retirer, et quand appeler le vétérinaire."
+      },
+      "keywords": ["banane chien", "chien peut-il manger une banane"]
+    },
+    {
+      "slug": "pasteque",
+      "nom": "Pastèque",
+      "emoji": "🍉",
+      "question": "Mon chien peut-il manger de la pastèque ?",
+      "synonymes": ["melon d'eau"],
+      "formes": ["pastèque", "de la pastèque", "pastèque sans pépins"],
+      "verdict": "avec-moderation",
+      "resume": "La chair de pastèque peut être donnée en petit morceau, sans écorce ni pépins : ce n'est pas toxique, mais restez sur une friandise.",
+      "reponse": "Oui, la chair, en petite quantité, sans l'écorce et sans les pépins. VCA la cite parmi les fruits possibles. L'écorce et les pépins, eux, peuvent se coincer.",
+      "pourquoi": "VCA Animal Hospitals inclut la pastèque dans les fruits et légumes qu'on peut proposer avec modération, et demande de retirer écorces, peaux épaisses et pépins. Preventive Vet confirme la chair, riche en eau, et prévient qu'un morceau plein de pépins peut bloquer l'intestin. Le fruit reste sucré : même consigne que pour les autres fruits, une petite part de la ration, pas le saladier.",
+      "signes": "Trop de chair d'un coup, ou un fruit nouveau : troubles digestifs possibles (Preventive Vet, VCA). Une écorce ou beaucoup de pépins : risque de blocage. La FDA décrit, pour un corps étranger coincé, des signes parfois différés de plusieurs jours.",
+      "apresIngestion": "De la chair sans pépin et sans croûte, en quantité modeste : pas d'appel systématique. Écorce, tas de pépins, vomissements qui durent : appelez. Ne faites pas vomir votre chien vous-même.",
+      "preparation": "Retirez l'écorce verte et la partie blanche, ainsi que les pépins. Coupez la chair en petits dés, sans sucre ajouté. Une pastèque entière à disposition d'un Beagle n'est pas une « petite quantité ».",
+      "liens": [
+        {"href": "/aliments/melon", "label": "Melon"},
+        {"href": "/aliments/concombre", "label": "Concombre"},
+        {"href": "/aliments/raisin", "label": "Raisin — toxique"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Can you feed pets certain fruits and veggies", "url": "https://vcahospitals.com/resources/preventive-dog/nutrition/can-you-feed-pets-certain-fruits-and-veggies", "editeur": "VCA Animal Hospitals"},
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"}
+      ],
+      "seo": {
+        "title": "Pastèque : le chien peut en manger un peu",
+        "description": "Le chien peut manger un peu de chair de pastèque, sans écorce ni pépins. Comment la préparer, et quand le morceau devient un risque de blocage."
+      },
+      "keywords": ["pastèque chien", "chien peut-il manger de la pastèque"]
+    },
+    {
+      "slug": "tomate",
+      "nom": "Tomate",
+      "emoji": "🍅",
+      "question": "Mon chien peut-il manger de la tomate ?",
+      "synonymes": ["tomate cerise", "tomatine", "plant de tomate"],
+      "formes": ["tomate", "tomates", "tomate verte", "tomates vertes", "de la tomate"],
+      "verdict": "avec-moderation",
+      "resume": "Un petit morceau de tomate bien mûre peut passer ; la tomate verte et le plant sont à éviter à cause de la tomatine.",
+      "reponse": "La chair bien mûre, en petite quantité, est acceptée par Preventive Vet. La tomate verte et la plante, non : VCA les classe parmi les aliments à éviter, à cause de la tomatine.",
+      "pourquoi": "Preventive Vet indique que la tomate non mûre et le plant peuvent contenir de la tomatine, nocive en grande quantité. La tomate mûre en contient aussi, mais en très petite quantité : de petites quantités de tomate mûre sont possibles. C'est acide, donc capable de déranger un estomac sensible. VCA liste explicitement les tomates vertes avec le raisin, l'oignon et l'ail, parmi ce qu'il faut éviter. Une sauce tomate n'est pas « de la tomate » : elle peut embarquer oignon, ail ou sel.",
+      "signes": "Preventive Vet retient les troubles d'estomac si l'on en donne beaucoup, à cause de l'acidité. Pour la plante ou les fruits verts, la source parle d'un effet possible de la tomatine en grande quantité, sans détailler ici un délai chiffré : en cas de doute après un raid dans le potager, on appelle plutôt que d'inventer une surveillance.",
+      "apresIngestion": "Un petit morceau de tomate bien mûre : surveillez le transit, sans dramatiser. Plant, tomates vertes, ou chien qui vomit et semble malade : appelez. Ne le faites pas vomir vous-même.",
+      "preparation": "Fruit bien rouge, lavé, en petit morceau, sans le pédoncule et sans les feuilles. Pas de tomate verte, pas de plant, pas de sauce. Un Beagle dans le potager n'est pas en train de « goûter un fruit mûr ».",
+      "liens": [
+        {"href": "/aliments/pomme-de-terre", "label": "Pomme de terre"},
+        {"href": "/aliments/oignon", "label": "Oignon et ail"},
+        {"href": "/aliments/concombre", "label": "Concombre"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"},
+        {"titre": "Can you feed pets certain fruits and veggies", "url": "https://vcahospitals.com/resources/preventive-dog/nutrition/can-you-feed-pets-certain-fruits-and-veggies", "editeur": "VCA Animal Hospitals"}
+      ],
+      "seo": {
+        "title": "Tomate : mûre avec modération, verte non",
+        "description": "Le chien peut manger un peu de tomate bien mûre. Tomate verte et plant : à éviter (tomatine). Comment la donner, et quand appeler."
+      },
+      "keywords": ["tomate chien", "tomate verte chien", "chien peut-il manger de la tomate"]
+    },
+    {
+      "slug": "pomme-de-terre",
+      "nom": "Pomme de terre",
+      "emoji": "🥔",
+      "question": "Mon chien peut-il manger de la pomme de terre ?",
+      "synonymes": ["patate", "solanine", "pomme de terre verte"],
+      "formes": ["pomme de terre", "pommes de terre", "patate", "patates", "pomme de terre crue", "pomme de terre cuite"],
+      "verdict": "avec-moderation",
+      "resume": "Une pomme de terre cuite, nature et sans peau peut être donnée en petite quantité ; crue, verte, germée ou en pelures, elle est à éviter à cause de la solanine.",
+      "reponse": "La chair cuite, nature, oui en petite quantité. Crue, verte, germée ou en pelures : non. Le CAPAE-Ouest met en cause la solanine, surtout dans les germes et les tubercules verdis.",
+      "pourquoi": "Le CAPAE-Ouest explique que la solanine irrite le tube digestif et a une toxicité nerveuse. Pelures, feuilles et fruits non mûrs peuvent être toxiques ; les germes et les pommes de terre germées ou vertes en contiennent davantage. La cuisson atténue la toxicité en faisant passer la solanine dans l'eau — et cette eau ne se donne pas. Il n'y a pas d'antidote. L'évolution est en général favorable, mais des cas mortels existent lors d'ingestion massive. On ne publie pas de seuil en grammes.",
+      "signes": "En ingestion aiguë, le CAPAE situe les symptômes en général 2 à 3 heures après : vomissements, constipation puis diarrhée parfois noirâtre, salivation. Parfois tremblements, pertes d'équilibre, baisse de la température. Une consommation répétée de pelures ou de tubercules verdis peut aussi rendre malade, sur un temps plus long.",
+      "apresIngestion": "Chair cuite nature en petite quantité : pas d'appel systématique. Pomme de terre crue, verte, germée, pelures, eau de cuisson, ou apparition de vomissements et de troubles de l'équilibre : appelez. Ne faites pas vomir votre chien vous-même.",
+      "preparation": "Cuite à l'eau ou à la vapeur, sans la peau, sans germe, sans partie verte, sans l'eau de cuisson, sans sel, sans beurre parfumé et sans oignon ni ail. Un petit morceau, pas la ration. Les frites et les chips ne sont pas « de la pomme de terre cuite nature ».",
+      "liens": [
+        {"href": "/aliments/tomate", "label": "Tomate"},
+        {"href": "/aliments/oignon", "label": "Oignon et ail"},
+        {"href": "/aliments/carotte", "label": "Carotte"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "La pomme de terre", "url": "https://www.centre-antipoison-animal.com/pomme-terre.html", "editeur": "CAPAE-Ouest"}
+      ],
+      "seo": {
+        "title": "Pomme de terre : cuite oui, verte non",
+        "description": "Pomme de terre cuite nature, sans peau : petite quantité. Crue, verte ou germée : solanine, signes souvent en 2 à 3 heures. Fiche CAPAE."
+      },
+      "keywords": ["pomme de terre chien", "patate chien", "solanine chien", "pomme de terre crue chien"]
+    },
+    {
+      "slug": "concombre",
+      "nom": "Concombre",
+      "emoji": "🥒",
+      "question": "Mon chien peut-il manger du concombre ?",
+      "synonymes": ["cornichon"],
+      "formes": ["concombre", "concombres", "du concombre", "rondelle de concombre"],
+      "verdict": "sans-danger",
+      "resume": "Le concombre n'est pas toxique pour le chien : en rondelles, pelé, c'est une friandise peu calorique, pas un concombre entier.",
+      "reponse": "Oui. VCA le cite parmi les légumes que l'on peut proposer, et Preventive Vet le décrit comme pauvre en glucides et en graisses. On le coupe, on ne le donne pas entier.",
+      "pourquoi": "Aucune de ces sources ne classe la chair du concombre comme toxique. VCA l'inclut avec la carotte dans les options à la place de friandises plus lourdes, toujours avec modération, lavé, un aliment nouveau à la fois. Preventive Vet le juge adapté aux chiens en surpoids, de préférence pelé. Le même texte déconseille le concombre entier : il peut déranger l'estomac en grande quantité et provoquer un étouffement. Il peut aussi faire baisser la pression artérielle : en cas de problème de tension, Preventive Vet demande l'avis du vétérinaire avant d'en donner. Le cornichon au vinaigre n'est pas du concombre nature.",
+      "signes": "Un concombre entier ou une grosse quantité : vomissements ou inconfort, voire étouffement (Preventive Vet). Un aliment nouveau peut aussi donner une diarrhée passagère (VCA). Ce n'est pas un tableau d'intoxication au sens du raisin ou du chocolat.",
+      "apresIngestion": "Quelques rondelles : rien à déclencher. S'il a avalé un gros morceau, s'étouffe, vomit beaucoup ou a une maladie de tension connue, appelez. Ne le faites pas vomir vous-même.",
+      "preparation": "Lavé, pelé de préférence, en rondelles ou en bâtonnets adaptés à la gueule. Pas entier, pas en bocal. Une rondelle pour le Beagle qui fait les yeux doux, pas le concombre sous prétexte que « c'est que de l'eau ».",
+      "liens": [
+        {"href": "/aliments/carotte", "label": "Carotte"},
+        {"href": "/aliments/pasteque", "label": "Pastèque"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"},
+        {"href": "/fiche/sante", "label": "Santé du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Can you feed pets certain fruits and veggies", "url": "https://vcahospitals.com/resources/preventive-dog/nutrition/can-you-feed-pets-certain-fruits-and-veggies", "editeur": "VCA Animal Hospitals"},
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"}
+      ],
+      "seo": {
+        "title": "Concombre : sans danger en rondelles",
+        "description": "Le concombre n'est pas toxique pour le chien, en rondelles et petite quantité. Pas entier : étouffement possible. Avis véto si problème de tension."
+      },
+      "keywords": ["concombre chien", "chien peut-il manger du concombre"]
+    },
+    {
+      "slug": "fraise",
+      "nom": "Fraise",
+      "emoji": "🍓",
+      "question": "Mon chien peut-il manger des fraises ?",
+      "synonymes": ["fraise"],
+      "formes": ["fraise", "fraises", "des fraises", "une fraise"],
+      "verdict": "avec-moderation",
+      "resume": "La fraise peut être donnée en petit morceau : elle n'est pas toxique, mais elle est sucrée et une fraise entière peut se coincer.",
+      "reponse": "Oui, coupée, en petite quantité. Preventive Vet ne la classe pas comme toxique, et prévient que trop de sucre peut déranger l'estomac et faire grossir.",
+      "pourquoi": "Preventive Vet liste la fraise parmi les fruits que le chien peut aimer, avec une mise en garde : teneur en sucre, troubles digestifs et prise de poids si l'on en donne trop. Certains chiens peuvent aussi démanger, réaction allergique possible à surveiller. Une fraise entière est un risque d'étouffement : il faut la couper. VCA rappelle la règle générale : laver, ne pas abuser des fruits sucrés, introduire un seul aliment nouveau à la fois. Pas de fraises au sirop.",
+      "signes": "Trop de fraises : estomac dérangé (Preventive Vet). Réaction possible : démangeaisons intenses. Étouffement si le fruit est donné entier. Diarrhée possible lors d'une introduction trop rapide (VCA).",
+      "apresIngestion": "Quelques morceaux coupés, c'est le cadre d'une friandise. Barquette vidée, démangeaisons, vomissements qui persistent : appelez. Ne faites pas vomir votre chien vous-même.",
+      "preparation": "Lavées, équeutées, coupées en morceaux, en petite quantité, pas la barquette. Le Beagle qui a trouvé le saladier n'est plus « avec modération » : dans ce cas, appelez si le volume était important.",
+      "liens": [
+        {"href": "/aliments/banane", "label": "Banane"},
+        {"href": "/aliments/pomme", "label": "Pomme"},
+        {"href": "/aliments/raisin", "label": "Raisin — toxique"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"},
+        {"titre": "Can you feed pets certain fruits and veggies", "url": "https://vcahospitals.com/resources/preventive-dog/nutrition/can-you-feed-pets-certain-fruits-and-veggies", "editeur": "VCA Animal Hospitals"}
+      ],
+      "seo": {
+        "title": "Fraise : le chien peut en manger un peu",
+        "description": "Le chien peut manger un peu de fraise coupée. Sucre, démangeaisons possibles, étouffement si elle est entière. Comment la donner."
+      },
+      "keywords": ["fraise chien", "chien peut-il manger des fraises"]
+    },
+    {
+      "slug": "mangue",
+      "nom": "Mangue",
+      "emoji": "🥭",
+      "question": "Mon chien peut-il manger de la mangue ?",
+      "synonymes": ["noyau de mangue"],
+      "formes": ["mangue", "mangues", "de la mangue"],
+      "verdict": "avec-moderation",
+      "resume": "La chair de mangue peut être donnée en petit morceau, sans la peau et sans le noyau, qui peut se coincer et contient un peu de cyanure.",
+      "reponse": "Oui, la chair pelée, en petite quantité. Le noyau et la peau ne se donnent pas : Preventive Vet signale un risque de blocage, et un peu de cyanure dans le noyau.",
+      "pourquoi": "Preventive Vet classe la chair de mangue parmi les fruits possibles, pelée, en petits morceaux, et la cite parmi les fruits riches en glucides — donc avec modération, surtout chez un chien en surpoids. La peau peut déranger la digestion. Le noyau est un risque d'étouffement et d'obstruction, et contient un peu de cyanure, comme les pépins de pomme. VCA demande, de façon générale, de retirer peaux épaisses, noyaux et trognons.",
+      "signes": "Trop de chair : troubles digestifs possibles, comme avec les autres fruits sucrés (Preventive Vet). Noyau avalé : étouffement ou blocage ; les signes d'un objet coincé peuvent être différés (FDA). Le cyanure des graines croquées, quand il se manifeste, débute très vite selon le Merck (voir la fiche noyaux).",
+      "apresIngestion": "Chair seule, petit morceau : pas d'appel systématique. Noyau, peau en quantité, ou chien qui vomit et ne mange plus : appelez. Ne le faites pas vomir vous-même.",
+      "preparation": "Pelée, noyau jeté hors de portée (poubelle fermée : un Beagle ouvre les couvercles mous). Chair en dés, nature, pas de mangue séchée sucrée ni de conserve au sirop.",
+      "liens": [
+        {"href": "/aliments/noyaux", "label": "Noyaux de fruits"},
+        {"href": "/aliments/pomme", "label": "Pomme"},
+        {"href": "/aliments/banane", "label": "Banane"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"},
+        {"titre": "Can you feed pets certain fruits and veggies", "url": "https://vcahospitals.com/resources/preventive-dog/nutrition/can-you-feed-pets-certain-fruits-and-veggies", "editeur": "VCA Animal Hospitals"},
+        {"titre": "Houseplants and Ornamentals — cyanogenic glycosides", "url": "https://www.merckvetmanual.com/toxicology/poisonous-plants/houseplants-and-ornamentals-toxic-to-animals", "editeur": "Merck Veterinary Manual"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"}
+      ],
+      "seo": {
+        "title": "Mangue : chair oui, noyau non",
+        "description": "Le chien peut manger un peu de chair de mangue pelée. Le noyau peut se coincer et contient un peu de cyanure. Comment la préparer."
+      },
+      "keywords": ["mangue chien", "noyau mangue chien", "chien peut-il manger de la mangue"]
+    },
+    {
+      "slug": "figue",
+      "nom": "Figue",
+      "emoji": "🫐",
+      "question": "Mon chien peut-il manger de la figue ?",
+      "synonymes": ["figue fraîche", "figue sèche", "sève de figuier"],
+      "formes": ["figue", "figues", "figue fraîche", "figues sèches", "de la figue"],
+      "verdict": "avec-moderation",
+      "resume": "La figue fraîche n'est pas toxique, mais seulement en toute petite quantité ; les figues sèches, les feuilles et la sève sont à éviter.",
+      "reponse": "La figue fraîche, oui, mais vraiment peu. Preventive Vet la dit non toxique, très riche en fibres, donc à rationner strictement. Pas de figue sèche, pas les feuilles, pas la sève.",
+      "pourquoi": "Preventive Vet écrit que la figue fraîche n'est pas toxique, mais qu'elle doit rester exceptionnelle à cause des fibres. Les figues sèches sont à ne pas donner : trop de sucre. Les feuilles et la sève du figuier sont toxiques selon la même source. Ce n'est pas le Ficus d'appartement : on s'en tient ici au fruit du figuier alimentaire, tel que décrit par ce vétérinaire.",
+      "signes": "Trop de fibres : troubles digestifs, dans la logique générale de Preventive Vet (diarrhée, ballonnements si l'on abuse d'un fruit). Pour les feuilles et la sève, la source les qualifie de toxiques sans détailler un délai sur cette page : en cas d'ingestion de la plante, on appelle plutôt que d'attendre un signe précis.",
+      "apresIngestion": "Une bouchée de figue fraîche : surveillance simple. Figues sèches en quantité, feuilles, sève, ou diarrhée importante : appelez. Ne faites pas vomir votre chien vous-même.",
+      "preparation": "Figue fraîche, lavée, un petit morceau, pas la barquette et pas le sachet de figues sèches. Feuilles et latex du figuier : hors de portée. Le Beagle qui vide le plateau de figues sèches n'est plus dans la « toute petite quantité ».",
+      "liens": [
+        {"href": "/aliments/abricot", "label": "Abricot"},
+        {"href": "/aliments/pomme", "label": "Pomme"},
+        {"href": "/aliments/raisin", "label": "Raisin — toxique"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"}
+      ],
+      "seo": {
+        "title": "Figue fraîche : très peu pour le chien",
+        "description": "La figue fraîche n'est pas toxique pour le chien, mais en très petite quantité. Figues sèches, feuilles et sève : à éviter."
+      },
+      "keywords": ["figue chien", "figue sèche chien", "chien peut-il manger de la figue"]
+    },
+    {
+      "slug": "abricot",
+      "nom": "Abricot",
+      "emoji": "🍊",
+      "question": "Mon chien peut-il manger un abricot ?",
+      "synonymes": ["chair d'abricot", "noyau d'abricot"],
+      "formes": ["abricot", "abricots", "un abricot", "noyau d'abricot"],
+      "verdict": "avec-moderation",
+      "resume": "La chair d'abricot pelée et dénoyautée peut être donnée en petit morceau ; le noyau, lui, est dangereux.",
+      "reponse": "Oui pour la chair, pelée et sans noyau, en petite quantité. Non pour le noyau : il peut se coincer, et c'est un Prunus.",
+      "pourquoi": "Preventive Vet autorise l'abricot pelé et dénoyauté, et prévient que le noyau avalé peut étouffer ou obstruer l'intestin. La FDA et le Merck décrivent le risque de cyanure si un noyau de Prunus — l'abricot en fait partie — est croqué, et le risque de blocage même s'il est avalé entier. Le détail est sur la fiche noyaux. La chair reste un fruit sucré : petite part de la ration, pas la corbeille (Preventive Vet, VCA).",
+      "signes": "Chair en excès : troubles digestifs possibles (Preventive Vet). Noyau : étouffement immédiat, ou signes de blocage parfois plusieurs jours après (FDA). Si le noyau a été broyé et qu'une intoxication au cyanure se déclare, le Merck décrit un début en 10 à 60 minutes.",
+      "apresIngestion": "Chair seule : pas d'appel systématique. Noyau avalé ou croqué : appelez, même si le chien semble aller bien. Ne le faites pas vomir vous-même.",
+      "preparation": "Mûr, lavé, pelé, ouvert, noyau jeté dans une poubelle inaccessible. Petits morceaux de chair, nature. Pas d'abricot au sirop. Pas d'amande d'abricot.",
+      "liens": [
+        {"href": "/aliments/noyaux", "label": "Noyaux de fruits"},
+        {"href": "/aliments/pomme", "label": "Pomme"},
+        {"href": "/aliments/mangue", "label": "Mangue"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"},
+        {"titre": "Potentially Dangerous Items for Your Pet", "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/potentially-dangerous-items-your-pet", "editeur": "FDA"},
+        {"titre": "Houseplants and Ornamentals — cyanogenic glycosides", "url": "https://www.merckvetmanual.com/toxicology/poisonous-plants/houseplants-and-ornamentals-toxic-to-animals", "editeur": "Merck Veterinary Manual"},
+        {"titre": "Can you feed pets certain fruits and veggies", "url": "https://vcahospitals.com/resources/preventive-dog/nutrition/can-you-feed-pets-certain-fruits-and-veggies", "editeur": "VCA Animal Hospitals"}
+      ],
+      "seo": {
+        "title": "Abricot : chair oui, noyau non",
+        "description": "Le chien peut manger un peu de chair d'abricot pelée et dénoyautée. Le noyau peut se coincer ou libérer du cyanure s'il est croqué."
+      },
+      "keywords": ["abricot chien", "noyau abricot chien", "chien peut-il manger un abricot"]
+    },
+    {
+      "slug": "pomme",
+      "nom": "Pomme",
+      "emoji": "🍏",
+      "question": "Mon chien peut-il manger une pomme ?",
+      "synonymes": ["pépins de pomme", "trognon", "Malus"],
+      "formes": ["pomme", "pommes", "une pomme", "pépins de pomme", "trognon de pomme"],
+      "verdict": "avec-moderation",
+      "resume": "La pomme peut être donnée en lamelles, sans pépins ni trognon : les pépins contiennent un précurseur du cyanure, et le trognon peut se coincer.",
+      "reponse": "Oui, en lamelles, sans les pépins et sans le trognon. VCA la présente comme une collation possible une fois ces parties retirées.",
+      "pourquoi": "VCA Animal Hospitals indique que des tranches de pomme sont une collation sûre, source d'antioxydants et de fibres, à condition de retirer les pépins et le trognon : les pépins contiennent un cyanure toxique, et le trognon peut étouffer. Preventive Vet précise que les pépins contiennent de l'amygdaline, composée de cyanure et de sucre. Le Merck classe le pommier (Malus) parmi les plantes à hétérosides cyanogènes, surtout dans les graines, libérés s'ils sont croqués. Les fruits du commerce en contiennent très peu, et une intoxication sévère est rare. On retire quand même les pépins : ce n'est pas une raison d'en faire une dose « encore acceptable ». La chair reste un fruit : avec modération (VCA).",
+      "signes": "Trognon ou gros morceau : étouffement ou blocage (VCA, FDA). Pépins croqués en grande quantité : le tableau du cyanure décrit par le Merck peut débuter en 10 à 60 minutes, mais il le juge peu fréquent avec les fruits du commerce. Chair en excès : troubles digestifs possibles comme avec les autres fruits (Preventive Vet).",
+      "apresIngestion": "Quelques lamelles sans pépin : pas d'appel systématique. Trognon avalé, ou chien qui a mâché beaucoup de pépins et semble en détresse : appelez. Ne le faites pas vomir vous-même.",
+      "preparation": "Lavée, trognon et pépins retirés, coupée en lamelles. Pas de trognon « pour finir ». Pas de pomme caramélisée. Le Beagle qui croque la pomme entière n'a pas lu la fiche : récupérez le trognon s'il reste, et appelez s'il a disparu.",
+      "liens": [
+        {"href": "/aliments/noyaux", "label": "Noyaux de fruits"},
+        {"href": "/aliments/carotte", "label": "Carotte"},
+        {"href": "/aliments/banane", "label": "Banane"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Fall food dos and don'ts for dogs", "url": "https://vcahospitals.com/urgent-care/health-and-safety-tips/fall-food-dos-and-donts-dogs", "editeur": "VCA Animal Hospitals"},
+        {"titre": "Safe and Unsafe Fruits For Dogs & Cats", "url": "https://www.preventivevet.com/pets/safe-fruits-for-dogs-and-cats", "editeur": "Preventive Vet (Dr Cathy Alinovi)"},
+        {"titre": "Houseplants and Ornamentals — cyanogenic glycosides", "url": "https://www.merckvetmanual.com/toxicology/poisonous-plants/houseplants-and-ornamentals-toxic-to-animals", "editeur": "Merck Veterinary Manual"}
+      ],
+      "seo": {
+        "title": "Pomme : oui, sans pépins ni trognon",
+        "description": "Le chien peut manger des lamelles de pomme sans pépins ni trognon. Les pépins contiennent un précurseur du cyanure. Comment les préparer."
+      },
+      "keywords": ["pomme chien", "pépins de pomme chien", "chien peut-il manger une pomme"]
+    },
+    {
+      "slug": "carotte",
+      "nom": "Carotte",
+      "emoji": "🥕",
+      "question": "Mon chien peut-il manger une carotte ?",
+      "synonymes": ["carotte"],
+      "formes": ["carotte", "carottes", "une carotte", "de la carotte"],
+      "verdict": "sans-danger",
+      "resume": "La carotte n'est pas toxique pour le chien : VCA la cite comme friandise possible, en petite quantité et en morceaux.",
+      "reponse": "Oui. VCA la liste parmi les légumes que l'on peut proposer à la place de friandises plus caloriques, lavée, en quantité modérée.",
+      "pourquoi": "VCA Animal Hospitals inclut la carotte dans les options « avec modération » au sens nutritionnel : une friandise, pas le repas, parce que même un aliment non toxique apporte des calories et peut déranger s'il est nouveau. La même page demande de laver fruits et légumes, d'introduire un seul aliment à la fois, et de retirer ce qui peut casser une dent, étouffer ou bloquer. Une carotte entière, très dure, entre dans cette prudence mécanique. Aucune source citée ici ne classe la carotte comme toxique.",
+      "signes": "Aliment nouveau ou grosse quantité : diarrhée ou inconfort possibles (VCA). Morceau trop gros : risque d'étouffement, à traiter comme une urgence respiratoire, pas comme une intoxication.",
+      "apresIngestion": "Quelques morceaux : c'est l'usage prévu. S'il s'étouffe, vomit de façon répétée ou a avalé un très gros morceau dur, appelez. Ne le faites pas vomir vous-même.",
+      "preparation": "Lavée, coupée en rondelles ou en bâtonnets que le chien peut croquer sans les avaler d'un bloc. Nature, sans sel. Une carotte de temps en temps, pas le sac. Le Beagle qui réclame la suivante a encore faim de la récompense, pas forcément de la carotte.",
+      "liens": [
+        {"href": "/aliments/concombre", "label": "Concombre"},
+        {"href": "/aliments/pomme", "label": "Pomme"},
+        {"href": "/aliments/pomme-de-terre", "label": "Pomme de terre"},
+        {"href": "/fiche/alimentation", "label": "Alimentation du Beagle"}
+      ],
+      "sources": [
+        {"titre": "Can you feed pets certain fruits and veggies", "url": "https://vcahospitals.com/resources/preventive-dog/nutrition/can-you-feed-pets-certain-fruits-and-veggies", "editeur": "VCA Animal Hospitals"}
+      ],
+      "seo": {
+        "title": "Carotte : sans danger pour le chien",
+        "description": "La carotte n'est pas toxique pour le chien. En morceaux, lavée, comme friandise. Quand un gros morceau devient un risque d'étouffement."
+      },
+      "keywords": ["carotte chien", "chien peut-il manger une carotte"]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllFiches, getAllFicheSlugs } from "@/data/fiches";
 import { getAllQuizSlugs } from "@/data/quizzes";
+import { getAllAliments, getAlimentsVerifiedAt } from "@/lib/aliments";
 import { absoluteUrl } from "@/lib/seo";
 
 /** Priorités SEO par thème de fiche (pages piliers). */
@@ -41,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: absoluteUrl("/aliments"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: absoluteUrl("/quizzes"),
       lastModified: now,
       changeFrequency: "weekly",
@@ -55,6 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: absoluteUrl("/politique-de-confidentialite"),
       lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: absoluteUrl("/extension/confidentialite"),
+      lastModified: new Date("2026-10-31"),
       changeFrequency: "yearly",
       priority: 0.3,
     },
@@ -95,6 +108,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  const alimentsVerified = new Date(getAlimentsVerifiedAt());
+  const alimentRoutes: MetadataRoute.Sitemap = getAllAliments().map(
+    (aliment) => ({
+      url: absoluteUrl(`/aliments/${aliment.slug}`),
+      lastModified: alimentsVerified,
+      changeFrequency: "monthly" as const,
+      priority: aliment.verdict === "toxique" ? 0.8 : 0.7,
+    })
+  );
+
   const quizRoutes: MetadataRoute.Sitemap = getAllQuizSlugs().map((slug) => ({
     url: absoluteUrl(`/quiz/${slug}`),
     lastModified: now,
@@ -102,5 +125,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticRoutes, ...ficheRoutes, ...quizRoutes];
+  return [...staticRoutes, ...ficheRoutes, ...alimentRoutes, ...quizRoutes];
 }
