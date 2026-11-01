@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toxique pour mon chien ?</title>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body>
+    <header class="top">
+      <img src="icons/icon32.png" width="32" height="32" alt="" />
+      <div>
+        <h1>Toxique pour mon chien ?</h1>
+        <p>Expert Beagle</p>
+      </div>
+    </header>
+    <form id="search" class="search">
+      <label for="q">Aliment</label>
+      <div class="search-row">
+        <input
+          id="q"
+          name="q"
+          type="search"
+          maxlength="300"
+          placeholder="raisin, chocolat, carotte…"
+          autocomplete="off"
+          enterkeyhint="search"
+          required
+        />
+        <button type="submit">Vérifier</button>
+      </div>
+    </form>
+    <main id="out" aria-live="polite"></main>
+    <footer>
+      <section id="emergency" class="emergency" aria-label="Urgence vétérinaire"></section>
+      <p id="meta" class="meta"></p>
+      <p class="foot-links">
+        <button type="button" id="update">Mettre à jour la base</button>
+        <a href="privacy.html" target="_blank" rel="noopener noreferrer">Confidentialité</a>
+      </p>
+    </footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

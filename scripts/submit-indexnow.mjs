@@ -24,6 +24,7 @@ const STATIC_PATHS = [
   "/quizzes",
   "/mentions-legales",
   "/politique-de-confidentialite",
+  "/extension/confidentialite",
   "/a-propos",
   "/methodologie",
   "/aliments",

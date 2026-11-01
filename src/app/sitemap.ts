@@ -66,6 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
+      url: absoluteUrl("/extension/confidentialite"),
+      lastModified: new Date("2026-10-31"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: absoluteUrl("/a-propos"),
       lastModified: now,
       changeFrequency: "monthly",

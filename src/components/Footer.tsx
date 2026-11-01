@@ -98,6 +98,14 @@ export function Footer() {
             </li>
             <li>
               <Link
+                href="/extension/confidentialite"
+                className="text-sm text-muted-foreground hover:text-primary"
+              >
+                Confidentialité de l&apos;extension
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/mentions-legales"
                 className="text-sm text-muted-foreground hover:text-primary"
               >

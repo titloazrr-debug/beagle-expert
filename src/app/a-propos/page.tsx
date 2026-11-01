@@ -73,6 +73,18 @@ export default function AProposPage() {
             </Link>
             .
           </p>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            L’extension Chrome « Toxique pour mon chien ? » indique si un
+            aliment figure dans la base du site. Elle ne collecte pas de
+            données. Sa politique est publiée sur la page{" "}
+            <Link
+              href="/extension/confidentialite"
+              className="font-semibold text-primary underline underline-offset-2 hover:no-underline"
+            >
+              Confidentialité de l’extension
+            </Link>
+            .
+          </p>
         </header>
 
         <div className="mt-10 grid max-w-3xl gap-6">
