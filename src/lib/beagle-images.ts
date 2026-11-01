@@ -27,6 +27,11 @@ export interface BeagleImageAsset {
   alt: string;
   width: number;
   height: number;
+  /**
+   * Cadrage des miniatures (object-position).
+   * Utile quand la photo est plus haute que le cadre 16/10 des cartes.
+   */
+  thumbPosition?: string;
 }
 
 const BASE = BEAGLE_IMAGES_DIR;
@@ -92,6 +97,7 @@ export const BEAGLE_IMAGES: Record<BeagleImageKey, BeagleImageAsset> = {
     alt: "Beagle tricolore avec un jouet en caoutchouc rouge dans la gueule",
     width: 768,
     height: 1152,
+    thumbPosition: "center 68%",
   },
   gps: {
     key: "gps",
@@ -99,6 +105,7 @@ export const BEAGLE_IMAGES: Record<BeagleImageKey, BeagleImageAsset> = {
     alt: "Beagle tricolore qui renifle un chemin, un petit boîtier GPS sur le collier",
     width: 768,
     height: 1152,
+    thumbPosition: "center 86%",
   },
   solitude: {
     key: "solitude",
@@ -106,6 +113,7 @@ export const BEAGLE_IMAGES: Record<BeagleImageKey, BeagleImageAsset> = {
     alt: "Beagle couché sur un tapis devant une porte fermée",
     width: 768,
     height: 1152,
+    thumbPosition: "center 100%",
   },
   assurance: {
     key: "assurance",
