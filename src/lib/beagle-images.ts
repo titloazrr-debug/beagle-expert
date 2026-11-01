@@ -55,7 +55,6 @@ export const BEAGLE_IMAGES: Record<BeagleImageKey, BeagleImageAsset> = {
     alt: "Beagle en bonne forme — santé, prévention et suivi vétérinaire",
     width: PHOTO_W,
     height: PHOTO_H,
-    thumbPosition: "center 100%",
   },
   alimentation: {
     key: "alimentation",
@@ -129,6 +128,7 @@ export const BEAGLE_IMAGES: Record<BeagleImageKey, BeagleImageAsset> = {
     alt: "Beagle plus âgé allongé dans une tache de soleil",
     width: 768,
     height: 1152,
+    thumbPosition: "center 100%",
   },
   "og-default": {
     key: "og-default",
