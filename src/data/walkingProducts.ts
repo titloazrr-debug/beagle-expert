@@ -8,6 +8,7 @@ import {
   WEENECT_PROMO_CODE,
   WEENECT_XS_DOG_URL,
 } from "@/lib/partners/weenect";
+import { isZoomaliaDestination, zoomaliaLink } from "@/lib/partners/zoomalia";
 
 export type WalkingProductCategory =
   | "y_harness"
@@ -36,6 +37,8 @@ export interface WalkingProduct {
   retailer: string;
   /** Nom de la variable d’env (lu côté client via process.env) */
   affiliateUrlEnv: string;
+  /** Repli quand l’env n’est pas définie (URL produit, jamais une catégorie). */
+  affiliateUrl?: string;
   image?: string;
   strengths: string[];
   watchouts: string[];
@@ -48,17 +51,20 @@ export interface WalkingProduct {
 const VERIFIED = "2026-08-07";
 
 /**
- * Placeholders partenaires (Zooplus, etc.) — active: false jusqu’à validation manuelle.
+ * Trois niveaux de repli pour l’URL : variable d’env, puis fiche produit du
+ * partenaire validé (Zoomalia via Affilae), puis rien — jamais un lien non tracké.
  * Tractive n’est pas proposé : gps-tractive-walking reste inactif.
  */
 export const WALKING_PRODUCTS: WalkingProduct[] = [
   {
-    id: "harness-y-placeholder",
-    name: "Harnais en Y confortable",
+    id: "harness-y",
+    name: "Harnais anti-traction en Y Zolia TUBS",
     category: "y_harness",
     active: true,
-    retailer: "Zooplus",
+    retailer: "Zoomalia",
     affiliateUrlEnv: "NEXT_PUBLIC_HARNESS_Y_AFFILIATE_URL",
+    affiliateUrl:
+      "https://www.zoomalia.com/animalerie/harnais-anti-traction-zolia-tubs-noir-plusieurs-tailles-disponibles-p-141750.html",
     strengths: [
       "Liberté des épaules pour la marche et le flair",
       "Ajustement multi-points",
@@ -66,9 +72,9 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     ],
     watchouts: [
       "Vérifier la taille et l’ajustement avant chaque sortie",
-      "Référence exacte à valider avant activation",
+      "4 points de réglage : prendre la mesure du tour de poitrail",
     ],
-    verifiedAt: VERIFIED,
+    verifiedAt: "2026-11-02",
     suitableProfiles: [
       "daily_walk",
       "scent_explorer",
@@ -78,12 +84,14 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     ctaLabel: "Voir le harnais",
   },
   {
-    id: "harness-escape-placeholder",
-    name: "Harnais anti-évasion / 3 points",
+    id: "harness-escape",
+    name: "Harnais de sécurité Stay (3 points)",
     category: "escape_proof_harness",
     active: true,
-    retailer: "Zooplus",
+    retailer: "Zoomalia",
     affiliateUrlEnv: "NEXT_PUBLIC_HARNESS_ESCAPE_AFFILIATE_URL",
+    affiliateUrl:
+      "https://www.zoomalia.com/animalerie/harnais-de-securite-stay-p-35480.html",
     strengths: [
       "Conception limitant le recul hors du harnais",
       "Plusieurs points de réglage",
@@ -93,17 +101,19 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
       "Aucun harnais n’est totalement infaillible",
       "Réglages et coutures à contrôler régulièrement",
     ],
-    verifiedAt: VERIFIED,
+    verifiedAt: "2026-11-02",
     suitableProfiles: ["escape_artist"],
     ctaLabel: "Voir le harnais anti-évasion",
   },
   {
-    id: "harness-hiking-placeholder",
-    name: "Harnais rembourré randonnée",
+    id: "harness-hiking",
+    name: "Harnais Zolux Bivouak randonnée",
     category: "hiking_harness",
     active: true,
-    retailer: "Zooplus",
+    retailer: "Zoomalia",
     affiliateUrlEnv: "NEXT_PUBLIC_HARNESS_HIKING_AFFILIATE_URL",
+    affiliateUrl:
+      "https://www.zoomalia.com/animalerie/harnais-rouge-confort-reglable-pour-randonnee-zolux-bivouak-5-tailles-disponibles-p-161183.html",
     strengths: [
       "Confort pour usage prolongé",
       "Solidité des attaches",
@@ -111,19 +121,21 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     ],
     watchouts: [
       "Vérifier le séchage et l’usure après sorties humides",
-      "Référence exacte à valider avant activation",
+      "Guide des tailles serré : mesurer plutôt que se fier au gabarit",
     ],
     verifiedAt: VERIFIED,
     suitableProfiles: ["hiking"],
     ctaLabel: "Voir le harnais randonnée",
   },
   {
-    id: "longline-5-placeholder",
-    name: "Longe environ 5 m",
+    id: "longline-5",
+    name: "Longe Zolia 5 m",
     category: "long_line_5",
     active: true,
-    retailer: "Zooplus",
+    retailer: "Zoomalia",
     affiliateUrlEnv: "NEXT_PUBLIC_LONG_LINE_5M_AFFILIATE_URL",
+    affiliateUrl:
+      "https://www.zoomalia.com/animalerie/longe-zolia-bleue-plusieurs-tailles-disponibles-p-141940.html",
     strengths: [
       "Plus de liberté qu’une laisse courte",
       "Contrôle encore confortable",
@@ -137,12 +149,14 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     ctaLabel: "Voir la longe 5 m",
   },
   {
-    id: "longline-10-placeholder",
-    name: "Longe environ 10 m",
+    id: "longline-10",
+    name: "Laisse à pister Zolia 10 m",
     category: "long_line_10",
     active: true,
-    retailer: "Zooplus",
+    retailer: "Zoomalia",
     affiliateUrlEnv: "NEXT_PUBLIC_LONG_LINE_10M_AFFILIATE_URL",
+    affiliateUrl:
+      "https://www.zoomalia.com/animalerie/laisse-a-pister-avec-grip-noire-zolia-5-10-et-15-metres-p-198160.html",
     strengths: [
       "Exploration élargie tout en restant attaché",
       "Utile pour travailler le rappel sur piste",
@@ -161,12 +175,14 @@ export const WALKING_PRODUCTS: WalkingProduct[] = [
     ctaLabel: "Voir la longe 10 m",
   },
   {
-    id: "longline-15-placeholder",
-    name: "Longe 15 m et plus",
+    id: "longline-15",
+    name: "Laisse d’entraînement et pistage Caspar 15 m",
     category: "long_line_15_plus",
     active: true,
-    retailer: "Zooplus",
+    retailer: "Zoomalia",
     affiliateUrlEnv: "NEXT_PUBLIC_LONG_LINE_15M_AFFILIATE_URL",
+    affiliateUrl:
+      "https://www.zoomalia.com/animalerie/laisse-d-entrainement-et-pistage-caspar-p-166853.html",
     strengths: [
       "Maximum de liberté sécurisée sur terrain adapté",
       "Filet de sécurité quand le rappel n’est pas suffisant",
@@ -261,6 +277,11 @@ export function resolveWalkingAffiliateUrl(
   // Fallback catalogue Weenect (lien Affilae actif)
   if (product.affiliateUrlEnv === "NEXT_PUBLIC_WEENECT_AFFILIATE_URL") {
     return WEENECT_AFFILIATE_URL_FALLBACK;
+  }
+  // Repli produit Zoomalia (programme validé) — enrobé pour le tracking.
+  const fallback = product.affiliateUrl?.trim();
+  if (fallback && /^https?:\/\//i.test(fallback)) {
+    return isZoomaliaDestination(fallback) ? zoomaliaLink(fallback) : fallback;
   }
   return null;
 }

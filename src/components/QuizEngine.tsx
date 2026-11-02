@@ -104,10 +104,27 @@ export function QuizEngine({
     url: string;
     productName: string;
   } | null>(null);
+  // La capture d'email n'est proposée que si un fournisseur est configuré côté serveur.
+  const [leadsEnabled, setLeadsEnabled] = useState(false);
   const isInsurance = isInsuranceQuizSlug(quiz.slug);
   const isFood = isFoodQuizSlug(quiz.slug);
   const isWalking = isWalkingQuizSlug(quiz.slug);
   const isSpecialized = isInsurance || isFood || isWalking;
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/leads")
+      .then((r) => (r.ok ? r.json() : { enabled: false }))
+      .then((data: { enabled?: boolean }) => {
+        if (!cancelled) setLeadsEnabled(Boolean(data.enabled));
+      })
+      .catch(() => {
+        if (!cancelled) setLeadsEnabled(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     if (isInsurance) InsuranceAnalytics.view();
@@ -743,8 +760,11 @@ export function QuizEngine({
                         reason={reason}
                         rank={i + 1}
                         utmCampaign={`quiz-${quiz.slug}`}
-                        onBeforeNavigate={(url, name) =>
-                          setEmailCapture({ url, productName: name })
+                        onBeforeNavigate={
+                          leadsEnabled
+                            ? (url, name) =>
+                                setEmailCapture({ url, productName: name })
+                            : undefined
                         }
                       />
                     </motion.div>
@@ -810,10 +830,10 @@ export function QuizEngine({
         isOpen={emailCapture !== null}
         productName={emailCapture?.productName ?? ""}
         redirectUrl={emailCapture?.url ?? ""}
+        quizSlug={quiz.slug}
         onClose={() => setEmailCapture(null)}
-        onSuccess={(email) => {
-          console.log("Email capturé:", email);
-          // TODO: envoyer vers API d'emailing
+        onSuccess={() => {
+          // L'enregistrement est fait par /api/leads ; rien à faire ici.
         }}
       />
     </div>
