@@ -176,8 +176,9 @@ export function parseFicheBody(
           continue;
         }
         if (inAttention) {
-          // Le texte d'encadré est rendu en texte brut : retirer aussi le gras
-          // inline, sinon les astérisques s'affichent en clair.
+          // Le gras inline est retiré ici, sinon les astérisques s'affichent.
+          // Les liens `[ancre](/chemin)` sont conservés : le rendu les
+          // transforme en vrais liens.
           attentionBuf.push(
             content.replace(/^\*\*.*?\*\*\s*/, "").replace(/\*\*/g, "")
           );

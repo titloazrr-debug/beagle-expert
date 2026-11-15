@@ -17,6 +17,11 @@ import { getProductsByIds } from "@/data/products";
 import { getComparisonsForFiche } from "@/lib/content/load-comparisons";
 import { getComparisonTablesForFiche } from "@/data/comparisons";
 import { AttentionBox } from "@/components/AttentionBox";
+import {
+  InlineMarkdown,
+  MarkdownLink,
+  isInternalHref,
+} from "@/components/InlineMarkdown";
 import { SummaryBox } from "@/components/SummaryBox";
 import { ProductCard } from "@/components/ProductCard";
 import { isMissingOutboundUrl } from "@/lib/outbound-link";
@@ -55,15 +60,11 @@ function InlineText({ text }: { text: string }) {
     const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (link) {
       const href = link[2];
-      if (href.startsWith("/")) {
+      if (isInternalHref(href)) {
         return (
-          <Link
-            key={i}
-            href={href}
-            className="font-semibold text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary"
-          >
+          <MarkdownLink key={i} href={href}>
             {link[1]}
-          </Link>
+          </MarkdownLink>
         );
       }
       return <span key={i}>{link[1]}</span>;
@@ -362,7 +363,9 @@ export default async function FichePage({ params }: PageProps) {
                           className="mt-2.5 size-2 shrink-0 rounded-full bg-primary"
                           aria-hidden
                         />
-                        <span>{bullet}</span>
+                        <span>
+                          <InlineMarkdown text={bullet} />
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -390,7 +393,7 @@ export default async function FichePage({ params }: PageProps) {
                             key={line}
                             className="text-sm leading-relaxed text-foreground/90"
                           >
-                            {line}
+                            <InlineMarkdown text={line} />
                           </li>
                         ))}
                       </ul>

@@ -1,4 +1,5 @@
 import { AlertTriangle, Lightbulb, Info } from "lucide-react";
+import { InlineMarkdown } from "@/components/InlineMarkdown";
 import { cn } from "@/lib/utils";
 
 interface AttentionBoxProps {
@@ -77,7 +78,7 @@ export function AttentionBox({
             v.body
           )}
         >
-          {text}
+          <InlineMarkdown text={text} />
         </p>
       </div>
     </aside>
