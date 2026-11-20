@@ -10,9 +10,8 @@ export const SELECTION_YEAR = 2027;
  * des fiches ne la remplace pas.
  *
  * À régler sur la date réelle de mise en ligne, juste avant le merge.
- * 2026-10-26 est la date de préparation, pas celle de publication.
  */
-export const SELECTION_UPDATED_ON = "2026-10-26";
+export const SELECTION_UPDATED_ON = "2026-11-20";
 
 const MONTHS_FR = [
   "janvier",

@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import type { Product, Quiz, QuizQuestion, QuizResultProfile } from "@/types";
 import { QUIZZES_DIR } from "@/lib/content/paths";
+import { mentionsTractive } from "@/lib/mentions-tractive";
 import {
   getAllProducts,
   getProductsByIds,
@@ -41,11 +42,16 @@ function collectProductIds(raw: RawQuizFile): string[] {
   return list;
 }
 
+function withoutTractive(ids: string[] | undefined): string[] {
+  return (ids ?? []).filter((id) => !mentionsTractive(id));
+}
+
 function readQuizFile(filePath: string): Quiz {
   const raw = JSON.parse(fs.readFileSync(filePath, "utf8")) as RawQuizFile;
-  const ids = collectProductIds(raw);
-  const products =
-    ids.length > 0 ? getProductsByIds(ids) : getAllProducts();
+  const ids = withoutTractive(collectProductIds(raw));
+  const products = (ids.length > 0 ? getProductsByIds(ids) : getAllProducts()).filter(
+    (product) => !mentionsTractive(product.id, product.name)
+  );
 
   return {
     slug: raw.slug,
@@ -58,7 +64,10 @@ function readQuizFile(filePath: string): Quiz {
     ctaLabel: raw.ctaLabel,
     seo: raw.seo,
     questions: raw.questions,
-    results: raw.results,
+    results: raw.results.map((result) => ({
+      ...result,
+      productIds: withoutTractive(result.productIds),
+    })),
     productCatalog: products,
   };
 }

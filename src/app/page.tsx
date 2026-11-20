@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Calculator, Compass, TrendingUp } from "lucide-react";
 import { fiches } from "@/data/fiches";
 import { quizzes } from "@/data/quizzes";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, HOME_META_DESCRIPTION } from "@/lib/seo";
 import { getTenant } from "@/lib/tenant";
 import { AffiliateDisclaimer } from "@/components/legal/AffiliateDisclaimer";
 import { MedicalDisclaimer } from "@/components/legal/MedicalDisclaimer";
@@ -17,7 +17,7 @@ const tenant = getTenant();
 
 export const metadata: Metadata = buildMetadata({
   title: "Beagle : le guide complet (santé, alimentation, éducation)",
-  description: tenant.description,
+  description: HOME_META_DESCRIPTION,
   path: "/",
   image: "/images/beagle/og-default.jpg",
   keywords: [

@@ -10,6 +10,8 @@ interface EmailCaptureModalProps {
   productName: string;
   /** URL à ouvrir après capture (oufermeture) */
   redirectUrl: string;
+  /** Slug du quiz d'où vient le visiteur (traçabilité de la base). */
+  quizSlug?: string;
   onClose: () => void;
   onSuccess: (email: string) => void;
 }
@@ -18,6 +20,7 @@ export function EmailCaptureModal({
   isOpen,
   productName,
   redirectUrl,
+  quizSlug,
   onClose,
   onSuccess,
 }: EmailCaptureModalProps) {
@@ -26,7 +29,7 @@ export function EmailCaptureModal({
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
-  function validate(e: FormEvent) {
+  async function validate(e: FormEvent) {
     e.preventDefault();
     const trimmed = email.trim();
     if (!trimmed || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
@@ -35,17 +38,32 @@ export function EmailCaptureModal({
     }
     setError("");
     setLoading(true);
-    // Simuler envoi — à brancher sur un endpoint ou mailchimp plus tard
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          email: trimmed,
+          quiz: quizSlug,
+          product: productName,
+        }),
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
       setDone(true);
       onSuccess(trimmed);
-      // Redirection après un bref délai pour voir le message de confirmation
       setTimeout(() => {
         window.open(redirectUrl, "_blank", "noopener,noreferrer");
         onClose();
-      }, 800);
-    }, 400);
+      }, 900);
+    } catch {
+      setError(
+        "L'enregistrement n'a pas abouti. Vous pouvez continuer vers l'offre sans laisser votre email."
+      );
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -91,12 +109,13 @@ export function EmailCaptureModal({
               {!done ? (
                 <>
                   <h2 className="mt-4 font-[family-name:var(--font-display)] text-xl font-extrabold tracking-tight text-foreground">
-                    Recevez votre bilan personnalisé par email
+                    Recevez nos conseils Beagle par email
                   </h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Avant de voir l&apos;offre <strong>{productName}</strong>,
-                    laissez-nous votre email pour recevoir gratuitement vos
-                    recommandations et astuces Beagle par la suite.
+                    Votre recommandation <strong>{productName}</strong> s&apos;affiche
+                    juste après. Laissez votre email si vous voulez recevoir les
+                    prochains guides : oreilles, poids, fugue, saison des tiques.
+                    Un email par mois environ, sans publicité.
                   </p>
 
                   <form onSubmit={validate} className="mt-5 space-y-3">
@@ -144,9 +163,26 @@ export function EmailCaptureModal({
                   </form>
 
                   <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-                    Pas de spam, désinscription en un clic. Vos données ne sont
-                    jamais revendues.
+                    Désinscription en un clic dans chaque email. Vos données ne
+                    sont jamais revendues.{" "}
+                    <a
+                      href="/politique-de-confidentialite"
+                      className="underline underline-offset-2 hover:text-foreground"
+                    >
+                      Politique de confidentialité
+                    </a>
                   </p>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      window.open(redirectUrl, "_blank", "noopener,noreferrer");
+                      onClose();
+                    }}
+                    className="mt-3 w-full text-center text-xs font-medium text-muted-foreground underline underline-offset-2 hover:text-foreground"
+                  >
+                    Continuer vers l&apos;offre sans laisser mon email
+                  </button>
                 </>
               ) : (
                 <div className="py-4 text-center">
@@ -154,11 +190,10 @@ export function EmailCaptureModal({
                     <Sparkles className="size-7 text-green-600" aria-hidden />
                   </div>
                   <h2 className="mt-4 font-[family-name:var(--font-display)] text-xl font-extrabold tracking-tight text-foreground">
-                    Merci {email.split("@")[0]} !
+                    C&apos;est noté.
                   </h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Votre bilan vous sera envoyé sous quelques instants.
-                    Redirection vers l&apos;offre…
+                    Votre recommandation s&apos;ouvre dans un instant.
                   </p>
                 </div>
               )}

@@ -3,13 +3,13 @@
   "title": "Quel collier GPS pour mon Beagle ?",
   "subtitle": "Anti-fugue en France : flair, rappel, marque FR — filet de sécurité réaliste",
   "emoji": "📡",
-  "description": "Le Beagle est un chien de piste : une odeur peut faire oublier le rappel. En 6 questions, on affine le filet GPS en France (Weenect, marque lyonnaise : localisation + vibreur ; Tractive, Autriche : localisation + suite app). Le GPS complète harnais, longe et clôture — il ne les remplace pas.",
+  "description": "Le Beagle est un chien de piste : une odeur peut faire oublier le rappel. En 6 questions, on choisit entre Weenect XS (léger, la plupart des Beagles) et Weenect XT (sorties longues). Le GPS complète harnais, longe et clôture — il ne les remplace pas.",
   "estimatedMinutes": 3,
   "mode": "product-score",
   "ctaLabel": "Voir mon GPS anti-fugue",
   "seo": {
     "title": "Quiz : quel collier GPS Beagle en France ?",
-    "description": "Quel collier GPS pour mon Beagle en France ? Quiz : Weenect (marque FR, vibreur) ou Tractive, terrain, rappel. Filet de sécurité, pas magie."
+    "description": "Quel collier GPS pour mon Beagle ? Quiz Weenect XS ou XT selon terrain et rappel. Filet de sécurité, pas une baguette magique."
   },
   "basedOn": [
     "content/raw/guide_budget_beagle.md",
@@ -28,8 +28,7 @@
             "fugueur": 3,
             "securite": 3,
             "gps": 3,
-            "weenect": 2,
-            "tractive": 2
+            "weenect": 2
           }
         },
         {
@@ -39,8 +38,7 @@
             "fugueur": 2,
             "campagne": 2,
             "gps": 2,
-            "weenect": 2,
-            "tractive": 2
+            "weenect": 2
           }
         },
         {
@@ -73,7 +71,6 @@
             "campagne": 3,
             "fugueur": 1,
             "weenect": 2,
-            "tractive": 2,
             "gps": 2
           }
         },
@@ -82,8 +79,7 @@
           "label": "Mixte ville + nature le week-end",
           "scores": {
             "gps": 2,
-            "weenect": 2,
-            "tractive": 2
+            "weenect": 2
           }
         },
         {
@@ -117,7 +113,6 @@
           "scores": {
             "weenect": 2,
             "vibration": 2,
-            "tractive": 1,
             "gps": 1
           }
         },
@@ -127,7 +122,7 @@
           "scores": {
             "budget": 1,
             "gps": 1,
-            "tractive": 1
+            "weenect": 1
           }
         }
       ]
@@ -135,7 +130,7 @@
     {
       "id": "priorite",
       "question": "Quelle priorité pour le traceur et l’application ?",
-      "helper": "Weenect se positionne sur « où est mon chien maintenant ? ». Tractive met aussi l’accent sur l’activité / le bien-être dans l’app.",
+      "helper": "Weenect se positionne sur « où est mon chien maintenant ? » : Superlive et vibreur. Le XS suffit à la plupart des Beagles ; le XT vise l’autonomie et les sorties longues.",
       "options": [
         {
           "id": "p1",
@@ -148,11 +143,10 @@
         },
         {
           "id": "p2",
-          "label": "Localisation + suivi d’activité / bien-être dans l’app",
+          "label": "Une app en français, centrée sur la position du chien",
           "scores": {
-            "tractive": 3,
-            "sante": 2,
-            "activite": 2,
+            "weenect": 3,
+            "francophone": 2,
             "gps": 1
           }
         },
@@ -170,7 +164,6 @@
           "label": "Le meilleur équilibre simplicité / sécurité",
           "scores": {
             "weenect": 2,
-            "tractive": 2,
             "gps": 1
           }
         }
@@ -179,7 +172,7 @@
     {
       "id": "france",
       "question": "Pour un usage en France, qu’est-ce qui compte le plus ?",
-      "helper": "Weenect et Tractive localisent tous les deux en France. La différence se joue sur l’origine de la marque, le SAV et les fonctions (vibreur vs suite activité).",
+      "helper": "En France, le critère utile est une marque et un SAV dans le pays, une app en français, et un abonnement clair. Weenect est basé à Lyon.",
       "options": [
         {
           "id": "fr1",
@@ -192,11 +185,11 @@
         },
         {
           "id": "fr2",
-          "label": "Peu importe l’origine : je veux l’app la plus complète (activité / bien-être)",
+          "label": "Sorties longues : je veux le modèle le plus autonome",
           "scores": {
-            "tractive": 3,
-            "sante": 2,
-            "activite": 2
+            "weenect": 2,
+            "campagne": 3,
+            "gps": 2
           }
         },
         {
@@ -211,11 +204,10 @@
         },
         {
           "id": "fr4",
-          "label": "Le prix du boîtier et de l’abo, quelle que soit la marque",
+          "label": "Le prix du boîtier et de l’abonnement",
           "scores": {
             "budget": 2,
-            "weenect": 1,
-            "tractive": 1
+            "weenect": 1
           }
         }
       ]
@@ -223,14 +215,13 @@
     {
       "id": "budget",
       "question": "Budget boîtier (hors abonnement mensuel) ?",
-      "helper": "Ordres de grandeur : boîtier souvent ~40–50€ ; abonnement obligatoire chez les deux (Weenect propose aussi des formules longues moins chères au mois).",
+      "helper": "Ordres de grandeur : boîtier souvent autour de 40 € avec le code BEAGLEEXPERT ; l’abonnement est obligatoire. Weenect propose aussi des formules longues, souvent moins chères au mois.",
       "options": [
         {
           "id": "b1",
           "label": "Autour de 40–50 €, abo à comparer sur 12–24 mois",
           "scores": {
             "weenect": 2,
-            "tractive": 2,
             "budget": 2
           }
         },
@@ -246,7 +237,6 @@
           "id": "b3",
           "label": "La sécurité et les fonctions app priment sur le prix",
           "scores": {
-            "tractive": 2,
             "weenect": 2,
             "securite": 2
           }
@@ -258,20 +248,18 @@
     {
       "id": "securite-max",
       "title": "Profil « sécurité max / fugueur »",
-      "description": "Votre Beagle a un risque réel de filer sur une piste. Priorité : localisation live et zones de sécurité. En France, Weenect (marque lyonnaise, vibreur) est en général le filet le plus cohérent ; Tractive reste une alternative si l’app activité compte plus que l’origine de la marque. Continuez le travail de rappel en environnement contrôlé.",
+      "description": "Votre Beagle a un risque réel de filer sur une piste. Priorité : localisation live et zones de sécurité. En France, le filet retenu ici est Weenect (marque lyonnaise, vibreur) : XS pour la plupart des Beagles, XT si les sorties sont longues. Continuez le travail de rappel en environnement contrôlé.",
       "tags": [
         "fugueur",
         "securite",
         "gps",
         "campagne",
         "weenect",
-        "france",
-        "tractive"
+        "france"
       ],
       "productIds": [
         "weenect-gps",
         "weenect-xt",
-        "tractive-gps",
         "kong-classic",
         "tapis-fouille"
       ],
@@ -279,13 +267,13 @@
         "Fugue / flair : un GPS live + géofence est un filet, pas une baguette magique",
         "Weenect XS : Superlive + vibreur, marque française ; code BEAGLEEXPERT (−40 % boîtier)",
         "Weenect XT : option usages intensifs / autonomie max",
-        "Tractive : alternative autrichienne si vous voulez aussi l’écosystème activité / app"
+        "Ni le XS ni le XT ne remplacent clôture, longe et travail de rappel"
       ]
     },
     {
       "id": "rappel-vibration",
       "title": "Profil « rappel difficile »",
-      "description": "Le nez gagne souvent sur la voix. Un GPS avec vibreur (Weenect) + formation adaptée chien de chasse est le combo le plus cohérent. Offre lecteurs : code BEAGLEEXPERT (−40 % sur le boîtier). Tractive reste une alternative si vous privilégiez la suite app.",
+      "description": "Le nez gagne souvent sur la voix. Un GPS avec vibreur (Weenect) + formation adaptée chien de chasse est le combo le plus cohérent. Offre lecteurs : code BEAGLEEXPERT (−40 % sur le boîtier).",
       "tags": [
         "weenect",
         "vibration",
@@ -297,7 +285,6 @@
       "productIds": [
         "weenect-gps",
         "weenect-xt",
-        "tractive-gps",
         "tapis-fouille",
         "kong-classic"
       ],
@@ -305,29 +292,27 @@
         "Weenect propose vibreur + sonnerie + lumière pour le rappel / la recherche",
         "Code promo BEAGLEEXPERT : −40 % sur le boîtier au panier Weenect",
         "Le GPS ne remplace pas le travail de rappel en longe et en environnement sûr",
-        "Tractive en alternative si l’angle « activité / bien-être » vous parle plus"
+        "XS pour un Beagle de compagnie ; XT si les sorties sont longues"
       ]
     },
     {
       "id": "anticipation",
       "title": "Profil « anticipation maligne »",
-      "description": "Risque modéré mais réel : un GPS d’entrée de gamme suffit souvent, combiné à laisse/longe et jardin sécurisé. Weenect XS (GPS à l’essentiel, code BEAGLEEXPERT) ou Tractive (app plus large) selon votre priorité.",
+      "description": "Risque modéré mais réel : un GPS d’entrée de gamme suffit souvent, combiné à laisse, longe et jardin sécurisé. Weenect XS (GPS à l’essentiel, code BEAGLEEXPERT) couvre le cas le plus courant. Le XT seulement si vous partez longtemps.",
       "tags": [
         "budget",
         "gps",
         "weenect",
-        "tractive",
         "securite"
       ],
       "productIds": [
         "weenect-gps",
-        "weenect-xt",
-        "tractive-gps"
+        "weenect-xt"
       ],
       "reasons": [
         "Même un Beagle « sage » peut suivre une piste un jour : anticiper est rationnel",
         "Weenect XS : performance GPS + promo lecteurs BEAGLEEXPERT (−40 %)",
-        "Tractive : si vous voulez aussi le suivi d’activité dans l’app",
+        "Weenect XT seulement si l’autonomie ou la campagne prime",
         "Laisse, longe et clôture restent la base — le GPS complète"
       ]
     }
@@ -335,7 +320,6 @@
   "productIds": [
     "weenect-gps",
     "weenect-xt",
-    "tractive-gps",
     "kong-classic",
     "tapis-fouille",
     "nettoyant-auriculaire"

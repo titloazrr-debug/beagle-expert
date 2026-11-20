@@ -17,7 +17,6 @@ const FICHE_PRIORITY = [
   "assurance-chien-beagle",
   "education-comportement",
   "collier-gps-beagle",
-  "harnais-anti-evasion-beagle",
   "solitude-aboiements-destruction",
   "jouets-beagle-destructeur",
   "soins-entretien",

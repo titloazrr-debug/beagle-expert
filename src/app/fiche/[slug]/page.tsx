@@ -35,6 +35,7 @@ import {
   faqPageJsonLd,
   productItemListJsonLd,
 } from "@/lib/seo";
+import { SITE_AUTHOR } from "@/lib/author";
 import {
   getFicheCoverImage,
   getFicheOgImageSrc,
@@ -47,9 +48,33 @@ import { AffiliateDisclaimer } from "@/components/legal/AffiliateDisclaimer";
 import { WeenectPartnerOffer } from "@/components/partners/WeenectPartnerOffer";
 import { cn } from "@/lib/utils";
 import { getTenant } from "@/lib/tenant";
-import { InlineText } from "@/components/InlineText";
 import { SelectionFreshness } from "@/components/SelectionFreshness";
 import { annualSelectionHeadline } from "@/lib/selection-year";
+
+function InlineText({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (link) {
+      const href = link[2];
+      if (href.startsWith("/")) {
+        return (
+          <Link
+            key={i}
+            href={href}
+            className="font-semibold text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary"
+          >
+            {link[1]}
+          </Link>
+        );
+      }
+      return <span key={i}>{link[1]}</span>;
+    }
+    const bold = part.match(/^\*\*([^*]+)\*\*$/);
+    if (bold) return <strong key={i}>{bold[1]}</strong>;
+    return <span key={i}>{part}</span>;
+  });
+}
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -146,7 +171,7 @@ export default async function FichePage({ params }: PageProps) {
       >
         <meta itemProp="headline" content={headline} />
         <meta itemProp="description" content={fiche.seo.description} />
-        <meta itemProp="author" content={tenant.name} />
+        <meta itemProp="author" content={SITE_AUTHOR.name} />
         {fiche.datePublished && (
           <meta itemProp="datePublished" content={fiche.datePublished} />
         )}
@@ -208,6 +233,12 @@ export default async function FichePage({ params }: PageProps) {
                 <Clock className="size-3" aria-hidden />
                 {fiche.readingTime} min de lecture
               </Badge>
+              <Link
+                href={SITE_AUTHOR.urlPath}
+                className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold text-foreground transition hover:border-primary/40 hover:text-primary"
+              >
+                Rédigé par {SITE_AUTHOR.name}
+              </Link>
             </div>
 
             <div className="mt-5 max-w-3xl">
@@ -338,9 +369,7 @@ export default async function FichePage({ params }: PageProps) {
                           className="mt-2.5 size-2 shrink-0 rounded-full bg-primary"
                           aria-hidden
                         />
-                        <span>
-                          <InlineText text={bullet} />
-                        </span>
+                        <span>{bullet}</span>
                       </li>
                     ))}
                   </ul>
@@ -468,14 +497,15 @@ export default async function FichePage({ params }: PageProps) {
                 )}
                 <div className="mt-6 grid gap-4 lg:grid-cols-1 xl:grid-cols-1">
                   {relatedProducts.map((p, i) => (
-                    <ProductCard
-                      key={p.id}
-                      product={p}
-                      reason={p.recommendation || p.shortDescription}
-                      rank={i + 1}
-                      showProsCons
-                      utmCampaign={`fiche-${slug}`}
-                    />
+                    <div key={p.id} id={`produit-${p.id}`}>
+                      <ProductCard
+                        product={p}
+                        reason={p.recommendation || p.shortDescription}
+                        rank={i + 1}
+                        showProsCons
+                        utmCampaign={`fiche-${slug}`}
+                      />
+                    </div>
                   ))}
                 </div>
               </section>

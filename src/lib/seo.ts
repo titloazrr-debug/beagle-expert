@@ -6,11 +6,8 @@ import {
 } from "@/lib/beagle-images";
 import { annualSelectionHeadline } from "@/lib/selection-year";
 import { getTenant } from "@/lib/tenant";
-import {
-  isMissingOutboundUrl,
-  referralCampaignFromPath,
-  withReferralUtm,
-} from "@/lib/outbound-link";
+import { SITE_AUTHOR } from "@/lib/author";
+import { mentionsTractive } from "@/lib/mentions-tractive";
 
 const tenant = getTenant();
 
@@ -81,17 +78,16 @@ export function brandTitle(title: string): string {
   return withBrand.length <= TITLE_MAX ? withBrand : clean;
 }
 
-/** Tronque une meta description sans couper un mot (cible SEO ~155). */
-export function clampMetaDescription(
-  text: string,
-  max = 155
-): string {
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (clean.length <= max) return clean;
-  const slice = clean.slice(0, max - 1);
-  const lastSpace = slice.lastIndexOf(" ");
-  const base = lastSpace > 80 ? slice.slice(0, lastSpace) : slice;
-  return `${base.replace(/[.,;:\-–—\s]+$/, "")}…`;
+/**
+ * Meta description de l’accueil (phrase entière, 140–155 caractères).
+ * Distincte de tenant.description, qui reste le texte du JSON-LD WebSite.
+ */
+export const HOME_META_DESCRIPTION =
+  "Le guide Beagle réunit des fiches et des quiz sur la santé, l'alimentation, l'éducation, le budget et la vie quotidienne, du chiot au chien âgé.";
+
+/** Nettoie une description écrite. Aucune troncature, aucun « … » ajouté. */
+export function clampMetaDescription(text: string): string {
+  return text.replace(/\s+/g, " ").trim();
 }
 
 export function buildMetadata({
@@ -169,7 +165,7 @@ export function buildMetadata({
         ? {
             publishedTime,
             modifiedTime: modifiedTime ?? publishedTime,
-            authors: [tenant.name],
+            authors: [SITE_AUTHOR.name],
             section: tenant.breed,
             tags: keywords,
           }
@@ -179,7 +175,6 @@ export function buildMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description: metaDescription,
-      site: tenant.social?.twitter,
       images: [ogImageUrl],
     },
     robots: noIndex
@@ -251,11 +246,6 @@ export function organizationJsonLd() {
         url: absoluteUrl("/a-propos"),
       },
     ],
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${tenant.siteUrl}/fiches?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -285,7 +275,7 @@ export function articleJsonLd({
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
-    description: clampMetaDescription(description, 300),
+    description: clampMetaDescription(description),
     url,
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -297,9 +287,9 @@ export function articleJsonLd({
     keywords: keywords?.join(", "),
     image: [imageUrl],
     author: {
-      "@type": "Organization",
-      name: tenant.name,
-      url: tenant.siteUrl,
+      "@type": "Person",
+      name: SITE_AUTHOR.name,
+      url: absoluteUrl(SITE_AUTHOR.urlPath),
     },
     publisher: {
       "@type": "Organization",
@@ -381,110 +371,12 @@ export function faqPageJsonLd(
   };
 }
 
-function hasUsableProductUrl(url?: string | null): boolean {
-  return !isMissingOutboundUrl(url);
-}
-
-function productOfferUrl(
-  product: Product,
-  pageUrl?: string
-): string | null {
-  if (hasUsableProductUrl(product.affiliateUrl)) {
-    return product.affiliateUrl.trim();
-  }
-  if (hasUsableProductUrl(product.officialUrl)) {
-    return withReferralUtm(
-      product.officialUrl!.trim(),
-      referralCampaignFromPath(pageUrl)
-    );
-  }
-  return null;
-}
-
 /**
- * Schema Product — pour citabilité agents / rich results.
- * Offre uniquement si une URL d’achat réelle est disponible (pas de "#").
+ * Liste de produits cités sur une fiche.
+ * ListItem uniquement (position, name, url) : pas de type Product,
+ * donc pas d’offers, d’avis ni de note. Pas de prix. Pas de Tractive.
+ * L’url pointe vers la carte sur la même page.
  */
-export function productJsonLd(
-  product: Product,
-  options?: { position?: number; url?: string }
-): Record<string, unknown> {
-  const description = clampMetaDescription(
-    product.recommendation || product.shortDescription || product.name,
-    300
-  );
-  const data: Record<string, unknown> = {
-    "@type": "Product",
-    "@id": absoluteUrl(`/produits#${product.id}`),
-    name: product.name,
-    description,
-    category: product.category || product.categories?.[0] || "Animalier",
-    sku: product.id,
-  };
-
-  const extraProps: Record<string, unknown>[] = [];
-  if (product.bestFor) {
-    extraProps.push({
-      "@type": "PropertyValue",
-      name: "Public cible",
-      value: product.bestFor,
-    });
-  }
-  if (product.advantages?.length) {
-    extraProps.push({
-      "@type": "PropertyValue",
-      name: "Avantages",
-      value: product.advantages.join(" · "),
-    });
-  }
-  if (product.disadvantages?.length) {
-    extraProps.push({
-      "@type": "PropertyValue",
-      name: "Points de vigilance",
-      value: product.disadvantages.join(" · "),
-    });
-  }
-  if (extraProps.length) {
-    data.additionalProperty = extraProps;
-  }
-
-  const offerUrl = productOfferUrl(product, options?.url);
-  if (offerUrl || product.priceCents > 0 || product.priceLabel) {
-    const offer: Record<string, unknown> = {
-      "@type": "Offer",
-      priceCurrency: product.currency ?? "EUR",
-    };
-    if (offerUrl) {
-      offer.url = offerUrl;
-      offer.availability = "https://schema.org/InStock";
-      offer.seller = {
-        "@type": "Organization",
-        name: tenant.name,
-      };
-    }
-    if (product.priceCents > 0) {
-      offer.price = (product.priceCents / 100).toFixed(2);
-    } else if (product.priceLabel) {
-      offer.priceSpecification = {
-        "@type": "PriceSpecification",
-        priceCurrency: product.currency ?? "EUR",
-        description: product.priceLabel,
-      };
-    }
-    data.offers = offer;
-  }
-
-  if (options?.url) {
-    data.url = options.url;
-  }
-  if (options?.position != null) {
-    data.position = options.position;
-  }
-
-  return data;
-}
-
-/** ItemList de produits recommandés (fiche, quiz). */
 export function productItemListJsonLd({
   name,
   description,
@@ -496,7 +388,11 @@ export function productItemListJsonLd({
   path: string;
   products: Product[];
 }): Record<string, unknown> | null {
-  if (!products.length) return null;
+  const listed = products.filter(
+    (product) => !mentionsTractive(product.id, product.name)
+  );
+  if (!listed.length) return null;
+  const pageUrl = absoluteUrl(path);
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -504,17 +400,14 @@ export function productItemListJsonLd({
     description:
       description ||
       `Sélection de produits recommandés pour le ${tenant.breed} sur ${tenant.name}.`,
-    url: absoluteUrl(path),
-    numberOfItems: products.length,
+    url: pageUrl,
+    numberOfItems: listed.length,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
-    itemListElement: products.map((product, index) => ({
+    itemListElement: listed.map((product, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: product.name,
-      item: productJsonLd(product, {
-        position: index + 1,
-        url: absoluteUrl(path),
-      }),
+      url: `${pageUrl}#produit-${product.id}`,
     })),
   };
 }
@@ -547,6 +440,11 @@ export function aboutPageJsonLd({
     about: {
       "@type": "Thing",
       name: `Chien de race ${tenant.breed}`,
+    },
+    author: {
+      "@type": "Person",
+      name: SITE_AUTHOR.name,
+      url: absoluteUrl(SITE_AUTHOR.urlPath),
     },
     publisher: {
       "@type": "Organization",

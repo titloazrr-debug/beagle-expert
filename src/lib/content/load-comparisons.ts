@@ -3,6 +3,7 @@ import "server-only";
 import fs from "fs";
 import type { ProductComparison } from "@/types";
 import { COMPARISONS_FILE } from "@/lib/content/paths";
+import { mentionsTractive } from "@/lib/mentions-tractive";
 
 let cache: ProductComparison[] | null = null;
 
@@ -33,7 +34,18 @@ export function loadComparisons(): ProductComparison[] {
 export function getComparisonsForFiche(
   slug: string
 ): ProductComparison[] {
-  return loadComparisons().filter((c) => c.ficheSlugs.includes(slug));
+  return loadComparisons().filter(
+    (c) =>
+      c.ficheSlugs.includes(slug) &&
+      !mentionsTractive(
+        c.id,
+        c.title,
+        c.left.name,
+        c.left.productId,
+        c.right.name,
+        c.right.productId
+      )
+  );
 }
 
 export function getComparisonById(

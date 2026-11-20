@@ -1,5 +1,4 @@
 import { AlertTriangle, Lightbulb, Info } from "lucide-react";
-import { InlineText } from "@/components/InlineText";
 import { cn } from "@/lib/utils";
 
 interface AttentionBoxProps {
@@ -78,7 +77,7 @@ export function AttentionBox({
             v.body
           )}
         >
-          <InlineText text={text} />
+          {text}
         </p>
       </div>
     </aside>

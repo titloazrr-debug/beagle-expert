@@ -1,10 +1,12 @@
 import type { ComparisonTableSpec } from "@/types";
-import { COLLIER_GPS_COMPARISON } from "@/data/comparisons/colliers-gps";
 
-/** Tous les tableaux interactifs (critères × produits). */
-export const COMPARISON_TABLES: ComparisonTableSpec[] = [
-  COLLIER_GPS_COMPARISON,
-];
+/**
+ * Tableaux interactifs (critères × produits).
+ * Le tableau Tractive vs Weenect n'est plus monté : pas de bouton ni
+ * d'accordéon pour ce concurrent. La comparaison factuelle reste dans
+ * le texte des fiches.
+ */
+export const COMPARISON_TABLES: ComparisonTableSpec[] = [];
 
 /** Mapping slug fiche → tableaux à afficher. */
 export function getComparisonTablesForFiche(
