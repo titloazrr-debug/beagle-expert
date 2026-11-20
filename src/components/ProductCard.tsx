@@ -35,7 +35,7 @@ export function ProductCard({
     product.priceLabel ||
     (product.priceCents > 0
       ? formatPrice(product.priceCents, product.currency ?? "EUR")
-      : "Prix selon offre");
+      : null);
 
   const why =
     reason || product.recommendation || product.shortDescription;
@@ -105,7 +105,9 @@ export function ProductCard({
             <h3 className="mt-1.5 text-base font-extrabold leading-snug text-foreground group-hover:text-accent transition-colors sm:text-[1.05rem]">
               {product.name}
             </h3>
-            <p className="mt-1 text-sm font-extrabold text-accent">{price}</p>
+            {price ? (
+              <p className="mt-1 text-sm font-extrabold text-accent">{price}</p>
+            ) : null}
           </div>
         </div>
 

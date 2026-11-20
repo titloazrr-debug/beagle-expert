@@ -17,6 +17,10 @@ import { normalizeContentProduct } from "@/lib/content/product-utils";
 import { mentionsTractive } from "@/lib/mentions-tractive";
 import { parseFrontmatter } from "@/lib/content/parse-frontmatter";
 import { toIsoDate, todayIsoDate } from "@/lib/seo";
+import {
+  isAnnualSelection,
+  SELECTION_UPDATED_ON,
+} from "@/lib/selection-year";
 
 interface FicheFrontmatter {
   slug: string;
@@ -336,13 +340,16 @@ function readFicheFile(filePath: string): {
 
   const faq = resolveFicheFaq(fm.slug, fm.faq);
 
-  // Dates réelles : frontmatter → mtime fichier → aujourd’hui
+  // Dates réelles : frontmatter → mtime fichier → aujourd’hui.
+  // Les sélections annuelles ignorent le frontmatter : SELECTION_UPDATED_ON
+  // est la seule date affichée, à régler juste avant le merge.
   const stats = fs.statSync(filePath);
   const fileIso = toIsoDate(stats.mtime);
   const datePublished =
     toIsoDate(fm.datePublished) ?? fileIso ?? todayIsoDate();
-  const dateModified =
-    toIsoDate(fm.dateModified) ?? fileIso ?? datePublished;
+  const dateModified = isAnnualSelection(fm.slug)
+    ? SELECTION_UPDATED_ON
+    : (toIsoDate(fm.dateModified) ?? fileIso ?? datePublished);
 
   const ogImage = fm.ogImage?.trim() || undefined;
 

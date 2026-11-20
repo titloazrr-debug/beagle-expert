@@ -478,5 +478,82 @@
       "Sans séchage et contrôle régulier, l’effet préventif diminue"
     ],
     "bestFor": "Tous les Beagles (oreilles tombantes), surtout en climat humide, après natation, ou dès les premiers signes de démangeaisons."
+  },
+  {
+    "id": "ruffwear-web-master",
+    "name": "Ruffwear Web Master",
+    "category": "harnais",
+    "shortDescription": "Harnais trois sangles avec poignée, décrit par Ruffwear pour les chiens qui sortent des autres modèles.",
+    "recommendation": "Ruffwear présente le Web Master comme un harnais à trois sangles, avec sangle ventrale, pour les chiens « houdini ». Quatre réglages, boucle au cou, poignée, attache avant et anneau dorsal. Page française ruffwear.eu : 94,90 €. Pas un essai Beagle Expert.",
+    "price": "94,90 €",
+    "affiliateUrl": "#",
+    "imageEmoji": "🦮",
+    "badge": "Sangle ventrale",
+    "tags": ["harnais", "anti-evasion", "ruffwear", "fugue"],
+    "categories": ["education", "equipement"],
+    "advantages": [
+      "Trois sangles, dont une sangle ventrale, selon la fiche Ruffwear",
+      "Présenté par la marque pour les chiens qui s'échappent des autres harnais",
+      "Quatre points de réglage et boucle au cou, sans passage par-dessus la tête",
+      "Poignée et point d'attache avant en plus de l'anneau du dos"
+    ],
+    "disadvantages": [
+      "Aucun harnais n'est infaillible, même à trois sangles",
+      "Entre deux tailles, Ruffwear dit de prendre la plus petite",
+      "94,90 € lus sur la page française ruffwear.eu ; un autre vendeur peut différer",
+      "Pas de lien affilié configuré : pas de bouton d'achat ici"
+    ],
+    "bestFor": "Un Beagle qui a déjà reculé hors d'un harnais, et pour qui la sangle derrière les côtes est le premier critère."
+  },
+  {
+    "id": "ruffwear-flagline",
+    "name": "Ruffwear Flagline",
+    "category": "harnais",
+    "shortDescription": "Harnais léger avec poignée, panneau poitrine/ventre et six points de réglage.",
+    "recommendation": "Le Flagline est le modèle léger de Ruffwear : panneau poitrine et ventre, six réglages, trois attaches dont une sur la poitrine. Page française ruffwear.eu : 94,90 €. Entre deux tailles, prendre la plus grande.",
+    "price": "94,90 €",
+    "affiliateUrl": "#",
+    "imageEmoji": "🦮",
+    "badge": "Léger",
+    "tags": ["harnais", "ruffwear", "flagline", "reglages"],
+    "categories": ["education", "equipement"],
+    "advantages": [
+      "Six points de réglage, annoncés par Ruffwear",
+      "Panneau qui répartit l'appui sur la poitrine et le ventre",
+      "Trois points d'attache, dont un sur la poitrine",
+      "Poignée, modèle plus léger que le Web Master"
+    ],
+    "disadvantages": [
+      "Moins structuré qu'un harnais trois sangles type Web Master",
+      "Entre deux tailles, Ruffwear dit de prendre la plus grande",
+      "94,90 € lus sur la page française ruffwear.eu ; un autre vendeur peut différer",
+      "Pas de lien affilié configuré : pas de bouton d'achat ici"
+    ],
+    "bestFor": "Un Beagle qu'on veut tenir avec un harnais léger et très réglable, sans passer tout de suite au modèle le plus couvrant."
+  },
+  {
+    "id": "julius-k9-idc-powerharness",
+    "name": "Julius-K9 IDC Powerharness",
+    "category": "harnais",
+    "shortDescription": "Harnais de poitrine à un clic, avec sangle de ventre à régler. La marque dit elle-même qu'une sortie reste possible.",
+    "recommendation": "L'IDC Powerharness est le harnais Julius-K9 pour la ville : sangle de poitrine, sangle de ventre, poignée, fermeture en un clic. La FAQ officielle prévient qu'un chien peut encore sortir si le réglage est lâche ou si la laisse est tirée dans le mauvais sens. Aucun prix en euros : la boutique du fabricant renvoie vers les revendeurs.",
+    "affiliateUrl": "#",
+    "imageEmoji": "🦮",
+    "badge": "Poitrail",
+    "tags": ["harnais", "julius-k9", "idc", "anti-evasion"],
+    "categories": ["education", "equipement"],
+    "advantages": [
+      "Sangle de poitrine et sangle de ventre à régler, selon la FAQ Julius-K9",
+      "Poignée sur le dos, utile si le chien panique près de la route",
+      "Fermeture en un clic, prévue pour les balades du quotidien",
+      "Notice de mesures publiée par la marque"
+    ],
+    "disadvantages": [
+      "La FAQ Julius-K9 dit qu'une sortie reste possible si le réglage ou la laisse sont mauvais",
+      "La marque le destine plutôt à la ville qu'à la randonnée",
+      "Pas de prix affiché : la boutique du fabricant ne publie pas de tarif en euros",
+      "Pas de lien affilié configuré : pas de bouton d'achat ici"
+    ],
+    "bestFor": "Un Beagle de balade urbaine dont on accepte de régler la sangle de ventre à chaque sortie, sans prendre l'étiquette anti-évasion pour une garantie."
   }
 ]

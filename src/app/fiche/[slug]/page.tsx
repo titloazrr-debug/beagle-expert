@@ -48,6 +48,8 @@ import { AffiliateDisclaimer } from "@/components/legal/AffiliateDisclaimer";
 import { WeenectPartnerOffer } from "@/components/partners/WeenectPartnerOffer";
 import { cn } from "@/lib/utils";
 import { getTenant } from "@/lib/tenant";
+import { SelectionFreshness } from "@/components/SelectionFreshness";
+import { annualSelectionHeadline } from "@/lib/selection-year";
 
 function InlineText({ text }: { text: string }) {
   const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
@@ -118,6 +120,7 @@ export default async function FichePage({ params }: PageProps) {
     )
     .slice(0, 3);
 
+  const headline = annualSelectionHeadline(slug) ?? fiche.title;
   const introText = fiche.intro || fiche.excerpt;
   const faqItems = fiche.faq ?? [];
   const faqLd = faqItems.length ? faqPageJsonLd(faqItems) : null;
@@ -142,7 +145,7 @@ export default async function FichePage({ params }: PageProps) {
     <>
       <JsonLd
         data={articleJsonLd({
-          title: fiche.title,
+          title: headline,
           description: fiche.seo.description,
           path: `/fiche/${slug}`,
           datePublished: fiche.datePublished,
@@ -166,7 +169,7 @@ export default async function FichePage({ params }: PageProps) {
         itemScope
         itemType="https://schema.org/Article"
       >
-        <meta itemProp="headline" content={fiche.title} />
+        <meta itemProp="headline" content={headline} />
         <meta itemProp="description" content={fiche.seo.description} />
         <meta itemProp="author" content={SITE_AUTHOR.name} />
         {fiche.datePublished && (
@@ -243,7 +246,7 @@ export default async function FichePage({ params }: PageProps) {
                 className="font-[family-name:var(--font-display)] text-3xl font-extrabold tracking-tight text-balance text-foreground sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
                 itemProp="headline"
               >
-                {fiche.title}
+                {headline}
               </h1>
               {fiche.summary ? (
                 <SummaryBox text={fiche.summary} className="mt-5" />
@@ -259,6 +262,10 @@ export default async function FichePage({ params }: PageProps) {
                   {fiche.excerpt}
                 </p>
               )}
+              <SelectionFreshness
+                slug={slug}
+                dateModified={fiche.dateModified}
+              />
             </div>
 
             {/* Image thématique sous le titre (next/image) */}
